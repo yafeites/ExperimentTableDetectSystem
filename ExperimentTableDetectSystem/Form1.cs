@@ -9,9 +9,9 @@ using System.Windows.Forms;
 
 namespace ExperimentTableDetectSystem
 {
-    public partial class Login : Form
+    public partial class LoginWin : Form
     {
-        public Login()
+        public LoginWin()
         {
             InitializeComponent();
         }

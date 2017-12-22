@@ -1,6 +1,6 @@
 ﻿namespace ExperimentTableDetectSystem
 {
-    partial class Login
+    partial class LoginWin
     {
         /// <summary>
         /// 必需的设计器变量。
@@ -30,12 +30,12 @@
         {
             this.SuspendLayout();
             // 
-            // Login
+            // LoginWin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(282, 253);
-            this.Name = "Login";
+            this.Name = "LoginWin";
             this.Text = "登陆";
             this.ResumeLayout(false);
 
