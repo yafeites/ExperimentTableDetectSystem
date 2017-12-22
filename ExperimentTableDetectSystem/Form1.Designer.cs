@@ -36,7 +36,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(282, 253);
             this.Name = "LoginWin";
-            this.Text = "登陆";
+            this.Text = "登录";
             this.ResumeLayout(false);
 
         }
