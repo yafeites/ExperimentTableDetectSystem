@@ -1,6 +1,6 @@
 ﻿namespace ExperimentTableDetectSystem
 {
-    partial class Form1
+    partial class Login
     {
         /// <summary>
         /// 必需的设计器变量。
@@ -28,9 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.SuspendLayout();
+            // 
+            // Login
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Text = "Form1";
+            this.ClientSize = new System.Drawing.Size(282, 253);
+            this.Name = "Login";
+            this.Text = "登陆";
+            this.ResumeLayout(false);
+
         }
 
         #endregion
