@@ -59,16 +59,28 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Windows\auto\autoDataDisplayWin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\auto\autoDataDisplayWin.Designer.cs">
+      <DependentUpon>autoDataDisplayWin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\auto\AutoExperimentWin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\auto\AutoExperimentWin.Designer.cs">
+      <DependentUpon>AutoExperimentWin.cs</DependentUpon>
+    </Compile>
     <Compile Include="Windows\MainWin.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Windows\MainWin.Designer.cs">
       <DependentUpon>MainWin.cs</DependentUpon>
     </Compile>
-    <Compile Include="Windows\ManualExperimentWin.cs">
+    <Compile Include="Windows\manual\ManualExperimentWin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Windows\ManualExperimentWin.Designer.cs">
+    <Compile Include="Windows\manual\ManualExperimentWin.Designer.cs">
       <DependentUpon>ManualExperimentWin.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="LoginWin.resx">
@@ -83,10 +95,16 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Windows\auto\autoDataDisplayWin.resx">
+      <DependentUpon>autoDataDisplayWin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\auto\AutoExperimentWin.resx">
+      <DependentUpon>AutoExperimentWin.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Windows\MainWin.resx">
       <DependentUpon>MainWin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Windows\ManualExperimentWin.resx">
+    <EmbeddedResource Include="Windows\manual\ManualExperimentWin.resx">
       <DependentUpon>ManualExperimentWin.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
