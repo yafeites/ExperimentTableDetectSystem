@@ -42,7 +42,8 @@
             this.Movable = false;
             this.Name = "AutoExperimentWin";
             this.Padding = new System.Windows.Forms.Padding(22, 72, 22, 24);
-            this.Text = "自动实验——实验项目选择";
+            this.Resizable = false;
+            this.Text = "自动实验(实验项目选择)";
             this.TextAlign = System.Windows.Forms.VisualStyles.HorizontalAlign.Center;
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.ResumeLayout(false);

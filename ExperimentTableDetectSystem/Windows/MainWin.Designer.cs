@@ -31,15 +31,15 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.btnUserSet = new System.Windows.Forms.ToolStripMenuItem();
             this.btnSetParameter = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnExperiment = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnManualExperiment = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnAutoExperiment = new System.Windows.Forms.ToolStripMenuItem();
             this.btnExperimentdata = new System.Windows.Forms.ToolStripMenuItem();
             this.btnCurrentData = new System.Windows.Forms.ToolStripMenuItem();
             this.btnHistoryData = new System.Windows.Forms.ToolStripMenuItem();
-            this.btnExit = new System.Windows.Forms.ToolStripMenuItem();
-            this.btnExperiment = new System.Windows.Forms.ToolStripMenuItem();
             this.btnDataAnalysis = new System.Windows.Forms.ToolStripMenuItem();
             this.btnAnalysisResult = new System.Windows.Forms.ToolStripMenuItem();
-            this.btnManualExperiment = new System.Windows.Forms.ToolStripMenuItem();
-            this.btnAutoExperiment = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnExit = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -79,6 +79,35 @@
             this.btnSetParameter.Size = new System.Drawing.Size(101, 44);
             this.btnSetParameter.Text = "参数设置";
             // 
+            // btnExperiment
+            // 
+            this.btnExperiment.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.btnManualExperiment,
+            this.btnAutoExperiment});
+            this.btnExperiment.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnExperiment.ForeColor = System.Drawing.Color.White;
+            this.btnExperiment.Name = "btnExperiment";
+            this.btnExperiment.Size = new System.Drawing.Size(101, 44);
+            this.btnExperiment.Text = "实验项目";
+            // 
+            // btnManualExperiment
+            // 
+            this.btnManualExperiment.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnManualExperiment.ForeColor = System.Drawing.Color.White;
+            this.btnManualExperiment.Name = "btnManualExperiment";
+            this.btnManualExperiment.Size = new System.Drawing.Size(181, 26);
+            this.btnManualExperiment.Text = "手动实验";
+            this.btnManualExperiment.Click += new System.EventHandler(this.btnManualExperiment_Click);
+            // 
+            // btnAutoExperiment
+            // 
+            this.btnAutoExperiment.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnAutoExperiment.ForeColor = System.Drawing.Color.White;
+            this.btnAutoExperiment.Name = "btnAutoExperiment";
+            this.btnAutoExperiment.Size = new System.Drawing.Size(181, 26);
+            this.btnAutoExperiment.Text = "自动实验";
+            this.btnAutoExperiment.Click += new System.EventHandler(this.btnAutoExperiment_Click);
+            // 
             // btnExperimentdata
             // 
             this.btnExperimentdata.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -106,25 +135,6 @@
             this.btnHistoryData.Size = new System.Drawing.Size(181, 26);
             this.btnHistoryData.Text = "历史数据";
             // 
-            // btnExit
-            // 
-            this.btnExit.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnExit.ForeColor = System.Drawing.Color.White;
-            this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(61, 44);
-            this.btnExit.Text = "退出";
-            // 
-            // btnExperiment
-            // 
-            this.btnExperiment.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.btnManualExperiment,
-            this.btnAutoExperiment});
-            this.btnExperiment.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnExperiment.ForeColor = System.Drawing.Color.White;
-            this.btnExperiment.Name = "btnExperiment";
-            this.btnExperiment.Size = new System.Drawing.Size(101, 44);
-            this.btnExperiment.Text = "实验项目";
-            // 
             // btnDataAnalysis
             // 
             this.btnDataAnalysis.Font = new System.Drawing.Font("宋体", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
@@ -141,23 +151,13 @@
             this.btnAnalysisResult.Size = new System.Drawing.Size(97, 44);
             this.btnAnalysisResult.Text = "分析结果";
             // 
-            // btnManualExperiment
+            // btnExit
             // 
-            this.btnManualExperiment.BackColor = System.Drawing.Color.SteelBlue;
-            this.btnManualExperiment.ForeColor = System.Drawing.Color.White;
-            this.btnManualExperiment.Name = "btnManualExperiment";
-            this.btnManualExperiment.Size = new System.Drawing.Size(181, 26);
-            this.btnManualExperiment.Text = "手动实验";
-            this.btnManualExperiment.Click += new System.EventHandler(this.btnManualExperiment_Click);
-            // 
-            // btnAutoExperiment
-            // 
-            this.btnAutoExperiment.BackColor = System.Drawing.Color.SteelBlue;
-            this.btnAutoExperiment.ForeColor = System.Drawing.Color.White;
-            this.btnAutoExperiment.Name = "btnAutoExperiment";
-            this.btnAutoExperiment.Size = new System.Drawing.Size(181, 26);
-            this.btnAutoExperiment.Text = "自动实验";
-            this.btnAutoExperiment.Click += new System.EventHandler(this.btnAutoExperiment_Click);
+            this.btnExit.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnExit.ForeColor = System.Drawing.Color.White;
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(61, 44);
+            this.btnExit.Text = "退出";
             // 
             // MainWin
             // 
@@ -172,6 +172,7 @@
             this.Movable = false;
             this.Name = "MainWin";
             this.Padding = new System.Windows.Forms.Padding(22, 72, 22, 24);
+            this.Resizable = false;
             this.Text = "欢迎使用叉车液压多路阀自动检测系统";
             this.TextAlign = System.Windows.Forms.VisualStyles.HorizontalAlign.Center;
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;

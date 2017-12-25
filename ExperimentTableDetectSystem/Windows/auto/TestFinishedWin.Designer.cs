@@ -1,6 +1,6 @@
 ﻿namespace ExperimentTableDetectSystem.Windows.auto
 {
-    partial class autoDataDisplayWin
+    partial class TestFinishedWin
     {
         /// <summary>
         /// Required designer variable.
@@ -30,7 +30,7 @@
         {
             this.SuspendLayout();
             // 
-            // autoDataDisplayWin
+            // TestFinishedWin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -39,10 +39,10 @@
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.MaximizeBox = false;
             this.Movable = false;
-            this.Name = "autoDataDisplayWin";
+            this.Name = "TestFinishedWin";
             this.Padding = new System.Windows.Forms.Padding(22, 72, 22, 24);
             this.Resizable = false;
-            this.Text = "自动实验(数据显示)";
+            this.Text = "测试完成";
             this.TextAlign = System.Windows.Forms.VisualStyles.HorizontalAlign.Center;
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.ResumeLayout(false);

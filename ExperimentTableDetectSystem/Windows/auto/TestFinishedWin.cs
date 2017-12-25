@@ -9,9 +9,9 @@ using System.Windows.Forms;
 
 namespace ExperimentTableDetectSystem.Windows.auto
 {
-    public partial class autoDataDisplayWin : MetroFramework.Forms.MetroForm
+    public partial class TestFinishedWin : MetroFramework.Forms.MetroForm
     {
-        public autoDataDisplayWin()
+        public TestFinishedWin()
         {
             InitializeComponent();
         }

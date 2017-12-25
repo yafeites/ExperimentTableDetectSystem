@@ -41,6 +41,7 @@
             this.Movable = false;
             this.Name = "ManualExperimentWin";
             this.Padding = new System.Windows.Forms.Padding(22, 72, 22, 24);
+            this.Resizable = false;
             this.Text = "手动实验";
             this.TextAlign = System.Windows.Forms.VisualStyles.HorizontalAlign.Center;
             this.ResumeLayout(false);

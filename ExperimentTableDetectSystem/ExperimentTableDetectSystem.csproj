@@ -71,6 +71,12 @@
     <Compile Include="Windows\auto\AutoExperimentWin.Designer.cs">
       <DependentUpon>AutoExperimentWin.cs</DependentUpon>
     </Compile>
+    <Compile Include="Windows\auto\TestFinishedWin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\auto\TestFinishedWin.Designer.cs">
+      <DependentUpon>TestFinishedWin.cs</DependentUpon>
+    </Compile>
     <Compile Include="Windows\MainWin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -100,6 +106,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Windows\auto\AutoExperimentWin.resx">
       <DependentUpon>AutoExperimentWin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\auto\TestFinishedWin.resx">
+      <DependentUpon>TestFinishedWin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Windows\MainWin.resx">
       <DependentUpon>MainWin.cs</DependentUpon>

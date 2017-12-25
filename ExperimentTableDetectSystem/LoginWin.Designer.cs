@@ -30,14 +30,14 @@
         {
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnCancel = new MetroFramework.Controls.MetroButton();
+            this.btnConfirm = new MetroFramework.Controls.MetroButton();
+            this.txtPassword = new MetroFramework.Controls.MetroTextBox();
+            this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
+            this.txtUserName = new MetroFramework.Controls.MetroTextBox();
+            this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
-            this.txtUserName = new MetroFramework.Controls.MetroTextBox();
-            this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
-            this.txtPassword = new MetroFramework.Controls.MetroTextBox();
-            this.btnConfirm = new MetroFramework.Controls.MetroButton();
-            this.btnCancel = new MetroFramework.Controls.MetroButton();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -75,6 +75,72 @@
             this.panel1.Size = new System.Drawing.Size(1102, 357);
             this.panel1.TabIndex = 0;
             // 
+            // btnCancel
+            // 
+            this.btnCancel.AutoSize = true;
+            this.btnCancel.Location = new System.Drawing.Point(882, 56);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(84, 30);
+            this.btnCancel.TabIndex = 105;
+            this.btnCancel.Text = "取消";
+            // 
+            // btnConfirm
+            // 
+            this.btnConfirm.AutoSize = true;
+            this.btnConfirm.Location = new System.Drawing.Point(740, 56);
+            this.btnConfirm.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnConfirm.Name = "btnConfirm";
+            this.btnConfirm.Size = new System.Drawing.Size(84, 30);
+            this.btnConfirm.TabIndex = 104;
+            this.btnConfirm.Text = "登录";
+            // 
+            // txtPassword
+            // 
+            this.txtPassword.FontSize = MetroFramework.MetroTextBoxSize.Tall;
+            this.txtPassword.Location = new System.Drawing.Point(529, 56);
+            this.txtPassword.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.PasswordChar = '*';
+            this.txtPassword.Size = new System.Drawing.Size(127, 28);
+            this.txtPassword.TabIndex = 103;
+            this.txtPassword.Text = "12345";
+            // 
+            // metroLabel2
+            // 
+            this.metroLabel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.metroLabel2.Location = new System.Drawing.Point(409, 60);
+            this.metroLabel2.Name = "metroLabel2";
+            this.metroLabel2.Size = new System.Drawing.Size(45, 24);
+            this.metroLabel2.TabIndex = 102;
+            this.metroLabel2.Text = "密码";
+            this.metroLabel2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // txtUserName
+            // 
+            this.txtUserName.FontSize = MetroFramework.MetroTextBoxSize.Tall;
+            this.txtUserName.Location = new System.Drawing.Point(222, 56);
+            this.txtUserName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtUserName.Name = "txtUserName";
+            this.txtUserName.Size = new System.Drawing.Size(127, 28);
+            this.txtUserName.TabIndex = 101;
+            this.txtUserName.Text = "admin";
+            // 
+            // metroLabel1
+            // 
+            this.metroLabel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.metroLabel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(155)))), ((int)(((byte)(255)))));
+            this.metroLabel1.Location = new System.Drawing.Point(130, 56);
+            this.metroLabel1.Name = "metroLabel1";
+            this.metroLabel1.Size = new System.Drawing.Size(45, 24);
+            this.metroLabel1.TabIndex = 2;
+            this.metroLabel1.Text = "账户";
+            this.metroLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -97,72 +163,6 @@
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
             // 
-            // metroLabel1
-            // 
-            this.metroLabel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.metroLabel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(155)))), ((int)(((byte)(255)))));
-            this.metroLabel1.Location = new System.Drawing.Point(130, 56);
-            this.metroLabel1.Name = "metroLabel1";
-            this.metroLabel1.Size = new System.Drawing.Size(45, 24);
-            this.metroLabel1.TabIndex = 2;
-            this.metroLabel1.Text = "账户";
-            this.metroLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // txtUserName
-            // 
-            this.txtUserName.FontSize = MetroFramework.MetroTextBoxSize.Tall;
-            this.txtUserName.Location = new System.Drawing.Point(222, 56);
-            this.txtUserName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtUserName.Name = "txtUserName";
-            this.txtUserName.Size = new System.Drawing.Size(127, 28);
-            this.txtUserName.TabIndex = 101;
-            this.txtUserName.Text = "admin";
-            // 
-            // metroLabel2
-            // 
-            this.metroLabel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.metroLabel2.Location = new System.Drawing.Point(409, 60);
-            this.metroLabel2.Name = "metroLabel2";
-            this.metroLabel2.Size = new System.Drawing.Size(45, 24);
-            this.metroLabel2.TabIndex = 102;
-            this.metroLabel2.Text = "密码";
-            this.metroLabel2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // txtPassword
-            // 
-            this.txtPassword.FontSize = MetroFramework.MetroTextBoxSize.Tall;
-            this.txtPassword.Location = new System.Drawing.Point(529, 56);
-            this.txtPassword.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtPassword.Name = "txtPassword";
-            this.txtPassword.PasswordChar = '*';
-            this.txtPassword.Size = new System.Drawing.Size(127, 28);
-            this.txtPassword.TabIndex = 103;
-            this.txtPassword.Text = "12345";
-            // 
-            // btnConfirm
-            // 
-            this.btnConfirm.AutoSize = true;
-            this.btnConfirm.Location = new System.Drawing.Point(740, 56);
-            this.btnConfirm.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnConfirm.Name = "btnConfirm";
-            this.btnConfirm.Size = new System.Drawing.Size(84, 30);
-            this.btnConfirm.TabIndex = 104;
-            this.btnConfirm.Text = "登录";
-            // 
-            // btnCancel
-            // 
-            this.btnCancel.AutoSize = true;
-            this.btnCancel.Location = new System.Drawing.Point(882, 56);
-            this.btnCancel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(84, 30);
-            this.btnCancel.TabIndex = 105;
-            this.btnCancel.Text = "取消";
-            // 
             // LoginWin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
@@ -170,11 +170,12 @@
             this.ClientSize = new System.Drawing.Size(1152, 922);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Font = new System.Drawing.Font("宋体", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.Movable = false;
             this.Name = "LoginWin";
             this.Padding = new System.Windows.Forms.Padding(22, 72, 22, 24);
+            this.Resizable = false;
             this.Text = "欢迎使用叉车液压多路阀自动检测系统";
             this.TextAlign = System.Windows.Forms.VisualStyles.HorizontalAlign.Center;
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
