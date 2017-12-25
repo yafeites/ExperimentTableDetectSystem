@@ -7,11 +7,11 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
-namespace ExperimentTableDetectSystem
+namespace ExperimentTableDetectSystem.Windows
 {
-    public partial class LoginWin : Form
+    public partial class ManualExperimentWin : MetroFramework.Forms.MetroForm
     {
-        public LoginWin()
+        public ManualExperimentWin()
         {
             InitializeComponent();
         }
