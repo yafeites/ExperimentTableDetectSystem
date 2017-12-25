@@ -1,6 +1,6 @@
-﻿namespace ExperimentTableDetectSystem.Windows
+﻿namespace ExperimentTableDetectSystem.Windows.manual
 {
-    partial class ManualExperimentWin
+    partial class ManualNumberInput
     {
         /// <summary>
         /// Required designer variable.
@@ -30,7 +30,7 @@
         {
             this.SuspendLayout();
             // 
-            // ManualExperimentWin
+            // ManualNumberInput
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -39,10 +39,10 @@
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.MaximizeBox = false;
             this.Movable = false;
-            this.Name = "ManualExperimentWin";
+            this.Name = "ManualNumberInput";
             this.Padding = new System.Windows.Forms.Padding(22, 72, 22, 24);
             this.Resizable = false;
-            this.Text = "手动实验(数据显示)";
+            this.Text = "手动实验(测试编号输入)";
             this.TextAlign = System.Windows.Forms.VisualStyles.HorizontalAlign.Center;
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.ResumeLayout(false);

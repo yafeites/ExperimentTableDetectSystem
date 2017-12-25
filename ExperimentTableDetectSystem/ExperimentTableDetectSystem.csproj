@@ -77,6 +77,24 @@
     <Compile Include="Windows\auto\TestFinishedWin.Designer.cs">
       <DependentUpon>TestFinishedWin.cs</DependentUpon>
     </Compile>
+    <Compile Include="Windows\dataAnalysis\dataAnalysisWin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\dataAnalysis\dataAnalysisWin.Designer.cs">
+      <DependentUpon>dataAnalysisWin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\ExperimentData\CurrentDataWin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\ExperimentData\CurrentDataWin.Designer.cs">
+      <DependentUpon>CurrentDataWin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\ExperimentData\HistoryDataWin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\ExperimentData\HistoryDataWin.Designer.cs">
+      <DependentUpon>HistoryDataWin.cs</DependentUpon>
+    </Compile>
     <Compile Include="Windows\MainWin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -88,6 +106,24 @@
     </Compile>
     <Compile Include="Windows\manual\ManualExperimentWin.Designer.cs">
       <DependentUpon>ManualExperimentWin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\manual\ManualNumberInput.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\manual\ManualNumberInput.Designer.cs">
+      <DependentUpon>ManualNumberInput.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\UserWin\AddAndUpdateWin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\UserWin\AddAndUpdateWin.Designer.cs">
+      <DependentUpon>AddAndUpdateWin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\UserWin\UserRightWin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\UserWin\UserRightWin.Designer.cs">
+      <DependentUpon>UserRightWin.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="LoginWin.resx">
       <DependentUpon>LoginWin.cs</DependentUpon>
@@ -110,11 +146,29 @@
     <EmbeddedResource Include="Windows\auto\TestFinishedWin.resx">
       <DependentUpon>TestFinishedWin.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Windows\dataAnalysis\dataAnalysisWin.resx">
+      <DependentUpon>dataAnalysisWin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\ExperimentData\CurrentDataWin.resx">
+      <DependentUpon>CurrentDataWin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\ExperimentData\HistoryDataWin.resx">
+      <DependentUpon>HistoryDataWin.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Windows\MainWin.resx">
       <DependentUpon>MainWin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Windows\manual\ManualExperimentWin.resx">
       <DependentUpon>ManualExperimentWin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\manual\ManualNumberInput.resx">
+      <DependentUpon>ManualNumberInput.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\UserWin\AddAndUpdateWin.resx">
+      <DependentUpon>AddAndUpdateWin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\UserWin\UserRightWin.resx">
+      <DependentUpon>UserRightWin.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
