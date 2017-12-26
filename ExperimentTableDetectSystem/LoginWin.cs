@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ExperimentTableDetectSystem.Windows;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -41,6 +42,16 @@ namespace ExperimentTableDetectSystem
             this.txtPassword.Location = new System.Drawing.Point(this.panel1.Width * 40 / 80, this.panel1.Height / 10);
             this.btnConfirm.Location = new System.Drawing.Point(this.panel1.Width * 55 / 80, this.panel1.Height / 10);
             this.btnCancel.Location = new System.Drawing.Point(this.panel1.Width * 62 / 80, this.panel1.Height / 10);
+        }
+
+        private void btnConfirm_Click(object sender, EventArgs e)
+        {
+            this.DialogResult = DialogResult.OK;
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

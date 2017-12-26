@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ExperimentTableDetectSystem.Windows.auto;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -14,6 +15,12 @@ namespace ExperimentTableDetectSystem.Windows
         public AutoExperimentWin()
         {
             InitializeComponent();
+        }
+
+        private void btnStartTest_Click(object sender, EventArgs e)
+        {
+            autoDataDisplayWin win = new autoDataDisplayWin();
+            win.Show();
         }
     }
 }

@@ -42,7 +42,7 @@
             this.Name = "ManualNumberInput";
             this.Padding = new System.Windows.Forms.Padding(22, 72, 22, 24);
             this.Resizable = false;
-            this.Text = "手动实验(测试编号输入)";
+            this.Text = "手动试验(测试编号输入)";
             this.TextAlign = System.Windows.Forms.VisualStyles.HorizontalAlign.Center;
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.ResumeLayout(false);

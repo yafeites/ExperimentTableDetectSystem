@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ExperimentTableDetectSystem.Windows.setParameterWin;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -23,7 +24,16 @@ namespace ExperimentTableDetectSystem.Windows
 
         private void btnAutoExperiment_Click(object sender, EventArgs e)
         {
-
+            AutoExperimentWin win = new AutoExperimentWin();
+            win.Show();
         }
+
+        private void btnSetParameter_Click(object sender, EventArgs e)
+        {
+            SetParameterWin win = SetParameterWin.getInstance();
+            win.Show();
+        }
+
+       
     }
 }

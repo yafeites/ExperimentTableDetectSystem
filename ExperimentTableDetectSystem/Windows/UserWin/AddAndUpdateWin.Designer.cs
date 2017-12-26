@@ -177,7 +177,9 @@
             this.ClientSize = new System.Drawing.Size(1024, 768);
             this.Controls.Add(this.tableLayoutPanel1);
             this.MaximizeBox = false;
+            this.Movable = false;
             this.Name = "AddAndUpdateWin";
+            this.Resizable = false;
             this.Text = "用户权限设置";
             this.TextAlign = System.Windows.Forms.VisualStyles.HorizontalAlign.Center;
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;

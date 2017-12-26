@@ -78,6 +78,7 @@
             this.btnSetParameter.Name = "btnSetParameter";
             this.btnSetParameter.Size = new System.Drawing.Size(101, 44);
             this.btnSetParameter.Text = "参数设置";
+            this.btnSetParameter.Click += new System.EventHandler(this.btnSetParameter_Click);
             // 
             // btnExperiment
             // 
@@ -89,6 +90,7 @@
             this.btnExperiment.Name = "btnExperiment";
             this.btnExperiment.Size = new System.Drawing.Size(101, 44);
             this.btnExperiment.Text = "实验项目";
+//            this.btnExperiment.Click += new System.EventHandler(this.btnExperiment_Click);
             // 
             // btnManualExperiment
             // 
@@ -124,7 +126,7 @@
             this.btnCurrentData.BackColor = System.Drawing.Color.SteelBlue;
             this.btnCurrentData.ForeColor = System.Drawing.Color.White;
             this.btnCurrentData.Name = "btnCurrentData";
-            this.btnCurrentData.Size = new System.Drawing.Size(181, 26);
+            this.btnCurrentData.Size = new System.Drawing.Size(164, 26);
             this.btnCurrentData.Text = "当前数据";
             // 
             // btnHistoryData
@@ -132,23 +134,23 @@
             this.btnHistoryData.BackColor = System.Drawing.Color.SteelBlue;
             this.btnHistoryData.ForeColor = System.Drawing.Color.White;
             this.btnHistoryData.Name = "btnHistoryData";
-            this.btnHistoryData.Size = new System.Drawing.Size(181, 26);
+            this.btnHistoryData.Size = new System.Drawing.Size(164, 26);
             this.btnHistoryData.Text = "历史数据";
             // 
             // btnDataAnalysis
             // 
-            this.btnDataAnalysis.Font = new System.Drawing.Font("宋体", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnDataAnalysis.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnDataAnalysis.ForeColor = System.Drawing.Color.White;
             this.btnDataAnalysis.Name = "btnDataAnalysis";
-            this.btnDataAnalysis.Size = new System.Drawing.Size(97, 44);
+            this.btnDataAnalysis.Size = new System.Drawing.Size(101, 44);
             this.btnDataAnalysis.Text = "数据分析";
             // 
             // btnAnalysisResult
             // 
-            this.btnAnalysisResult.Font = new System.Drawing.Font("宋体", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnAnalysisResult.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnAnalysisResult.ForeColor = System.Drawing.Color.White;
             this.btnAnalysisResult.Name = "btnAnalysisResult";
-            this.btnAnalysisResult.Size = new System.Drawing.Size(97, 44);
+            this.btnAnalysisResult.Size = new System.Drawing.Size(101, 44);
             this.btnAnalysisResult.Text = "分析结果";
             // 
             // btnExit

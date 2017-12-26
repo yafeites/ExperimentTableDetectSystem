@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ExperimentTableDetectSystem.Windows;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
@@ -15,7 +16,14 @@ namespace ExperimentTableDetectSystem
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new LoginWin());
+            LoginWin loginwin = new LoginWin();
+        
+            if (loginwin.ShowDialog()== DialogResult.OK)
+            {
+                loginwin.Close();
+                Application.Run(new MainWin());
+            }
+            
         }
     }
 }
