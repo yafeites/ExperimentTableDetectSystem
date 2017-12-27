@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ExperimentTableDetectSystem.Windows.manual;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -29,9 +30,31 @@ namespace ExperimentTableDetectSystem.Windows.auto
             return instance;
         }
         #endregion
+        private string valveid;
+
+        public string Valveid
+        {
+            get
+            {
+                return valveid;
+            }
+
+            set
+            {
+                valveid = value;
+            }
+        }
+
         private autoDataDisplayWin()
         {
             InitializeComponent();
+        }
+        
+        private void autoDataDisplayWin_Load(object sender, EventArgs e)
+        {
+            this.valveid = ManualNumberInput.id;
+            this.lblValveId.Text = valveid;
+
         }
     }
 }

@@ -30,7 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(autoDataDisplayWin));
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblValveId = new System.Windows.Forms.Label();
             this.picTest = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -86,6 +86,7 @@
             this.label26 = new System.Windows.Forms.Label();
             this.label27 = new System.Windows.Forms.Label();
             this.label28 = new System.Windows.Forms.Label();
+            this.lblTestingProcess = new MetroFramework.Controls.MetroLabel();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picTest)).BeginInit();
             this.SuspendLayout();
@@ -99,7 +100,7 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 52F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12F));
-            this.tableLayoutPanel1.Controls.Add(this.label1, 2, 0);
+            this.tableLayoutPanel1.Controls.Add(this.lblValveId, 2, 0);
             this.tableLayoutPanel1.Controls.Add(this.picTest, 2, 2);
             this.tableLayoutPanel1.Controls.Add(this.label3, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.label5, 1, 2);
@@ -155,6 +156,7 @@
             this.tableLayoutPanel1.Controls.Add(this.label26, 4, 11);
             this.tableLayoutPanel1.Controls.Add(this.label27, 4, 12);
             this.tableLayoutPanel1.Controls.Add(this.label28, 4, 13);
+            this.tableLayoutPanel1.Controls.Add(this.lblTestingProcess, 2, 1);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(22, 72);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -177,18 +179,18 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1108, 826);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
-            // label1
+            // lblValveId
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.White;
-            this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label1.Location = new System.Drawing.Point(267, 3);
-            this.label1.Margin = new System.Windows.Forms.Padding(3);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(570, 49);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "测试所处过程";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblValveId.AutoSize = true;
+            this.lblValveId.BackColor = System.Drawing.Color.White;
+            this.lblValveId.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lblValveId.Location = new System.Drawing.Point(267, 3);
+            this.lblValveId.Margin = new System.Windows.Forms.Padding(3);
+            this.lblValveId.Name = "lblValveId";
+            this.lblValveId.Size = new System.Drawing.Size(570, 49);
+            this.lblValveId.TabIndex = 0;
+            this.lblValveId.Text = "被测阀编号：001";
+            this.lblValveId.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // picTest
             // 
@@ -850,6 +852,18 @@
             this.label28.Text = "label28";
             this.label28.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // lblTestingProcess
+            // 
+            this.lblTestingProcess.AutoSize = true;
+            this.lblTestingProcess.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lblTestingProcess.Location = new System.Drawing.Point(267, 58);
+            this.lblTestingProcess.Margin = new System.Windows.Forms.Padding(3);
+            this.lblTestingProcess.Name = "lblTestingProcess";
+            this.lblTestingProcess.Size = new System.Drawing.Size(570, 49);
+            this.lblTestingProcess.TabIndex = 60;
+            this.lblTestingProcess.Text = "测试所处过程";
+            this.lblTestingProcess.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // autoDataDisplayWin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
@@ -866,6 +880,7 @@
             this.Text = "自动试验(数据显示)";
             this.TextAlign = System.Windows.Forms.VisualStyles.HorizontalAlign.Center;
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.autoDataDisplayWin_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picTest)).EndInit();
@@ -876,7 +891,7 @@
         #endregion
 
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblValveId;
         private System.Windows.Forms.PictureBox picTest;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label5;
@@ -932,5 +947,6 @@
         private System.Windows.Forms.Label label26;
         private System.Windows.Forms.Label label27;
         private System.Windows.Forms.Label label28;
+        private MetroFramework.Controls.MetroLabel lblTestingProcess;
     }
 }

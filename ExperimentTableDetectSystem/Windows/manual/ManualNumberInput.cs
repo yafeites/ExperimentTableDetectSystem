@@ -28,9 +28,33 @@ namespace ExperimentTableDetectSystem.Windows.manual
             return instance;
         }
         #endregion
+        private  string valveid;
+        public static string id;
+        public  string Valveid
+        {
+            get
+            {
+                return valveid;
+            }
+
+            set
+            {
+                valveid = value;
+            }
+        }
+
         private ManualNumberInput()
         {
             InitializeComponent();
+        }
+
+        private void btnConfirm_Click(object sender, EventArgs e)
+        {
+           this.valveid = txtValveId.Text;
+            id = this.valveid;
+            this.Close();
+            ManualExperimentWin win = ManualExperimentWin.getInstance();
+            win.Show();
         }
     }
 }
