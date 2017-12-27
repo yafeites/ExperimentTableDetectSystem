@@ -52,8 +52,9 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Top;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(22, 59);
+            this.pictureBox1.Location = new System.Drawing.Point(22, 72);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(1108, 54);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -82,7 +83,8 @@
             this.Column5,
             this.Column6,
             this.Column7});
-            this.dgvUser.Location = new System.Drawing.Point(22, 113);
+            this.dgvUser.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvUser.Location = new System.Drawing.Point(22, 126);
             this.dgvUser.Margin = new System.Windows.Forms.Padding(10);
             this.dgvUser.Name = "dgvUser";
             this.dgvUser.RowHeadersWidth = 100;
@@ -90,7 +92,7 @@
             this.dgvUser.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvUser.RowTemplate.Height = 27;
             this.dgvUser.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvUser.Size = new System.Drawing.Size(1108, 567);
+            this.dgvUser.Size = new System.Drawing.Size(1108, 772);
             this.dgvUser.TabIndex = 2;
             // 
             // Column1
@@ -178,6 +180,7 @@
             this.btnAdd.TabIndex = 0;
             this.btnAdd.Text = "新增";
             this.btnAdd.UseVisualStyleBackColor = false;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // btnDelete
             // 
@@ -190,6 +193,7 @@
             this.btnDelete.TabIndex = 2;
             this.btnDelete.Text = "删除";
             this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnBack
             // 
@@ -202,6 +206,7 @@
             this.btnBack.TabIndex = 4;
             this.btnBack.Text = "返回";
             this.btnBack.UseVisualStyleBackColor = false;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // btnModify
             // 
@@ -213,6 +218,7 @@
             this.btnModify.TabIndex = 5;
             this.btnModify.Text = "修改";
             this.btnModify.UseVisualStyleBackColor = false;
+            this.btnModify.Click += new System.EventHandler(this.btnModify_Click);
             // 
             // UserRightWin
             // 
@@ -232,6 +238,7 @@
             this.Text = "用户权限设置";
             this.TextAlign = System.Windows.Forms.VisualStyles.HorizontalAlign.Center;
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.UserRightWin_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUser)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);

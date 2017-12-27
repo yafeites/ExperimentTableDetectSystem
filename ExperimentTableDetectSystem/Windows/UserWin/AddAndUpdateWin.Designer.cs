@@ -141,6 +141,7 @@
             this.btnConfirm.TabIndex = 8;
             this.btnConfirm.Text = "确定";
             this.btnConfirm.UseVisualStyleBackColor = false;
+            this.btnConfirm.Click += new System.EventHandler(this.btnConfirm_Click);
             // 
             // btnCancel
             // 
@@ -153,6 +154,7 @@
             this.btnCancel.TabIndex = 9;
             this.btnCancel.Text = "取消";
             this.btnCancel.UseVisualStyleBackColor = false;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // txtUserName
             // 

@@ -11,6 +11,24 @@ namespace ExperimentTableDetectSystem.Windows
 {
     public partial class ManualExperimentWin : MetroFramework.Forms.MetroForm
     {
+        #region singleton 
+        private static ManualExperimentWin instance;
+        private static object obj = new object();
+        public static ManualExperimentWin getInstance()
+        {
+            if (instance == null)
+            {
+                lock (obj)
+                {
+                    if (instance == null)
+                    {
+                        instance = new ManualExperimentWin();
+                    }
+                }
+            }
+            return instance;
+        }
+        #endregion
         public ManualExperimentWin()
         {
             InitializeComponent();

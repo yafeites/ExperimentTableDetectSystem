@@ -70,6 +70,7 @@
             this.btnUserSet.Name = "btnUserSet";
             this.btnUserSet.Size = new System.Drawing.Size(101, 44);
             this.btnUserSet.Text = "系统设置";
+            this.btnUserSet.Click += new System.EventHandler(this.btnUserSet_Click);
             // 
             // btnSetParameter
             // 
@@ -90,14 +91,13 @@
             this.btnExperiment.Name = "btnExperiment";
             this.btnExperiment.Size = new System.Drawing.Size(101, 44);
             this.btnExperiment.Text = "实验项目";
-//            this.btnExperiment.Click += new System.EventHandler(this.btnExperiment_Click);
             // 
             // btnManualExperiment
             // 
             this.btnManualExperiment.BackColor = System.Drawing.Color.SteelBlue;
             this.btnManualExperiment.ForeColor = System.Drawing.Color.White;
             this.btnManualExperiment.Name = "btnManualExperiment";
-            this.btnManualExperiment.Size = new System.Drawing.Size(181, 26);
+            this.btnManualExperiment.Size = new System.Drawing.Size(164, 26);
             this.btnManualExperiment.Text = "手动实验";
             this.btnManualExperiment.Click += new System.EventHandler(this.btnManualExperiment_Click);
             // 
@@ -106,7 +106,7 @@
             this.btnAutoExperiment.BackColor = System.Drawing.Color.SteelBlue;
             this.btnAutoExperiment.ForeColor = System.Drawing.Color.White;
             this.btnAutoExperiment.Name = "btnAutoExperiment";
-            this.btnAutoExperiment.Size = new System.Drawing.Size(181, 26);
+            this.btnAutoExperiment.Size = new System.Drawing.Size(164, 26);
             this.btnAutoExperiment.Text = "自动实验";
             this.btnAutoExperiment.Click += new System.EventHandler(this.btnAutoExperiment_Click);
             // 
@@ -160,6 +160,7 @@
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(61, 44);
             this.btnExit.Text = "退出";
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // MainWin
             // 

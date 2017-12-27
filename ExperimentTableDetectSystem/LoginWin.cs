@@ -1,8 +1,10 @@
-﻿using ExperimentTableDetectSystem.Windows;
+﻿using ExperimentTableDetectSystem.service;
+using ExperimentTableDetectSystem.Windows;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -46,7 +48,27 @@ namespace ExperimentTableDetectSystem
 
         private void btnConfirm_Click(object sender, EventArgs e)
         {
-            this.DialogResult = DialogResult.OK;
+            //this.DialogResult = DialogResult.OK;
+            string userName = this.txtUserName.Text;
+            string password = this.txtPassword.Text;
+            UserRightManager.Initial(userName, password);
+            UserRightManager manager = UserRightManager.GetInstance();
+            try
+            {
+                if (manager.Check())
+                {
+                    this.DialogResult = DialogResult.OK;
+
+                }
+                else
+                {
+                    MessageBox.Show("账号或密码错误，请重新输入");
+                }
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void btnCancel_Click(object sender, EventArgs e)

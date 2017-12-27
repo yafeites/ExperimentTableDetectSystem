@@ -12,14 +12,31 @@ namespace ExperimentTableDetectSystem.Windows
 {
     public partial class AutoExperimentWin : MetroFramework.Forms.MetroForm
     {
-        public AutoExperimentWin()
+        #region singleton
+        private static AutoExperimentWin instance;
+     //   private static object obj = new object();
+        public static AutoExperimentWin getInstance()
+       {
+            if (instance == null||instance.IsDisposed)
+            { //lock (obj)
+               // {
+                  //  if (instance == null)
+                   // {
+                        instance = new AutoExperimentWin();
+                   // }
+               // }
+             }
+            return instance;
+        }
+        #endregion
+        private AutoExperimentWin()
         {
             InitializeComponent();
         }
 
         private void btnStartTest_Click(object sender, EventArgs e)
         {
-            autoDataDisplayWin win = new autoDataDisplayWin();
+            autoDataDisplayWin win = autoDataDisplayWin.getInstance();
             win.Show();
         }
     }

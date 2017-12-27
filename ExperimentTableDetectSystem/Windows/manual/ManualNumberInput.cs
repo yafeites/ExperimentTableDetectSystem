@@ -11,7 +11,24 @@ namespace ExperimentTableDetectSystem.Windows.manual
 {
     public partial class ManualNumberInput : MetroFramework.Forms.MetroForm
     {
-        public ManualNumberInput()
+        #region singleton
+        private static ManualNumberInput instance;
+       // private static object obj = new object();
+        public static ManualNumberInput getInstance()
+        {
+            if (instance == null||instance.IsDisposed)
+            {// lock (obj)
+                //{
+                   // if (instance == null)
+                   // {
+                        instance = new ManualNumberInput();
+                    //}
+                //}
+            }
+            return instance;
+        }
+        #endregion
+        private ManualNumberInput()
         {
             InitializeComponent();
         }
