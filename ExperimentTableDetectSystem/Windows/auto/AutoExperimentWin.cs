@@ -36,6 +36,7 @@ namespace ExperimentTableDetectSystem.Windows
 
         private void btnStartTest_Click(object sender, EventArgs e)
         {
+            this.Close();
             autoDataDisplayWin win = autoDataDisplayWin.getInstance();
             win.Show();
         }

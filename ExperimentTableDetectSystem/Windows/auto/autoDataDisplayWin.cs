@@ -56,5 +56,12 @@ namespace ExperimentTableDetectSystem.Windows.auto
             this.lblValveId.Text = valveid;
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            TestFinishedWin win = new TestFinishedWin();
+            win.Show();
+        }
     }
 }

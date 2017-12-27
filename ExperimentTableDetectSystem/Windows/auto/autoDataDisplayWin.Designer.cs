@@ -87,6 +87,7 @@
             this.label27 = new System.Windows.Forms.Label();
             this.label28 = new System.Windows.Forms.Label();
             this.lblTestingProcess = new MetroFramework.Controls.MetroLabel();
+            this.button1 = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picTest)).BeginInit();
             this.SuspendLayout();
@@ -157,6 +158,7 @@
             this.tableLayoutPanel1.Controls.Add(this.label27, 4, 12);
             this.tableLayoutPanel1.Controls.Add(this.label28, 4, 13);
             this.tableLayoutPanel1.Controls.Add(this.lblTestingProcess, 2, 1);
+            this.tableLayoutPanel1.Controls.Add(this.button1, 2, 14);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(22, 72);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -189,7 +191,7 @@
             this.lblValveId.Name = "lblValveId";
             this.lblValveId.Size = new System.Drawing.Size(570, 49);
             this.lblValveId.TabIndex = 0;
-            this.lblValveId.Text = "被测阀编号：001";
+            this.lblValveId.Text = "被测阀编号：xxx";
             this.lblValveId.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // picTest
@@ -864,6 +866,16 @@
             this.lblTestingProcess.Text = "测试所处过程";
             this.lblTestingProcess.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(267, 773);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(116, 50);
+            this.button1.TabIndex = 61;
+            this.button1.Text = "demo完成";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // autoDataDisplayWin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
@@ -948,5 +960,6 @@
         private System.Windows.Forms.Label label27;
         private System.Windows.Forms.Label label28;
         private MetroFramework.Controls.MetroLabel lblTestingProcess;
+        private System.Windows.Forms.Button button1;
     }
 }
