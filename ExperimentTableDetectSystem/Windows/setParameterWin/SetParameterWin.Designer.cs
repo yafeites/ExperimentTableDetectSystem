@@ -62,42 +62,42 @@
             this.metroLabel30 = new MetroFramework.Controls.MetroLabel();
             this.btnSave = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
-            this.txtPump1 = new System.Windows.Forms.NumericUpDown();
-            this.txtPump2 = new System.Windows.Forms.NumericUpDown();
-            this.txtMainReliefValveP = new System.Windows.Forms.NumericUpDown();
-            this.txtReliefValveP = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown5 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown6 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown7 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown8 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown9 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown10 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown11 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown12 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown13 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown14 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown15 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown16 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown17 = new System.Windows.Forms.NumericUpDown();
+            this.txt1 = new System.Windows.Forms.NumericUpDown();
+            this.txt2 = new System.Windows.Forms.NumericUpDown();
+            this.txt3 = new System.Windows.Forms.NumericUpDown();
+            this.txt4 = new System.Windows.Forms.NumericUpDown();
+            this.txt5 = new System.Windows.Forms.NumericUpDown();
+            this.txt6 = new System.Windows.Forms.NumericUpDown();
+            this.txt7 = new System.Windows.Forms.NumericUpDown();
+            this.txt8 = new System.Windows.Forms.NumericUpDown();
+            this.txt9 = new System.Windows.Forms.NumericUpDown();
+            this.txt10 = new System.Windows.Forms.NumericUpDown();
+            this.txt11 = new System.Windows.Forms.NumericUpDown();
+            this.txt12 = new System.Windows.Forms.NumericUpDown();
+            this.txt13 = new System.Windows.Forms.NumericUpDown();
+            this.txt14 = new System.Windows.Forms.NumericUpDown();
+            this.txt15 = new System.Windows.Forms.NumericUpDown();
+            this.txt16 = new System.Windows.Forms.NumericUpDown();
+            this.txt17 = new System.Windows.Forms.NumericUpDown();
             this.groupBox1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtPump1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtPump2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtMainReliefValveP)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtReliefValveP)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown9)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown10)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown11)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown12)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown13)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown14)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown15)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown16)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown17)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt11)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt12)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt13)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt14)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt15)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt16)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt17)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -153,23 +153,23 @@
             this.tableLayoutPanel1.Controls.Add(this.metroLabel30, 5, 8);
             this.tableLayoutPanel1.Controls.Add(this.btnSave, 2, 9);
             this.tableLayoutPanel1.Controls.Add(this.btnCancel, 6, 9);
-            this.tableLayoutPanel1.Controls.Add(this.txtPump1, 2, 0);
-            this.tableLayoutPanel1.Controls.Add(this.txtPump2, 2, 1);
-            this.tableLayoutPanel1.Controls.Add(this.txtMainReliefValveP, 2, 2);
-            this.tableLayoutPanel1.Controls.Add(this.txtReliefValveP, 2, 3);
-            this.tableLayoutPanel1.Controls.Add(this.numericUpDown5, 2, 4);
-            this.tableLayoutPanel1.Controls.Add(this.numericUpDown6, 2, 5);
-            this.tableLayoutPanel1.Controls.Add(this.numericUpDown7, 2, 6);
-            this.tableLayoutPanel1.Controls.Add(this.numericUpDown8, 2, 7);
-            this.tableLayoutPanel1.Controls.Add(this.numericUpDown9, 6, 0);
-            this.tableLayoutPanel1.Controls.Add(this.numericUpDown10, 6, 1);
-            this.tableLayoutPanel1.Controls.Add(this.numericUpDown11, 6, 2);
-            this.tableLayoutPanel1.Controls.Add(this.numericUpDown12, 6, 3);
-            this.tableLayoutPanel1.Controls.Add(this.numericUpDown13, 6, 4);
-            this.tableLayoutPanel1.Controls.Add(this.numericUpDown14, 6, 5);
-            this.tableLayoutPanel1.Controls.Add(this.numericUpDown15, 6, 6);
-            this.tableLayoutPanel1.Controls.Add(this.numericUpDown16, 6, 7);
-            this.tableLayoutPanel1.Controls.Add(this.numericUpDown17, 6, 8);
+            this.tableLayoutPanel1.Controls.Add(this.txt1, 2, 0);
+            this.tableLayoutPanel1.Controls.Add(this.txt2, 2, 1);
+            this.tableLayoutPanel1.Controls.Add(this.txt3, 2, 2);
+            this.tableLayoutPanel1.Controls.Add(this.txt4, 2, 3);
+            this.tableLayoutPanel1.Controls.Add(this.txt5, 2, 4);
+            this.tableLayoutPanel1.Controls.Add(this.txt6, 2, 5);
+            this.tableLayoutPanel1.Controls.Add(this.txt7, 2, 6);
+            this.tableLayoutPanel1.Controls.Add(this.txt8, 2, 7);
+            this.tableLayoutPanel1.Controls.Add(this.txt9, 6, 0);
+            this.tableLayoutPanel1.Controls.Add(this.txt10, 6, 1);
+            this.tableLayoutPanel1.Controls.Add(this.txt11, 6, 2);
+            this.tableLayoutPanel1.Controls.Add(this.txt12, 6, 3);
+            this.tableLayoutPanel1.Controls.Add(this.txt13, 6, 4);
+            this.tableLayoutPanel1.Controls.Add(this.txt14, 6, 5);
+            this.tableLayoutPanel1.Controls.Add(this.txt15, 6, 6);
+            this.tableLayoutPanel1.Controls.Add(this.txt16, 6, 7);
+            this.tableLayoutPanel1.Controls.Add(this.txt17, 6, 8);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(3, 24);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -602,176 +602,177 @@
             this.btnCancel.TabIndex = 52;
             this.btnCancel.Text = "返回";
             this.btnCancel.UseVisualStyleBackColor = false;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
-            // txtPump1
+            // txt1
             // 
-            this.txtPump1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtPump1.Font = new System.Drawing.Font("宋体", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.txtPump1.Location = new System.Drawing.Point(366, 3);
-            this.txtPump1.Name = "txtPump1";
-            this.txtPump1.Size = new System.Drawing.Size(126, 53);
-            this.txtPump1.TabIndex = 53;
-            this.txtPump1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txt1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txt1.Font = new System.Drawing.Font("宋体", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.txt1.Location = new System.Drawing.Point(366, 3);
+            this.txt1.Name = "txt1";
+            this.txt1.Size = new System.Drawing.Size(126, 53);
+            this.txt1.TabIndex = 53;
+            this.txt1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // txtPump2
+            // txt2
             // 
-            this.txtPump2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtPump2.Font = new System.Drawing.Font("宋体", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.txtPump2.Location = new System.Drawing.Point(366, 77);
-            this.txtPump2.Name = "txtPump2";
-            this.txtPump2.Size = new System.Drawing.Size(126, 53);
-            this.txtPump2.TabIndex = 54;
-            this.txtPump2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txt2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txt2.Font = new System.Drawing.Font("宋体", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.txt2.Location = new System.Drawing.Point(366, 77);
+            this.txt2.Name = "txt2";
+            this.txt2.Size = new System.Drawing.Size(126, 53);
+            this.txt2.TabIndex = 54;
+            this.txt2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // txtMainReliefValveP
+            // txt3
             // 
-            this.txtMainReliefValveP.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtMainReliefValveP.Font = new System.Drawing.Font("宋体", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.txtMainReliefValveP.Location = new System.Drawing.Point(366, 151);
-            this.txtMainReliefValveP.Name = "txtMainReliefValveP";
-            this.txtMainReliefValveP.Size = new System.Drawing.Size(126, 53);
-            this.txtMainReliefValveP.TabIndex = 55;
-            this.txtMainReliefValveP.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txt3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txt3.Font = new System.Drawing.Font("宋体", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.txt3.Location = new System.Drawing.Point(366, 151);
+            this.txt3.Name = "txt3";
+            this.txt3.Size = new System.Drawing.Size(126, 53);
+            this.txt3.TabIndex = 55;
+            this.txt3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // txtReliefValveP
+            // txt4
             // 
-            this.txtReliefValveP.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtReliefValveP.Font = new System.Drawing.Font("宋体", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.txtReliefValveP.Location = new System.Drawing.Point(366, 225);
-            this.txtReliefValveP.Name = "txtReliefValveP";
-            this.txtReliefValveP.Size = new System.Drawing.Size(126, 53);
-            this.txtReliefValveP.TabIndex = 56;
-            this.txtReliefValveP.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txt4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txt4.Font = new System.Drawing.Font("宋体", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.txt4.Location = new System.Drawing.Point(366, 225);
+            this.txt4.Name = "txt4";
+            this.txt4.Size = new System.Drawing.Size(126, 53);
+            this.txt4.TabIndex = 56;
+            this.txt4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // numericUpDown5
+            // txt5
             // 
-            this.numericUpDown5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.numericUpDown5.Font = new System.Drawing.Font("宋体", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.numericUpDown5.Location = new System.Drawing.Point(366, 299);
-            this.numericUpDown5.Name = "numericUpDown5";
-            this.numericUpDown5.Size = new System.Drawing.Size(126, 53);
-            this.numericUpDown5.TabIndex = 57;
-            this.numericUpDown5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txt5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txt5.Font = new System.Drawing.Font("宋体", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.txt5.Location = new System.Drawing.Point(366, 299);
+            this.txt5.Name = "txt5";
+            this.txt5.Size = new System.Drawing.Size(126, 53);
+            this.txt5.TabIndex = 57;
+            this.txt5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // numericUpDown6
+            // txt6
             // 
-            this.numericUpDown6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.numericUpDown6.Font = new System.Drawing.Font("宋体", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.numericUpDown6.Location = new System.Drawing.Point(366, 373);
-            this.numericUpDown6.Name = "numericUpDown6";
-            this.numericUpDown6.Size = new System.Drawing.Size(126, 53);
-            this.numericUpDown6.TabIndex = 58;
-            this.numericUpDown6.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txt6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txt6.Font = new System.Drawing.Font("宋体", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.txt6.Location = new System.Drawing.Point(366, 373);
+            this.txt6.Name = "txt6";
+            this.txt6.Size = new System.Drawing.Size(126, 53);
+            this.txt6.TabIndex = 58;
+            this.txt6.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // numericUpDown7
+            // txt7
             // 
-            this.numericUpDown7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.numericUpDown7.Font = new System.Drawing.Font("宋体", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.numericUpDown7.Location = new System.Drawing.Point(366, 447);
-            this.numericUpDown7.Name = "numericUpDown7";
-            this.numericUpDown7.Size = new System.Drawing.Size(126, 53);
-            this.numericUpDown7.TabIndex = 59;
-            this.numericUpDown7.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txt7.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txt7.Font = new System.Drawing.Font("宋体", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.txt7.Location = new System.Drawing.Point(366, 447);
+            this.txt7.Name = "txt7";
+            this.txt7.Size = new System.Drawing.Size(126, 53);
+            this.txt7.TabIndex = 59;
+            this.txt7.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // numericUpDown8
+            // txt8
             // 
-            this.numericUpDown8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.numericUpDown8.Font = new System.Drawing.Font("宋体", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.numericUpDown8.Location = new System.Drawing.Point(366, 521);
-            this.numericUpDown8.Name = "numericUpDown8";
-            this.numericUpDown8.Size = new System.Drawing.Size(126, 53);
-            this.numericUpDown8.TabIndex = 60;
-            this.numericUpDown8.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txt8.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txt8.Font = new System.Drawing.Font("宋体", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.txt8.Location = new System.Drawing.Point(366, 521);
+            this.txt8.Name = "txt8";
+            this.txt8.Size = new System.Drawing.Size(126, 53);
+            this.txt8.TabIndex = 60;
+            this.txt8.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // numericUpDown9
+            // txt9
             // 
-            this.numericUpDown9.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.numericUpDown9.Font = new System.Drawing.Font("宋体", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.numericUpDown9.Location = new System.Drawing.Point(971, 3);
-            this.numericUpDown9.Name = "numericUpDown9";
-            this.numericUpDown9.Size = new System.Drawing.Size(128, 53);
-            this.numericUpDown9.TabIndex = 61;
-            this.numericUpDown9.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txt9.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txt9.Font = new System.Drawing.Font("宋体", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.txt9.Location = new System.Drawing.Point(971, 3);
+            this.txt9.Name = "txt9";
+            this.txt9.Size = new System.Drawing.Size(128, 53);
+            this.txt9.TabIndex = 61;
+            this.txt9.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // numericUpDown10
+            // txt10
             // 
-            this.numericUpDown10.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.numericUpDown10.Font = new System.Drawing.Font("宋体", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.numericUpDown10.Location = new System.Drawing.Point(971, 77);
-            this.numericUpDown10.Name = "numericUpDown10";
-            this.numericUpDown10.Size = new System.Drawing.Size(128, 53);
-            this.numericUpDown10.TabIndex = 62;
-            this.numericUpDown10.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txt10.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txt10.Font = new System.Drawing.Font("宋体", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.txt10.Location = new System.Drawing.Point(971, 77);
+            this.txt10.Name = "txt10";
+            this.txt10.Size = new System.Drawing.Size(128, 53);
+            this.txt10.TabIndex = 62;
+            this.txt10.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // numericUpDown11
+            // txt11
             // 
-            this.numericUpDown11.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.numericUpDown11.Font = new System.Drawing.Font("宋体", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.numericUpDown11.Location = new System.Drawing.Point(971, 151);
-            this.numericUpDown11.Name = "numericUpDown11";
-            this.numericUpDown11.Size = new System.Drawing.Size(128, 53);
-            this.numericUpDown11.TabIndex = 63;
-            this.numericUpDown11.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txt11.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txt11.Font = new System.Drawing.Font("宋体", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.txt11.Location = new System.Drawing.Point(971, 151);
+            this.txt11.Name = "txt11";
+            this.txt11.Size = new System.Drawing.Size(128, 53);
+            this.txt11.TabIndex = 63;
+            this.txt11.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // numericUpDown12
+            // txt12
             // 
-            this.numericUpDown12.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.numericUpDown12.Font = new System.Drawing.Font("宋体", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.numericUpDown12.Location = new System.Drawing.Point(971, 225);
-            this.numericUpDown12.Name = "numericUpDown12";
-            this.numericUpDown12.Size = new System.Drawing.Size(128, 53);
-            this.numericUpDown12.TabIndex = 64;
-            this.numericUpDown12.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txt12.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txt12.Font = new System.Drawing.Font("宋体", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.txt12.Location = new System.Drawing.Point(971, 225);
+            this.txt12.Name = "txt12";
+            this.txt12.Size = new System.Drawing.Size(128, 53);
+            this.txt12.TabIndex = 64;
+            this.txt12.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // numericUpDown13
+            // txt13
             // 
-            this.numericUpDown13.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.numericUpDown13.Font = new System.Drawing.Font("宋体", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.numericUpDown13.Location = new System.Drawing.Point(971, 299);
-            this.numericUpDown13.Name = "numericUpDown13";
-            this.numericUpDown13.Size = new System.Drawing.Size(128, 53);
-            this.numericUpDown13.TabIndex = 65;
-            this.numericUpDown13.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txt13.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txt13.Font = new System.Drawing.Font("宋体", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.txt13.Location = new System.Drawing.Point(971, 299);
+            this.txt13.Name = "txt13";
+            this.txt13.Size = new System.Drawing.Size(128, 53);
+            this.txt13.TabIndex = 65;
+            this.txt13.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // numericUpDown14
+            // txt14
             // 
-            this.numericUpDown14.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.numericUpDown14.Font = new System.Drawing.Font("宋体", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.numericUpDown14.Location = new System.Drawing.Point(971, 373);
-            this.numericUpDown14.Name = "numericUpDown14";
-            this.numericUpDown14.Size = new System.Drawing.Size(128, 53);
-            this.numericUpDown14.TabIndex = 66;
-            this.numericUpDown14.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txt14.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txt14.Font = new System.Drawing.Font("宋体", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.txt14.Location = new System.Drawing.Point(971, 373);
+            this.txt14.Name = "txt14";
+            this.txt14.Size = new System.Drawing.Size(128, 53);
+            this.txt14.TabIndex = 66;
+            this.txt14.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // numericUpDown15
+            // txt15
             // 
-            this.numericUpDown15.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.numericUpDown15.Font = new System.Drawing.Font("宋体", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.numericUpDown15.Location = new System.Drawing.Point(971, 447);
-            this.numericUpDown15.Name = "numericUpDown15";
-            this.numericUpDown15.Size = new System.Drawing.Size(128, 53);
-            this.numericUpDown15.TabIndex = 67;
-            this.numericUpDown15.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txt15.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txt15.Font = new System.Drawing.Font("宋体", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.txt15.Location = new System.Drawing.Point(971, 447);
+            this.txt15.Name = "txt15";
+            this.txt15.Size = new System.Drawing.Size(128, 53);
+            this.txt15.TabIndex = 67;
+            this.txt15.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // numericUpDown16
+            // txt16
             // 
-            this.numericUpDown16.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.numericUpDown16.Font = new System.Drawing.Font("宋体", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.numericUpDown16.Location = new System.Drawing.Point(971, 521);
-            this.numericUpDown16.Name = "numericUpDown16";
-            this.numericUpDown16.Size = new System.Drawing.Size(128, 53);
-            this.numericUpDown16.TabIndex = 68;
-            this.numericUpDown16.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txt16.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txt16.Font = new System.Drawing.Font("宋体", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.txt16.Location = new System.Drawing.Point(971, 521);
+            this.txt16.Name = "txt16";
+            this.txt16.Size = new System.Drawing.Size(128, 53);
+            this.txt16.TabIndex = 68;
+            this.txt16.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // numericUpDown17
+            // txt17
             // 
-            this.numericUpDown17.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.numericUpDown17.Font = new System.Drawing.Font("宋体", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.numericUpDown17.Location = new System.Drawing.Point(971, 595);
-            this.numericUpDown17.Name = "numericUpDown17";
-            this.numericUpDown17.Size = new System.Drawing.Size(128, 53);
-            this.numericUpDown17.TabIndex = 69;
-            this.numericUpDown17.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txt17.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txt17.Font = new System.Drawing.Font("宋体", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.txt17.Location = new System.Drawing.Point(971, 595);
+            this.txt17.Name = "txt17";
+            this.txt17.Size = new System.Drawing.Size(128, 53);
+            this.txt17.TabIndex = 69;
+            this.txt17.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // SetParameterWin
             // 
@@ -791,23 +792,23 @@
             this.groupBox1.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtPump1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtPump2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtMainReliefValveP)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtReliefValveP)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown9)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown10)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown11)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown12)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown13)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown14)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown15)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown16)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown17)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt11)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt12)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt13)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt14)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt15)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt16)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt17)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -848,22 +849,22 @@
         private MetroFramework.Controls.MetroLabel metroLabel30;
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Button btnCancel;
-        private System.Windows.Forms.NumericUpDown txtPump1;
-        private System.Windows.Forms.NumericUpDown txtPump2;
-        private System.Windows.Forms.NumericUpDown txtMainReliefValveP;
-        private System.Windows.Forms.NumericUpDown txtReliefValveP;
-        private System.Windows.Forms.NumericUpDown numericUpDown5;
-        private System.Windows.Forms.NumericUpDown numericUpDown6;
-        private System.Windows.Forms.NumericUpDown numericUpDown7;
-        private System.Windows.Forms.NumericUpDown numericUpDown8;
-        private System.Windows.Forms.NumericUpDown numericUpDown9;
-        private System.Windows.Forms.NumericUpDown numericUpDown10;
-        private System.Windows.Forms.NumericUpDown numericUpDown11;
-        private System.Windows.Forms.NumericUpDown numericUpDown12;
-        private System.Windows.Forms.NumericUpDown numericUpDown13;
-        private System.Windows.Forms.NumericUpDown numericUpDown14;
-        private System.Windows.Forms.NumericUpDown numericUpDown15;
-        private System.Windows.Forms.NumericUpDown numericUpDown16;
-        private System.Windows.Forms.NumericUpDown numericUpDown17;
+        private System.Windows.Forms.NumericUpDown txt1;
+        private System.Windows.Forms.NumericUpDown txt2;
+        private System.Windows.Forms.NumericUpDown txt3;
+        private System.Windows.Forms.NumericUpDown txt4;
+        private System.Windows.Forms.NumericUpDown txt5;
+        private System.Windows.Forms.NumericUpDown txt6;
+        private System.Windows.Forms.NumericUpDown txt7;
+        private System.Windows.Forms.NumericUpDown txt8;
+        private System.Windows.Forms.NumericUpDown txt9;
+        private System.Windows.Forms.NumericUpDown txt10;
+        private System.Windows.Forms.NumericUpDown txt11;
+        private System.Windows.Forms.NumericUpDown txt12;
+        private System.Windows.Forms.NumericUpDown txt13;
+        private System.Windows.Forms.NumericUpDown txt14;
+        private System.Windows.Forms.NumericUpDown txt15;
+        private System.Windows.Forms.NumericUpDown txt16;
+        private System.Windows.Forms.NumericUpDown txt17;
     }
 }
