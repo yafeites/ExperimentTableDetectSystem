@@ -61,7 +61,7 @@
             this.metroLabel29 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel30 = new MetroFramework.Controls.MetroLabel();
             this.btnSave = new System.Windows.Forms.Button();
-            this.btnBack = new System.Windows.Forms.Button();
+            this.btnCancel = new System.Windows.Forms.Button();
             this.txtPump1 = new System.Windows.Forms.NumericUpDown();
             this.txtPump2 = new System.Windows.Forms.NumericUpDown();
             this.txtMainReliefValveP = new System.Windows.Forms.NumericUpDown();
@@ -152,7 +152,7 @@
             this.tableLayoutPanel1.Controls.Add(this.metroLabel29, 4, 8);
             this.tableLayoutPanel1.Controls.Add(this.metroLabel30, 5, 8);
             this.tableLayoutPanel1.Controls.Add(this.btnSave, 2, 9);
-            this.tableLayoutPanel1.Controls.Add(this.btnBack, 6, 9);
+            this.tableLayoutPanel1.Controls.Add(this.btnCancel, 6, 9);
             this.tableLayoutPanel1.Controls.Add(this.txtPump1, 2, 0);
             this.tableLayoutPanel1.Controls.Add(this.txtPump2, 2, 1);
             this.tableLayoutPanel1.Controls.Add(this.txtMainReliefValveP, 2, 2);
@@ -237,7 +237,7 @@
             this.metroLabel2.Name = "metroLabel2";
             this.metroLabel2.Size = new System.Drawing.Size(192, 68);
             this.metroLabel2.TabIndex = 19;
-            this.metroLabel2.Text = "主泵1";
+            this.metroLabel2.Text = "主泵1转速";
             this.metroLabel2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // metroLabel3
@@ -250,7 +250,7 @@
             this.metroLabel3.Name = "metroLabel3";
             this.metroLabel3.Size = new System.Drawing.Size(192, 68);
             this.metroLabel3.TabIndex = 20;
-            this.metroLabel3.Text = "主泵2";
+            this.metroLabel3.Text = "主泵2转速";
             this.metroLabel3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // metroLabel4
@@ -589,18 +589,19 @@
             this.btnSave.TabIndex = 51;
             this.btnSave.Text = "保存";
             this.btnSave.UseVisualStyleBackColor = false;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
-            // btnBack
+            // btnCancel
             // 
-            this.btnBack.BackColor = System.Drawing.Color.SteelBlue;
-            this.btnBack.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnBack.ForeColor = System.Drawing.Color.White;
-            this.btnBack.Location = new System.Drawing.Point(971, 669);
-            this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(128, 58);
-            this.btnBack.TabIndex = 52;
-            this.btnBack.Text = "返回";
-            this.btnBack.UseVisualStyleBackColor = false;
+            this.btnCancel.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnCancel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnCancel.ForeColor = System.Drawing.Color.White;
+            this.btnCancel.Location = new System.Drawing.Point(971, 669);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(128, 58);
+            this.btnCancel.TabIndex = 52;
+            this.btnCancel.Text = "返回";
+            this.btnCancel.UseVisualStyleBackColor = false;
             // 
             // txtPump1
             // 
@@ -846,7 +847,7 @@
         private MetroFramework.Controls.MetroLabel metroLabel29;
         private MetroFramework.Controls.MetroLabel metroLabel30;
         private System.Windows.Forms.Button btnSave;
-        private System.Windows.Forms.Button btnBack;
+        private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.NumericUpDown txtPump1;
         private System.Windows.Forms.NumericUpDown txtPump2;
         private System.Windows.Forms.NumericUpDown txtMainReliefValveP;

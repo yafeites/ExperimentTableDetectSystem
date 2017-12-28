@@ -5,6 +5,7 @@ using System.Linq;
 using System.Windows.Forms;
 
 using ExperimentTableDetectSystem.service;
+using ExperimentTableDetectSystem.util;
 
 namespace ExperimentTableDetectSystem
 {
@@ -14,12 +15,12 @@ namespace ExperimentTableDetectSystem
         /// 应用程序的主入口点。
         /// </summary>
         [STAThread]
-        static void Main()
+        static void Main(string[] args)
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             LoginWin loginwin = new LoginWin();
-           // Initialize();
+            Initialize(args);
             if (loginwin.ShowDialog()== DialogResult.OK)
             {
                 loginwin.Close();
@@ -27,9 +28,52 @@ namespace ExperimentTableDetectSystem
             }
             
         }
-        private static void Initialize()
+        private static void Initialize(string[] args)
         {
-            RecreateRecordManager.InitialDataBase();
-        }
+            bool recreate = false;
+            bool isResetDb = false;
+
+            if (args.Length > 0)
+            {
+                recreate = bool.Parse(args[0]);
+                isResetDb = bool.Parse(args[1]);
+            }
+
+          
+
+            //数据库初始化
+            try
+            {
+                if (recreate)
+                {
+                    RecreateRecordManager.InitialDataBase();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("初始化数据库表报错:" + ex.Message);
+            }
+
+            //配置初始化
+            try
+            {
+                DBHelper dbHelper = DBHelper.GetInstance();
+                if (isResetDb)
+                {
+                    ConfigManager.Initialize(dbHelper, false);
+                    ConfigManager.GetInstance().RecreateDbTable();
+                }
+                else
+                {
+                    ConfigManager.Initialize(dbHelper);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("配置初始化错误" + ex.Message);
+            }
+
+          }
+
     }
 }

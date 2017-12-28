@@ -16,22 +16,22 @@ namespace ExperimentTableDetectSystem.Windows.setParameterWin
             InitializeComponent();
         }
         #region singleton
-      //  private static object obj = new object();
+     
         private static SetParameterWin instance;
         public static SetParameterWin getInstance()
         {
             if (instance == null||instance.IsDisposed)
             {
-                //lock (obj)
-               // {
-                  //  if (instance == null)
-                    //{
                         instance = new SetParameterWin();
-                   // }
-               // }
+                  
             }
             return instance;
         }
         #endregion
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
