@@ -30,26 +30,12 @@
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.grpGate = new System.Windows.Forms.GroupBox();
-            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.chkUp = new System.Windows.Forms.CheckBox();
-            this.chkDown = new System.Windows.Forms.CheckBox();
-            this.chkForward = new System.Windows.Forms.CheckBox();
-            this.chkBack = new System.Windows.Forms.CheckBox();
-            this.grpPressureLoss = new System.Windows.Forms.GroupBox();
-            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
-            this.chkMediumPressureLoss = new System.Windows.Forms.CheckBox();
-            this.chkLiftPressureLoss = new System.Windows.Forms.CheckBox();
-            this.chkForwardPreesureLoss = new System.Windows.Forms.CheckBox();
-            this.chkBackPressureLoss = new System.Windows.Forms.CheckBox();
-            this.chkDownPressureLoss = new System.Windows.Forms.CheckBox();
-            this.grp3 = new System.Windows.Forms.GroupBox();
-            this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
-            this.chkActionCheck = new System.Windows.Forms.CheckBox();
-            this.chkSelfLockedCheck = new System.Windows.Forms.CheckBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
-            this.chkBackPressureTest = new System.Windows.Forms.CheckBox();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
+            this.chkAloneTest = new System.Windows.Forms.CheckBox();
+            this.chkLiftTest = new System.Windows.Forms.CheckBox();
+            this.chkTiltTest = new System.Windows.Forms.CheckBox();
+            this.chkLiftAndTiltTest = new System.Windows.Forms.CheckBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
             this.chkMediumLeakage = new System.Windows.Forms.CheckBox();
@@ -57,29 +43,43 @@
             this.chkTiltLeakage = new System.Windows.Forms.CheckBox();
             this.chkServiceValveLeakage1 = new System.Windows.Forms.CheckBox();
             this.chkServiceValveLeakage2 = new System.Windows.Forms.CheckBox();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
-            this.chkAloneTest = new System.Windows.Forms.CheckBox();
-            this.chkLiftTest = new System.Windows.Forms.CheckBox();
-            this.chkTiltTest = new System.Windows.Forms.CheckBox();
-            this.chkLiftAndTiltTest = new System.Windows.Forms.CheckBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
+            this.chkBackPressureTest = new System.Windows.Forms.CheckBox();
+            this.grp3 = new System.Windows.Forms.GroupBox();
+            this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
+            this.chkActionCheck = new System.Windows.Forms.CheckBox();
+            this.chkSelfLockedCheck = new System.Windows.Forms.CheckBox();
+            this.grpPressureLoss = new System.Windows.Forms.GroupBox();
+            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.chkMediumPressureLoss = new System.Windows.Forms.CheckBox();
+            this.chkLiftPressureLoss = new System.Windows.Forms.CheckBox();
+            this.chkForwardPreesureLoss = new System.Windows.Forms.CheckBox();
+            this.chkBackPressureLoss = new System.Windows.Forms.CheckBox();
+            this.chkDownPressureLoss = new System.Windows.Forms.CheckBox();
+            this.grpGate = new System.Windows.Forms.GroupBox();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.chkUp = new System.Windows.Forms.CheckBox();
+            this.chkDown = new System.Windows.Forms.CheckBox();
+            this.chkForward = new System.Windows.Forms.CheckBox();
+            this.chkBack = new System.Windows.Forms.CheckBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel8 = new System.Windows.Forms.TableLayoutPanel();
             this.btnStartTest = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
-            this.grpGate.SuspendLayout();
-            this.tableLayoutPanel2.SuspendLayout();
-            this.grpPressureLoss.SuspendLayout();
-            this.tableLayoutPanel3.SuspendLayout();
-            this.grp3.SuspendLayout();
-            this.tableLayoutPanel4.SuspendLayout();
-            this.groupBox2.SuspendLayout();
-            this.tableLayoutPanel5.SuspendLayout();
-            this.groupBox3.SuspendLayout();
-            this.tableLayoutPanel6.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.tableLayoutPanel7.SuspendLayout();
+            this.groupBox3.SuspendLayout();
+            this.tableLayoutPanel6.SuspendLayout();
+            this.groupBox2.SuspendLayout();
+            this.tableLayoutPanel5.SuspendLayout();
+            this.grp3.SuspendLayout();
+            this.tableLayoutPanel4.SuspendLayout();
+            this.grpPressureLoss.SuspendLayout();
+            this.tableLayoutPanel3.SuspendLayout();
+            this.grpGate.SuspendLayout();
+            this.tableLayoutPanel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.tableLayoutPanel8.SuspendLayout();
             this.SuspendLayout();
@@ -119,298 +119,94 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1102, 799);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
-            // grpGate
+            // groupBox4
             // 
-            this.grpGate.Controls.Add(this.tableLayoutPanel2);
-            this.grpGate.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.grpGate.Location = new System.Drawing.Point(3, 3);
-            this.grpGate.Name = "grpGate";
-            this.grpGate.Size = new System.Drawing.Size(361, 363);
-            this.grpGate.TabIndex = 0;
-            this.grpGate.TabStop = false;
-            this.grpGate.Text = "1.门架动作";
+            this.groupBox4.Controls.Add(this.tableLayoutPanel7);
+            this.groupBox4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox4.Location = new System.Drawing.Point(737, 372);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(362, 363);
+            this.groupBox4.TabIndex = 5;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "6.转向优先阀流量测试";
             // 
-            // tableLayoutPanel2
+            // tableLayoutPanel7
             // 
-            this.tableLayoutPanel2.ColumnCount = 2;
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30.70423F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 69.29577F));
-            this.tableLayoutPanel2.Controls.Add(this.chkUp, 1, 1);
-            this.tableLayoutPanel2.Controls.Add(this.chkDown, 1, 3);
-            this.tableLayoutPanel2.Controls.Add(this.chkForward, 1, 5);
-            this.tableLayoutPanel2.Controls.Add(this.chkBack, 1, 7);
-            this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 24);
-            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
-            this.tableLayoutPanel2.RowCount = 9;
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.10124F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.10124F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.10124F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.10124F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.10124F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.10124F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.10124F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.10124F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.19005F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(355, 336);
-            this.tableLayoutPanel2.TabIndex = 0;
+            this.tableLayoutPanel7.ColumnCount = 2;
+            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30.70423F));
+            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 69.29577F));
+            this.tableLayoutPanel7.Controls.Add(this.chkAloneTest, 1, 1);
+            this.tableLayoutPanel7.Controls.Add(this.chkLiftTest, 1, 3);
+            this.tableLayoutPanel7.Controls.Add(this.chkTiltTest, 1, 5);
+            this.tableLayoutPanel7.Controls.Add(this.chkLiftAndTiltTest, 1, 7);
+            this.tableLayoutPanel7.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel7.Location = new System.Drawing.Point(3, 24);
+            this.tableLayoutPanel7.Name = "tableLayoutPanel7";
+            this.tableLayoutPanel7.RowCount = 10;
+            this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 4.901961F));
+            this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.76471F));
+            this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 4.901961F));
+            this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.76471F));
+            this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 4.901961F));
+            this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.76471F));
+            this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 4.901961F));
+            this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.76471F));
+            this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 4.901961F));
+            this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.76471F));
+            this.tableLayoutPanel7.Size = new System.Drawing.Size(356, 336);
+            this.tableLayoutPanel7.TabIndex = 0;
             // 
-            // chkUp
+            // chkAloneTest
             // 
-            this.chkUp.AutoSize = true;
-            this.chkUp.Checked = true;
-            this.chkUp.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.chkUp.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.chkUp.Location = new System.Drawing.Point(112, 40);
-            this.chkUp.Name = "chkUp";
-            this.chkUp.Size = new System.Drawing.Size(240, 31);
-            this.chkUp.TabIndex = 0;
-            this.chkUp.Text = "门架上升";
-            this.chkUp.UseVisualStyleBackColor = true;
+            this.chkAloneTest.AutoSize = true;
+            this.chkAloneTest.Checked = true;
+            this.chkAloneTest.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.chkAloneTest.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.chkAloneTest.Location = new System.Drawing.Point(112, 22);
+            this.chkAloneTest.Name = "chkAloneTest";
+            this.chkAloneTest.Size = new System.Drawing.Size(241, 41);
+            this.chkAloneTest.TabIndex = 0;
+            this.chkAloneTest.Text = "单独测试";
+            this.chkAloneTest.UseVisualStyleBackColor = true;
             // 
-            // chkDown
+            // chkLiftTest
             // 
-            this.chkDown.AutoSize = true;
-            this.chkDown.Checked = true;
-            this.chkDown.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.chkDown.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.chkDown.Location = new System.Drawing.Point(112, 114);
-            this.chkDown.Name = "chkDown";
-            this.chkDown.Size = new System.Drawing.Size(240, 31);
-            this.chkDown.TabIndex = 1;
-            this.chkDown.Text = "门架下降";
-            this.chkDown.UseVisualStyleBackColor = true;
+            this.chkLiftTest.AutoSize = true;
+            this.chkLiftTest.Checked = true;
+            this.chkLiftTest.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.chkLiftTest.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.chkLiftTest.Location = new System.Drawing.Point(112, 88);
+            this.chkLiftTest.Name = "chkLiftTest";
+            this.chkLiftTest.Size = new System.Drawing.Size(241, 41);
+            this.chkLiftTest.TabIndex = 1;
+            this.chkLiftTest.Text = "起升复合测试";
+            this.chkLiftTest.UseVisualStyleBackColor = true;
             // 
-            // chkForward
+            // chkTiltTest
             // 
-            this.chkForward.AutoSize = true;
-            this.chkForward.Checked = true;
-            this.chkForward.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.chkForward.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.chkForward.Location = new System.Drawing.Point(112, 188);
-            this.chkForward.Name = "chkForward";
-            this.chkForward.Size = new System.Drawing.Size(240, 31);
-            this.chkForward.TabIndex = 2;
-            this.chkForward.Text = "门架前倾";
-            this.chkForward.UseVisualStyleBackColor = true;
+            this.chkTiltTest.AutoSize = true;
+            this.chkTiltTest.Checked = true;
+            this.chkTiltTest.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.chkTiltTest.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.chkTiltTest.Location = new System.Drawing.Point(112, 154);
+            this.chkTiltTest.Name = "chkTiltTest";
+            this.chkTiltTest.Size = new System.Drawing.Size(241, 41);
+            this.chkTiltTest.TabIndex = 2;
+            this.chkTiltTest.Text = "倾斜复合测试";
+            this.chkTiltTest.UseVisualStyleBackColor = true;
             // 
-            // chkBack
+            // chkLiftAndTiltTest
             // 
-            this.chkBack.AutoSize = true;
-            this.chkBack.Checked = true;
-            this.chkBack.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.chkBack.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.chkBack.Location = new System.Drawing.Point(112, 262);
-            this.chkBack.Name = "chkBack";
-            this.chkBack.Size = new System.Drawing.Size(240, 31);
-            this.chkBack.TabIndex = 3;
-            this.chkBack.Text = "门架后倾";
-            this.chkBack.UseVisualStyleBackColor = true;
-            // 
-            // grpPressureLoss
-            // 
-            this.grpPressureLoss.Controls.Add(this.tableLayoutPanel3);
-            this.grpPressureLoss.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.grpPressureLoss.Location = new System.Drawing.Point(370, 3);
-            this.grpPressureLoss.Name = "grpPressureLoss";
-            this.grpPressureLoss.Size = new System.Drawing.Size(361, 363);
-            this.grpPressureLoss.TabIndex = 1;
-            this.grpPressureLoss.TabStop = false;
-            this.grpPressureLoss.Text = "2.压力损失试验";
-            // 
-            // tableLayoutPanel3
-            // 
-            this.tableLayoutPanel3.ColumnCount = 2;
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30.70423F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 69.29577F));
-            this.tableLayoutPanel3.Controls.Add(this.chkMediumPressureLoss, 1, 1);
-            this.tableLayoutPanel3.Controls.Add(this.chkLiftPressureLoss, 1, 3);
-            this.tableLayoutPanel3.Controls.Add(this.chkForwardPreesureLoss, 1, 5);
-            this.tableLayoutPanel3.Controls.Add(this.chkBackPressureLoss, 1, 7);
-            this.tableLayoutPanel3.Controls.Add(this.chkDownPressureLoss, 1, 9);
-            this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(3, 24);
-            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
-            this.tableLayoutPanel3.RowCount = 10;
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 4.901961F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.76471F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 4.901961F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.76471F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 4.901961F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.76471F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 4.901961F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.76471F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 4.901961F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.76471F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(355, 336);
-            this.tableLayoutPanel3.TabIndex = 0;
-            // 
-            // chkMediumPressureLoss
-            // 
-            this.chkMediumPressureLoss.AutoSize = true;
-            this.chkMediumPressureLoss.Checked = true;
-            this.chkMediumPressureLoss.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.chkMediumPressureLoss.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.chkMediumPressureLoss.Location = new System.Drawing.Point(112, 22);
-            this.chkMediumPressureLoss.Name = "chkMediumPressureLoss";
-            this.chkMediumPressureLoss.Size = new System.Drawing.Size(240, 41);
-            this.chkMediumPressureLoss.TabIndex = 0;
-            this.chkMediumPressureLoss.Text = "中位压力损失";
-            this.chkMediumPressureLoss.UseVisualStyleBackColor = true;
-            // 
-            // chkLiftPressureLoss
-            // 
-            this.chkLiftPressureLoss.AutoSize = true;
-            this.chkLiftPressureLoss.Checked = true;
-            this.chkLiftPressureLoss.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.chkLiftPressureLoss.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.chkLiftPressureLoss.Location = new System.Drawing.Point(112, 88);
-            this.chkLiftPressureLoss.Name = "chkLiftPressureLoss";
-            this.chkLiftPressureLoss.Size = new System.Drawing.Size(240, 41);
-            this.chkLiftPressureLoss.TabIndex = 1;
-            this.chkLiftPressureLoss.Text = "起升压力损失";
-            this.chkLiftPressureLoss.UseVisualStyleBackColor = true;
-            // 
-            // chkForwardPreesureLoss
-            // 
-            this.chkForwardPreesureLoss.AutoSize = true;
-            this.chkForwardPreesureLoss.Checked = true;
-            this.chkForwardPreesureLoss.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.chkForwardPreesureLoss.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.chkForwardPreesureLoss.Location = new System.Drawing.Point(112, 154);
-            this.chkForwardPreesureLoss.Name = "chkForwardPreesureLoss";
-            this.chkForwardPreesureLoss.Size = new System.Drawing.Size(240, 41);
-            this.chkForwardPreesureLoss.TabIndex = 2;
-            this.chkForwardPreesureLoss.Text = "前倾压力损失";
-            this.chkForwardPreesureLoss.UseVisualStyleBackColor = true;
-            // 
-            // chkBackPressureLoss
-            // 
-            this.chkBackPressureLoss.AutoSize = true;
-            this.chkBackPressureLoss.Checked = true;
-            this.chkBackPressureLoss.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.chkBackPressureLoss.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.chkBackPressureLoss.Location = new System.Drawing.Point(112, 220);
-            this.chkBackPressureLoss.Name = "chkBackPressureLoss";
-            this.chkBackPressureLoss.Size = new System.Drawing.Size(240, 41);
-            this.chkBackPressureLoss.TabIndex = 3;
-            this.chkBackPressureLoss.Text = "后倾压力损失";
-            this.chkBackPressureLoss.UseVisualStyleBackColor = true;
-            // 
-            // chkDownPressureLoss
-            // 
-            this.chkDownPressureLoss.AutoSize = true;
-            this.chkDownPressureLoss.Checked = true;
-            this.chkDownPressureLoss.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.chkDownPressureLoss.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.chkDownPressureLoss.Location = new System.Drawing.Point(112, 286);
-            this.chkDownPressureLoss.Name = "chkDownPressureLoss";
-            this.chkDownPressureLoss.Size = new System.Drawing.Size(240, 47);
-            this.chkDownPressureLoss.TabIndex = 4;
-            this.chkDownPressureLoss.Text = "下降压力损失";
-            this.chkDownPressureLoss.UseVisualStyleBackColor = true;
-            // 
-            // grp3
-            // 
-            this.grp3.Controls.Add(this.tableLayoutPanel4);
-            this.grp3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.grp3.Location = new System.Drawing.Point(737, 3);
-            this.grp3.Name = "grp3";
-            this.grp3.Size = new System.Drawing.Size(362, 363);
-            this.grp3.TabIndex = 2;
-            this.grp3.TabStop = false;
-            this.grp3.Text = "3.门架动作";
-            // 
-            // tableLayoutPanel4
-            // 
-            this.tableLayoutPanel4.ColumnCount = 2;
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30.70423F));
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 69.29577F));
-            this.tableLayoutPanel4.Controls.Add(this.chkActionCheck, 1, 1);
-            this.tableLayoutPanel4.Controls.Add(this.chkSelfLockedCheck, 1, 3);
-            this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel4.Location = new System.Drawing.Point(3, 24);
-            this.tableLayoutPanel4.Name = "tableLayoutPanel4";
-            this.tableLayoutPanel4.RowCount = 7;
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.10124F));
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.10124F));
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.10124F));
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.10124F));
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.10124F));
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.10124F));
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.10124F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(356, 336);
-            this.tableLayoutPanel4.TabIndex = 0;
-            // 
-            // chkActionCheck
-            // 
-            this.chkActionCheck.AutoSize = true;
-            this.chkActionCheck.Checked = true;
-            this.chkActionCheck.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.chkActionCheck.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.chkActionCheck.Location = new System.Drawing.Point(112, 50);
-            this.chkActionCheck.Name = "chkActionCheck";
-            this.chkActionCheck.Size = new System.Drawing.Size(241, 41);
-            this.chkActionCheck.TabIndex = 0;
-            this.chkActionCheck.Text = "动作检测";
-            this.chkActionCheck.UseVisualStyleBackColor = true;
-            // 
-            // chkSelfLockedCheck
-            // 
-            this.chkSelfLockedCheck.AutoSize = true;
-            this.chkSelfLockedCheck.Checked = true;
-            this.chkSelfLockedCheck.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.chkSelfLockedCheck.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.chkSelfLockedCheck.Location = new System.Drawing.Point(112, 144);
-            this.chkSelfLockedCheck.Name = "chkSelfLockedCheck";
-            this.chkSelfLockedCheck.Size = new System.Drawing.Size(241, 41);
-            this.chkSelfLockedCheck.TabIndex = 1;
-            this.chkSelfLockedCheck.Text = "自锁检测";
-            this.chkSelfLockedCheck.UseVisualStyleBackColor = true;
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.tableLayoutPanel5);
-            this.groupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox2.Location = new System.Drawing.Point(3, 372);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(361, 363);
-            this.groupBox2.TabIndex = 3;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "4.背压试验";
-            // 
-            // tableLayoutPanel5
-            // 
-            this.tableLayoutPanel5.ColumnCount = 2;
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30.70423F));
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 69.29577F));
-            this.tableLayoutPanel5.Controls.Add(this.chkBackPressureTest, 1, 1);
-            this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel5.Location = new System.Drawing.Point(3, 24);
-            this.tableLayoutPanel5.Name = "tableLayoutPanel5";
-            this.tableLayoutPanel5.RowCount = 7;
-            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.10124F));
-            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.10124F));
-            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.10124F));
-            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.10124F));
-            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.10124F));
-            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.10124F));
-            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.10124F));
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(355, 336);
-            this.tableLayoutPanel5.TabIndex = 0;
-            // 
-            // chkBackPressureTest
-            // 
-            this.chkBackPressureTest.AutoSize = true;
-            this.chkBackPressureTest.Checked = true;
-            this.chkBackPressureTest.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.chkBackPressureTest.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.chkBackPressureTest.Location = new System.Drawing.Point(112, 50);
-            this.chkBackPressureTest.Name = "chkBackPressureTest";
-            this.chkBackPressureTest.Size = new System.Drawing.Size(240, 41);
-            this.chkBackPressureTest.TabIndex = 0;
-            this.chkBackPressureTest.Text = "背压试验";
-            this.chkBackPressureTest.UseVisualStyleBackColor = true;
+            this.chkLiftAndTiltTest.AutoSize = true;
+            this.chkLiftAndTiltTest.Checked = true;
+            this.chkLiftAndTiltTest.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.chkLiftAndTiltTest.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.chkLiftAndTiltTest.Location = new System.Drawing.Point(112, 220);
+            this.chkLiftAndTiltTest.Name = "chkLiftAndTiltTest";
+            this.chkLiftAndTiltTest.Size = new System.Drawing.Size(241, 41);
+            this.chkLiftAndTiltTest.TabIndex = 3;
+            this.chkLiftAndTiltTest.Text = "起升+倾斜复合测试";
+            this.chkLiftAndTiltTest.UseVisualStyleBackColor = true;
             // 
             // groupBox3
             // 
@@ -515,94 +311,298 @@
             this.chkServiceValveLeakage2.Text = "备用阀2工作位置内泄漏检测";
             this.chkServiceValveLeakage2.UseVisualStyleBackColor = true;
             // 
-            // groupBox4
+            // groupBox2
             // 
-            this.groupBox4.Controls.Add(this.tableLayoutPanel7);
-            this.groupBox4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox4.Location = new System.Drawing.Point(737, 372);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(362, 363);
-            this.groupBox4.TabIndex = 5;
-            this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "6.转向优先阀流量测试";
+            this.groupBox2.Controls.Add(this.tableLayoutPanel5);
+            this.groupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox2.Location = new System.Drawing.Point(3, 372);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(361, 363);
+            this.groupBox2.TabIndex = 3;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "4.背压试验";
             // 
-            // tableLayoutPanel7
+            // tableLayoutPanel5
             // 
-            this.tableLayoutPanel7.ColumnCount = 2;
-            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30.70423F));
-            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 69.29577F));
-            this.tableLayoutPanel7.Controls.Add(this.chkAloneTest, 1, 1);
-            this.tableLayoutPanel7.Controls.Add(this.chkLiftTest, 1, 3);
-            this.tableLayoutPanel7.Controls.Add(this.chkTiltTest, 1, 5);
-            this.tableLayoutPanel7.Controls.Add(this.chkLiftAndTiltTest, 1, 7);
-            this.tableLayoutPanel7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel7.Location = new System.Drawing.Point(3, 24);
-            this.tableLayoutPanel7.Name = "tableLayoutPanel7";
-            this.tableLayoutPanel7.RowCount = 10;
-            this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 4.901961F));
-            this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.76471F));
-            this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 4.901961F));
-            this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.76471F));
-            this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 4.901961F));
-            this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.76471F));
-            this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 4.901961F));
-            this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.76471F));
-            this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 4.901961F));
-            this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.76471F));
-            this.tableLayoutPanel7.Size = new System.Drawing.Size(356, 336);
-            this.tableLayoutPanel7.TabIndex = 0;
+            this.tableLayoutPanel5.ColumnCount = 2;
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30.70423F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 69.29577F));
+            this.tableLayoutPanel5.Controls.Add(this.chkBackPressureTest, 1, 1);
+            this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel5.Location = new System.Drawing.Point(3, 24);
+            this.tableLayoutPanel5.Name = "tableLayoutPanel5";
+            this.tableLayoutPanel5.RowCount = 7;
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.10124F));
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.10124F));
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.10124F));
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.10124F));
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.10124F));
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.10124F));
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.10124F));
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(355, 336);
+            this.tableLayoutPanel5.TabIndex = 0;
             // 
-            // chkAloneTest
+            // chkBackPressureTest
             // 
-            this.chkAloneTest.AutoSize = true;
-            this.chkAloneTest.Checked = true;
-            this.chkAloneTest.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.chkAloneTest.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.chkAloneTest.Location = new System.Drawing.Point(112, 22);
-            this.chkAloneTest.Name = "chkAloneTest";
-            this.chkAloneTest.Size = new System.Drawing.Size(241, 41);
-            this.chkAloneTest.TabIndex = 0;
-            this.chkAloneTest.Text = "单独测试";
-            this.chkAloneTest.UseVisualStyleBackColor = true;
+            this.chkBackPressureTest.AutoSize = true;
+            this.chkBackPressureTest.Checked = true;
+            this.chkBackPressureTest.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.chkBackPressureTest.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.chkBackPressureTest.Location = new System.Drawing.Point(112, 50);
+            this.chkBackPressureTest.Name = "chkBackPressureTest";
+            this.chkBackPressureTest.Size = new System.Drawing.Size(240, 41);
+            this.chkBackPressureTest.TabIndex = 0;
+            this.chkBackPressureTest.Text = "背压试验";
+            this.chkBackPressureTest.UseVisualStyleBackColor = true;
             // 
-            // chkLiftTest
+            // grp3
             // 
-            this.chkLiftTest.AutoSize = true;
-            this.chkLiftTest.Checked = true;
-            this.chkLiftTest.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.chkLiftTest.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.chkLiftTest.Location = new System.Drawing.Point(112, 88);
-            this.chkLiftTest.Name = "chkLiftTest";
-            this.chkLiftTest.Size = new System.Drawing.Size(241, 41);
-            this.chkLiftTest.TabIndex = 1;
-            this.chkLiftTest.Text = "起升复合测试";
-            this.chkLiftTest.UseVisualStyleBackColor = true;
+            this.grp3.Controls.Add(this.tableLayoutPanel4);
+            this.grp3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.grp3.Location = new System.Drawing.Point(737, 3);
+            this.grp3.Name = "grp3";
+            this.grp3.Size = new System.Drawing.Size(362, 363);
+            this.grp3.TabIndex = 2;
+            this.grp3.TabStop = false;
+            this.grp3.Text = "3.前倾检测";
             // 
-            // chkTiltTest
+            // tableLayoutPanel4
             // 
-            this.chkTiltTest.AutoSize = true;
-            this.chkTiltTest.Checked = true;
-            this.chkTiltTest.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.chkTiltTest.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.chkTiltTest.Location = new System.Drawing.Point(112, 154);
-            this.chkTiltTest.Name = "chkTiltTest";
-            this.chkTiltTest.Size = new System.Drawing.Size(241, 41);
-            this.chkTiltTest.TabIndex = 2;
-            this.chkTiltTest.Text = "倾斜复合测试";
-            this.chkTiltTest.UseVisualStyleBackColor = true;
+            this.tableLayoutPanel4.ColumnCount = 2;
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30.70423F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 69.29577F));
+            this.tableLayoutPanel4.Controls.Add(this.chkActionCheck, 1, 1);
+            this.tableLayoutPanel4.Controls.Add(this.chkSelfLockedCheck, 1, 3);
+            this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(3, 24);
+            this.tableLayoutPanel4.Name = "tableLayoutPanel4";
+            this.tableLayoutPanel4.RowCount = 7;
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.10124F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.10124F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.10124F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.10124F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.10124F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.10124F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.10124F));
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(356, 336);
+            this.tableLayoutPanel4.TabIndex = 0;
             // 
-            // chkLiftAndTiltTest
+            // chkActionCheck
             // 
-            this.chkLiftAndTiltTest.AutoSize = true;
-            this.chkLiftAndTiltTest.Checked = true;
-            this.chkLiftAndTiltTest.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.chkLiftAndTiltTest.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.chkLiftAndTiltTest.Location = new System.Drawing.Point(112, 220);
-            this.chkLiftAndTiltTest.Name = "chkLiftAndTiltTest";
-            this.chkLiftAndTiltTest.Size = new System.Drawing.Size(241, 41);
-            this.chkLiftAndTiltTest.TabIndex = 3;
-            this.chkLiftAndTiltTest.Text = "起升+倾斜复合测试";
-            this.chkLiftAndTiltTest.UseVisualStyleBackColor = true;
+            this.chkActionCheck.AutoSize = true;
+            this.chkActionCheck.Checked = true;
+            this.chkActionCheck.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.chkActionCheck.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.chkActionCheck.Location = new System.Drawing.Point(112, 50);
+            this.chkActionCheck.Name = "chkActionCheck";
+            this.chkActionCheck.Size = new System.Drawing.Size(241, 41);
+            this.chkActionCheck.TabIndex = 0;
+            this.chkActionCheck.Text = "动作检测";
+            this.chkActionCheck.UseVisualStyleBackColor = true;
+            // 
+            // chkSelfLockedCheck
+            // 
+            this.chkSelfLockedCheck.AutoSize = true;
+            this.chkSelfLockedCheck.Checked = true;
+            this.chkSelfLockedCheck.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.chkSelfLockedCheck.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.chkSelfLockedCheck.Location = new System.Drawing.Point(112, 144);
+            this.chkSelfLockedCheck.Name = "chkSelfLockedCheck";
+            this.chkSelfLockedCheck.Size = new System.Drawing.Size(241, 41);
+            this.chkSelfLockedCheck.TabIndex = 1;
+            this.chkSelfLockedCheck.Text = "自锁检测";
+            this.chkSelfLockedCheck.UseVisualStyleBackColor = true;
+            // 
+            // grpPressureLoss
+            // 
+            this.grpPressureLoss.Controls.Add(this.tableLayoutPanel3);
+            this.grpPressureLoss.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.grpPressureLoss.Location = new System.Drawing.Point(370, 3);
+            this.grpPressureLoss.Name = "grpPressureLoss";
+            this.grpPressureLoss.Size = new System.Drawing.Size(361, 363);
+            this.grpPressureLoss.TabIndex = 1;
+            this.grpPressureLoss.TabStop = false;
+            this.grpPressureLoss.Text = "2.压力损失试验";
+            // 
+            // tableLayoutPanel3
+            // 
+            this.tableLayoutPanel3.ColumnCount = 2;
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30.70423F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 69.29577F));
+            this.tableLayoutPanel3.Controls.Add(this.chkMediumPressureLoss, 1, 1);
+            this.tableLayoutPanel3.Controls.Add(this.chkLiftPressureLoss, 1, 3);
+            this.tableLayoutPanel3.Controls.Add(this.chkForwardPreesureLoss, 1, 5);
+            this.tableLayoutPanel3.Controls.Add(this.chkBackPressureLoss, 1, 7);
+            this.tableLayoutPanel3.Controls.Add(this.chkDownPressureLoss, 1, 9);
+            this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(3, 24);
+            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
+            this.tableLayoutPanel3.RowCount = 10;
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 4.901961F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.76471F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 4.901961F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.76471F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 4.901961F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.76471F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 4.901961F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.76471F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 4.901961F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.76471F));
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(355, 336);
+            this.tableLayoutPanel3.TabIndex = 0;
+            // 
+            // chkMediumPressureLoss
+            // 
+            this.chkMediumPressureLoss.AutoSize = true;
+            this.chkMediumPressureLoss.Checked = true;
+            this.chkMediumPressureLoss.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.chkMediumPressureLoss.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.chkMediumPressureLoss.Location = new System.Drawing.Point(112, 22);
+            this.chkMediumPressureLoss.Name = "chkMediumPressureLoss";
+            this.chkMediumPressureLoss.Size = new System.Drawing.Size(240, 41);
+            this.chkMediumPressureLoss.TabIndex = 0;
+            this.chkMediumPressureLoss.Text = "中位压力损失";
+            this.chkMediumPressureLoss.UseVisualStyleBackColor = true;
+            // 
+            // chkLiftPressureLoss
+            // 
+            this.chkLiftPressureLoss.AutoSize = true;
+            this.chkLiftPressureLoss.Checked = true;
+            this.chkLiftPressureLoss.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.chkLiftPressureLoss.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.chkLiftPressureLoss.Location = new System.Drawing.Point(112, 88);
+            this.chkLiftPressureLoss.Name = "chkLiftPressureLoss";
+            this.chkLiftPressureLoss.Size = new System.Drawing.Size(240, 41);
+            this.chkLiftPressureLoss.TabIndex = 1;
+            this.chkLiftPressureLoss.Text = "起升压力损失";
+            this.chkLiftPressureLoss.UseVisualStyleBackColor = true;
+            // 
+            // chkForwardPreesureLoss
+            // 
+            this.chkForwardPreesureLoss.AutoSize = true;
+            this.chkForwardPreesureLoss.Checked = true;
+            this.chkForwardPreesureLoss.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.chkForwardPreesureLoss.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.chkForwardPreesureLoss.Location = new System.Drawing.Point(112, 154);
+            this.chkForwardPreesureLoss.Name = "chkForwardPreesureLoss";
+            this.chkForwardPreesureLoss.Size = new System.Drawing.Size(240, 41);
+            this.chkForwardPreesureLoss.TabIndex = 2;
+            this.chkForwardPreesureLoss.Text = "前倾压力损失";
+            this.chkForwardPreesureLoss.UseVisualStyleBackColor = true;
+            // 
+            // chkBackPressureLoss
+            // 
+            this.chkBackPressureLoss.AutoSize = true;
+            this.chkBackPressureLoss.Checked = true;
+            this.chkBackPressureLoss.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.chkBackPressureLoss.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.chkBackPressureLoss.Location = new System.Drawing.Point(112, 220);
+            this.chkBackPressureLoss.Name = "chkBackPressureLoss";
+            this.chkBackPressureLoss.Size = new System.Drawing.Size(240, 41);
+            this.chkBackPressureLoss.TabIndex = 3;
+            this.chkBackPressureLoss.Text = "后倾压力损失";
+            this.chkBackPressureLoss.UseVisualStyleBackColor = true;
+            // 
+            // chkDownPressureLoss
+            // 
+            this.chkDownPressureLoss.AutoSize = true;
+            this.chkDownPressureLoss.Checked = true;
+            this.chkDownPressureLoss.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.chkDownPressureLoss.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.chkDownPressureLoss.Location = new System.Drawing.Point(112, 286);
+            this.chkDownPressureLoss.Name = "chkDownPressureLoss";
+            this.chkDownPressureLoss.Size = new System.Drawing.Size(240, 47);
+            this.chkDownPressureLoss.TabIndex = 4;
+            this.chkDownPressureLoss.Text = "下降压力损失";
+            this.chkDownPressureLoss.UseVisualStyleBackColor = true;
+            // 
+            // grpGate
+            // 
+            this.grpGate.Controls.Add(this.tableLayoutPanel2);
+            this.grpGate.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.grpGate.Location = new System.Drawing.Point(3, 3);
+            this.grpGate.Name = "grpGate";
+            this.grpGate.Size = new System.Drawing.Size(361, 363);
+            this.grpGate.TabIndex = 0;
+            this.grpGate.TabStop = false;
+            this.grpGate.Text = "1.门架动作";
+            // 
+            // tableLayoutPanel2
+            // 
+            this.tableLayoutPanel2.ColumnCount = 2;
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30.70423F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 69.29577F));
+            this.tableLayoutPanel2.Controls.Add(this.chkUp, 1, 1);
+            this.tableLayoutPanel2.Controls.Add(this.chkDown, 1, 3);
+            this.tableLayoutPanel2.Controls.Add(this.chkForward, 1, 5);
+            this.tableLayoutPanel2.Controls.Add(this.chkBack, 1, 7);
+            this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 24);
+            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
+            this.tableLayoutPanel2.RowCount = 9;
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.10124F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.10124F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.10124F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.10124F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.10124F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.10124F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.10124F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.10124F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.19005F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(355, 336);
+            this.tableLayoutPanel2.TabIndex = 0;
+            // 
+            // chkUp
+            // 
+            this.chkUp.AutoSize = true;
+            this.chkUp.Checked = true;
+            this.chkUp.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.chkUp.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.chkUp.Location = new System.Drawing.Point(112, 40);
+            this.chkUp.Name = "chkUp";
+            this.chkUp.Size = new System.Drawing.Size(240, 31);
+            this.chkUp.TabIndex = 0;
+            this.chkUp.Text = "门架上升";
+            this.chkUp.UseVisualStyleBackColor = true;
+            // 
+            // chkDown
+            // 
+            this.chkDown.AutoSize = true;
+            this.chkDown.Checked = true;
+            this.chkDown.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.chkDown.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.chkDown.Location = new System.Drawing.Point(112, 114);
+            this.chkDown.Name = "chkDown";
+            this.chkDown.Size = new System.Drawing.Size(240, 31);
+            this.chkDown.TabIndex = 1;
+            this.chkDown.Text = "门架下降";
+            this.chkDown.UseVisualStyleBackColor = true;
+            // 
+            // chkForward
+            // 
+            this.chkForward.AutoSize = true;
+            this.chkForward.Checked = true;
+            this.chkForward.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.chkForward.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.chkForward.Location = new System.Drawing.Point(112, 188);
+            this.chkForward.Name = "chkForward";
+            this.chkForward.Size = new System.Drawing.Size(240, 31);
+            this.chkForward.TabIndex = 2;
+            this.chkForward.Text = "门架前倾";
+            this.chkForward.UseVisualStyleBackColor = true;
+            // 
+            // chkBack
+            // 
+            this.chkBack.AutoSize = true;
+            this.chkBack.Checked = true;
+            this.chkBack.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.chkBack.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.chkBack.Location = new System.Drawing.Point(112, 262);
+            this.chkBack.Name = "chkBack";
+            this.chkBack.Size = new System.Drawing.Size(240, 31);
+            this.chkBack.TabIndex = 3;
+            this.chkBack.Text = "门架后倾";
+            this.chkBack.UseVisualStyleBackColor = true;
             // 
             // panel1
             // 
@@ -658,24 +658,24 @@
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.groupBox1.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
-            this.grpGate.ResumeLayout(false);
-            this.tableLayoutPanel2.ResumeLayout(false);
-            this.tableLayoutPanel2.PerformLayout();
-            this.grpPressureLoss.ResumeLayout(false);
-            this.tableLayoutPanel3.ResumeLayout(false);
-            this.tableLayoutPanel3.PerformLayout();
-            this.grp3.ResumeLayout(false);
-            this.tableLayoutPanel4.ResumeLayout(false);
-            this.tableLayoutPanel4.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.tableLayoutPanel5.ResumeLayout(false);
-            this.tableLayoutPanel5.PerformLayout();
-            this.groupBox3.ResumeLayout(false);
-            this.tableLayoutPanel6.ResumeLayout(false);
-            this.tableLayoutPanel6.PerformLayout();
             this.groupBox4.ResumeLayout(false);
             this.tableLayoutPanel7.ResumeLayout(false);
             this.tableLayoutPanel7.PerformLayout();
+            this.groupBox3.ResumeLayout(false);
+            this.tableLayoutPanel6.ResumeLayout(false);
+            this.tableLayoutPanel6.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.tableLayoutPanel5.ResumeLayout(false);
+            this.tableLayoutPanel5.PerformLayout();
+            this.grp3.ResumeLayout(false);
+            this.tableLayoutPanel4.ResumeLayout(false);
+            this.tableLayoutPanel4.PerformLayout();
+            this.grpPressureLoss.ResumeLayout(false);
+            this.tableLayoutPanel3.ResumeLayout(false);
+            this.tableLayoutPanel3.PerformLayout();
+            this.grpGate.ResumeLayout(false);
+            this.tableLayoutPanel2.ResumeLayout(false);
+            this.tableLayoutPanel2.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.tableLayoutPanel8.ResumeLayout(false);
             this.ResumeLayout(false);

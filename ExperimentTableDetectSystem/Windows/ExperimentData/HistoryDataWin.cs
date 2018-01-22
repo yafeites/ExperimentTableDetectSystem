@@ -15,5 +15,10 @@ namespace ExperimentTableDetectSystem.Windows.ExperimentData
         {
             InitializeComponent();
         }
+
+        private void HistoryDataWin_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

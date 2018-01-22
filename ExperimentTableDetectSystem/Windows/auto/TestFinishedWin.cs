@@ -30,5 +30,8 @@ namespace ExperimentTableDetectSystem.Windows.auto
             ManualNumberInput win = ManualNumberInput.getInstance();
             win.Show();
         }
+
+      
+       
     }
 }

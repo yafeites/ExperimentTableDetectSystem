@@ -91,5 +91,7 @@ namespace ExperimentTableDetectSystem.Windows
                 System.Environment.Exit(0);
             }
         }
+
+      
     }
 }
