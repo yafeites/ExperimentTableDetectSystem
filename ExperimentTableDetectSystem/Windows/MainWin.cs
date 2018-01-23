@@ -11,6 +11,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using ExperimentTableDetectSystem.entity;
+using ExperimentTableDetectSystem.Windows.ExperimentData;
 
 namespace ExperimentTableDetectSystem.Windows
 {
@@ -90,6 +91,12 @@ namespace ExperimentTableDetectSystem.Windows
                
                 System.Environment.Exit(0);
             }
+        }
+
+        private void btnCurrentData_Click(object sender, EventArgs e)
+        {
+            CurrentDataWin win = new CurrentDataWin();
+            win.Show();
         }
 
       

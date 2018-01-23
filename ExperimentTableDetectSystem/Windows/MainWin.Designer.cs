@@ -36,7 +36,6 @@
             this.btnAutoExperiment = new System.Windows.Forms.ToolStripMenuItem();
             this.btnExperimentdata = new System.Windows.Forms.ToolStripMenuItem();
             this.btnCurrentData = new System.Windows.Forms.ToolStripMenuItem();
-            this.btnHistoryData = new System.Windows.Forms.ToolStripMenuItem();
             this.btnDataAnalysis = new System.Windows.Forms.ToolStripMenuItem();
             this.btnAnalysisResult = new System.Windows.Forms.ToolStripMenuItem();
             this.btnExit = new System.Windows.Forms.ToolStripMenuItem();
@@ -113,8 +112,7 @@
             // btnExperimentdata
             // 
             this.btnExperimentdata.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.btnCurrentData,
-            this.btnHistoryData});
+            this.btnCurrentData});
             this.btnExperimentdata.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnExperimentdata.ForeColor = System.Drawing.Color.White;
             this.btnExperimentdata.Name = "btnExperimentdata";
@@ -126,16 +124,9 @@
             this.btnCurrentData.BackColor = System.Drawing.Color.SteelBlue;
             this.btnCurrentData.ForeColor = System.Drawing.Color.White;
             this.btnCurrentData.Name = "btnCurrentData";
-            this.btnCurrentData.Size = new System.Drawing.Size(164, 26);
-            this.btnCurrentData.Text = "当前数据";
-            // 
-            // btnHistoryData
-            // 
-            this.btnHistoryData.BackColor = System.Drawing.Color.SteelBlue;
-            this.btnHistoryData.ForeColor = System.Drawing.Color.White;
-            this.btnHistoryData.Name = "btnHistoryData";
-            this.btnHistoryData.Size = new System.Drawing.Size(164, 26);
-            this.btnHistoryData.Text = "历史数据";
+            this.btnCurrentData.Size = new System.Drawing.Size(181, 26);
+            this.btnCurrentData.Text = "数据查询";
+            this.btnCurrentData.Click += new System.EventHandler(this.btnCurrentData_Click);
             // 
             // btnDataAnalysis
             // 
@@ -192,7 +183,6 @@
         private System.Windows.Forms.ToolStripMenuItem btnSetParameter;
         private System.Windows.Forms.ToolStripMenuItem btnExperimentdata;
         private System.Windows.Forms.ToolStripMenuItem btnCurrentData;
-        private System.Windows.Forms.ToolStripMenuItem btnHistoryData;
         private System.Windows.Forms.ToolStripMenuItem btnExit;
         private System.Windows.Forms.ToolStripMenuItem btnExperiment;
         private System.Windows.Forms.ToolStripMenuItem btnDataAnalysis;

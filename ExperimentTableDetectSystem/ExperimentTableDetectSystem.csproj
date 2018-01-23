@@ -63,6 +63,7 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="service\ConfigManager.cs" />
+    <Compile Include="service\OperateDb.cs" />
     <Compile Include="service\RecreateRecordManager.cs" />
     <Compile Include="service\UserRightManager.cs" />
     <Compile Include="util\DBHelper.cs" />

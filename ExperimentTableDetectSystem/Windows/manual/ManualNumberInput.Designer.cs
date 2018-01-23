@@ -56,7 +56,7 @@
             // 
             this.btnConfirm.BackColor = System.Drawing.Color.SteelBlue;
             this.btnConfirm.ForeColor = System.Drawing.Color.White;
-            this.btnConfirm.Location = new System.Drawing.Point(225, 274);
+            this.btnConfirm.Location = new System.Drawing.Point(209, 267);
             this.btnConfirm.Name = "btnConfirm";
             this.btnConfirm.Size = new System.Drawing.Size(133, 53);
             this.btnConfirm.TabIndex = 2;
@@ -68,11 +68,11 @@
             // 
             this.button1.BackColor = System.Drawing.Color.SteelBlue;
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(371, 376);
+            this.button1.Location = new System.Drawing.Point(363, 341);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(133, 53);
             this.button1.TabIndex = 3;
-            this.button1.Text = "删除表";
+            this.button1.Text = "delete";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
