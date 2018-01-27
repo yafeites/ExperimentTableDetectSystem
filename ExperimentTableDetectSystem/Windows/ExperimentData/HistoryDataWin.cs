@@ -12,7 +12,9 @@ namespace ExperimentTableDetectSystem.Windows.ExperimentData
 {
     public partial class HistoryDataWin : MetroFramework.Forms.MetroForm
     {//时间列应为datetime类型
-        public string strname;
+        public string productId;
+        public int N;
+
         
         public HistoryDataWin()
         {
@@ -22,18 +24,24 @@ namespace ExperimentTableDetectSystem.Windows.ExperimentData
 
         private void HistoryDataWin_Load(object sender, EventArgs e)
         {
-            strname = CurrentDataWin.name;
-            this.Text = strname + "的历史数据";
-            string sql = string.Format("select * from {0}", strname);
-            OperateDb.LoadData(sql, dgv);
+            this.productId = DataSearchWin.id;
+            this.N = DataSearchWin.n;
+          //  string sqlstr = "select * from tbProductId where Id=" + "'" + txtValveId.Text + "'";
+            string sql = string.Format("select * from valvef1 where productId="+"'"+productId+"'" +"and n={0}",N);
+            try
+            {
+              DataTable dt= OperateDb.LoadData(sql, dgv);
+                if (dt.Rows.Count == 0) { MessageBox.Show("不存在此项测试数据"); }
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("搜素数据失败，请检查输入合适；或未进行此项测试。" + ex.Message);
+            }
 
 
         }
 
-        private void btnSearch_Click(object sender, EventArgs e)
-        {
-
-        }
+       
 
         private void dgv_RowStateChanged(object sender, DataGridViewRowStateChangedEventArgs e)
         {

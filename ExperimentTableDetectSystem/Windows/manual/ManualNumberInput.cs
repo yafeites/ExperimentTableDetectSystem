@@ -14,7 +14,9 @@ namespace ExperimentTableDetectSystem.Windows.manual
     public partial class ManualNumberInput : MetroFramework.Forms.MetroForm
     {
         private DBHelper dbhelper=DBHelper.GetInstance();
-        int i=1;
+       // DataStoreManager dataStoreManager;
+       private int i=1;
+        public static int n = -1;
         #region singleton
         private static ManualNumberInput instance;
        
@@ -28,6 +30,7 @@ namespace ExperimentTableDetectSystem.Windows.manual
             return instance;
         }
         #endregion
+
         private  string valveid;
         public static string id;
         public  string Valveid
@@ -42,18 +45,25 @@ namespace ExperimentTableDetectSystem.Windows.manual
                 valveid = value;
             }
         }
+        private string SendCompany;
+        public static string company;
 
         private ManualNumberInput()
         {
             InitializeComponent();
 
         }
-
+        /// <summary>
+        /// 输入编号，发往厂家，插入到表tbProductId
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnConfirm_Click(object sender, EventArgs e)
         {
            this.valveid = txtValveId.Text;
             id = this.valveid;
-          
+            this.SendCompany = txtCompany.Text;
+            company = this.SendCompany;
             string sqlstr = "select * from tbProductId where Id="+"'"+txtValveId.Text+"'" ;
 
             
@@ -69,24 +79,18 @@ namespace ExperimentTableDetectSystem.Windows.manual
                  MessageBox.Show("这是第"+i.ToString()+"测试。");
              
             }
-
+            n = i;
 
             try
             {
-                RecreateRecordManager.AddNewId(id, i);
+                RecreateRecordManager.AddNewId(id, i,company);
             }
             catch (Exception ex)
             {
                 MessageBox.Show("加入阀编号表错误" + ex.Message);
             }
-            try
-            {
-                RecreateRecordManager.CreateValveTable(id + "第" + i.ToString()+"次");
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message + "建立阀每个试验数据表错误");
-            }
+            //接收数据插入到测试数据表里，14个表
+           // dataStoreManager.Insertf1();
 
 
             this.Close();
@@ -95,31 +99,6 @@ namespace ExperimentTableDetectSystem.Windows.manual
             win.Show();
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            del();
-        }
-        private void del()
-        {
-            string[] s = new string[13];
-            string ss = "valve1第3次f";
-            for (int i = 1; i < 13; i++)
-            {
-                s[i] = ss + i.ToString();
-            }
-            try
-            {
-                for (int i = 1; i < 13; i++)
-                {
-                    RecreateRecordManager.deleteTable(s[i]);
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message + "删表出现失败");
-            }
-
-            MessageBox.Show("删除成功.");
-        }
+      
     }
 }

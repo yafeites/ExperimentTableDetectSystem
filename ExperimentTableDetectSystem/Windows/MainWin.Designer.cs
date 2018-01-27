@@ -124,7 +124,7 @@
             this.btnCurrentData.BackColor = System.Drawing.Color.SteelBlue;
             this.btnCurrentData.ForeColor = System.Drawing.Color.White;
             this.btnCurrentData.Name = "btnCurrentData";
-            this.btnCurrentData.Size = new System.Drawing.Size(181, 26);
+            this.btnCurrentData.Size = new System.Drawing.Size(164, 26);
             this.btnCurrentData.Text = "数据查询";
             this.btnCurrentData.Click += new System.EventHandler(this.btnCurrentData_Click);
             // 
@@ -170,6 +170,7 @@
             this.Text = "欢迎使用叉车液压多路阀自动检测系统";
             this.TextAlign = System.Windows.Forms.VisualStyles.HorizontalAlign.Center;
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.MainWin_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);

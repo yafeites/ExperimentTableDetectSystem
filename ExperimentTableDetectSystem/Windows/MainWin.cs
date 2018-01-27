@@ -95,10 +95,17 @@ namespace ExperimentTableDetectSystem.Windows
 
         private void btnCurrentData_Click(object sender, EventArgs e)
         {
-            CurrentDataWin win = new CurrentDataWin();
+            DataSearchWin win = new DataSearchWin();
             win.Show();
         }
 
-      
+        private void MainWin_Load(object sender, EventArgs e)
+        {
+            try { DataStoreManager.Initialize(); }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message + "数据保存类初始化错误。");
+            }
+        }
     }
 }

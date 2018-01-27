@@ -63,9 +63,19 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="service\ConfigManager.cs" />
+    <Compile Include="service\DataReceiveManager.cs" />
+    <Compile Include="service\DataSendManager.cs" />
+    <Compile Include="service\DataStoreManager.cs" />
     <Compile Include="service\OperateDb.cs" />
     <Compile Include="service\RecreateRecordManager.cs" />
+    <Compile Include="service\SearchHelper.cs" />
     <Compile Include="service\UserRightManager.cs" />
+    <Compile Include="testWin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="testWin.Designer.cs">
+      <DependentUpon>testWin.cs</DependentUpon>
+    </Compile>
     <Compile Include="util\DBHelper.cs" />
     <Compile Include="Windows\auto\autoDataDisplayWin.cs">
       <SubType>Form</SubType>
@@ -91,11 +101,11 @@
     <Compile Include="Windows\dataAnalysis\dataAnalysisWin.Designer.cs">
       <DependentUpon>dataAnalysisWin.cs</DependentUpon>
     </Compile>
-    <Compile Include="Windows\ExperimentData\CurrentDataWin.cs">
+    <Compile Include="Windows\ExperimentData\DataSearchWin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Windows\ExperimentData\CurrentDataWin.Designer.cs">
-      <DependentUpon>CurrentDataWin.cs</DependentUpon>
+    <Compile Include="Windows\ExperimentData\DataSearchWin.Designer.cs">
+      <DependentUpon>DataSearchWin.cs</DependentUpon>
     </Compile>
     <Compile Include="Windows\ExperimentData\HistoryDataWin.cs">
       <SubType>Form</SubType>
@@ -151,6 +161,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="testWin.resx">
+      <DependentUpon>testWin.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Windows\auto\autoDataDisplayWin.resx">
       <DependentUpon>autoDataDisplayWin.cs</DependentUpon>
     </EmbeddedResource>
@@ -163,8 +176,8 @@
     <EmbeddedResource Include="Windows\dataAnalysis\dataAnalysisWin.resx">
       <DependentUpon>dataAnalysisWin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Windows\ExperimentData\CurrentDataWin.resx">
-      <DependentUpon>CurrentDataWin.cs</DependentUpon>
+    <EmbeddedResource Include="Windows\ExperimentData\DataSearchWin.resx">
+      <DependentUpon>DataSearchWin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Windows\ExperimentData\HistoryDataWin.resx">
       <DependentUpon>HistoryDataWin.cs</DependentUpon>

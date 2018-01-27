@@ -1,6 +1,6 @@
 ﻿namespace ExperimentTableDetectSystem.Windows.ExperimentData
 {
-    partial class CurrentDataWin
+    partial class DataSearchWin
     {
         /// <summary>
         /// Required designer variable.
@@ -143,7 +143,7 @@
             this.textBox2.Size = new System.Drawing.Size(100, 28);
             this.textBox2.TabIndex = 8;
             // 
-            // CurrentDataWin
+            // DataSearchWin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -161,7 +161,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.MaximizeBox = false;
             this.Movable = false;
-            this.Name = "CurrentDataWin";
+            this.Name = "DataSearchWin";
             this.Padding = new System.Windows.Forms.Padding(22, 72, 22, 24);
             this.Resizable = false;
             this.Text = "实验数据查询";

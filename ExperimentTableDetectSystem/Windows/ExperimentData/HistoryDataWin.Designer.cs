@@ -41,7 +41,6 @@
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.dgv = new System.Windows.Forms.DataGridView();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnSearch = new System.Windows.Forms.Button();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -51,6 +50,8 @@
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -65,7 +66,6 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 7.220217F));
             this.tableLayoutPanel1.Controls.Add(this.dgv, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.pictureBox1, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.btnSearch, 2, 2);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(22, 72);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -98,7 +98,9 @@
             this.Column6,
             this.Column7,
             this.Column8,
-            this.Column9});
+            this.Column9,
+            this.Column10,
+            this.Column11});
             this.tableLayoutPanel1.SetColumnSpan(this.dgv, 4);
             this.dgv.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgv.Location = new System.Drawing.Point(3, 64);
@@ -119,18 +121,6 @@
             this.pictureBox1.Size = new System.Drawing.Size(1108, 61);
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
-            // 
-            // btnSearch
-            // 
-            this.btnSearch.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnSearch.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnSearch.Location = new System.Drawing.Point(936, 650);
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(88, 46);
-            this.btnSearch.TabIndex = 2;
-            this.btnSearch.Text = "搜索";
-            this.btnSearch.UseVisualStyleBackColor = false;
-            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // Column1
             // 
@@ -204,6 +194,16 @@
             this.Column9.HeaderText = "时间";
             this.Column9.Name = "Column9";
             // 
+            // Column10
+            // 
+            this.Column10.HeaderText = "编号";
+            this.Column10.Name = "Column10";
+            // 
+            // Column11
+            // 
+            this.Column11.HeaderText = "次数";
+            this.Column11.Name = "Column11";
+            // 
             // HistoryDataWin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
@@ -218,7 +218,7 @@
             this.Name = "HistoryDataWin";
             this.Padding = new System.Windows.Forms.Padding(22, 72, 22, 24);
             this.Resizable = false;
-            this.Text = "历史数据";
+            this.Text = "（f1）转向优先阀流量测试历史数据";
             this.TextAlign = System.Windows.Forms.VisualStyles.HorizontalAlign.Center;
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.HistoryDataWin_Load);
@@ -233,7 +233,6 @@
 
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.DataGridView dgv;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
@@ -244,5 +243,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column10;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column11;
     }
 }

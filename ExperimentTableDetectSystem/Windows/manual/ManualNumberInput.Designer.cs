@@ -31,14 +31,15 @@
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.txtValveId = new System.Windows.Forms.TextBox();
             this.btnConfirm = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
+            this.txtCompany = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // metroLabel1
             // 
             this.metroLabel1.AutoSize = true;
             this.metroLabel1.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.metroLabel1.Location = new System.Drawing.Point(204, 129);
+            this.metroLabel1.Location = new System.Drawing.Point(51, 114);
             this.metroLabel1.Name = "metroLabel1";
             this.metroLabel1.Size = new System.Drawing.Size(183, 25);
             this.metroLabel1.TabIndex = 0;
@@ -47,7 +48,7 @@
             // txtValveId
             // 
             this.txtValveId.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.txtValveId.Location = new System.Drawing.Point(225, 203);
+            this.txtValveId.Location = new System.Drawing.Point(333, 114);
             this.txtValveId.Name = "txtValveId";
             this.txtValveId.Size = new System.Drawing.Size(117, 30);
             this.txtValveId.TabIndex = 1;
@@ -56,7 +57,7 @@
             // 
             this.btnConfirm.BackColor = System.Drawing.Color.SteelBlue;
             this.btnConfirm.ForeColor = System.Drawing.Color.White;
-            this.btnConfirm.Location = new System.Drawing.Point(209, 267);
+            this.btnConfirm.Location = new System.Drawing.Point(208, 362);
             this.btnConfirm.Name = "btnConfirm";
             this.btnConfirm.Size = new System.Drawing.Size(133, 53);
             this.btnConfirm.TabIndex = 2;
@@ -64,17 +65,23 @@
             this.btnConfirm.UseVisualStyleBackColor = false;
             this.btnConfirm.Click += new System.EventHandler(this.btnConfirm_Click);
             // 
-            // button1
+            // metroLabel2
             // 
-            this.button1.BackColor = System.Drawing.Color.SteelBlue;
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(363, 341);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(133, 53);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "delete";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.metroLabel2.AutoSize = true;
+            this.metroLabel2.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.metroLabel2.Location = new System.Drawing.Point(78, 176);
+            this.metroLabel2.Name = "metroLabel2";
+            this.metroLabel2.Size = new System.Drawing.Size(126, 25);
+            this.metroLabel2.TabIndex = 4;
+            this.metroLabel2.Text = "发往厂家名称";
+            // 
+            // txtCompany
+            // 
+            this.txtCompany.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.txtCompany.Location = new System.Drawing.Point(333, 176);
+            this.txtCompany.Name = "txtCompany";
+            this.txtCompany.Size = new System.Drawing.Size(117, 30);
+            this.txtCompany.TabIndex = 5;
             // 
             // ManualNumberInput
             // 
@@ -82,7 +89,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BorderStyle = MetroFramework.Drawing.MetroBorderStyle.FixedSingle;
             this.ClientSize = new System.Drawing.Size(588, 465);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.txtCompany);
+            this.Controls.Add(this.metroLabel2);
             this.Controls.Add(this.btnConfirm);
             this.Controls.Add(this.txtValveId);
             this.Controls.Add(this.metroLabel1);
@@ -105,6 +113,7 @@
         private MetroFramework.Controls.MetroLabel metroLabel1;
         private System.Windows.Forms.TextBox txtValveId;
         private System.Windows.Forms.Button btnConfirm;
-        private System.Windows.Forms.Button button1;
+        private MetroFramework.Controls.MetroLabel metroLabel2;
+        private System.Windows.Forms.TextBox txtCompany;
     }
 }
