@@ -70,6 +70,7 @@
     <Compile Include="service\RecreateRecordManager.cs" />
     <Compile Include="service\SearchHelper.cs" />
     <Compile Include="service\UserRightManager.cs" />
+    <Compile Include="service\WarningManager.cs" />
     <Compile Include="testWin.cs">
       <SubType>Form</SubType>
     </Compile>

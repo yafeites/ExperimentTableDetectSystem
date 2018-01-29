@@ -70,6 +70,7 @@ namespace ExperimentTableDetectSystem.service
 	[Q1] [real] NOT NULL,
 	[P2] [real] NOT NULL,
 	[Q2] [real] NULL,
+    [P] [real] NULL,
     [time] [real] NULL,
 ) ");
         }
@@ -158,7 +159,7 @@ namespace ExperimentTableDetectSystem.service
 	    [P2] [real] NULL,
 	    [Q2] [real] NULL,
 	    [Pi] [real] NULL,
-	    [Max(P1-P2)-Pi] [real] NULL,
+	    [P3] [real] NULL,
 	    [S] [real] NULL,
 	    [V] [real] NULL,
 	    [F] [real] NULL,
@@ -330,7 +331,7 @@ namespace ExperimentTableDetectSystem.service
     [P2] [real] NULL,
 	[Q2] [real] NULL,
 	[Pb] [real] NULL,
-    [Max( P1,P2)-Pb] [real] NULL,
+    [P3] [real] NULL,
 [time] [real] NULL
 ) ");
         }

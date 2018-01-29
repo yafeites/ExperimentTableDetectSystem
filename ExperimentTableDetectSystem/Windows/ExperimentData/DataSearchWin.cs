@@ -33,10 +33,10 @@ namespace ExperimentTableDetectSystem.Windows.ExperimentData
              test = lstSelection.SelectedIndex+1;//试验项目
                                                  //  textBox1.Text = n.ToString();
                                                  // textBox2.Text = test.ToString();
-            testWin window = new testWin();
-            window.Show();
-         //  HistoryDataWin win = new HistoryDataWin();
-          // win.Show();
+           // testWin window = new testWin();
+           // window.Show();
+          HistoryDataWin win = new HistoryDataWin();
+           win.Show();
         }
 
     }

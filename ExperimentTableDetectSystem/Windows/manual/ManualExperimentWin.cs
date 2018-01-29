@@ -49,10 +49,27 @@ namespace ExperimentTableDetectSystem.Windows
             }
         }
 
+        public string Company
+        {
+            get
+            {
+                return company;
+            }
+
+            set
+            {
+                company = value;
+            }
+        }
+
+        private string company;
+
+
         private void ManualExperimentWin_Load(object sender, EventArgs e)
         {
             this.valveid = ManualNumberInput.id;
-            lblValveId.Text = this.valveid.ToString();
+            this.company = ManualNumberInput.company;
+            lblValveId.Text = "编号:" + this.valveid.ToString() + "  发往厂家:" + this.company.ToString();
         }
     }
 }
