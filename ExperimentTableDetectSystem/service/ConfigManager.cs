@@ -76,7 +76,7 @@ namespace ExperimentTableDetectSystem.service
         /// 名称枚举
         /// </summary>
         public enum ConfigKeys
-        {
+        {//
             mainPumpN1,
             mainPumpN2,
             mainOverflowValveP,
