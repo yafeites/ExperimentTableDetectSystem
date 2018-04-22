@@ -19,6 +19,10 @@ namespace ExperimentTableDetectSystem.service
 
         }
         private static volatile DataStoreManager instance;
+        /// <summary>
+        /// 初始化，放在mainwin加载时使用
+        /// </summary>
+        /// <returns></returns>
         public static DataStoreManager Initialize()
         {
             if (instance != null)

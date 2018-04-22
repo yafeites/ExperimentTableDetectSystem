@@ -39,6 +39,8 @@
             this.btnDataAnalysis = new System.Windows.Forms.ToolStripMenuItem();
             this.btnAnalysisResult = new System.Windows.Forms.ToolStripMenuItem();
             this.btnExit = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnexpPara = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnWarningPara = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -73,6 +75,9 @@
             // 
             // btnSetParameter
             // 
+            this.btnSetParameter.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.btnexpPara,
+            this.btnWarningPara});
             this.btnSetParameter.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnSetParameter.ForeColor = System.Drawing.Color.White;
             this.btnSetParameter.Name = "btnSetParameter";
@@ -96,7 +101,7 @@
             this.btnManualExperiment.BackColor = System.Drawing.Color.SteelBlue;
             this.btnManualExperiment.ForeColor = System.Drawing.Color.White;
             this.btnManualExperiment.Name = "btnManualExperiment";
-            this.btnManualExperiment.Size = new System.Drawing.Size(164, 26);
+            this.btnManualExperiment.Size = new System.Drawing.Size(181, 26);
             this.btnManualExperiment.Text = "手动实验";
             this.btnManualExperiment.Click += new System.EventHandler(this.btnManualExperiment_Click);
             // 
@@ -105,7 +110,7 @@
             this.btnAutoExperiment.BackColor = System.Drawing.Color.SteelBlue;
             this.btnAutoExperiment.ForeColor = System.Drawing.Color.White;
             this.btnAutoExperiment.Name = "btnAutoExperiment";
-            this.btnAutoExperiment.Size = new System.Drawing.Size(164, 26);
+            this.btnAutoExperiment.Size = new System.Drawing.Size(181, 26);
             this.btnAutoExperiment.Text = "自动实验";
             this.btnAutoExperiment.Click += new System.EventHandler(this.btnAutoExperiment_Click);
             // 
@@ -124,7 +129,7 @@
             this.btnCurrentData.BackColor = System.Drawing.Color.SteelBlue;
             this.btnCurrentData.ForeColor = System.Drawing.Color.White;
             this.btnCurrentData.Name = "btnCurrentData";
-            this.btnCurrentData.Size = new System.Drawing.Size(164, 26);
+            this.btnCurrentData.Size = new System.Drawing.Size(181, 26);
             this.btnCurrentData.Text = "数据查询";
             this.btnCurrentData.Click += new System.EventHandler(this.btnCurrentData_Click);
             // 
@@ -152,6 +157,24 @@
             this.btnExit.Size = new System.Drawing.Size(61, 44);
             this.btnExit.Text = "退出";
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            // 
+            // btnexpPara
+            // 
+            this.btnexpPara.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnexpPara.ForeColor = System.Drawing.Color.White;
+            this.btnexpPara.Name = "btnexpPara";
+            this.btnexpPara.Size = new System.Drawing.Size(204, 26);
+            this.btnexpPara.Text = "实验参数设置";
+            this.btnexpPara.Click += new System.EventHandler(this.btnexpPara_Click);
+            // 
+            // btnWarningPara
+            // 
+            this.btnWarningPara.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnWarningPara.ForeColor = System.Drawing.Color.White;
+            this.btnWarningPara.Name = "btnWarningPara";
+            this.btnWarningPara.Size = new System.Drawing.Size(204, 26);
+            this.btnWarningPara.Text = "报警参数设置";
+            this.btnWarningPara.Click += new System.EventHandler(this.btnWarningPara_Click);
             // 
             // MainWin
             // 
@@ -190,5 +213,7 @@
         private System.Windows.Forms.ToolStripMenuItem btnAnalysisResult;
         private System.Windows.Forms.ToolStripMenuItem btnManualExperiment;
         private System.Windows.Forms.ToolStripMenuItem btnAutoExperiment;
+        private System.Windows.Forms.ToolStripMenuItem btnexpPara;
+        private System.Windows.Forms.ToolStripMenuItem btnWarningPara;
     }
 }

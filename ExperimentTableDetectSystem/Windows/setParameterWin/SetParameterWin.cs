@@ -111,7 +111,11 @@ namespace ExperimentTableDetectSystem.Windows.setParameterWin
                 configManager.Set(configKeysList[i], Convert.ToDouble(numericList[i].Value));
             }
         }
-
+        /// <summary>
+        /// 实验参数应该发给plc
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnSave_Click(object sender, EventArgs e)
         {
             try

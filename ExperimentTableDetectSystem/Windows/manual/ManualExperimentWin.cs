@@ -70,6 +70,7 @@ namespace ExperimentTableDetectSystem.Windows
             this.valveid = ManualNumberInput.id;
             this.company = ManualNumberInput.company;
             lblValveId.Text = "编号:" + this.valveid.ToString() + "  发往厂家:" + this.company.ToString();
+
         }
     }
 }

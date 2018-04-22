@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(autoDataDisplayWin));
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.lblValveId = new System.Windows.Forms.Label();
@@ -88,6 +89,7 @@
             this.label28 = new System.Windows.Forms.Label();
             this.lblTestingProcess = new MetroFramework.Controls.MetroLabel();
             this.button1 = new System.Windows.Forms.Button();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picTest)).BeginInit();
             this.SuspendLayout();
@@ -876,6 +878,10 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // autoDataDisplayWin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
@@ -961,5 +967,6 @@
         private System.Windows.Forms.Label label28;
         private MetroFramework.Controls.MetroLabel lblTestingProcess;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Timer timer1;
     }
 }

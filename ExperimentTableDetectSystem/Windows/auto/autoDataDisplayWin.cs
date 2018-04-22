@@ -59,5 +59,10 @@ namespace ExperimentTableDetectSystem.Windows.auto
             TestFinishedWin win = new TestFinishedWin();
             win.Show();
         }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+
+        }
     }
 }

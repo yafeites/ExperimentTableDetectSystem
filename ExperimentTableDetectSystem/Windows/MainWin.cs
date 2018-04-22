@@ -53,15 +53,7 @@ namespace ExperimentTableDetectSystem.Windows
         /// <param name="e"></param>
         private void btnSetParameter_Click(object sender, EventArgs e)
         {
-            if (!rightManager.CanDoThis(UserRightConstraint.RingParameterSetLeastLevel))
-            {
-                new UserPrivilegeException();
-            }
-            else
-            {
-                SetParameterWin win = SetParameterWin.getInstance();
-                win.Show();
-            }
+         
         }
         /// <summary>
         /// 系统设置
@@ -101,10 +93,49 @@ namespace ExperimentTableDetectSystem.Windows
 
         private void MainWin_Load(object sender, EventArgs e)
         {
-            try { DataStoreManager.Initialize(); }
+            try
+            {
+                DataStoreManager.Initialize();
+            }
             catch(Exception ex)
             {
                 MessageBox.Show(ex.Message + "数据保存类初始化错误。");
+            }
+
+        }
+        /// <summary>
+        /// 实验参数设置，发给plc
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btnexpPara_Click(object sender, EventArgs e)
+        {
+            if (!rightManager.CanDoThis(UserRightConstraint.RingParameterSetLeastLevel))
+            {
+                new UserPrivilegeException();
+            }
+            else
+            {
+                SetParameterWin win = SetParameterWin.getInstance();
+                win.Show();
+            }
+        }
+
+        /// <summary>
+        /// 报警参数设置 存数据库
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btnWarningPara_Click(object sender, EventArgs e)
+        {
+            if (!rightManager.CanDoThis(UserRightConstraint.RingParameterSetLeastLevel))
+            {
+                new UserPrivilegeException();
+            }
+            else
+            {
+                SetParameterWin win = SetParameterWin.getInstance();
+                win.Show();
             }
         }
     }

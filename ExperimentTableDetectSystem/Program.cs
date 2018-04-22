@@ -21,6 +21,7 @@ namespace ExperimentTableDetectSystem
             Application.SetCompatibleTextRenderingDefault(false);
             LoginWin loginwin = new LoginWin();
             Initialize(args);
+            initialPeakHelper();
             if (loginwin.ShowDialog()== DialogResult.OK)
             {
                 loginwin.Close();
@@ -28,6 +29,7 @@ namespace ExperimentTableDetectSystem
             }
             
         }
+
         private static void Initialize(string[] args)
         {
             bool recreate = false;
@@ -74,6 +76,22 @@ namespace ExperimentTableDetectSystem
             }
 
           }
+        /// <summary>
+        /// 初始化peakhelper，后来使用调用GetInstance()即可
+        /// </summary>
+        private static void initialPeakHelper()
+        {
+            // PeakHelper pcan = new PeakHelper();
+            PcanHelper pcan = new PcanHelper();
+            try
+            {
+                PeakHelper.Initialize(pcan);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message+"在program.cs初始化peakhelper失败");
+            }
+        }
 
     }
 }

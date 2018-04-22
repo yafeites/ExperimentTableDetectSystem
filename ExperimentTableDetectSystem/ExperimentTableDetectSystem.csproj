@@ -64,9 +64,11 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="service\ConfigManager.cs" />
     <Compile Include="service\DataReceiveManager.cs" />
-    <Compile Include="service\DataSendManager.cs" />
     <Compile Include="service\DataStoreManager.cs" />
     <Compile Include="service\OperateDb.cs" />
+    <Compile Include="service\PCANBasic.cs" />
+    <Compile Include="service\PcanHelper.cs" />
+    <Compile Include="service\PeakHelper.cs" />
     <Compile Include="service\RecreateRecordManager.cs" />
     <Compile Include="service\SearchHelper.cs" />
     <Compile Include="service\UserRightManager.cs" />

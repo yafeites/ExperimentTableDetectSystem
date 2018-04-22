@@ -49,16 +49,7 @@ namespace ExperimentTableDetectSystem.Windows.ExperimentData
 
             }
            
-         //   searchhelper.Searchf8(productId, N, dgv);
-            //try
-            //{
-            //  DataTable dt= OperateDb.LoadData(sql, dgv);
-            //    if (dt.Rows.Count == 0) { MessageBox.Show("不存在此项测试数据"); }
-            //}
-            //catch(Exception ex)
-            //{
-            //    MessageBox.Show("搜素数据失败，请检查输入合适；或未进行此项测试。" + ex.Message);
-            //}
+      
 
 
         }

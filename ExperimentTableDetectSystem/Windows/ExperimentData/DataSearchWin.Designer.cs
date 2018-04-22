@@ -81,7 +81,7 @@
             "第9次",
             "第10次",
             "第11次"});
-            this.lstN.Location = new System.Drawing.Point(680, 210);
+            this.lstN.Location = new System.Drawing.Point(680, 195);
             this.lstN.Name = "lstN";
             this.lstN.Size = new System.Drawing.Size(120, 94);
             this.lstN.TabIndex = 3;

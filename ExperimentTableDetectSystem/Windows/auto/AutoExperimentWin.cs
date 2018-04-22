@@ -40,5 +40,10 @@ namespace ExperimentTableDetectSystem.Windows
             autoDataDisplayWin win = autoDataDisplayWin.getInstance();
             win.Show();
         }
+
+        private void AutoExperimentWin_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
