@@ -1,4 +1,5 @@
-﻿using ExperimentTableDetectSystem.Windows.manual;
+﻿using ExperimentTableDetectSystem.service;
+using ExperimentTableDetectSystem.Windows.manual;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -12,28 +13,7 @@ namespace ExperimentTableDetectSystem.Windows
 {
     public partial class ManualExperimentWin : MetroFramework.Forms.MetroForm
     {
-        #region singleton 
-        private static ManualExperimentWin instance;
-      //  private static object obj = new object();
-        public static ManualExperimentWin getInstance()
-        {
-            if (instance == null||instance.IsDisposed)
-            {
-                //lock (obj)
-               // {
-                   // if (instance == null)
-                   // {
-                        instance = new ManualExperimentWin();
-                   // }
-               // }
-            }
-            return instance;
-        }
-        #endregion
-        public ManualExperimentWin()
-        {
-            InitializeComponent();
-        }
+        #region 字段
         private string valveid;
 
         public string Valveid
@@ -63,14 +43,65 @@ namespace ExperimentTableDetectSystem.Windows
         }
 
         private string company;
-
+        PeakHelper peakHelperer;
+        DataStoreManager dataStoreManager;
+        ConfigManager config;
+        #endregion
+        #region singleton 
+        private static ManualExperimentWin instance;
+        public static ManualExperimentWin getInstance()
+        {
+            if (instance == null||instance.IsDisposed)
+            {
+            instance = new ManualExperimentWin();
+            }
+            return instance;
+        }
+        #endregion
+        public ManualExperimentWin()
+        {
+            InitializeComponent();
+            peakHelperer = PeakHelper.GetInstance();
+            dataStoreManager = DataStoreManager.GetInstance();
+            config = ConfigManager.GetInstance();
+        }
+       
 
         private void ManualExperimentWin_Load(object sender, EventArgs e)
         {
             this.valveid = ManualNumberInput.id;
             this.company = ManualNumberInput.company;
             lblValveId.Text = "编号:" + this.valveid.ToString() + "  发往厂家:" + this.company.ToString();
+            //获得配置项的值，赋予报警参数? ? ?
+            timer1.Enabled = true;
+            peakHelperer.StartTimer(250);
+            dataStoreManager.StartTimer(500, 1000);
+        }
 
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            refreshData();
+        }
+
+        /// <summary>
+        /// 数据显示
+        /// </summary>
+        private void refreshData()
+        {
+
+        }
+
+        private void ManualExperimentWin_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (dataStoreManager != null)
+            {
+                dataStoreManager.StopTimer();
+            }
+            if (peakHelperer != null)
+            {
+                peakHelperer.StopTimer();
+            }
+           
         }
     }
 }

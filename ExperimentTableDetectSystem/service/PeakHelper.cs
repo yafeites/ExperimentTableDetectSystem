@@ -10,6 +10,7 @@ namespace ExperimentTableDetectSystem.service
    public class PeakHelper
     {
         #region 字段
+        public volatile bool hasData;
         public double[] AllValue;
         private PcanHelper pcanhelper;
         public System.Threading.Timer readTimer { get; set; }
@@ -19,6 +20,7 @@ namespace ExperimentTableDetectSystem.service
         private static volatile PeakHelper instance = null;
         private PeakHelper(PcanHelper pcan)
         {
+            this.hasData = false;
             this.AllValue = new double[11];
             this.pcanhelper = pcan;
             try
@@ -40,8 +42,8 @@ namespace ExperimentTableDetectSystem.service
                 catch (Exception ex)
                 {
                     readTimer.Change(Timeout.Infinite, Timeout.Infinite);
-                   // hasData = false;
-                    //throw ex;
+                   hasData = false;
+                 
                     System.Windows.Forms.MessageBox.Show("PEAKHelper读数据出错");
                 }
             }, null, Timeout.Infinite, Timeout.Infinite);
@@ -81,17 +83,19 @@ namespace ExperimentTableDetectSystem.service
         {
             lock (obj)
             { AllValue= pcanhelper.ReadMessages();
+                hasData = true;
             }
         }
 
-        public void startTimer(int period)
+        public void StartTimer(int period)
         {
             readTimer.Change(0, period);
         }
 
-        public void stopTimer()
+        public void StopTimer()
         {
             readTimer.Change(Timeout.Infinite, Timeout.Infinite);
+            hasData = false;
         }
 
         /// <summary>

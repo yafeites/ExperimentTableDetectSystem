@@ -4,18 +4,29 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-
+using System.Threading;
 namespace ExperimentTableDetectSystem.service
 {
   public  class DataStoreManager
     {
+        #region 字段
         private  int number;
         private  double productId;
         DBHelper dbhelper;
+        System.Threading.Timer storeTimer { get; set; }
+        PeakHelper peakHelper;
+       #endregion
         private DataStoreManager()
         {
             dbhelper = DBHelper.GetInstance();
-           // number = ManualNumberInput.n;
+            storeTimer = new System.Threading.Timer(_ =>
+            {
+                if (peakHelper.hasData)
+                {
+                    storeData();
+                }
+            }, null, Timeout.Infinite, Timeout.Infinite);
+
 
         }
         private static volatile DataStoreManager instance;
@@ -37,6 +48,16 @@ namespace ExperimentTableDetectSystem.service
         {
             if (instance == null) { throw new Exception("数据保存类实例不存在"); }
             return instance;
+        }
+      
+        public void StartTimer(int dueTime, int period)
+        {
+            storeTimer.Change(dueTime, period);
+        }
+      
+        public void StopTimer()
+        {
+            storeTimer.Change(Timeout.Infinite, Timeout.Infinite);
         }
 
         /// <summary>
@@ -63,5 +84,12 @@ namespace ExperimentTableDetectSystem.service
 
         }
         //。。。
+        /// <summary>
+        /// 数据保存具体实现方法
+        /// </summary>
+        public void storeData()
+        {
+
+        }
     }
 }

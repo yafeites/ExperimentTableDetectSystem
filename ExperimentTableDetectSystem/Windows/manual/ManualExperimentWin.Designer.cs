@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ManualExperimentWin));
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.lblValveId = new System.Windows.Forms.Label();
@@ -87,6 +88,7 @@
             this.label27 = new System.Windows.Forms.Label();
             this.label28 = new System.Windows.Forms.Label();
             this.lblTestingProcess = new MetroFramework.Controls.MetroLabel();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picTest)).BeginInit();
             this.SuspendLayout();
@@ -864,6 +866,10 @@
             this.lblTestingProcess.Text = "测试所处过程";
             this.lblTestingProcess.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // ManualExperimentWin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
@@ -881,6 +887,7 @@
             this.Text = "手动实验(数据显示)";
             this.TextAlign = System.Windows.Forms.VisualStyles.HorizontalAlign.Center;
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ManualExperimentWin_FormClosing);
             this.Load += new System.EventHandler(this.ManualExperimentWin_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
@@ -949,5 +956,6 @@
         private System.Windows.Forms.Label label27;
         private System.Windows.Forms.Label label28;
         private MetroFramework.Controls.MetroLabel lblTestingProcess;
+        private System.Windows.Forms.Timer timer1;
     }
 }
