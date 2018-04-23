@@ -77,23 +77,30 @@ namespace ExperimentTableDetectSystem.service
         /// </summary>
         public enum ConfigKeys
         {//
-            mainPumpN1,
-            mainPumpN2,
-            mainOverflowValveP,
-            steeringOverflowValveP,
-            portalTestTime,
-            aloneTestTime,
-            compoundTestTime,
-            mediumPreLossTime,
-            liftingOilDis,
-            frontOilDis,
-            backOilDis,
-            downOilDis,
-            frontTestNumber,
-            frontSelfLockTestTime,
-            changeDirectionNumber,
-            backPressureHoldTime,
-            linkagePressureHoldTime
+            Atime,
+            Btime,
+
+            MaxTemp,
+           MinTemp,
+
+            BigBackS,
+            BigForwardS,
+            BigSelfLockS,
+            BigUpS,
+            BigDownS,
+
+            LeakageLiftTime,
+            MainP,
+            MediumPTime,
+
+            SmallBackS,
+            SmallDownS,
+            SmallForwardS,
+            SmallSelfLockS,
+            SmallUpS,
+
+            SteeringValveP,
+            SteerPreesureTestTime,
 
         }
         /// <summary>
@@ -129,23 +136,28 @@ namespace ExperimentTableDetectSystem.service
         {
             var config = new Dictionary<ConfigKeys, ConfigItem>()
             {
-                {ConfigKeys.mainPumpN1,new ConfigItem("主泵1转速",0,10000,50) },
-                {ConfigKeys.mainPumpN2,new ConfigItem("主泵2转速",0,10000,50) },
-                {ConfigKeys.mainOverflowValveP,new ConfigItem("主溢流阀调定压力",0,1000,50) },
-                {ConfigKeys.steeringOverflowValveP,new ConfigItem("转向溢流阀调定压力",0,10000,50) },
-                {ConfigKeys.portalTestTime,new ConfigItem("门架动作试验时间",0,10000,60) },
-                {ConfigKeys.aloneTestTime,new ConfigItem("转向优先阀流量测试：单独测试试验时间",0,10000,60) },
-                {ConfigKeys.compoundTestTime,new ConfigItem("转向优先阀流量测试：复合测试试验时间",0,10000,60) },
-                {ConfigKeys.mediumPreLossTime,new ConfigItem("中位压力损失试验：试验时间",0,10000,60) },
-                {ConfigKeys.liftingOilDis,new ConfigItem("起升压力损失试验:油缸位移",0,10000,60) },
-                {ConfigKeys.frontOilDis,new ConfigItem("前倾压力损失：前倾油缸行走位移",0,10000,60) },
-                {ConfigKeys.backOilDis,new ConfigItem("后倾压力损失：后倾油缸行走位移",0,10000,60) },
-                {ConfigKeys.downOilDis,new ConfigItem("油缸下降位移",0,10000,60) },
-                {ConfigKeys.frontTestNumber,new ConfigItem("前倾动作检测：试验次数",0,10000,30) },
-                {ConfigKeys.frontSelfLockTestTime,new ConfigItem("前倾自锁：试验时间",0,10000,60) },
-                {ConfigKeys.changeDirectionNumber,new ConfigItem("背压试验：换向次数",0,10000,60) },
-                {ConfigKeys.backPressureHoldTime,new ConfigItem("背压试验：保压时间",0,10000,60) },
-                {ConfigKeys.linkagePressureHoldTime,new ConfigItem("内泄漏测试：保压时间",0,10000,60) },
+                {ConfigKeys.MaxTemp,new ConfigItem("加热电机环境最高温度",0,100,50) },
+                {ConfigKeys.MinTemp,new ConfigItem("加热电机环境最低温度",0,100,20) },
+                {ConfigKeys.MainP,new ConfigItem("主溢流阀调定压力",0,1000,50) },
+                {ConfigKeys.SteeringValveP,new ConfigItem("转向溢流阀调定压力",0,10000,50) },
+
+                {ConfigKeys.Atime,new ConfigItem("泄露倾斜阀A口保压时间",0,10000,60) },
+                {ConfigKeys.Btime,new ConfigItem("泄露倾斜阀B口保压时间",0,10000,60) },
+                {ConfigKeys.LeakageLiftTime,new ConfigItem("泄露升降阀口保压时间",0,10000,60) },
+                  {ConfigKeys.MediumPTime,new ConfigItem("中位压力损失测试时间",0,10000,60) },
+                   {ConfigKeys.SteerPreesureTestTime,new ConfigItem("转向压力损失测试时间",0,10000,60) },
+
+                {ConfigKeys.SmallBackS,new ConfigItem("小门架油缸后倾停止位移",0,10000,60) },
+                {ConfigKeys.SmallDownS,new ConfigItem("小门架油缸下降停止位移",0,10000,60) },
+                {ConfigKeys.SmallForwardS,new ConfigItem("小门架油缸前倾停止位移",0,10000,60) },
+                {ConfigKeys.SmallSelfLockS,new ConfigItem("小门架油缸自锁位移",0,10000,60) },
+                {ConfigKeys.SmallUpS,new ConfigItem("小门架油缸上升停止位移",0,10000,60) },
+
+                {ConfigKeys.BigBackS,new ConfigItem("大门架油缸后倾停止位移",0,10000,30) },
+                {ConfigKeys.BigDownS,new ConfigItem("大门架油缸下降停止位移",0,10000,60) },
+                {ConfigKeys.BigForwardS,new ConfigItem("大门架油缸前倾停止位移",0,10000,60) },
+                {ConfigKeys.BigSelfLockS,new ConfigItem("大门架油缸自锁位移",0,10000,60) },
+                {ConfigKeys.BigUpS,new ConfigItem("大门架油缸上升停止位移",0,10000,60) },
 
 
             };
