@@ -47,6 +47,7 @@ namespace ExperimentTableDetectSystem.Windows
         DataStoreManager dataStoreManager;
         ConfigManager config;
         #endregion
+
         #region singleton 
         private static ManualExperimentWin instance;
         public static ManualExperimentWin getInstance()
@@ -58,6 +59,7 @@ namespace ExperimentTableDetectSystem.Windows
             return instance;
         }
         #endregion
+
         public ManualExperimentWin()
         {
             InitializeComponent();

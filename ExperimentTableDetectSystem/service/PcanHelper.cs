@@ -283,9 +283,9 @@ namespace ExperimentTableDetectSystem.service
         /// 发送数据函数
         /// </summary>
         /// <param name="CANMsg"></param>
-        public void writeee(TPCANMsg CANMsg)
+        public TPCANStatus writeee(TPCANMsg CANMsg)
         {
-            PCANBasic.Write(m_PcanHandle, ref CANMsg);
+           return PCANBasic.Write(m_PcanHandle, ref CANMsg);
         }
 
     }

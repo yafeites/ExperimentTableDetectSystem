@@ -102,9 +102,9 @@ namespace ExperimentTableDetectSystem.service
         /// 写
         /// </summary>
         /// <param name="msg"></param>
-        public void write(TPCANMsg msg)
+        public TPCANStatus write(TPCANMsg msg)
         {
-            pcanhelper.writeee(msg);
+          return  pcanhelper.writeee(msg);
         }
         #endregion
 
