@@ -32,7 +32,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(autoDataDisplayWin));
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.lblValveId = new System.Windows.Forms.Label();
-            this.picTest = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -90,6 +89,7 @@
             this.lblTestingProcess = new MetroFramework.Controls.MetroLabel();
             this.button1 = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.picTest = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picTest)).BeginInit();
             this.SuspendLayout();
@@ -97,14 +97,18 @@
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.tableLayoutPanel1.ColumnCount = 5;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 52F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12F));
+            this.tableLayoutPanel1.ColumnCount = 9;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 9.090909F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 9.090909F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 9.090909F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 9.090909F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 27.27273F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 9.090909F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 9.090909F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 9.090909F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 9.090909F));
             this.tableLayoutPanel1.Controls.Add(this.lblValveId, 2, 0);
-            this.tableLayoutPanel1.Controls.Add(this.picTest, 2, 2);
+            this.tableLayoutPanel1.Controls.Add(this.picTest, 4, 2);
             this.tableLayoutPanel1.Controls.Add(this.label3, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.label5, 1, 2);
             this.tableLayoutPanel1.Controls.Add(this.label7, 1, 3);
@@ -122,19 +126,19 @@
             this.tableLayoutPanel1.Controls.Add(this.metroLabel11, 0, 11);
             this.tableLayoutPanel1.Controls.Add(this.metroLabel12, 0, 12);
             this.tableLayoutPanel1.Controls.Add(this.metroLabel13, 0, 13);
-            this.tableLayoutPanel1.Controls.Add(this.metroLabel14, 3, 1);
-            this.tableLayoutPanel1.Controls.Add(this.metroLabel15, 3, 2);
-            this.tableLayoutPanel1.Controls.Add(this.metroLabel16, 3, 3);
-            this.tableLayoutPanel1.Controls.Add(this.metroLabel17, 3, 4);
-            this.tableLayoutPanel1.Controls.Add(this.metroLabel18, 3, 5);
-            this.tableLayoutPanel1.Controls.Add(this.metroLabel19, 3, 6);
-            this.tableLayoutPanel1.Controls.Add(this.metroLabel20, 3, 7);
-            this.tableLayoutPanel1.Controls.Add(this.metroLabel21, 3, 8);
-            this.tableLayoutPanel1.Controls.Add(this.metroLabel22, 3, 9);
-            this.tableLayoutPanel1.Controls.Add(this.metroLabel23, 3, 10);
-            this.tableLayoutPanel1.Controls.Add(this.metroLabel24, 3, 11);
-            this.tableLayoutPanel1.Controls.Add(this.metroLabel25, 3, 12);
-            this.tableLayoutPanel1.Controls.Add(this.metroLabel26, 3, 13);
+            this.tableLayoutPanel1.Controls.Add(this.metroLabel14, 7, 1);
+            this.tableLayoutPanel1.Controls.Add(this.metroLabel15, 7, 2);
+            this.tableLayoutPanel1.Controls.Add(this.metroLabel16, 7, 3);
+            this.tableLayoutPanel1.Controls.Add(this.metroLabel17, 7, 4);
+            this.tableLayoutPanel1.Controls.Add(this.metroLabel18, 7, 5);
+            this.tableLayoutPanel1.Controls.Add(this.metroLabel19, 7, 6);
+            this.tableLayoutPanel1.Controls.Add(this.metroLabel20, 7, 7);
+            this.tableLayoutPanel1.Controls.Add(this.metroLabel21, 7, 8);
+            this.tableLayoutPanel1.Controls.Add(this.metroLabel22, 7, 9);
+            this.tableLayoutPanel1.Controls.Add(this.metroLabel23, 7, 10);
+            this.tableLayoutPanel1.Controls.Add(this.metroLabel24, 7, 11);
+            this.tableLayoutPanel1.Controls.Add(this.metroLabel25, 7, 12);
+            this.tableLayoutPanel1.Controls.Add(this.metroLabel26, 7, 13);
             this.tableLayoutPanel1.Controls.Add(this.metroLabel27, 0, 14);
             this.tableLayoutPanel1.Controls.Add(this.label2, 1, 5);
             this.tableLayoutPanel1.Controls.Add(this.label4, 1, 6);
@@ -146,40 +150,40 @@
             this.tableLayoutPanel1.Controls.Add(this.label13, 1, 12);
             this.tableLayoutPanel1.Controls.Add(this.label14, 1, 13);
             this.tableLayoutPanel1.Controls.Add(this.label15, 1, 14);
-            this.tableLayoutPanel1.Controls.Add(this.label16, 4, 1);
-            this.tableLayoutPanel1.Controls.Add(this.label17, 4, 2);
-            this.tableLayoutPanel1.Controls.Add(this.label18, 4, 3);
-            this.tableLayoutPanel1.Controls.Add(this.label19, 4, 4);
-            this.tableLayoutPanel1.Controls.Add(this.label20, 4, 5);
-            this.tableLayoutPanel1.Controls.Add(this.label21, 4, 6);
-            this.tableLayoutPanel1.Controls.Add(this.label22, 4, 7);
-            this.tableLayoutPanel1.Controls.Add(this.label23, 4, 8);
-            this.tableLayoutPanel1.Controls.Add(this.label24, 4, 9);
-            this.tableLayoutPanel1.Controls.Add(this.label25, 4, 10);
-            this.tableLayoutPanel1.Controls.Add(this.label26, 4, 11);
-            this.tableLayoutPanel1.Controls.Add(this.label27, 4, 12);
-            this.tableLayoutPanel1.Controls.Add(this.label28, 4, 13);
+            this.tableLayoutPanel1.Controls.Add(this.label16, 8, 1);
+            this.tableLayoutPanel1.Controls.Add(this.label17, 8, 2);
+            this.tableLayoutPanel1.Controls.Add(this.label18, 8, 3);
+            this.tableLayoutPanel1.Controls.Add(this.label19, 8, 4);
+            this.tableLayoutPanel1.Controls.Add(this.label20, 8, 5);
+            this.tableLayoutPanel1.Controls.Add(this.label21, 8, 6);
+            this.tableLayoutPanel1.Controls.Add(this.label22, 8, 7);
+            this.tableLayoutPanel1.Controls.Add(this.label23, 8, 8);
+            this.tableLayoutPanel1.Controls.Add(this.label24, 8, 9);
+            this.tableLayoutPanel1.Controls.Add(this.label25, 8, 10);
+            this.tableLayoutPanel1.Controls.Add(this.label26, 8, 11);
+            this.tableLayoutPanel1.Controls.Add(this.label27, 8, 12);
+            this.tableLayoutPanel1.Controls.Add(this.label28, 8, 13);
             this.tableLayoutPanel1.Controls.Add(this.lblTestingProcess, 2, 1);
             this.tableLayoutPanel1.Controls.Add(this.button1, 2, 14);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(22, 72);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 15;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.666845F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.666845F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.666845F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.666845F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.666845F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.666845F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.666845F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.666845F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.666845F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.666845F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.666845F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.666845F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.666845F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.666845F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.664178F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.666843F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.666843F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.666843F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.666843F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.666843F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.666843F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.666843F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.666843F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.666843F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.666843F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.666843F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.666843F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.666843F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.666843F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.664176F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1108, 826);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
@@ -188,34 +192,22 @@
             this.lblValveId.AutoSize = true;
             this.lblValveId.BackColor = System.Drawing.Color.White;
             this.lblValveId.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblValveId.Location = new System.Drawing.Point(267, 3);
+            this.lblValveId.Location = new System.Drawing.Point(203, 3);
             this.lblValveId.Margin = new System.Windows.Forms.Padding(3);
             this.lblValveId.Name = "lblValveId";
-            this.lblValveId.Size = new System.Drawing.Size(570, 49);
+            this.lblValveId.Size = new System.Drawing.Size(94, 49);
             this.lblValveId.TabIndex = 0;
             this.lblValveId.Text = "被测阀编号：xxx";
             this.lblValveId.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // picTest
-            // 
-            this.picTest.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.picTest.Image = ((System.Drawing.Image)(resources.GetObject("picTest.Image")));
-            this.picTest.Location = new System.Drawing.Point(267, 113);
-            this.picTest.Name = "picTest";
-            this.tableLayoutPanel1.SetRowSpan(this.picTest, 11);
-            this.picTest.Size = new System.Drawing.Size(570, 599);
-            this.picTest.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picTest.TabIndex = 1;
-            this.picTest.TabStop = false;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label3.Location = new System.Drawing.Point(135, 58);
+            this.label3.Location = new System.Drawing.Point(103, 58);
             this.label3.Margin = new System.Windows.Forms.Padding(3);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(126, 49);
+            this.label3.Size = new System.Drawing.Size(94, 49);
             this.label3.TabIndex = 3;
             this.label3.Text = "label3";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -224,10 +216,10 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label5.Location = new System.Drawing.Point(135, 113);
+            this.label5.Location = new System.Drawing.Point(103, 113);
             this.label5.Margin = new System.Windows.Forms.Padding(3);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(126, 49);
+            this.label5.Size = new System.Drawing.Size(94, 49);
             this.label5.TabIndex = 5;
             this.label5.Text = "label5";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -236,10 +228,10 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label7.Location = new System.Drawing.Point(135, 168);
+            this.label7.Location = new System.Drawing.Point(103, 168);
             this.label7.Margin = new System.Windows.Forms.Padding(3);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(126, 49);
+            this.label7.Size = new System.Drawing.Size(94, 49);
             this.label7.TabIndex = 7;
             this.label7.Text = "label7";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -248,10 +240,10 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label9.Location = new System.Drawing.Point(135, 223);
+            this.label9.Location = new System.Drawing.Point(103, 223);
             this.label9.Margin = new System.Windows.Forms.Padding(3);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(126, 49);
+            this.label9.Size = new System.Drawing.Size(94, 49);
             this.label9.TabIndex = 9;
             this.label9.Text = "label9";
             this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -263,9 +255,9 @@
             this.metroLabel1.Location = new System.Drawing.Point(3, 113);
             this.metroLabel1.Margin = new System.Windows.Forms.Padding(3);
             this.metroLabel1.Name = "metroLabel1";
-            this.metroLabel1.Size = new System.Drawing.Size(126, 49);
+            this.metroLabel1.Size = new System.Drawing.Size(94, 49);
             this.metroLabel1.TabIndex = 10;
-            this.metroLabel1.Text = "主泵2压力p2";
+            this.metroLabel1.Text = "主泵2流量";
             this.metroLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // metroLabel2
@@ -275,9 +267,9 @@
             this.metroLabel2.Location = new System.Drawing.Point(3, 58);
             this.metroLabel2.Margin = new System.Windows.Forms.Padding(3);
             this.metroLabel2.Name = "metroLabel2";
-            this.metroLabel2.Size = new System.Drawing.Size(126, 49);
+            this.metroLabel2.Size = new System.Drawing.Size(94, 49);
             this.metroLabel2.TabIndex = 11;
-            this.metroLabel2.Text = "主泵1压力p1";
+            this.metroLabel2.Text = "主泵1流量";
             this.metroLabel2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // metroLabel3
@@ -287,9 +279,9 @@
             this.metroLabel3.Location = new System.Drawing.Point(3, 168);
             this.metroLabel3.Margin = new System.Windows.Forms.Padding(3);
             this.metroLabel3.Name = "metroLabel3";
-            this.metroLabel3.Size = new System.Drawing.Size(126, 49);
+            this.metroLabel3.Size = new System.Drawing.Size(94, 49);
             this.metroLabel3.TabIndex = 12;
-            this.metroLabel3.Text = "主泵1流量q1";
+            this.metroLabel3.Text = "转向流量";
             this.metroLabel3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // metroLabel4
@@ -299,9 +291,9 @@
             this.metroLabel4.Location = new System.Drawing.Point(3, 223);
             this.metroLabel4.Margin = new System.Windows.Forms.Padding(3);
             this.metroLabel4.Name = "metroLabel4";
-            this.metroLabel4.Size = new System.Drawing.Size(126, 49);
+            this.metroLabel4.Size = new System.Drawing.Size(94, 49);
             this.metroLabel4.TabIndex = 13;
-            this.metroLabel4.Text = "主泵2流量q2";
+            this.metroLabel4.Text = "主泵1流量q1";
             this.metroLabel4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // metroLabel5
@@ -311,7 +303,7 @@
             this.metroLabel5.Location = new System.Drawing.Point(3, 278);
             this.metroLabel5.Margin = new System.Windows.Forms.Padding(3);
             this.metroLabel5.Name = "metroLabel5";
-            this.metroLabel5.Size = new System.Drawing.Size(126, 49);
+            this.metroLabel5.Size = new System.Drawing.Size(94, 49);
             this.metroLabel5.TabIndex = 14;
             this.metroLabel5.Text = "大门架升降位移S1";
             this.metroLabel5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -323,7 +315,7 @@
             this.metroLabel6.Location = new System.Drawing.Point(3, 333);
             this.metroLabel6.Margin = new System.Windows.Forms.Padding(3);
             this.metroLabel6.Name = "metroLabel6";
-            this.metroLabel6.Size = new System.Drawing.Size(126, 49);
+            this.metroLabel6.Size = new System.Drawing.Size(94, 49);
             this.metroLabel6.TabIndex = 15;
             this.metroLabel6.Text = "大门架升降速度V1";
             this.metroLabel6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -335,7 +327,7 @@
             this.metroLabel7.Location = new System.Drawing.Point(3, 388);
             this.metroLabel7.Margin = new System.Windows.Forms.Padding(3);
             this.metroLabel7.Name = "metroLabel7";
-            this.metroLabel7.Size = new System.Drawing.Size(126, 49);
+            this.metroLabel7.Size = new System.Drawing.Size(94, 49);
             this.metroLabel7.TabIndex = 16;
             this.metroLabel7.Text = "大门架倾斜位移S2";
             this.metroLabel7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -347,7 +339,7 @@
             this.metroLabel8.Location = new System.Drawing.Point(3, 443);
             this.metroLabel8.Margin = new System.Windows.Forms.Padding(3);
             this.metroLabel8.Name = "metroLabel8";
-            this.metroLabel8.Size = new System.Drawing.Size(126, 49);
+            this.metroLabel8.Size = new System.Drawing.Size(94, 49);
             this.metroLabel8.TabIndex = 17;
             this.metroLabel8.Text = "大门架倾斜速度V2";
             this.metroLabel8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -359,7 +351,7 @@
             this.metroLabel9.Location = new System.Drawing.Point(3, 498);
             this.metroLabel9.Margin = new System.Windows.Forms.Padding(3);
             this.metroLabel9.Name = "metroLabel9";
-            this.metroLabel9.Size = new System.Drawing.Size(126, 49);
+            this.metroLabel9.Size = new System.Drawing.Size(94, 49);
             this.metroLabel9.TabIndex = 18;
             this.metroLabel9.Text = "小门架升降位移S3";
             this.metroLabel9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -371,7 +363,7 @@
             this.metroLabel10.Location = new System.Drawing.Point(3, 553);
             this.metroLabel10.Margin = new System.Windows.Forms.Padding(3);
             this.metroLabel10.Name = "metroLabel10";
-            this.metroLabel10.Size = new System.Drawing.Size(126, 49);
+            this.metroLabel10.Size = new System.Drawing.Size(94, 49);
             this.metroLabel10.TabIndex = 19;
             this.metroLabel10.Text = "小门架升降速度V3";
             this.metroLabel10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -383,7 +375,7 @@
             this.metroLabel11.Location = new System.Drawing.Point(3, 608);
             this.metroLabel11.Margin = new System.Windows.Forms.Padding(3);
             this.metroLabel11.Name = "metroLabel11";
-            this.metroLabel11.Size = new System.Drawing.Size(126, 49);
+            this.metroLabel11.Size = new System.Drawing.Size(94, 49);
             this.metroLabel11.TabIndex = 20;
             this.metroLabel11.Text = "小门架倾斜位移S4";
             this.metroLabel11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -395,7 +387,7 @@
             this.metroLabel12.Location = new System.Drawing.Point(3, 663);
             this.metroLabel12.Margin = new System.Windows.Forms.Padding(3);
             this.metroLabel12.Name = "metroLabel12";
-            this.metroLabel12.Size = new System.Drawing.Size(126, 49);
+            this.metroLabel12.Size = new System.Drawing.Size(94, 49);
             this.metroLabel12.TabIndex = 21;
             this.metroLabel12.Text = "小门架倾斜速度V4";
             this.metroLabel12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -407,7 +399,7 @@
             this.metroLabel13.Location = new System.Drawing.Point(3, 718);
             this.metroLabel13.Margin = new System.Windows.Forms.Padding(3);
             this.metroLabel13.Name = "metroLabel13";
-            this.metroLabel13.Size = new System.Drawing.Size(126, 49);
+            this.metroLabel13.Size = new System.Drawing.Size(94, 49);
             this.metroLabel13.TabIndex = 22;
             this.metroLabel13.Text = "回油压力";
             this.metroLabel13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -416,10 +408,10 @@
             // 
             this.metroLabel14.AutoSize = true;
             this.metroLabel14.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.metroLabel14.Location = new System.Drawing.Point(843, 58);
+            this.metroLabel14.Location = new System.Drawing.Point(905, 58);
             this.metroLabel14.Margin = new System.Windows.Forms.Padding(3);
             this.metroLabel14.Name = "metroLabel14";
-            this.metroLabel14.Size = new System.Drawing.Size(126, 49);
+            this.metroLabel14.Size = new System.Drawing.Size(94, 49);
             this.metroLabel14.TabIndex = 23;
             this.metroLabel14.Text = "内泄漏流量";
             this.metroLabel14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -428,10 +420,10 @@
             // 
             this.metroLabel15.AutoSize = true;
             this.metroLabel15.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.metroLabel15.Location = new System.Drawing.Point(843, 113);
+            this.metroLabel15.Location = new System.Drawing.Point(905, 113);
             this.metroLabel15.Margin = new System.Windows.Forms.Padding(3);
             this.metroLabel15.Name = "metroLabel15";
-            this.metroLabel15.Size = new System.Drawing.Size(126, 49);
+            this.metroLabel15.Size = new System.Drawing.Size(94, 49);
             this.metroLabel15.TabIndex = 24;
             this.metroLabel15.Text = "内泄漏测试压力";
             this.metroLabel15.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -440,10 +432,10 @@
             // 
             this.metroLabel16.AutoSize = true;
             this.metroLabel16.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.metroLabel16.Location = new System.Drawing.Point(843, 168);
+            this.metroLabel16.Location = new System.Drawing.Point(905, 168);
             this.metroLabel16.Margin = new System.Windows.Forms.Padding(3);
             this.metroLabel16.Name = "metroLabel16";
-            this.metroLabel16.Size = new System.Drawing.Size(126, 49);
+            this.metroLabel16.Size = new System.Drawing.Size(94, 49);
             this.metroLabel16.TabIndex = 25;
             this.metroLabel16.Text = "转向压力";
             this.metroLabel16.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -452,10 +444,10 @@
             // 
             this.metroLabel17.AutoSize = true;
             this.metroLabel17.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.metroLabel17.Location = new System.Drawing.Point(843, 223);
+            this.metroLabel17.Location = new System.Drawing.Point(905, 223);
             this.metroLabel17.Margin = new System.Windows.Forms.Padding(3);
             this.metroLabel17.Name = "metroLabel17";
-            this.metroLabel17.Size = new System.Drawing.Size(126, 49);
+            this.metroLabel17.Size = new System.Drawing.Size(94, 49);
             this.metroLabel17.TabIndex = 26;
             this.metroLabel17.Text = "转向流量";
             this.metroLabel17.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -464,10 +456,10 @@
             // 
             this.metroLabel18.AutoSize = true;
             this.metroLabel18.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.metroLabel18.Location = new System.Drawing.Point(843, 278);
+            this.metroLabel18.Location = new System.Drawing.Point(905, 278);
             this.metroLabel18.Margin = new System.Windows.Forms.Padding(3);
             this.metroLabel18.Name = "metroLabel18";
-            this.metroLabel18.Size = new System.Drawing.Size(126, 49);
+            this.metroLabel18.Size = new System.Drawing.Size(94, 49);
             this.metroLabel18.TabIndex = 27;
             this.metroLabel18.Text = "油温";
             this.metroLabel18.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -476,10 +468,10 @@
             // 
             this.metroLabel19.AutoSize = true;
             this.metroLabel19.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.metroLabel19.Location = new System.Drawing.Point(843, 333);
+            this.metroLabel19.Location = new System.Drawing.Point(905, 333);
             this.metroLabel19.Margin = new System.Windows.Forms.Padding(3);
             this.metroLabel19.Name = "metroLabel19";
-            this.metroLabel19.Size = new System.Drawing.Size(126, 49);
+            this.metroLabel19.Size = new System.Drawing.Size(94, 49);
             this.metroLabel19.TabIndex = 28;
             this.metroLabel19.Text = "升降阀口压力P(A)";
             this.metroLabel19.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -488,10 +480,10 @@
             // 
             this.metroLabel20.AutoSize = true;
             this.metroLabel20.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.metroLabel20.Location = new System.Drawing.Point(843, 388);
+            this.metroLabel20.Location = new System.Drawing.Point(905, 388);
             this.metroLabel20.Margin = new System.Windows.Forms.Padding(3);
             this.metroLabel20.Name = "metroLabel20";
-            this.metroLabel20.Size = new System.Drawing.Size(126, 49);
+            this.metroLabel20.Size = new System.Drawing.Size(94, 49);
             this.metroLabel20.TabIndex = 29;
             this.metroLabel20.Text = "升降阀口压力P(B)";
             this.metroLabel20.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -500,10 +492,10 @@
             // 
             this.metroLabel21.AutoSize = true;
             this.metroLabel21.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.metroLabel21.Location = new System.Drawing.Point(843, 443);
+            this.metroLabel21.Location = new System.Drawing.Point(905, 443);
             this.metroLabel21.Margin = new System.Windows.Forms.Padding(3);
             this.metroLabel21.Name = "metroLabel21";
-            this.metroLabel21.Size = new System.Drawing.Size(126, 49);
+            this.metroLabel21.Size = new System.Drawing.Size(94, 49);
             this.metroLabel21.TabIndex = 30;
             this.metroLabel21.Text = "倾斜阀P(A)";
             this.metroLabel21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -512,10 +504,10 @@
             // 
             this.metroLabel22.AutoSize = true;
             this.metroLabel22.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.metroLabel22.Location = new System.Drawing.Point(843, 498);
+            this.metroLabel22.Location = new System.Drawing.Point(905, 498);
             this.metroLabel22.Margin = new System.Windows.Forms.Padding(3);
             this.metroLabel22.Name = "metroLabel22";
-            this.metroLabel22.Size = new System.Drawing.Size(126, 49);
+            this.metroLabel22.Size = new System.Drawing.Size(94, 49);
             this.metroLabel22.TabIndex = 31;
             this.metroLabel22.Text = "倾斜阀P(B)";
             this.metroLabel22.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -524,10 +516,10 @@
             // 
             this.metroLabel23.AutoSize = true;
             this.metroLabel23.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.metroLabel23.Location = new System.Drawing.Point(843, 553);
+            this.metroLabel23.Location = new System.Drawing.Point(905, 553);
             this.metroLabel23.Margin = new System.Windows.Forms.Padding(3);
             this.metroLabel23.Name = "metroLabel23";
-            this.metroLabel23.Size = new System.Drawing.Size(126, 49);
+            this.metroLabel23.Size = new System.Drawing.Size(94, 49);
             this.metroLabel23.TabIndex = 32;
             this.metroLabel23.Text = "备用阀1 P(A)";
             this.metroLabel23.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -536,10 +528,10 @@
             // 
             this.metroLabel24.AutoSize = true;
             this.metroLabel24.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.metroLabel24.Location = new System.Drawing.Point(843, 608);
+            this.metroLabel24.Location = new System.Drawing.Point(905, 608);
             this.metroLabel24.Margin = new System.Windows.Forms.Padding(3);
             this.metroLabel24.Name = "metroLabel24";
-            this.metroLabel24.Size = new System.Drawing.Size(126, 49);
+            this.metroLabel24.Size = new System.Drawing.Size(94, 49);
             this.metroLabel24.TabIndex = 33;
             this.metroLabel24.Text = "备用阀1 P(B)";
             this.metroLabel24.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -548,10 +540,10 @@
             // 
             this.metroLabel25.AutoSize = true;
             this.metroLabel25.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.metroLabel25.Location = new System.Drawing.Point(843, 663);
+            this.metroLabel25.Location = new System.Drawing.Point(905, 663);
             this.metroLabel25.Margin = new System.Windows.Forms.Padding(3);
             this.metroLabel25.Name = "metroLabel25";
-            this.metroLabel25.Size = new System.Drawing.Size(126, 49);
+            this.metroLabel25.Size = new System.Drawing.Size(94, 49);
             this.metroLabel25.TabIndex = 34;
             this.metroLabel25.Text = "备用阀2 P(A)";
             this.metroLabel25.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -560,10 +552,10 @@
             // 
             this.metroLabel26.AutoSize = true;
             this.metroLabel26.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.metroLabel26.Location = new System.Drawing.Point(843, 718);
+            this.metroLabel26.Location = new System.Drawing.Point(905, 718);
             this.metroLabel26.Margin = new System.Windows.Forms.Padding(3);
             this.metroLabel26.Name = "metroLabel26";
-            this.metroLabel26.Size = new System.Drawing.Size(126, 49);
+            this.metroLabel26.Size = new System.Drawing.Size(94, 49);
             this.metroLabel26.TabIndex = 35;
             this.metroLabel26.Text = "备用阀2 P(B)";
             this.metroLabel26.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -575,7 +567,7 @@
             this.metroLabel27.Location = new System.Drawing.Point(3, 773);
             this.metroLabel27.Margin = new System.Windows.Forms.Padding(3);
             this.metroLabel27.Name = "metroLabel27";
-            this.metroLabel27.Size = new System.Drawing.Size(126, 50);
+            this.metroLabel27.Size = new System.Drawing.Size(94, 50);
             this.metroLabel27.TabIndex = 36;
             this.metroLabel27.Text = "回油流量";
             this.metroLabel27.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -584,10 +576,10 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label2.Location = new System.Drawing.Point(135, 278);
+            this.label2.Location = new System.Drawing.Point(103, 278);
             this.label2.Margin = new System.Windows.Forms.Padding(3);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(126, 49);
+            this.label2.Size = new System.Drawing.Size(94, 49);
             this.label2.TabIndex = 37;
             this.label2.Text = "label2";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -596,10 +588,10 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label4.Location = new System.Drawing.Point(135, 333);
+            this.label4.Location = new System.Drawing.Point(103, 333);
             this.label4.Margin = new System.Windows.Forms.Padding(3);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(126, 49);
+            this.label4.Size = new System.Drawing.Size(94, 49);
             this.label4.TabIndex = 38;
             this.label4.Text = "label4";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -608,10 +600,10 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label6.Location = new System.Drawing.Point(135, 388);
+            this.label6.Location = new System.Drawing.Point(103, 388);
             this.label6.Margin = new System.Windows.Forms.Padding(3);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(126, 49);
+            this.label6.Size = new System.Drawing.Size(94, 49);
             this.label6.TabIndex = 39;
             this.label6.Text = "label6";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -620,10 +612,10 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label8.Location = new System.Drawing.Point(135, 443);
+            this.label8.Location = new System.Drawing.Point(103, 443);
             this.label8.Margin = new System.Windows.Forms.Padding(3);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(126, 49);
+            this.label8.Size = new System.Drawing.Size(94, 49);
             this.label8.TabIndex = 40;
             this.label8.Text = "label8";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -632,10 +624,10 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label10.Location = new System.Drawing.Point(135, 498);
+            this.label10.Location = new System.Drawing.Point(103, 498);
             this.label10.Margin = new System.Windows.Forms.Padding(3);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(126, 49);
+            this.label10.Size = new System.Drawing.Size(94, 49);
             this.label10.TabIndex = 41;
             this.label10.Text = "label10";
             this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -644,10 +636,10 @@
             // 
             this.label11.AutoSize = true;
             this.label11.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label11.Location = new System.Drawing.Point(135, 553);
+            this.label11.Location = new System.Drawing.Point(103, 553);
             this.label11.Margin = new System.Windows.Forms.Padding(3);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(126, 49);
+            this.label11.Size = new System.Drawing.Size(94, 49);
             this.label11.TabIndex = 42;
             this.label11.Text = "label11";
             this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -656,10 +648,10 @@
             // 
             this.label12.AutoSize = true;
             this.label12.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label12.Location = new System.Drawing.Point(135, 608);
+            this.label12.Location = new System.Drawing.Point(103, 608);
             this.label12.Margin = new System.Windows.Forms.Padding(3);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(126, 49);
+            this.label12.Size = new System.Drawing.Size(94, 49);
             this.label12.TabIndex = 43;
             this.label12.Text = "label12";
             this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -668,10 +660,10 @@
             // 
             this.label13.AutoSize = true;
             this.label13.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label13.Location = new System.Drawing.Point(135, 663);
+            this.label13.Location = new System.Drawing.Point(103, 663);
             this.label13.Margin = new System.Windows.Forms.Padding(3);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(126, 49);
+            this.label13.Size = new System.Drawing.Size(94, 49);
             this.label13.TabIndex = 44;
             this.label13.Text = "label13";
             this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -680,10 +672,10 @@
             // 
             this.label14.AutoSize = true;
             this.label14.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label14.Location = new System.Drawing.Point(135, 718);
+            this.label14.Location = new System.Drawing.Point(103, 718);
             this.label14.Margin = new System.Windows.Forms.Padding(3);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(126, 49);
+            this.label14.Size = new System.Drawing.Size(94, 49);
             this.label14.TabIndex = 45;
             this.label14.Text = "label14";
             this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -692,10 +684,10 @@
             // 
             this.label15.AutoSize = true;
             this.label15.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label15.Location = new System.Drawing.Point(135, 773);
+            this.label15.Location = new System.Drawing.Point(103, 773);
             this.label15.Margin = new System.Windows.Forms.Padding(3);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(126, 50);
+            this.label15.Size = new System.Drawing.Size(94, 50);
             this.label15.TabIndex = 46;
             this.label15.Text = "label15";
             this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -704,10 +696,10 @@
             // 
             this.label16.AutoSize = true;
             this.label16.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label16.Location = new System.Drawing.Point(975, 58);
+            this.label16.Location = new System.Drawing.Point(1005, 58);
             this.label16.Margin = new System.Windows.Forms.Padding(3);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(130, 49);
+            this.label16.Size = new System.Drawing.Size(100, 49);
             this.label16.TabIndex = 47;
             this.label16.Text = "label16";
             this.label16.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -716,10 +708,10 @@
             // 
             this.label17.AutoSize = true;
             this.label17.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label17.Location = new System.Drawing.Point(975, 113);
+            this.label17.Location = new System.Drawing.Point(1005, 113);
             this.label17.Margin = new System.Windows.Forms.Padding(3);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(130, 49);
+            this.label17.Size = new System.Drawing.Size(100, 49);
             this.label17.TabIndex = 48;
             this.label17.Text = "label17";
             this.label17.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -728,10 +720,10 @@
             // 
             this.label18.AutoSize = true;
             this.label18.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label18.Location = new System.Drawing.Point(975, 168);
+            this.label18.Location = new System.Drawing.Point(1005, 168);
             this.label18.Margin = new System.Windows.Forms.Padding(3);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(130, 49);
+            this.label18.Size = new System.Drawing.Size(100, 49);
             this.label18.TabIndex = 49;
             this.label18.Text = "label18";
             this.label18.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -740,10 +732,10 @@
             // 
             this.label19.AutoSize = true;
             this.label19.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label19.Location = new System.Drawing.Point(975, 223);
+            this.label19.Location = new System.Drawing.Point(1005, 223);
             this.label19.Margin = new System.Windows.Forms.Padding(3);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(130, 49);
+            this.label19.Size = new System.Drawing.Size(100, 49);
             this.label19.TabIndex = 50;
             this.label19.Text = "label19";
             this.label19.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -752,10 +744,10 @@
             // 
             this.label20.AutoSize = true;
             this.label20.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label20.Location = new System.Drawing.Point(975, 278);
+            this.label20.Location = new System.Drawing.Point(1005, 278);
             this.label20.Margin = new System.Windows.Forms.Padding(3);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(130, 49);
+            this.label20.Size = new System.Drawing.Size(100, 49);
             this.label20.TabIndex = 51;
             this.label20.Text = "label20";
             this.label20.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -764,10 +756,10 @@
             // 
             this.label21.AutoSize = true;
             this.label21.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label21.Location = new System.Drawing.Point(975, 333);
+            this.label21.Location = new System.Drawing.Point(1005, 333);
             this.label21.Margin = new System.Windows.Forms.Padding(3);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(130, 49);
+            this.label21.Size = new System.Drawing.Size(100, 49);
             this.label21.TabIndex = 52;
             this.label21.Text = "label21";
             this.label21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -776,10 +768,10 @@
             // 
             this.label22.AutoSize = true;
             this.label22.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label22.Location = new System.Drawing.Point(975, 388);
+            this.label22.Location = new System.Drawing.Point(1005, 388);
             this.label22.Margin = new System.Windows.Forms.Padding(3);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(130, 49);
+            this.label22.Size = new System.Drawing.Size(100, 49);
             this.label22.TabIndex = 53;
             this.label22.Text = "label22";
             this.label22.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -788,10 +780,10 @@
             // 
             this.label23.AutoSize = true;
             this.label23.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label23.Location = new System.Drawing.Point(975, 443);
+            this.label23.Location = new System.Drawing.Point(1005, 443);
             this.label23.Margin = new System.Windows.Forms.Padding(3);
             this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(130, 49);
+            this.label23.Size = new System.Drawing.Size(100, 49);
             this.label23.TabIndex = 54;
             this.label23.Text = "label23";
             this.label23.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -800,10 +792,10 @@
             // 
             this.label24.AutoSize = true;
             this.label24.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label24.Location = new System.Drawing.Point(975, 498);
+            this.label24.Location = new System.Drawing.Point(1005, 498);
             this.label24.Margin = new System.Windows.Forms.Padding(3);
             this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(130, 49);
+            this.label24.Size = new System.Drawing.Size(100, 49);
             this.label24.TabIndex = 55;
             this.label24.Text = "label24";
             this.label24.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -812,10 +804,10 @@
             // 
             this.label25.AutoSize = true;
             this.label25.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label25.Location = new System.Drawing.Point(975, 553);
+            this.label25.Location = new System.Drawing.Point(1005, 553);
             this.label25.Margin = new System.Windows.Forms.Padding(3);
             this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(130, 49);
+            this.label25.Size = new System.Drawing.Size(100, 49);
             this.label25.TabIndex = 56;
             this.label25.Text = "label25";
             this.label25.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -824,10 +816,10 @@
             // 
             this.label26.AutoSize = true;
             this.label26.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label26.Location = new System.Drawing.Point(975, 608);
+            this.label26.Location = new System.Drawing.Point(1005, 608);
             this.label26.Margin = new System.Windows.Forms.Padding(3);
             this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(130, 49);
+            this.label26.Size = new System.Drawing.Size(100, 49);
             this.label26.TabIndex = 57;
             this.label26.Text = "label26";
             this.label26.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -836,10 +828,10 @@
             // 
             this.label27.AutoSize = true;
             this.label27.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label27.Location = new System.Drawing.Point(975, 663);
+            this.label27.Location = new System.Drawing.Point(1005, 663);
             this.label27.Margin = new System.Windows.Forms.Padding(3);
             this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(130, 49);
+            this.label27.Size = new System.Drawing.Size(100, 49);
             this.label27.TabIndex = 58;
             this.label27.Text = "label27";
             this.label27.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -848,10 +840,10 @@
             // 
             this.label28.AutoSize = true;
             this.label28.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label28.Location = new System.Drawing.Point(975, 718);
+            this.label28.Location = new System.Drawing.Point(1005, 718);
             this.label28.Margin = new System.Windows.Forms.Padding(3);
             this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(130, 49);
+            this.label28.Size = new System.Drawing.Size(100, 49);
             this.label28.TabIndex = 59;
             this.label28.Text = "label28";
             this.label28.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -860,19 +852,19 @@
             // 
             this.lblTestingProcess.AutoSize = true;
             this.lblTestingProcess.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblTestingProcess.Location = new System.Drawing.Point(267, 58);
+            this.lblTestingProcess.Location = new System.Drawing.Point(203, 58);
             this.lblTestingProcess.Margin = new System.Windows.Forms.Padding(3);
             this.lblTestingProcess.Name = "lblTestingProcess";
-            this.lblTestingProcess.Size = new System.Drawing.Size(570, 49);
+            this.lblTestingProcess.Size = new System.Drawing.Size(94, 49);
             this.lblTestingProcess.TabIndex = 60;
             this.lblTestingProcess.Text = "测试所处过程";
             this.lblTestingProcess.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(267, 773);
+            this.button1.Location = new System.Drawing.Point(203, 773);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(116, 50);
+            this.button1.Size = new System.Drawing.Size(94, 50);
             this.button1.TabIndex = 61;
             this.button1.Text = "demo完成";
             this.button1.UseVisualStyleBackColor = true;
@@ -881,6 +873,18 @@
             // timer1
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // picTest
+            // 
+            this.picTest.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.picTest.Image = ((System.Drawing.Image)(resources.GetObject("picTest.Image")));
+            this.picTest.Location = new System.Drawing.Point(403, 113);
+            this.picTest.Name = "picTest";
+            this.tableLayoutPanel1.SetRowSpan(this.picTest, 11);
+            this.picTest.Size = new System.Drawing.Size(296, 599);
+            this.picTest.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picTest.TabIndex = 1;
+            this.picTest.TabStop = false;
             // 
             // autoDataDisplayWin
             // 
@@ -910,7 +914,6 @@
 
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Label lblValveId;
-        private System.Windows.Forms.PictureBox picTest;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label7;
@@ -968,5 +971,6 @@
         private MetroFramework.Controls.MetroLabel lblTestingProcess;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.PictureBox picTest;
     }
 }

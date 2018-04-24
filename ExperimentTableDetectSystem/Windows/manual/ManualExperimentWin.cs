@@ -71,13 +71,17 @@ namespace ExperimentTableDetectSystem.Windows
 
         private void ManualExperimentWin_Load(object sender, EventArgs e)
         {
+            this.panel1.BackColor = Color.FromArgb(255, 50, 161, 206);
+            this.panel2.Width = this.panel1.Width / 2;
+            this.panel4.Height = this.panel2.Height / 2;
+            this.panel6.Height = this.panel4.Height;
             this.valveid = ManualNumberInput.id;
             this.company = ManualNumberInput.company;
             lblValveId.Text = "编号:" + this.valveid.ToString() + "  发往厂家:" + this.company.ToString();
             //获得配置项的值，赋予报警参数? ? ?
             timer1.Enabled = true;
-            peakHelperer.StartTimer(250);
-            dataStoreManager.StartTimer(500, 1000);
+           // peakHelperer.StartTimer(250);
+           // dataStoreManager.StartTimer(500, 1000);
         }
 
         private void timer1_Tick(object sender, EventArgs e)
