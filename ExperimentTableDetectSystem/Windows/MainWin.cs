@@ -35,6 +35,8 @@ namespace ExperimentTableDetectSystem.Windows
         {
             ManualNumberInput win = ManualNumberInput.getInstance();
             win.Show();
+            btnManualExperiment.Enabled = false;
+            btnAutoExperiment.Enabled = true;
         }
         /// <summary>
         /// 自动试验
@@ -43,6 +45,8 @@ namespace ExperimentTableDetectSystem.Windows
         /// <param name="e"></param>
         private void btnAutoExperiment_Click(object sender, EventArgs e)
         {
+            btnManualExperiment.Enabled = true;
+            btnAutoExperiment.Enabled = false;
             AutoExperimentWin win = AutoExperimentWin.getInstance();
             win.Show();
         }
@@ -101,6 +105,7 @@ namespace ExperimentTableDetectSystem.Windows
             {
                 MessageBox.Show(ex.Message + "数据保存类初始化错误。");
             }
+          
 
         }
         /// <summary>

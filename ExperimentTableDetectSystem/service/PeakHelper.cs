@@ -21,7 +21,7 @@ namespace ExperimentTableDetectSystem.service
         private PeakHelper(PcanHelper pcan)
         {
             this.hasData = false;
-            this.AllValue = new double[11];
+            this.AllValue = new double[51];
             this.pcanhelper = pcan;
             try
             { pcan.initialize();

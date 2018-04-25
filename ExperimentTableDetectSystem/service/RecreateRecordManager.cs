@@ -10,7 +10,7 @@ namespace ExperimentTableDetectSystem.service
 {
     public static class RecreateRecordManager
     {
-       // string sqlSteeveForce = string.Format("insert into SteeveForce values(newid(),getdate(),'{0}',{1},{2},{3},{4})", name, dicSteeve[0].GetForce(), dicSteeve[1].GetForce(), dicSteeve[2].GetForce(), dicSteeve[3].GetForce());
+        // string sqlSteeveForce = string.Format("insert into SteeveForce values(newid(),getdate(),'{0}',{1},{2},{3},{4})", name, dicSteeve[0].GetForce(), dicSteeve[1].GetForce(), dicSteeve[2].GetForce(), dicSteeve[3].GetForce());
         private static DBHelper dbHelper = DBHelper.GetInstance();
         /// <summary>
         ///1 重建用户表
@@ -42,7 +42,7 @@ namespace ExperimentTableDetectSystem.service
             dbHelper.ExecuteNonQuery(@"IF OBJECT_ID('dbo.valveM1', 'U') IS NOT NULL 
              DROP TABLE dbo.valveM1; ");
             dbHelper.ExecuteNonQuery(
-                "create table "+name+@"
+                "create table " + name + @"
                 (productId nvarchar(50)  NOT NULL,                 
                  n int NOT NULL,
 	             P1 real NOT NULL,
@@ -59,10 +59,10 @@ namespace ExperimentTableDetectSystem.service
         public static void M2(string s)
         {
 
-           dbHelper.ExecuteNonQuery(@"IF OBJECT_ID('dbo.valveM2', 'U') IS NOT NULL 
+            dbHelper.ExecuteNonQuery(@"IF OBJECT_ID('dbo.valveM2', 'U') IS NOT NULL 
                                         DROP TABLE dbo.valveM2; ");
             dbHelper.ExecuteNonQuery(
-                "create table "+s+ @"
+                "create table " + s + @"
                (
 	[productId] [nvarchar](50) NOT NULL,
   	[n] [int] NOT NULL,
@@ -80,10 +80,10 @@ namespace ExperimentTableDetectSystem.service
         /// </summary>
         public static void f1(string name)
         {
-           dbHelper.ExecuteNonQuery(@"IF OBJECT_ID('dbo.valvef1', 'U') IS NOT NULL 
+            dbHelper.ExecuteNonQuery(@"IF OBJECT_ID('dbo.valvef1', 'U') IS NOT NULL 
                                         DROP TABLE dbo.valvef1; ");
             dbHelper.ExecuteNonQuery(
-                "create table "+name+ @"
+                "create table " + name + @"
                (
     [productId] [nvarchar](50) NOT NULL,
   	[n] [int] NOT NULL,
@@ -102,10 +102,10 @@ namespace ExperimentTableDetectSystem.service
         public static void f2(string name)
         {
 
-           dbHelper.ExecuteNonQuery(@"IF OBJECT_ID('dbo.valvef2', 'U') IS NOT NULL 
+            dbHelper.ExecuteNonQuery(@"IF OBJECT_ID('dbo.valvef2', 'U') IS NOT NULL 
                                         DROP TABLE dbo.valvef2; ");
             dbHelper.ExecuteNonQuery(
-               "create table "+name+ @"
+               "create table " + name + @"
                (
    [productId] [nvarchar](50) NOT NULL,
   	[n] [int] NOT NULL,
@@ -127,7 +127,7 @@ namespace ExperimentTableDetectSystem.service
             dbHelper.ExecuteNonQuery(@"IF OBJECT_ID('dbo.valvef3', 'U') IS NOT NULL 
                                         DROP TABLE dbo.valvef3; ");
             dbHelper.ExecuteNonQuery(
-                "create table "+name+ @"
+                "create table " + name + @"
                (
         [productId] [nvarchar](50) NOT NULL,
   	    [n] [int] NOT NULL,
@@ -150,7 +150,7 @@ namespace ExperimentTableDetectSystem.service
             dbHelper.ExecuteNonQuery(@"IF OBJECT_ID('dbo.valvef4', 'U') IS NOT NULL 
                                        DROP TABLE dbo.valvef4; ");
             dbHelper.ExecuteNonQuery(
-                "create table "+name+ @"
+                "create table " + name + @"
                (
         [productId] [nvarchar](50) NOT NULL,
       	[n] [int] NOT NULL,
@@ -171,10 +171,10 @@ namespace ExperimentTableDetectSystem.service
         public static void f5(string name)
         {
 
-           dbHelper.ExecuteNonQuery(@"IF OBJECT_ID('dbo.valvef5', 'U') IS NOT NULL 
+            dbHelper.ExecuteNonQuery(@"IF OBJECT_ID('dbo.valvef5', 'U') IS NOT NULL 
                                         DROP TABLE dbo.valvef5; ");
             dbHelper.ExecuteNonQuery(
-                "create table "+name+ @"
+                "create table " + name + @"
                (
     [productId] [nvarchar](50) NOT NULL,
   	[n] [int] NOT NULL,
@@ -196,10 +196,10 @@ namespace ExperimentTableDetectSystem.service
         public static void f6(string name)
         {
 
-           dbHelper.ExecuteNonQuery(@"IF OBJECT_ID('dbo.valvef6', 'U') IS NOT NULL 
+            dbHelper.ExecuteNonQuery(@"IF OBJECT_ID('dbo.valvef6', 'U') IS NOT NULL 
                                         DROP TABLE dbo.valvef6; ");
             dbHelper.ExecuteNonQuery(
-                "create table "+name+ @"
+                "create table " + name + @"
                (
      [productId] [nvarchar](50) NOT NULL,
   	[n] [int] NOT NULL,
@@ -224,7 +224,7 @@ namespace ExperimentTableDetectSystem.service
             dbHelper.ExecuteNonQuery(@"IF OBJECT_ID('dbo.valvef7', 'U') IS NOT NULL 
                                         DROP TABLE dbo.valvef7; ");
             dbHelper.ExecuteNonQuery(
-                "create table "+name+ @"
+                "create table " + name + @"
                (
      [productId] [nvarchar](50) NOT NULL,
   	[n] [int] NOT NULL,
@@ -246,10 +246,10 @@ namespace ExperimentTableDetectSystem.service
         public static void f8(string name)
         {
 
-           dbHelper.ExecuteNonQuery(@"IF OBJECT_ID('dbo.valvef8', 'U') IS NOT NULL 
+            dbHelper.ExecuteNonQuery(@"IF OBJECT_ID('dbo.valvef8', 'U') IS NOT NULL 
                                        DROP TABLE dbo.valvef8; ");
             dbHelper.ExecuteNonQuery(
-                "create table "+name+ @"
+                "create table " + name + @"
                (
     [productId] [nvarchar](50) NOT NULL,
   	[n] [int] NOT NULL,
@@ -276,7 +276,7 @@ namespace ExperimentTableDetectSystem.service
             dbHelper.ExecuteNonQuery(@"IF OBJECT_ID('dbo.valvef9', 'U') IS NOT NULL 
                                         DROP TABLE dbo.valvef9; ");
             dbHelper.ExecuteNonQuery(
-                "create table "+name+ @"
+                "create table " + name + @"
                (
     [productId] [nvarchar](50) NOT NULL,
   	[n] [int] NOT NULL,
@@ -300,10 +300,10 @@ namespace ExperimentTableDetectSystem.service
         public static void f10(string name)
         {
 
-           dbHelper.ExecuteNonQuery(@"IF OBJECT_ID('dbo.valvef10', 'U') IS NOT NULL 
+            dbHelper.ExecuteNonQuery(@"IF OBJECT_ID('dbo.valvef10', 'U') IS NOT NULL 
                                         DROP TABLE dbo.valvef10; ");
             dbHelper.ExecuteNonQuery(
-                "create table "+name+ @"
+                "create table " + name + @"
                (
     [productId] [nvarchar](50) NOT NULL,
   	[n] [int] NOT NULL,
@@ -322,7 +322,7 @@ namespace ExperimentTableDetectSystem.service
             dbHelper.ExecuteNonQuery(@"IF OBJECT_ID('dbo.valvef11', 'U') IS NOT NULL 
                                         DROP TABLE dbo.valvef11; ");
             dbHelper.ExecuteNonQuery(
-                "create table "+name+ @"
+                "create table " + name + @"
                (
     [productId] [nvarchar](50) NOT NULL,
   	[n] [int] NOT NULL,
@@ -342,7 +342,7 @@ namespace ExperimentTableDetectSystem.service
             dbHelper.ExecuteNonQuery(@"IF OBJECT_ID('dbo.valvef12', 'U') IS NOT NULL 
                                         DROP TABLE dbo.valvef12; ");
             dbHelper.ExecuteNonQuery(
-                "create table "+name+ @"
+                "create table " + name + @"
                (
     [productId] [nvarchar](50) NOT NULL,
   	[n] [int] NOT NULL,
@@ -355,26 +355,26 @@ namespace ExperimentTableDetectSystem.service
     [time] [real] NULL
 ) ");
         }
-       
+
 
         public static void CreateAutoTable(string s)
         {
             //自动
-            f1(s+"f1");
-            f2(s+"f2");
-            f3(s+"f3");
-            f4(s+"f4");
-            f5(s+"f5");
-            f6(s+"f6");
-            f7(s+"f7");
-            f8(s+"f8");
-            f9(s+"f9");
-            f10(s+"f10");
-            f11(s+"f11");
-            f12(s+"f12");
+            f1(s + "f1");
+            f2(s + "f2");
+            f3(s + "f3");
+            f4(s + "f4");
+            f5(s + "f5");
+            f6(s + "f6");
+            f7(s + "f7");
+            f8(s + "f8");
+            f9(s + "f9");
+            f10(s + "f10");
+            f11(s + "f11");
+            f12(s + "f12");
         }
 
-       
+
         /// <summary>
         /// 建立阀测试数据的表（14个表）
         /// </summary>
@@ -386,7 +386,7 @@ namespace ExperimentTableDetectSystem.service
                 M2("valveM2");
                 CreateAutoTable("valve");
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show("初始化建立阀测试表发生异常" + ex.Message);
             }
@@ -394,22 +394,23 @@ namespace ExperimentTableDetectSystem.service
         }
         #endregion
 
-      
+
 
         /// <summary>
         /// 加编号
         /// </summary>
         /// <param name="s"></param>
         /// <param name="n"></param>
-        public static void AddNewId(string id,int n,string company)
-        {                                      
-                 string str = string.Format("insert into tbProductId values('{0}',{1},'{2}')", id,n,company);
+        public static void AddNewId(string id, int n, string company)
+        {
+            string str = string.Format("insert into tbProductId values('{0}',{1},'{2}')", id, n, company);
             dbHelper.ExecuteNonQuery(str);
         }
+
         /// <summary>
         /// 建立编号的表,管理阀编号（包括id和次数n），用于查询
         /// </summary>
-        public  static  void CreateProductId()
+        public static void CreateProductId()
         {
             dbHelper.ExecuteNonQuery(@"IF OBJECT_ID('dbo.tbProductId', 'U') IS NOT NULL 
                                         DROP TABLE dbo.tbProductId; ");
@@ -421,12 +422,82 @@ namespace ExperimentTableDetectSystem.service
                 )");
         }
 
+       
+        public static void CreateTotalTable()
+        {
+            dbHelper.ExecuteNonQuery(@"IF OBJECT_ID('dbo.allData', 'U') IS NOT NULL 
+                                        DROP TABLE dbo.allData; ");
+            dbHelper.ExecuteNonQuery(
+                @"create table allData
+                ([productId] [nvarchar](50) NOT NULL,
+  	             [n] [int] NOT NULL,
+[testName] [nvarchar](50) NOT NULL,
+	[pump1flow] [real] NULL,
+	[pump2flow] [real] NULL,
+	[steerflow] [real] NULL,
+	[leakageflow] [real] NULL,
+
+	[ai1] [real] NULL,
+	[ai2] [real] NULL,
+	[ai3] [real] NULL,
+	[ai4] [real] NULL,
+    [ai5] [real] NULL,
+    [ai6] [real] NULL,
+	[ai7] [real] NULL,
+	[ai8] [real] NULL,
+	[ai9] [real] NULL,
+    [ai10] [real] NULL,
+    [ai11] [real] NULL,
+	[ai12] [real] NULL,
+	[ai13] [real] NULL,
+	[ai14] [real] NULL,
+    [ai15] [real] NULL,
+    [ai16] [real] NULL,
+	[ai17] [real] NULL,
+	[ai18] [real] NULL,
+	[ai19] [real] NULL,
+    [ai20] [real] NULL,
+    [ai21] [real] NULL,
+    [ai22] [real] NULL,
+	[ai23] [real] NULL,
+	
+	[ai24] [real] NULL,
+    [ai25] [real] NULL,
+    [ai26] [real] NULL,
+	[ai27] [real] NULL,
+	[ai28] [real] NULL,
+	[ai29] [real] NULL,
+    [ai30] [real] NULL,
+    [ai31] [real] NULL,
+    [ai32] [real] NULL,
+
+    [pushvalvef1] [real] NULL,
+    [pushvalvef2] [real] NULL,
+    [pushvalvef3] [real] NULL,
+    [pushvalvef4] [real] NULL,
+
+    [systembackPressure] [real] NULL,
+    [cylinderPressure] [real] NULL,
+    [cylinderInPressure] [real] NULL,
+    [cylinderOutPressure] [real] NULL,
+
+    [pushvalveTime1] [real] NULL,
+    [pushvalveTime2] [real] NULL,
+    [pushvalveTime3] [real] NULL,
+    [pushvalveTime4] [real] NULL,
+    [pushvalveTime5] [real] NULL,
+    [pushvalveTime6] [real] NULL,
+    [pushvalveTime7] [real] NULL,
+    [pushvalveTime8] [real] NULL,
+                )");
+        }
+
         public static void InitialDataBase()
         {
             RecreateUserManagerTable();
             CreateProductId();
-            CreateValveTable();
-
+            //  CreateValveTable();
+            CreateTotalTable();
         }
 
     }

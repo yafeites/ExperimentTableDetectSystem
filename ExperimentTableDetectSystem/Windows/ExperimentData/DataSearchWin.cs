@@ -28,7 +28,7 @@ namespace ExperimentTableDetectSystem.Windows.ExperimentData
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-              id= txtId.Text;//编号
+             id= txtId.Text;//编号
              n= lstN.SelectedIndex+1;//测试次数
              test = lstSelection.SelectedIndex+1;//试验项目
                                                  //  textBox1.Text = n.ToString();

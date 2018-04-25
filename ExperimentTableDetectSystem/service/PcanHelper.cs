@@ -99,7 +99,7 @@ namespace ExperimentTableDetectSystem.service
         /// </summary>
         public double[] ReadMessages()
         {
-            double[] v = new double[11];//对外的实际值
+            double[] v = new double[51];//对外的实际值
             TPCANMsg CANMsg;
             TPCANTimestamp CANTimeStamp;
             TPCANStatus stsResult;
@@ -208,7 +208,7 @@ namespace ExperimentTableDetectSystem.service
 
         public double[] ConvertToRealValue(TPCANMsg CanMsg)
         {
-            double[] realValue = new double[52];
+            double[] realValue = new double[51];
 
             byte[] AllDatas = new byte[96];
             int[] temp = new int[12] { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
@@ -226,7 +226,7 @@ namespace ExperimentTableDetectSystem.service
             }
             else if (CanMsg.ID == 0x281)
             {
-                temp[1] = 0;
+                temp[1] = 1;
                 for (int i = 8; i < 16; i++)
                 {
                     AllDatas[i] = CanMsg.DATA[i % 8];
@@ -235,7 +235,7 @@ namespace ExperimentTableDetectSystem.service
             }
             else if (CanMsg.ID == 0x282)
             {
-                temp[2] = 0;
+                temp[2] = 1;
                 for (int i = 16; i < 24; i++)
                 {
                     AllDatas[i] = CanMsg.DATA[i % 8];
@@ -243,7 +243,7 @@ namespace ExperimentTableDetectSystem.service
             }
             else if (CanMsg.ID == 0x283)
             {
-                temp[3] = 0;
+                temp[3] = 1;
                 for (int i = 24; i < 32; i++)
                 {
                     AllDatas[i] = CanMsg.DATA[i % 8];
@@ -251,7 +251,7 @@ namespace ExperimentTableDetectSystem.service
             }
             else if (CanMsg.ID == 0x284)
             {
-                temp[4] = 0;
+                temp[4] = 1;
                 for (int i = 32; i < 40; i++)
                 {
                     AllDatas[i] = CanMsg.DATA[i % 8];
@@ -259,7 +259,7 @@ namespace ExperimentTableDetectSystem.service
             }
             else if (CanMsg.ID == 0x285)
             {
-                temp[5] = 0;
+                temp[5] = 1;
                 for (int i = 40; i < 48; i++)
                 {
                     AllDatas[i] = CanMsg.DATA[i % 8];
@@ -267,7 +267,7 @@ namespace ExperimentTableDetectSystem.service
             }
             else if (CanMsg.ID == 0x286)
             {
-                temp[6] = 0;
+                temp[6] = 1;
                 for (int i = 48; i < 56; i++)
                 {
                     AllDatas[i] = CanMsg.DATA[i % 8];
@@ -275,7 +275,7 @@ namespace ExperimentTableDetectSystem.service
             }
             else if (CanMsg.ID == 0x287)
             {
-                temp[7] = 0;
+                temp[7] = 1;
                 for (int i = 56; i < 64; i++)
                 {
                     AllDatas[i] = CanMsg.DATA[i % 8];
@@ -283,7 +283,7 @@ namespace ExperimentTableDetectSystem.service
             }
             else if (CanMsg.ID == 0x288)
             {
-                temp[8] = 0;
+                temp[8] = 1;
                 for (int i = 64; i < 72; i++)
                 {
                     AllDatas[i] = CanMsg.DATA[i % 8];
@@ -291,7 +291,7 @@ namespace ExperimentTableDetectSystem.service
             }
             else if (CanMsg.ID == 0x289)
             {
-                temp[9] = 0;
+                temp[9] = 1;
                 for (int i = 72; i < 80; i++)
                 {
                     AllDatas[i] = CanMsg.DATA[i % 8];
@@ -299,7 +299,7 @@ namespace ExperimentTableDetectSystem.service
             }
             else if (CanMsg.ID == 0x290)
             {
-                temp[10] = 0;
+                temp[10] = 1;
                 for (int i = 80; i < 88; i++)
                 {
                     AllDatas[i] = CanMsg.DATA[i % 8];
@@ -307,7 +307,7 @@ namespace ExperimentTableDetectSystem.service
             }
             else if (CanMsg.ID == 0x291)
             {
-                temp[11] = 0;
+                temp[11] = 1;
                 for (int i = 88; i < 96; i++)
                 {
                     AllDatas[i] = CanMsg.DATA[i % 8];
@@ -477,6 +477,7 @@ namespace ExperimentTableDetectSystem.service
                 realValue[37] = endFlag10;
                 realValue[38] = endFlag11;
                 realValue[39] = endFlag12;
+
                 realValue[40] = endFlag13leakageTest;
                 realValue[41] = endFlag14;
                 realValue[42] = endFlag15;

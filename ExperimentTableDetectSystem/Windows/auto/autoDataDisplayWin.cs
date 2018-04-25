@@ -26,6 +26,7 @@ namespace ExperimentTableDetectSystem.Windows.auto
             return instance;
         }
         #endregion
+        
         private string valveid;
 
         public string Valveid
@@ -48,9 +49,13 @@ namespace ExperimentTableDetectSystem.Windows.auto
         
         private void autoDataDisplayWin_Load(object sender, EventArgs e)
         {
+            this.panel1.BackColor = Color.FromArgb(255, 50, 161, 206);
+            this.panel2.Width = this.panel1.Width / 2;
+            this.panel4.Height = this.panel2.Height / 2;
+            this.panel6.Height = this.panel4.Height;
             this.valveid = ManualNumberInput.id;
             this.lblValveId.Text = valveid;
-
+         
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -63,6 +68,11 @@ namespace ExperimentTableDetectSystem.Windows.auto
         private void timer1_Tick(object sender, EventArgs e)
         {
 
+        }
+
+        private void autoDataDisplayWin_FormClosing(object sender, FormClosingEventArgs e)
+        {
+           // ManualExperimentWin.isDone = false;
         }
     }
 }

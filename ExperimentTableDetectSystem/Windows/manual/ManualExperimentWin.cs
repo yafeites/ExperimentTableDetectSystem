@@ -15,7 +15,7 @@ namespace ExperimentTableDetectSystem.Windows
     {
         #region 字段
         private string valveid;
-
+        public static bool isDone=false;
         public string Valveid
         {
             get
@@ -71,6 +71,7 @@ namespace ExperimentTableDetectSystem.Windows
 
         private void ManualExperimentWin_Load(object sender, EventArgs e)
         {
+            //isDone = true;
             this.panel1.BackColor = Color.FromArgb(255, 50, 161, 206);
             this.panel2.Width = this.panel1.Width / 2;
             this.panel4.Height = this.panel2.Height / 2;
@@ -107,7 +108,7 @@ namespace ExperimentTableDetectSystem.Windows
             {
                 peakHelperer.StopTimer();
             }
-           
+            isDone = true;
         }
     }
 }

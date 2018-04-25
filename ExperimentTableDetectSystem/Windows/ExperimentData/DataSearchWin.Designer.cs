@@ -50,7 +50,7 @@
             // 
             // txtId
             // 
-            this.txtId.Location = new System.Drawing.Point(680, 118);
+            this.txtId.Location = new System.Drawing.Point(625, 118);
             this.txtId.Name = "txtId";
             this.txtId.Size = new System.Drawing.Size(100, 28);
             this.txtId.TabIndex = 1;
@@ -81,9 +81,9 @@
             "第9次",
             "第10次",
             "第11次"});
-            this.lstN.Location = new System.Drawing.Point(680, 195);
+            this.lstN.Location = new System.Drawing.Point(581, 195);
             this.lstN.Name = "lstN";
-            this.lstN.Size = new System.Drawing.Size(120, 94);
+            this.lstN.Size = new System.Drawing.Size(219, 94);
             this.lstN.TabIndex = 3;
             // 
             // label3
@@ -100,28 +100,29 @@
             this.lstSelection.FormattingEnabled = true;
             this.lstSelection.ItemHeight = 18;
             this.lstSelection.Items.AddRange(new object[] {
-            "M1",
-            "M2",
-            "f1",
-            "f2",
-            "f3",
-            "f4",
-            "f5",
-            "f6",
-            "f7",
-            "f8",
-            "f9",
-            "f10",
-            "f11",
-            "f12"});
-            this.lstSelection.Location = new System.Drawing.Point(680, 345);
+            "M1主溢流阀调定试验",
+            "M2转向溢流阀调定测试",
+            "f1中位压力损失测试",
+            "f2转向优先阀流量测试",
+            "f3内泄漏测试",
+            "f4小门架上升",
+            "f5小门架下降",
+            "f6大门架上升",
+            "f7大门架下降",
+            "f8小门架前倾",
+            "f9小门架后倾",
+            "f10大门架前倾",
+            "f11大门架后倾",
+            "f12小门架前倾自锁",
+            "f13大门架前倾自锁"});
+            this.lstSelection.Location = new System.Drawing.Point(581, 316);
             this.lstSelection.Name = "lstSelection";
-            this.lstSelection.Size = new System.Drawing.Size(120, 94);
+            this.lstSelection.Size = new System.Drawing.Size(251, 184);
             this.lstSelection.TabIndex = 5;
             // 
             // btnSearch
             // 
-            this.btnSearch.Location = new System.Drawing.Point(680, 524);
+            this.btnSearch.Location = new System.Drawing.Point(581, 575);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(100, 33);
             this.btnSearch.TabIndex = 6;
