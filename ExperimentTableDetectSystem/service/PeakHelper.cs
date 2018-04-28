@@ -11,7 +11,7 @@ namespace ExperimentTableDetectSystem.service
     {
         #region 字段
         public volatile bool hasData;
-        public double[] AllValue;
+        public double[] AllValue { get; set; }
         private PcanHelper pcanhelper;
         public System.Threading.Timer readTimer { get; set; }
         #endregion

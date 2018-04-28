@@ -41,11 +41,12 @@ namespace ExperimentTableDetectSystem.Windows
                 company = value;
             }
         }
-
+        double[] nowAlldata = new double[51];
         private string company;
         PeakHelper peakHelperer;
         DataStoreManager dataStoreManager;
         ConfigManager config;
+
         #endregion
 
         #region singleton 
@@ -66,6 +67,7 @@ namespace ExperimentTableDetectSystem.Windows
             peakHelperer = PeakHelper.GetInstance();
             dataStoreManager = DataStoreManager.GetInstance();
             config = ConfigManager.GetInstance();
+           
         }
        
 
@@ -81,34 +83,99 @@ namespace ExperimentTableDetectSystem.Windows
             lblValveId.Text = "编号:" + this.valveid.ToString() + "  发往厂家:" + this.company.ToString();
             //获得配置项的值，赋予报警参数? ? ?
             timer1.Enabled = true;
-           // peakHelperer.StartTimer(250);
-           // dataStoreManager.StartTimer(500, 1000);
+            timer2.Enabled = false;
+       
+            peakHelperer.StartTimer(250);
+           dataStoreManager.StartTimer1(500, 1000);
         }
 
+        /// <summary>
+        /// 数据显示
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void timer1_Tick(object sender, EventArgs e)
         {
             refreshData();
+
         }
+
 
         /// <summary>
         /// 数据显示
         /// </summary>
         private void refreshData()
         {
+            double[] showdata = new double[51];
+            for (int i = 0; i < 51; i++)
+            {
+                showdata[i] = peakHelperer.AllValue[i];
+            }
+            ///数据显示实现代码？？?
+            txtmainPumpP1.Text = showdata[4].ToString();
+            txtMainPumpP2.Text = showdata[5].ToString();
+            txtpumpFlow1.Text = showdata[0].ToString();
+            txtPumpFlow2.Text = showdata[1].ToString();
+
+            if (showdata[28] == 1)
+            {
+                timer1.Enabled = false;
+                DialogResult dr= MessageBox.Show("主溢流阀调定试验已做完，请进行转向溢流阀调定测试","提示",MessageBoxButtons.OKCancel);
+                if (dr == DialogResult.OK)
+                {
+                    this.picTest.Image = Image.FromFile(@"../../picture\1.jpg");
+                  //  timer1.Enabled = false;
+                    timer2.Enabled = true;
+                }
+                else { timer1.Enabled = true; }
+              
+            }
+            
+
+
 
         }
 
+        
+        /// <summary>
+        /// 关闭
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ManualExperimentWin_FormClosing(object sender, FormClosingEventArgs e)
         {
             if (dataStoreManager != null)
             {
-                dataStoreManager.StopTimer();
+                dataStoreManager.StopTimer1();
             }
             if (peakHelperer != null)
             {
                 peakHelperer.StopTimer();
             }
             isDone = true;
+        }
+
+        private void timer2_Tick(object sender, EventArgs e)
+        {
+            double[] showdata = new double[51];
+            for (int i = 0; i < 51; i++)
+            {
+                showdata[i] = peakHelperer.AllValue[i];
+            }
+            txtmainPumpP1.Text = showdata[4].ToString();
+            txtMainPumpP2.Text = showdata[5].ToString();
+            txtpumpFlow1.Text = showdata[0].ToString();
+            txtPumpFlow2.Text = showdata[1].ToString();
+            txtSteerPressure.Text = showdata[6].ToString();
+            if (showdata[29] == 1)
+            {
+                timer2.Enabled = false;
+                DialogResult dr=   MessageBox.Show("转向溢流阀调定试验已做完,下面进行自动测试。");
+                if (dr == DialogResult.OK)
+                {
+                    this.Close();
+                }
+            }
         }
     }
 }

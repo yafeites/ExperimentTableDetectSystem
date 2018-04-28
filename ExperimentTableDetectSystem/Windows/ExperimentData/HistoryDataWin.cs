@@ -47,7 +47,7 @@ namespace ExperimentTableDetectSystem.Windows.ExperimentData
                case 14:this.Text = "12.小门架前倾自锁"; searchhelper.Searchf12(productId, N, dgv);break;
                
                 case 15:this.Text = "13.大门架前倾自锁"; searchhelper.Searchf13(productId, N, dgv);     break;
-                default: MessageBox.Show("请选择试验项目"); break;
+                default: MessageBox.Show("没有符合条件的记录，请重新选择"); break;
             }
            
       

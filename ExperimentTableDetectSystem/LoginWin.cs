@@ -48,7 +48,7 @@ namespace ExperimentTableDetectSystem
 
         private void btnConfirm_Click(object sender, EventArgs e)
         {
-            //this.DialogResult = DialogResult.OK;
+           
             string userName = this.txtUserName.Text;
             string password = this.txtPassword.Text;
             UserRightManager.Initial(userName, password);
