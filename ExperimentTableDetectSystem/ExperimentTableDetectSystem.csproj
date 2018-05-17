@@ -63,7 +63,6 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="service\ConfigManager.cs" />
-    <Compile Include="service\DataReceiveManager.cs" />
     <Compile Include="service\DataStoreManager.cs" />
     <Compile Include="service\OperateDb.cs" />
     <Compile Include="service\PCANBasic.cs" />
@@ -73,6 +72,12 @@
     <Compile Include="service\SearchHelper.cs" />
     <Compile Include="service\UserRightManager.cs" />
     <Compile Include="service\WarningManager.cs" />
+    <Compile Include="testdemo\testManualWin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="testdemo\testManualWin.Designer.cs">
+      <DependentUpon>testManualWin.cs</DependentUpon>
+    </Compile>
     <Compile Include="testWin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -140,6 +145,12 @@
     <Compile Include="Windows\setParameterWin\SetParameterWin.Designer.cs">
       <DependentUpon>SetParameterWin.cs</DependentUpon>
     </Compile>
+    <Compile Include="Windows\TestForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\TestForm.designer.cs">
+      <DependentUpon>TestForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Windows\UserWin\AddAndUpdateWin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -164,6 +175,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="testdemo\testManualWin.resx">
+      <DependentUpon>testManualWin.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="testWin.resx">
       <DependentUpon>testWin.cs</DependentUpon>
     </EmbeddedResource>
@@ -196,6 +210,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Windows\setParameterWin\SetParameterWin.resx">
       <DependentUpon>SetParameterWin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\TestForm.resx">
+      <DependentUpon>TestForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Windows\UserWin\AddAndUpdateWin.resx">
       <DependentUpon>AddAndUpdateWin.cs</DependentUpon>

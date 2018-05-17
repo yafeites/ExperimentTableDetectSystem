@@ -14,7 +14,7 @@ namespace ExperimentTableDetectSystem.Windows.manual
     public partial class ManualNumberInput : MetroFramework.Forms.MetroForm
     {
         private DBHelper dbhelper=DBHelper.GetInstance();
-       // DataStoreManager dataStoreManager;
+      
        private int i=1;
         public static int n = -1;
         #region singleton
@@ -60,10 +60,13 @@ namespace ExperimentTableDetectSystem.Windows.manual
         /// <param name="e"></param>
         private void btnConfirm_Click(object sender, EventArgs e)
         {
-           this.valveid = txtValveId.Text;
+          
+            this.valveid = txtValveId.Text;
             id = this.valveid;
             this.SendCompany = txtCompany.Text;
             company = this.SendCompany;
+        
+
             string sqlstr = "select * from tbProductId where Id="+"'"+txtValveId.Text+"'" ;
 
             
@@ -80,7 +83,9 @@ namespace ExperimentTableDetectSystem.Windows.manual
              
             }
             n = i;
-
+            //  datastoremanager.n = n;
+           // DataStoreManager.n = n;
+           // DataStoreManager.productId = id;
             try
             {
                 RecreateRecordManager.AddNewId(id, i,company);
@@ -89,9 +94,8 @@ namespace ExperimentTableDetectSystem.Windows.manual
             {
                 MessageBox.Show("加入阀编号表错误" + ex.Message);
             }
-            //接收数据插入到测试数据表里，14个表
-           // dataStoreManager.Insertf1();
-
+            
+           
 
             this.Close();
 

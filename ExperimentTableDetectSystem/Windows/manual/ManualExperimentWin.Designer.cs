@@ -36,10 +36,6 @@
             this.panel7 = new System.Windows.Forms.Panel();
             this.picTest = new System.Windows.Forms.PictureBox();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.grpSteeveDis = new System.Windows.Forms.GroupBox();
             this.panel11 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
@@ -83,6 +79,51 @@
             this.metroLabel39 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel40 = new MetroFramework.Controls.MetroLabel();
             this.txtSmallUpDis = new MetroFramework.Controls.MetroTextBox();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.metroTextBox1 = new MetroFramework.Controls.MetroTextBox();
+            this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
+            this.txtBigForwardOutPressureLoss = new MetroFramework.Controls.MetroTextBox();
+            this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
+            this.metroTextBox3 = new MetroFramework.Controls.MetroTextBox();
+            this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
+            this.txtBigInPressureLoss = new MetroFramework.Controls.MetroTextBox();
+            this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
+            this.metroTextBox5 = new MetroFramework.Controls.MetroTextBox();
+            this.metroLabel5 = new MetroFramework.Controls.MetroLabel();
+            this.txtBigForwardV = new MetroFramework.Controls.MetroTextBox();
+            this.metroLabel6 = new MetroFramework.Controls.MetroLabel();
+            this.metroTextBox7 = new MetroFramework.Controls.MetroTextBox();
+            this.metroLabel7 = new MetroFramework.Controls.MetroLabel();
+            this.txtBigForwardDis = new MetroFramework.Controls.MetroTextBox();
+            this.metroLabel8 = new MetroFramework.Controls.MetroLabel();
+            this.metroTextBox9 = new MetroFramework.Controls.MetroTextBox();
+            this.metroLabel9 = new MetroFramework.Controls.MetroLabel();
+            this.txtBigDownPressureLoss = new MetroFramework.Controls.MetroTextBox();
+            this.metroLabel10 = new MetroFramework.Controls.MetroLabel();
+            this.metroTextBox11 = new MetroFramework.Controls.MetroTextBox();
+            this.metroLabel11 = new MetroFramework.Controls.MetroLabel();
+            this.txtBigDownV = new MetroFramework.Controls.MetroTextBox();
+            this.metroLabel12 = new MetroFramework.Controls.MetroLabel();
+            this.txtBigBackOutPressureLoss = new MetroFramework.Controls.MetroTextBox();
+            this.metroLabel13 = new MetroFramework.Controls.MetroLabel();
+            this.txtBigDownDis = new MetroFramework.Controls.MetroTextBox();
+            this.metroLabel14 = new MetroFramework.Controls.MetroLabel();
+            this.txtBIgBackInPressureLoss = new MetroFramework.Controls.MetroTextBox();
+            this.metroLabel15 = new MetroFramework.Controls.MetroLabel();
+            this.txtBigUpPressureLoss = new MetroFramework.Controls.MetroTextBox();
+            this.metroLabel16 = new MetroFramework.Controls.MetroLabel();
+            this.txtBigBackV = new MetroFramework.Controls.MetroTextBox();
+            this.metroLabel17 = new MetroFramework.Controls.MetroLabel();
+            this.txtBigUpV = new MetroFramework.Controls.MetroTextBox();
+            this.metroLabel18 = new MetroFramework.Controls.MetroLabel();
+            this.txtBigBackDis = new MetroFramework.Controls.MetroTextBox();
+            this.metroLabel19 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel20 = new MetroFramework.Controls.MetroLabel();
+            this.txtBigUpDis = new MetroFramework.Controls.MetroTextBox();
+            this.panel4 = new System.Windows.Forms.Panel();
             this.grpSteeveForce = new System.Windows.Forms.GroupBox();
             this.panel9 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
@@ -126,64 +167,25 @@
             this.lblValveId = new MetroFramework.Controls.MetroLabel();
             this.metroLabel60 = new MetroFramework.Controls.MetroLabel();
             this.txtmainPumpP1 = new MetroFramework.Controls.MetroTextBox();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.metroTextBox1 = new MetroFramework.Controls.MetroTextBox();
-            this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
-            this.txtBigForwardOutPressureLoss = new MetroFramework.Controls.MetroTextBox();
-            this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
-            this.metroTextBox3 = new MetroFramework.Controls.MetroTextBox();
-            this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
-            this.txtBigInPressureLoss = new MetroFramework.Controls.MetroTextBox();
-            this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
-            this.metroTextBox5 = new MetroFramework.Controls.MetroTextBox();
-            this.metroLabel5 = new MetroFramework.Controls.MetroLabel();
-            this.txtBigForwardV = new MetroFramework.Controls.MetroTextBox();
-            this.metroLabel6 = new MetroFramework.Controls.MetroLabel();
-            this.metroTextBox7 = new MetroFramework.Controls.MetroTextBox();
-            this.metroLabel7 = new MetroFramework.Controls.MetroLabel();
-            this.txtBigForwardDis = new MetroFramework.Controls.MetroTextBox();
-            this.metroLabel8 = new MetroFramework.Controls.MetroLabel();
-            this.metroTextBox9 = new MetroFramework.Controls.MetroTextBox();
-            this.metroLabel9 = new MetroFramework.Controls.MetroLabel();
-            this.txtBigDownPressureLoss = new MetroFramework.Controls.MetroTextBox();
-            this.metroLabel10 = new MetroFramework.Controls.MetroLabel();
-            this.metroTextBox11 = new MetroFramework.Controls.MetroTextBox();
-            this.metroLabel11 = new MetroFramework.Controls.MetroLabel();
-            this.txtBigDownV = new MetroFramework.Controls.MetroTextBox();
-            this.metroLabel12 = new MetroFramework.Controls.MetroLabel();
-            this.txtBigBackOutPressureLoss = new MetroFramework.Controls.MetroTextBox();
-            this.metroLabel13 = new MetroFramework.Controls.MetroLabel();
-            this.txtBigDownDis = new MetroFramework.Controls.MetroTextBox();
-            this.metroLabel14 = new MetroFramework.Controls.MetroLabel();
-            this.txtBIgBackInPressureLoss = new MetroFramework.Controls.MetroTextBox();
-            this.metroLabel15 = new MetroFramework.Controls.MetroLabel();
-            this.txtBigUpPressureLoss = new MetroFramework.Controls.MetroTextBox();
-            this.metroLabel16 = new MetroFramework.Controls.MetroLabel();
-            this.txtBigBackV = new MetroFramework.Controls.MetroTextBox();
-            this.metroLabel17 = new MetroFramework.Controls.MetroLabel();
-            this.txtBigUpV = new MetroFramework.Controls.MetroTextBox();
-            this.metroLabel18 = new MetroFramework.Controls.MetroLabel();
-            this.txtBigBackDis = new MetroFramework.Controls.MetroTextBox();
-            this.metroLabel19 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel20 = new MetroFramework.Controls.MetroLabel();
-            this.txtBigUpDis = new MetroFramework.Controls.MetroTextBox();
+            this.timer2 = new System.Windows.Forms.Timer(this.components);
+            this.btnRetest = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picTest)).BeginInit();
             this.panel6.SuspendLayout();
-            this.panel2.SuspendLayout();
-            this.panel5.SuspendLayout();
-            this.panel4.SuspendLayout();
             this.grpSteeveDis.SuspendLayout();
             this.panel11.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
+            this.panel2.SuspendLayout();
+            this.panel5.SuspendLayout();
+            this.groupBox1.SuspendLayout();
+            this.tableLayoutPanel2.SuspendLayout();
+            this.panel4.SuspendLayout();
             this.grpSteeveForce.SuspendLayout();
             this.panel9.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
-            this.groupBox1.SuspendLayout();
-            this.tableLayoutPanel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // timer1
@@ -239,39 +241,6 @@
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(554, 413);
             this.panel6.TabIndex = 0;
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.panel5);
-            this.panel2.Controls.Add(this.panel4);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(554, 826);
-            this.panel2.TabIndex = 0;
-            // 
-            // panel5
-            // 
-            this.panel5.Controls.Add(this.groupBox1);
-            this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel5.Location = new System.Drawing.Point(0, 413);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(554, 413);
-            this.panel5.TabIndex = 1;
-            // 
-            // panel4
-            // 
-            this.panel4.Controls.Add(this.grpSteeveForce);
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel4.Location = new System.Drawing.Point(0, 0);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(554, 413);
-            this.panel4.TabIndex = 0;
-            // 
-            // timer2
-            // 
-            this.timer2.Interval = 1000;
-            this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
             // 
             // grpSteeveDis
             // 
@@ -810,6 +779,555 @@
             this.txtSmallUpDis.Size = new System.Drawing.Size(135, 39);
             this.txtSmallUpDis.TabIndex = 1;
             // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.panel5);
+            this.panel2.Controls.Add(this.panel4);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(554, 826);
+            this.panel2.TabIndex = 0;
+            // 
+            // panel5
+            // 
+            this.panel5.Controls.Add(this.groupBox1);
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel5.Location = new System.Drawing.Point(0, 413);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(554, 413);
+            this.panel5.TabIndex = 1;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.tableLayoutPanel2);
+            this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox1.ForeColor = System.Drawing.Color.Red;
+            this.groupBox1.Location = new System.Drawing.Point(0, 0);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox1.Size = new System.Drawing.Size(554, 413);
+            this.groupBox1.TabIndex = 3;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "大门架";
+            // 
+            // tableLayoutPanel2
+            // 
+            this.tableLayoutPanel2.ColumnCount = 4;
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16F));
+            this.tableLayoutPanel2.Controls.Add(this.metroTextBox1, 3, 9);
+            this.tableLayoutPanel2.Controls.Add(this.metroLabel1, 2, 9);
+            this.tableLayoutPanel2.Controls.Add(this.txtBigForwardOutPressureLoss, 1, 9);
+            this.tableLayoutPanel2.Controls.Add(this.metroLabel2, 0, 9);
+            this.tableLayoutPanel2.Controls.Add(this.metroTextBox3, 3, 8);
+            this.tableLayoutPanel2.Controls.Add(this.metroLabel3, 2, 8);
+            this.tableLayoutPanel2.Controls.Add(this.txtBigInPressureLoss, 1, 8);
+            this.tableLayoutPanel2.Controls.Add(this.metroLabel4, 0, 8);
+            this.tableLayoutPanel2.Controls.Add(this.metroTextBox5, 3, 7);
+            this.tableLayoutPanel2.Controls.Add(this.metroLabel5, 2, 7);
+            this.tableLayoutPanel2.Controls.Add(this.txtBigForwardV, 1, 7);
+            this.tableLayoutPanel2.Controls.Add(this.metroLabel6, 0, 7);
+            this.tableLayoutPanel2.Controls.Add(this.metroTextBox7, 3, 6);
+            this.tableLayoutPanel2.Controls.Add(this.metroLabel7, 2, 6);
+            this.tableLayoutPanel2.Controls.Add(this.txtBigForwardDis, 1, 6);
+            this.tableLayoutPanel2.Controls.Add(this.metroLabel8, 0, 6);
+            this.tableLayoutPanel2.Controls.Add(this.metroTextBox9, 3, 5);
+            this.tableLayoutPanel2.Controls.Add(this.metroLabel9, 2, 5);
+            this.tableLayoutPanel2.Controls.Add(this.txtBigDownPressureLoss, 1, 5);
+            this.tableLayoutPanel2.Controls.Add(this.metroLabel10, 0, 5);
+            this.tableLayoutPanel2.Controls.Add(this.metroTextBox11, 3, 4);
+            this.tableLayoutPanel2.Controls.Add(this.metroLabel11, 2, 4);
+            this.tableLayoutPanel2.Controls.Add(this.txtBigDownV, 1, 4);
+            this.tableLayoutPanel2.Controls.Add(this.metroLabel12, 0, 4);
+            this.tableLayoutPanel2.Controls.Add(this.txtBigBackOutPressureLoss, 3, 3);
+            this.tableLayoutPanel2.Controls.Add(this.metroLabel13, 2, 3);
+            this.tableLayoutPanel2.Controls.Add(this.txtBigDownDis, 1, 3);
+            this.tableLayoutPanel2.Controls.Add(this.metroLabel14, 0, 3);
+            this.tableLayoutPanel2.Controls.Add(this.txtBIgBackInPressureLoss, 3, 2);
+            this.tableLayoutPanel2.Controls.Add(this.metroLabel15, 2, 2);
+            this.tableLayoutPanel2.Controls.Add(this.txtBigUpPressureLoss, 1, 2);
+            this.tableLayoutPanel2.Controls.Add(this.metroLabel16, 0, 2);
+            this.tableLayoutPanel2.Controls.Add(this.txtBigBackV, 3, 1);
+            this.tableLayoutPanel2.Controls.Add(this.metroLabel17, 2, 1);
+            this.tableLayoutPanel2.Controls.Add(this.txtBigUpV, 1, 1);
+            this.tableLayoutPanel2.Controls.Add(this.metroLabel18, 0, 1);
+            this.tableLayoutPanel2.Controls.Add(this.txtBigBackDis, 3, 0);
+            this.tableLayoutPanel2.Controls.Add(this.metroLabel19, 2, 0);
+            this.tableLayoutPanel2.Controls.Add(this.metroLabel20, 0, 0);
+            this.tableLayoutPanel2.Controls.Add(this.txtBigUpDis, 1, 0);
+            this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 23);
+            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
+            this.tableLayoutPanel2.RowCount = 10;
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(548, 388);
+            this.tableLayoutPanel2.TabIndex = 2;
+            // 
+            // metroTextBox1
+            // 
+            this.metroTextBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.metroTextBox1.FontSize = MetroFramework.MetroTextBoxSize.Tall;
+            this.metroTextBox1.Location = new System.Drawing.Point(412, 343);
+            this.metroTextBox1.Margin = new System.Windows.Forms.Padding(1);
+            this.metroTextBox1.Name = "metroTextBox1";
+            this.metroTextBox1.Size = new System.Drawing.Size(135, 44);
+            this.metroTextBox1.TabIndex = 39;
+            // 
+            // metroLabel1
+            // 
+            this.metroLabel1.AutoSize = true;
+            this.metroLabel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.metroLabel1.FontSize = MetroFramework.MetroLabelSize.Small;
+            this.metroLabel1.Location = new System.Drawing.Point(274, 343);
+            this.metroLabel1.Margin = new System.Windows.Forms.Padding(0, 1, 0, 1);
+            this.metroLabel1.Name = "metroLabel1";
+            this.metroLabel1.Size = new System.Drawing.Size(137, 44);
+            this.metroLabel1.TabIndex = 38;
+            this.metroLabel1.Text = "xxx";
+            this.metroLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // txtBigForwardOutPressureLoss
+            // 
+            this.txtBigForwardOutPressureLoss.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtBigForwardOutPressureLoss.FontSize = MetroFramework.MetroTextBoxSize.Tall;
+            this.txtBigForwardOutPressureLoss.Location = new System.Drawing.Point(138, 343);
+            this.txtBigForwardOutPressureLoss.Margin = new System.Windows.Forms.Padding(1);
+            this.txtBigForwardOutPressureLoss.Name = "txtBigForwardOutPressureLoss";
+            this.txtBigForwardOutPressureLoss.Size = new System.Drawing.Size(135, 44);
+            this.txtBigForwardOutPressureLoss.TabIndex = 37;
+            // 
+            // metroLabel2
+            // 
+            this.metroLabel2.AutoSize = true;
+            this.metroLabel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.metroLabel2.Location = new System.Drawing.Point(0, 343);
+            this.metroLabel2.Margin = new System.Windows.Forms.Padding(0, 1, 0, 1);
+            this.metroLabel2.Name = "metroLabel2";
+            this.metroLabel2.Size = new System.Drawing.Size(137, 44);
+            this.metroLabel2.TabIndex = 36;
+            this.metroLabel2.Text = "前倾回油口压力损失";
+            this.metroLabel2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // metroTextBox3
+            // 
+            this.metroTextBox3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.metroTextBox3.FontSize = MetroFramework.MetroTextBoxSize.Tall;
+            this.metroTextBox3.Location = new System.Drawing.Point(412, 305);
+            this.metroTextBox3.Margin = new System.Windows.Forms.Padding(1, 1, 1, 0);
+            this.metroTextBox3.Name = "metroTextBox3";
+            this.metroTextBox3.Size = new System.Drawing.Size(135, 37);
+            this.metroTextBox3.TabIndex = 35;
+            // 
+            // metroLabel3
+            // 
+            this.metroLabel3.AutoSize = true;
+            this.metroLabel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.metroLabel3.FontSize = MetroFramework.MetroLabelSize.Small;
+            this.metroLabel3.Location = new System.Drawing.Point(274, 305);
+            this.metroLabel3.Margin = new System.Windows.Forms.Padding(0, 1, 0, 0);
+            this.metroLabel3.Name = "metroLabel3";
+            this.metroLabel3.Size = new System.Drawing.Size(137, 37);
+            this.metroLabel3.TabIndex = 34;
+            this.metroLabel3.Text = "xxxx";
+            this.metroLabel3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // txtBigInPressureLoss
+            // 
+            this.txtBigInPressureLoss.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtBigInPressureLoss.FontSize = MetroFramework.MetroTextBoxSize.Tall;
+            this.txtBigInPressureLoss.Location = new System.Drawing.Point(138, 305);
+            this.txtBigInPressureLoss.Margin = new System.Windows.Forms.Padding(1, 1, 1, 0);
+            this.txtBigInPressureLoss.Name = "txtBigInPressureLoss";
+            this.txtBigInPressureLoss.Size = new System.Drawing.Size(135, 37);
+            this.txtBigInPressureLoss.TabIndex = 33;
+            // 
+            // metroLabel4
+            // 
+            this.metroLabel4.AutoSize = true;
+            this.metroLabel4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.metroLabel4.Location = new System.Drawing.Point(0, 305);
+            this.metroLabel4.Margin = new System.Windows.Forms.Padding(0, 1, 0, 0);
+            this.metroLabel4.Name = "metroLabel4";
+            this.metroLabel4.Size = new System.Drawing.Size(137, 37);
+            this.metroLabel4.TabIndex = 32;
+            this.metroLabel4.Text = "前倾进油口压力损失";
+            this.metroLabel4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // metroTextBox5
+            // 
+            this.metroTextBox5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.metroTextBox5.FontSize = MetroFramework.MetroTextBoxSize.Tall;
+            this.metroTextBox5.Location = new System.Drawing.Point(412, 267);
+            this.metroTextBox5.Margin = new System.Windows.Forms.Padding(1, 1, 1, 0);
+            this.metroTextBox5.Name = "metroTextBox5";
+            this.metroTextBox5.Size = new System.Drawing.Size(135, 37);
+            this.metroTextBox5.TabIndex = 31;
+            // 
+            // metroLabel5
+            // 
+            this.metroLabel5.AutoSize = true;
+            this.metroLabel5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.metroLabel5.Location = new System.Drawing.Point(274, 267);
+            this.metroLabel5.Margin = new System.Windows.Forms.Padding(0, 1, 0, 0);
+            this.metroLabel5.Name = "metroLabel5";
+            this.metroLabel5.Size = new System.Drawing.Size(137, 37);
+            this.metroLabel5.TabIndex = 30;
+            this.metroLabel5.Text = "16";
+            this.metroLabel5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // txtBigForwardV
+            // 
+            this.txtBigForwardV.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtBigForwardV.FontSize = MetroFramework.MetroTextBoxSize.Tall;
+            this.txtBigForwardV.Location = new System.Drawing.Point(138, 267);
+            this.txtBigForwardV.Margin = new System.Windows.Forms.Padding(1, 1, 1, 0);
+            this.txtBigForwardV.Name = "txtBigForwardV";
+            this.txtBigForwardV.Size = new System.Drawing.Size(135, 37);
+            this.txtBigForwardV.TabIndex = 29;
+            // 
+            // metroLabel6
+            // 
+            this.metroLabel6.AutoSize = true;
+            this.metroLabel6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.metroLabel6.Location = new System.Drawing.Point(0, 267);
+            this.metroLabel6.Margin = new System.Windows.Forms.Padding(0, 1, 0, 0);
+            this.metroLabel6.Name = "metroLabel6";
+            this.metroLabel6.Size = new System.Drawing.Size(137, 37);
+            this.metroLabel6.TabIndex = 28;
+            this.metroLabel6.Text = "前倾速度";
+            this.metroLabel6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // metroTextBox7
+            // 
+            this.metroTextBox7.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.metroTextBox7.FontSize = MetroFramework.MetroTextBoxSize.Tall;
+            this.metroTextBox7.Location = new System.Drawing.Point(412, 229);
+            this.metroTextBox7.Margin = new System.Windows.Forms.Padding(1, 1, 1, 0);
+            this.metroTextBox7.Name = "metroTextBox7";
+            this.metroTextBox7.Size = new System.Drawing.Size(135, 37);
+            this.metroTextBox7.TabIndex = 27;
+            // 
+            // metroLabel7
+            // 
+            this.metroLabel7.AutoSize = true;
+            this.metroLabel7.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.metroLabel7.Location = new System.Drawing.Point(274, 229);
+            this.metroLabel7.Margin = new System.Windows.Forms.Padding(0, 1, 0, 0);
+            this.metroLabel7.Name = "metroLabel7";
+            this.metroLabel7.Size = new System.Drawing.Size(137, 37);
+            this.metroLabel7.TabIndex = 26;
+            this.metroLabel7.Text = "15";
+            this.metroLabel7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // txtBigForwardDis
+            // 
+            this.txtBigForwardDis.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtBigForwardDis.FontSize = MetroFramework.MetroTextBoxSize.Tall;
+            this.txtBigForwardDis.Location = new System.Drawing.Point(138, 229);
+            this.txtBigForwardDis.Margin = new System.Windows.Forms.Padding(1, 1, 1, 0);
+            this.txtBigForwardDis.Name = "txtBigForwardDis";
+            this.txtBigForwardDis.Size = new System.Drawing.Size(135, 37);
+            this.txtBigForwardDis.TabIndex = 25;
+            // 
+            // metroLabel8
+            // 
+            this.metroLabel8.AutoSize = true;
+            this.metroLabel8.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.metroLabel8.Location = new System.Drawing.Point(0, 229);
+            this.metroLabel8.Margin = new System.Windows.Forms.Padding(0, 1, 0, 0);
+            this.metroLabel8.Name = "metroLabel8";
+            this.metroLabel8.Size = new System.Drawing.Size(137, 37);
+            this.metroLabel8.TabIndex = 24;
+            this.metroLabel8.Text = "前倾位移";
+            this.metroLabel8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // metroTextBox9
+            // 
+            this.metroTextBox9.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.metroTextBox9.FontSize = MetroFramework.MetroTextBoxSize.Tall;
+            this.metroTextBox9.Location = new System.Drawing.Point(412, 191);
+            this.metroTextBox9.Margin = new System.Windows.Forms.Padding(1, 1, 1, 0);
+            this.metroTextBox9.Name = "metroTextBox9";
+            this.metroTextBox9.Size = new System.Drawing.Size(135, 37);
+            this.metroTextBox9.TabIndex = 23;
+            // 
+            // metroLabel9
+            // 
+            this.metroLabel9.AutoSize = true;
+            this.metroLabel9.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.metroLabel9.Location = new System.Drawing.Point(274, 191);
+            this.metroLabel9.Margin = new System.Windows.Forms.Padding(0, 1, 0, 0);
+            this.metroLabel9.Name = "metroLabel9";
+            this.metroLabel9.Size = new System.Drawing.Size(137, 37);
+            this.metroLabel9.TabIndex = 22;
+            this.metroLabel9.Text = "14";
+            this.metroLabel9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // txtBigDownPressureLoss
+            // 
+            this.txtBigDownPressureLoss.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtBigDownPressureLoss.FontSize = MetroFramework.MetroTextBoxSize.Tall;
+            this.txtBigDownPressureLoss.Location = new System.Drawing.Point(138, 191);
+            this.txtBigDownPressureLoss.Margin = new System.Windows.Forms.Padding(1, 1, 1, 0);
+            this.txtBigDownPressureLoss.Name = "txtBigDownPressureLoss";
+            this.txtBigDownPressureLoss.Size = new System.Drawing.Size(135, 37);
+            this.txtBigDownPressureLoss.TabIndex = 21;
+            // 
+            // metroLabel10
+            // 
+            this.metroLabel10.AutoSize = true;
+            this.metroLabel10.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.metroLabel10.Location = new System.Drawing.Point(0, 191);
+            this.metroLabel10.Margin = new System.Windows.Forms.Padding(0, 1, 0, 0);
+            this.metroLabel10.Name = "metroLabel10";
+            this.metroLabel10.Size = new System.Drawing.Size(137, 37);
+            this.metroLabel10.TabIndex = 20;
+            this.metroLabel10.Text = "下降压力损失";
+            this.metroLabel10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // metroTextBox11
+            // 
+            this.metroTextBox11.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.metroTextBox11.FontSize = MetroFramework.MetroTextBoxSize.Tall;
+            this.metroTextBox11.Location = new System.Drawing.Point(412, 153);
+            this.metroTextBox11.Margin = new System.Windows.Forms.Padding(1, 1, 1, 0);
+            this.metroTextBox11.Name = "metroTextBox11";
+            this.metroTextBox11.Size = new System.Drawing.Size(135, 37);
+            this.metroTextBox11.TabIndex = 19;
+            // 
+            // metroLabel11
+            // 
+            this.metroLabel11.AutoSize = true;
+            this.metroLabel11.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.metroLabel11.Location = new System.Drawing.Point(274, 153);
+            this.metroLabel11.Margin = new System.Windows.Forms.Padding(0, 1, 0, 0);
+            this.metroLabel11.Name = "metroLabel11";
+            this.metroLabel11.Size = new System.Drawing.Size(137, 37);
+            this.metroLabel11.TabIndex = 18;
+            this.metroLabel11.Text = "13";
+            this.metroLabel11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // txtBigDownV
+            // 
+            this.txtBigDownV.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtBigDownV.FontSize = MetroFramework.MetroTextBoxSize.Tall;
+            this.txtBigDownV.Location = new System.Drawing.Point(138, 153);
+            this.txtBigDownV.Margin = new System.Windows.Forms.Padding(1, 1, 1, 0);
+            this.txtBigDownV.Name = "txtBigDownV";
+            this.txtBigDownV.Size = new System.Drawing.Size(135, 37);
+            this.txtBigDownV.TabIndex = 17;
+            // 
+            // metroLabel12
+            // 
+            this.metroLabel12.AutoSize = true;
+            this.metroLabel12.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.metroLabel12.Location = new System.Drawing.Point(0, 153);
+            this.metroLabel12.Margin = new System.Windows.Forms.Padding(0, 1, 0, 0);
+            this.metroLabel12.Name = "metroLabel12";
+            this.metroLabel12.Size = new System.Drawing.Size(137, 37);
+            this.metroLabel12.TabIndex = 16;
+            this.metroLabel12.Text = "下降速度";
+            this.metroLabel12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // txtBigBackOutPressureLoss
+            // 
+            this.txtBigBackOutPressureLoss.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtBigBackOutPressureLoss.FontSize = MetroFramework.MetroTextBoxSize.Tall;
+            this.txtBigBackOutPressureLoss.Location = new System.Drawing.Point(412, 115);
+            this.txtBigBackOutPressureLoss.Margin = new System.Windows.Forms.Padding(1, 1, 1, 0);
+            this.txtBigBackOutPressureLoss.Name = "txtBigBackOutPressureLoss";
+            this.txtBigBackOutPressureLoss.Size = new System.Drawing.Size(135, 37);
+            this.txtBigBackOutPressureLoss.TabIndex = 15;
+            // 
+            // metroLabel13
+            // 
+            this.metroLabel13.AutoSize = true;
+            this.metroLabel13.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.metroLabel13.Location = new System.Drawing.Point(274, 115);
+            this.metroLabel13.Margin = new System.Windows.Forms.Padding(0, 1, 0, 0);
+            this.metroLabel13.Name = "metroLabel13";
+            this.metroLabel13.Size = new System.Drawing.Size(137, 37);
+            this.metroLabel13.TabIndex = 14;
+            this.metroLabel13.Text = "后倾回油口压力损失";
+            this.metroLabel13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // txtBigDownDis
+            // 
+            this.txtBigDownDis.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtBigDownDis.FontSize = MetroFramework.MetroTextBoxSize.Tall;
+            this.txtBigDownDis.Location = new System.Drawing.Point(138, 115);
+            this.txtBigDownDis.Margin = new System.Windows.Forms.Padding(1, 1, 1, 0);
+            this.txtBigDownDis.Name = "txtBigDownDis";
+            this.txtBigDownDis.Size = new System.Drawing.Size(135, 37);
+            this.txtBigDownDis.TabIndex = 13;
+            // 
+            // metroLabel14
+            // 
+            this.metroLabel14.AutoSize = true;
+            this.metroLabel14.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.metroLabel14.Location = new System.Drawing.Point(0, 115);
+            this.metroLabel14.Margin = new System.Windows.Forms.Padding(0, 1, 0, 0);
+            this.metroLabel14.Name = "metroLabel14";
+            this.metroLabel14.Size = new System.Drawing.Size(137, 37);
+            this.metroLabel14.TabIndex = 12;
+            this.metroLabel14.Text = "下降位移(mm)";
+            this.metroLabel14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // txtBIgBackInPressureLoss
+            // 
+            this.txtBIgBackInPressureLoss.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtBIgBackInPressureLoss.FontSize = MetroFramework.MetroTextBoxSize.Tall;
+            this.txtBIgBackInPressureLoss.Location = new System.Drawing.Point(412, 77);
+            this.txtBIgBackInPressureLoss.Margin = new System.Windows.Forms.Padding(1, 1, 1, 0);
+            this.txtBIgBackInPressureLoss.Name = "txtBIgBackInPressureLoss";
+            this.txtBIgBackInPressureLoss.Size = new System.Drawing.Size(135, 37);
+            this.txtBIgBackInPressureLoss.TabIndex = 11;
+            // 
+            // metroLabel15
+            // 
+            this.metroLabel15.AutoSize = true;
+            this.metroLabel15.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.metroLabel15.Location = new System.Drawing.Point(274, 77);
+            this.metroLabel15.Margin = new System.Windows.Forms.Padding(0, 1, 0, 0);
+            this.metroLabel15.Name = "metroLabel15";
+            this.metroLabel15.Size = new System.Drawing.Size(137, 37);
+            this.metroLabel15.TabIndex = 10;
+            this.metroLabel15.Text = "后倾进油口压力损失";
+            this.metroLabel15.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // txtBigUpPressureLoss
+            // 
+            this.txtBigUpPressureLoss.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtBigUpPressureLoss.FontSize = MetroFramework.MetroTextBoxSize.Tall;
+            this.txtBigUpPressureLoss.Location = new System.Drawing.Point(138, 77);
+            this.txtBigUpPressureLoss.Margin = new System.Windows.Forms.Padding(1, 1, 1, 0);
+            this.txtBigUpPressureLoss.Name = "txtBigUpPressureLoss";
+            this.txtBigUpPressureLoss.Size = new System.Drawing.Size(135, 37);
+            this.txtBigUpPressureLoss.TabIndex = 9;
+            // 
+            // metroLabel16
+            // 
+            this.metroLabel16.AutoSize = true;
+            this.metroLabel16.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.metroLabel16.Location = new System.Drawing.Point(0, 77);
+            this.metroLabel16.Margin = new System.Windows.Forms.Padding(0, 1, 0, 0);
+            this.metroLabel16.Name = "metroLabel16";
+            this.metroLabel16.Size = new System.Drawing.Size(137, 37);
+            this.metroLabel16.TabIndex = 8;
+            this.metroLabel16.Text = "上升压力损失";
+            this.metroLabel16.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // txtBigBackV
+            // 
+            this.txtBigBackV.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtBigBackV.FontSize = MetroFramework.MetroTextBoxSize.Tall;
+            this.txtBigBackV.Location = new System.Drawing.Point(412, 39);
+            this.txtBigBackV.Margin = new System.Windows.Forms.Padding(1, 1, 1, 0);
+            this.txtBigBackV.Name = "txtBigBackV";
+            this.txtBigBackV.Size = new System.Drawing.Size(135, 37);
+            this.txtBigBackV.TabIndex = 7;
+            // 
+            // metroLabel17
+            // 
+            this.metroLabel17.AutoSize = true;
+            this.metroLabel17.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.metroLabel17.Location = new System.Drawing.Point(274, 39);
+            this.metroLabel17.Margin = new System.Windows.Forms.Padding(0, 1, 0, 0);
+            this.metroLabel17.Name = "metroLabel17";
+            this.metroLabel17.Size = new System.Drawing.Size(137, 37);
+            this.metroLabel17.TabIndex = 6;
+            this.metroLabel17.Text = "后倾速度";
+            this.metroLabel17.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // txtBigUpV
+            // 
+            this.txtBigUpV.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtBigUpV.FontSize = MetroFramework.MetroTextBoxSize.Tall;
+            this.txtBigUpV.Location = new System.Drawing.Point(138, 39);
+            this.txtBigUpV.Margin = new System.Windows.Forms.Padding(1, 1, 1, 0);
+            this.txtBigUpV.Name = "txtBigUpV";
+            this.txtBigUpV.Size = new System.Drawing.Size(135, 37);
+            this.txtBigUpV.TabIndex = 5;
+            // 
+            // metroLabel18
+            // 
+            this.metroLabel18.AutoSize = true;
+            this.metroLabel18.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.metroLabel18.Location = new System.Drawing.Point(0, 39);
+            this.metroLabel18.Margin = new System.Windows.Forms.Padding(0, 1, 0, 0);
+            this.metroLabel18.Name = "metroLabel18";
+            this.metroLabel18.Size = new System.Drawing.Size(137, 37);
+            this.metroLabel18.TabIndex = 4;
+            this.metroLabel18.Text = "上升速度(m/s)";
+            this.metroLabel18.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // txtBigBackDis
+            // 
+            this.txtBigBackDis.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtBigBackDis.FontSize = MetroFramework.MetroTextBoxSize.Tall;
+            this.txtBigBackDis.Location = new System.Drawing.Point(412, 0);
+            this.txtBigBackDis.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
+            this.txtBigBackDis.Name = "txtBigBackDis";
+            this.txtBigBackDis.Size = new System.Drawing.Size(135, 38);
+            this.txtBigBackDis.TabIndex = 3;
+            // 
+            // metroLabel19
+            // 
+            this.metroLabel19.AutoSize = true;
+            this.metroLabel19.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.metroLabel19.Location = new System.Drawing.Point(274, 0);
+            this.metroLabel19.Margin = new System.Windows.Forms.Padding(0);
+            this.metroLabel19.Name = "metroLabel19";
+            this.metroLabel19.Size = new System.Drawing.Size(137, 38);
+            this.metroLabel19.TabIndex = 2;
+            this.metroLabel19.Text = "后倾位移";
+            this.metroLabel19.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // metroLabel20
+            // 
+            this.metroLabel20.AutoSize = true;
+            this.metroLabel20.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.metroLabel20.Location = new System.Drawing.Point(0, 0);
+            this.metroLabel20.Margin = new System.Windows.Forms.Padding(0);
+            this.metroLabel20.Name = "metroLabel20";
+            this.metroLabel20.Size = new System.Drawing.Size(137, 38);
+            this.metroLabel20.TabIndex = 0;
+            this.metroLabel20.Text = "上升位移(mm)";
+            this.metroLabel20.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // txtBigUpDis
+            // 
+            this.txtBigUpDis.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtBigUpDis.FontSize = MetroFramework.MetroTextBoxSize.Tall;
+            this.txtBigUpDis.Location = new System.Drawing.Point(138, 0);
+            this.txtBigUpDis.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
+            this.txtBigUpDis.Name = "txtBigUpDis";
+            this.txtBigUpDis.Size = new System.Drawing.Size(135, 38);
+            this.txtBigUpDis.TabIndex = 1;
+            // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.grpSteeveForce);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel4.Location = new System.Drawing.Point(0, 0);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(554, 413);
+            this.panel4.TabIndex = 0;
+            // 
             // grpSteeveForce
             // 
             this.grpSteeveForce.Controls.Add(this.panel9);
@@ -1344,532 +1862,42 @@
             this.txtmainPumpP1.Size = new System.Drawing.Size(135, 39);
             this.txtmainPumpP1.TabIndex = 1;
             // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.tableLayoutPanel2);
-            this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox1.ForeColor = System.Drawing.Color.Red;
-            this.groupBox1.Location = new System.Drawing.Point(0, 0);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox1.Size = new System.Drawing.Size(554, 413);
-            this.groupBox1.TabIndex = 3;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "大门架";
-            // 
-            // tableLayoutPanel2
-            // 
-            this.tableLayoutPanel2.ColumnCount = 4;
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16F));
-            this.tableLayoutPanel2.Controls.Add(this.metroTextBox1, 3, 9);
-            this.tableLayoutPanel2.Controls.Add(this.metroLabel1, 2, 9);
-            this.tableLayoutPanel2.Controls.Add(this.txtBigForwardOutPressureLoss, 1, 9);
-            this.tableLayoutPanel2.Controls.Add(this.metroLabel2, 0, 9);
-            this.tableLayoutPanel2.Controls.Add(this.metroTextBox3, 3, 8);
-            this.tableLayoutPanel2.Controls.Add(this.metroLabel3, 2, 8);
-            this.tableLayoutPanel2.Controls.Add(this.txtBigInPressureLoss, 1, 8);
-            this.tableLayoutPanel2.Controls.Add(this.metroLabel4, 0, 8);
-            this.tableLayoutPanel2.Controls.Add(this.metroTextBox5, 3, 7);
-            this.tableLayoutPanel2.Controls.Add(this.metroLabel5, 2, 7);
-            this.tableLayoutPanel2.Controls.Add(this.txtBigForwardV, 1, 7);
-            this.tableLayoutPanel2.Controls.Add(this.metroLabel6, 0, 7);
-            this.tableLayoutPanel2.Controls.Add(this.metroTextBox7, 3, 6);
-            this.tableLayoutPanel2.Controls.Add(this.metroLabel7, 2, 6);
-            this.tableLayoutPanel2.Controls.Add(this.txtBigForwardDis, 1, 6);
-            this.tableLayoutPanel2.Controls.Add(this.metroLabel8, 0, 6);
-            this.tableLayoutPanel2.Controls.Add(this.metroTextBox9, 3, 5);
-            this.tableLayoutPanel2.Controls.Add(this.metroLabel9, 2, 5);
-            this.tableLayoutPanel2.Controls.Add(this.txtBigDownPressureLoss, 1, 5);
-            this.tableLayoutPanel2.Controls.Add(this.metroLabel10, 0, 5);
-            this.tableLayoutPanel2.Controls.Add(this.metroTextBox11, 3, 4);
-            this.tableLayoutPanel2.Controls.Add(this.metroLabel11, 2, 4);
-            this.tableLayoutPanel2.Controls.Add(this.txtBigDownV, 1, 4);
-            this.tableLayoutPanel2.Controls.Add(this.metroLabel12, 0, 4);
-            this.tableLayoutPanel2.Controls.Add(this.txtBigBackOutPressureLoss, 3, 3);
-            this.tableLayoutPanel2.Controls.Add(this.metroLabel13, 2, 3);
-            this.tableLayoutPanel2.Controls.Add(this.txtBigDownDis, 1, 3);
-            this.tableLayoutPanel2.Controls.Add(this.metroLabel14, 0, 3);
-            this.tableLayoutPanel2.Controls.Add(this.txtBIgBackInPressureLoss, 3, 2);
-            this.tableLayoutPanel2.Controls.Add(this.metroLabel15, 2, 2);
-            this.tableLayoutPanel2.Controls.Add(this.txtBigUpPressureLoss, 1, 2);
-            this.tableLayoutPanel2.Controls.Add(this.metroLabel16, 0, 2);
-            this.tableLayoutPanel2.Controls.Add(this.txtBigBackV, 3, 1);
-            this.tableLayoutPanel2.Controls.Add(this.metroLabel17, 2, 1);
-            this.tableLayoutPanel2.Controls.Add(this.txtBigUpV, 1, 1);
-            this.tableLayoutPanel2.Controls.Add(this.metroLabel18, 0, 1);
-            this.tableLayoutPanel2.Controls.Add(this.txtBigBackDis, 3, 0);
-            this.tableLayoutPanel2.Controls.Add(this.metroLabel19, 2, 0);
-            this.tableLayoutPanel2.Controls.Add(this.metroLabel20, 0, 0);
-            this.tableLayoutPanel2.Controls.Add(this.txtBigUpDis, 1, 0);
-            this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 23);
-            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
-            this.tableLayoutPanel2.RowCount = 10;
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(548, 388);
-            this.tableLayoutPanel2.TabIndex = 2;
-            // 
-            // metroTextBox1
-            // 
-            this.metroTextBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.metroTextBox1.FontSize = MetroFramework.MetroTextBoxSize.Tall;
-            this.metroTextBox1.Location = new System.Drawing.Point(412, 343);
-            this.metroTextBox1.Margin = new System.Windows.Forms.Padding(1);
-            this.metroTextBox1.Name = "metroTextBox1";
-            this.metroTextBox1.Size = new System.Drawing.Size(135, 44);
-            this.metroTextBox1.TabIndex = 39;
-            // 
-            // metroLabel1
-            // 
-            this.metroLabel1.AutoSize = true;
-            this.metroLabel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.metroLabel1.FontSize = MetroFramework.MetroLabelSize.Small;
-            this.metroLabel1.Location = new System.Drawing.Point(274, 343);
-            this.metroLabel1.Margin = new System.Windows.Forms.Padding(0, 1, 0, 1);
-            this.metroLabel1.Name = "metroLabel1";
-            this.metroLabel1.Size = new System.Drawing.Size(137, 44);
-            this.metroLabel1.TabIndex = 38;
-            this.metroLabel1.Text = "xxx";
-            this.metroLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // txtBigForwardOutPressureLoss
-            // 
-            this.txtBigForwardOutPressureLoss.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtBigForwardOutPressureLoss.FontSize = MetroFramework.MetroTextBoxSize.Tall;
-            this.txtBigForwardOutPressureLoss.Location = new System.Drawing.Point(138, 343);
-            this.txtBigForwardOutPressureLoss.Margin = new System.Windows.Forms.Padding(1);
-            this.txtBigForwardOutPressureLoss.Name = "txtBigForwardOutPressureLoss";
-            this.txtBigForwardOutPressureLoss.Size = new System.Drawing.Size(135, 44);
-            this.txtBigForwardOutPressureLoss.TabIndex = 37;
-            // 
-            // metroLabel2
-            // 
-            this.metroLabel2.AutoSize = true;
-            this.metroLabel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.metroLabel2.Location = new System.Drawing.Point(0, 343);
-            this.metroLabel2.Margin = new System.Windows.Forms.Padding(0, 1, 0, 1);
-            this.metroLabel2.Name = "metroLabel2";
-            this.metroLabel2.Size = new System.Drawing.Size(137, 44);
-            this.metroLabel2.TabIndex = 36;
-            this.metroLabel2.Text = "前倾回油口压力损失";
-            this.metroLabel2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // metroTextBox3
-            // 
-            this.metroTextBox3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.metroTextBox3.FontSize = MetroFramework.MetroTextBoxSize.Tall;
-            this.metroTextBox3.Location = new System.Drawing.Point(412, 305);
-            this.metroTextBox3.Margin = new System.Windows.Forms.Padding(1, 1, 1, 0);
-            this.metroTextBox3.Name = "metroTextBox3";
-            this.metroTextBox3.Size = new System.Drawing.Size(135, 37);
-            this.metroTextBox3.TabIndex = 35;
-            // 
-            // metroLabel3
-            // 
-            this.metroLabel3.AutoSize = true;
-            this.metroLabel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.metroLabel3.FontSize = MetroFramework.MetroLabelSize.Small;
-            this.metroLabel3.Location = new System.Drawing.Point(274, 305);
-            this.metroLabel3.Margin = new System.Windows.Forms.Padding(0, 1, 0, 0);
-            this.metroLabel3.Name = "metroLabel3";
-            this.metroLabel3.Size = new System.Drawing.Size(137, 37);
-            this.metroLabel3.TabIndex = 34;
-            this.metroLabel3.Text = "xxxx";
-            this.metroLabel3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // txtBigInPressureLoss
-            // 
-            this.txtBigInPressureLoss.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtBigInPressureLoss.FontSize = MetroFramework.MetroTextBoxSize.Tall;
-            this.txtBigInPressureLoss.Location = new System.Drawing.Point(138, 305);
-            this.txtBigInPressureLoss.Margin = new System.Windows.Forms.Padding(1, 1, 1, 0);
-            this.txtBigInPressureLoss.Name = "txtBigInPressureLoss";
-            this.txtBigInPressureLoss.Size = new System.Drawing.Size(135, 37);
-            this.txtBigInPressureLoss.TabIndex = 33;
-            // 
-            // metroLabel4
-            // 
-            this.metroLabel4.AutoSize = true;
-            this.metroLabel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.metroLabel4.Location = new System.Drawing.Point(0, 305);
-            this.metroLabel4.Margin = new System.Windows.Forms.Padding(0, 1, 0, 0);
-            this.metroLabel4.Name = "metroLabel4";
-            this.metroLabel4.Size = new System.Drawing.Size(137, 37);
-            this.metroLabel4.TabIndex = 32;
-            this.metroLabel4.Text = "前倾进油口压力损失";
-            this.metroLabel4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // metroTextBox5
-            // 
-            this.metroTextBox5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.metroTextBox5.FontSize = MetroFramework.MetroTextBoxSize.Tall;
-            this.metroTextBox5.Location = new System.Drawing.Point(412, 267);
-            this.metroTextBox5.Margin = new System.Windows.Forms.Padding(1, 1, 1, 0);
-            this.metroTextBox5.Name = "metroTextBox5";
-            this.metroTextBox5.Size = new System.Drawing.Size(135, 37);
-            this.metroTextBox5.TabIndex = 31;
-            // 
-            // metroLabel5
-            // 
-            this.metroLabel5.AutoSize = true;
-            this.metroLabel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.metroLabel5.Location = new System.Drawing.Point(274, 267);
-            this.metroLabel5.Margin = new System.Windows.Forms.Padding(0, 1, 0, 0);
-            this.metroLabel5.Name = "metroLabel5";
-            this.metroLabel5.Size = new System.Drawing.Size(137, 37);
-            this.metroLabel5.TabIndex = 30;
-            this.metroLabel5.Text = "16";
-            this.metroLabel5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // txtBigForwardV
-            // 
-            this.txtBigForwardV.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtBigForwardV.FontSize = MetroFramework.MetroTextBoxSize.Tall;
-            this.txtBigForwardV.Location = new System.Drawing.Point(138, 267);
-            this.txtBigForwardV.Margin = new System.Windows.Forms.Padding(1, 1, 1, 0);
-            this.txtBigForwardV.Name = "txtBigForwardV";
-            this.txtBigForwardV.Size = new System.Drawing.Size(135, 37);
-            this.txtBigForwardV.TabIndex = 29;
-            // 
-            // metroLabel6
-            // 
-            this.metroLabel6.AutoSize = true;
-            this.metroLabel6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.metroLabel6.Location = new System.Drawing.Point(0, 267);
-            this.metroLabel6.Margin = new System.Windows.Forms.Padding(0, 1, 0, 0);
-            this.metroLabel6.Name = "metroLabel6";
-            this.metroLabel6.Size = new System.Drawing.Size(137, 37);
-            this.metroLabel6.TabIndex = 28;
-            this.metroLabel6.Text = "前倾速度";
-            this.metroLabel6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // metroTextBox7
-            // 
-            this.metroTextBox7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.metroTextBox7.FontSize = MetroFramework.MetroTextBoxSize.Tall;
-            this.metroTextBox7.Location = new System.Drawing.Point(412, 229);
-            this.metroTextBox7.Margin = new System.Windows.Forms.Padding(1, 1, 1, 0);
-            this.metroTextBox7.Name = "metroTextBox7";
-            this.metroTextBox7.Size = new System.Drawing.Size(135, 37);
-            this.metroTextBox7.TabIndex = 27;
-            // 
-            // metroLabel7
-            // 
-            this.metroLabel7.AutoSize = true;
-            this.metroLabel7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.metroLabel7.Location = new System.Drawing.Point(274, 229);
-            this.metroLabel7.Margin = new System.Windows.Forms.Padding(0, 1, 0, 0);
-            this.metroLabel7.Name = "metroLabel7";
-            this.metroLabel7.Size = new System.Drawing.Size(137, 37);
-            this.metroLabel7.TabIndex = 26;
-            this.metroLabel7.Text = "15";
-            this.metroLabel7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // txtBigForwardDis
-            // 
-            this.txtBigForwardDis.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtBigForwardDis.FontSize = MetroFramework.MetroTextBoxSize.Tall;
-            this.txtBigForwardDis.Location = new System.Drawing.Point(138, 229);
-            this.txtBigForwardDis.Margin = new System.Windows.Forms.Padding(1, 1, 1, 0);
-            this.txtBigForwardDis.Name = "txtBigForwardDis";
-            this.txtBigForwardDis.Size = new System.Drawing.Size(135, 37);
-            this.txtBigForwardDis.TabIndex = 25;
-            // 
-            // metroLabel8
-            // 
-            this.metroLabel8.AutoSize = true;
-            this.metroLabel8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.metroLabel8.Location = new System.Drawing.Point(0, 229);
-            this.metroLabel8.Margin = new System.Windows.Forms.Padding(0, 1, 0, 0);
-            this.metroLabel8.Name = "metroLabel8";
-            this.metroLabel8.Size = new System.Drawing.Size(137, 37);
-            this.metroLabel8.TabIndex = 24;
-            this.metroLabel8.Text = "前倾位移";
-            this.metroLabel8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // metroTextBox9
-            // 
-            this.metroTextBox9.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.metroTextBox9.FontSize = MetroFramework.MetroTextBoxSize.Tall;
-            this.metroTextBox9.Location = new System.Drawing.Point(412, 191);
-            this.metroTextBox9.Margin = new System.Windows.Forms.Padding(1, 1, 1, 0);
-            this.metroTextBox9.Name = "metroTextBox9";
-            this.metroTextBox9.Size = new System.Drawing.Size(135, 37);
-            this.metroTextBox9.TabIndex = 23;
-            // 
-            // metroLabel9
-            // 
-            this.metroLabel9.AutoSize = true;
-            this.metroLabel9.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.metroLabel9.Location = new System.Drawing.Point(274, 191);
-            this.metroLabel9.Margin = new System.Windows.Forms.Padding(0, 1, 0, 0);
-            this.metroLabel9.Name = "metroLabel9";
-            this.metroLabel9.Size = new System.Drawing.Size(137, 37);
-            this.metroLabel9.TabIndex = 22;
-            this.metroLabel9.Text = "14";
-            this.metroLabel9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // txtBigDownPressureLoss
-            // 
-            this.txtBigDownPressureLoss.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtBigDownPressureLoss.FontSize = MetroFramework.MetroTextBoxSize.Tall;
-            this.txtBigDownPressureLoss.Location = new System.Drawing.Point(138, 191);
-            this.txtBigDownPressureLoss.Margin = new System.Windows.Forms.Padding(1, 1, 1, 0);
-            this.txtBigDownPressureLoss.Name = "txtBigDownPressureLoss";
-            this.txtBigDownPressureLoss.Size = new System.Drawing.Size(135, 37);
-            this.txtBigDownPressureLoss.TabIndex = 21;
-            // 
-            // metroLabel10
-            // 
-            this.metroLabel10.AutoSize = true;
-            this.metroLabel10.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.metroLabel10.Location = new System.Drawing.Point(0, 191);
-            this.metroLabel10.Margin = new System.Windows.Forms.Padding(0, 1, 0, 0);
-            this.metroLabel10.Name = "metroLabel10";
-            this.metroLabel10.Size = new System.Drawing.Size(137, 37);
-            this.metroLabel10.TabIndex = 20;
-            this.metroLabel10.Text = "下降压力损失";
-            this.metroLabel10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // metroTextBox11
-            // 
-            this.metroTextBox11.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.metroTextBox11.FontSize = MetroFramework.MetroTextBoxSize.Tall;
-            this.metroTextBox11.Location = new System.Drawing.Point(412, 153);
-            this.metroTextBox11.Margin = new System.Windows.Forms.Padding(1, 1, 1, 0);
-            this.metroTextBox11.Name = "metroTextBox11";
-            this.metroTextBox11.Size = new System.Drawing.Size(135, 37);
-            this.metroTextBox11.TabIndex = 19;
-            // 
-            // metroLabel11
-            // 
-            this.metroLabel11.AutoSize = true;
-            this.metroLabel11.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.metroLabel11.Location = new System.Drawing.Point(274, 153);
-            this.metroLabel11.Margin = new System.Windows.Forms.Padding(0, 1, 0, 0);
-            this.metroLabel11.Name = "metroLabel11";
-            this.metroLabel11.Size = new System.Drawing.Size(137, 37);
-            this.metroLabel11.TabIndex = 18;
-            this.metroLabel11.Text = "13";
-            this.metroLabel11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // txtBigDownV
-            // 
-            this.txtBigDownV.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtBigDownV.FontSize = MetroFramework.MetroTextBoxSize.Tall;
-            this.txtBigDownV.Location = new System.Drawing.Point(138, 153);
-            this.txtBigDownV.Margin = new System.Windows.Forms.Padding(1, 1, 1, 0);
-            this.txtBigDownV.Name = "txtBigDownV";
-            this.txtBigDownV.Size = new System.Drawing.Size(135, 37);
-            this.txtBigDownV.TabIndex = 17;
-            // 
-            // metroLabel12
-            // 
-            this.metroLabel12.AutoSize = true;
-            this.metroLabel12.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.metroLabel12.Location = new System.Drawing.Point(0, 153);
-            this.metroLabel12.Margin = new System.Windows.Forms.Padding(0, 1, 0, 0);
-            this.metroLabel12.Name = "metroLabel12";
-            this.metroLabel12.Size = new System.Drawing.Size(137, 37);
-            this.metroLabel12.TabIndex = 16;
-            this.metroLabel12.Text = "下降速度";
-            this.metroLabel12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // txtBigBackOutPressureLoss
-            // 
-            this.txtBigBackOutPressureLoss.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtBigBackOutPressureLoss.FontSize = MetroFramework.MetroTextBoxSize.Tall;
-            this.txtBigBackOutPressureLoss.Location = new System.Drawing.Point(412, 115);
-            this.txtBigBackOutPressureLoss.Margin = new System.Windows.Forms.Padding(1, 1, 1, 0);
-            this.txtBigBackOutPressureLoss.Name = "txtBigBackOutPressureLoss";
-            this.txtBigBackOutPressureLoss.Size = new System.Drawing.Size(135, 37);
-            this.txtBigBackOutPressureLoss.TabIndex = 15;
-            // 
-            // metroLabel13
-            // 
-            this.metroLabel13.AutoSize = true;
-            this.metroLabel13.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.metroLabel13.Location = new System.Drawing.Point(274, 115);
-            this.metroLabel13.Margin = new System.Windows.Forms.Padding(0, 1, 0, 0);
-            this.metroLabel13.Name = "metroLabel13";
-            this.metroLabel13.Size = new System.Drawing.Size(137, 37);
-            this.metroLabel13.TabIndex = 14;
-            this.metroLabel13.Text = "后倾回油口压力损失";
-            this.metroLabel13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // txtBigDownDis
-            // 
-            this.txtBigDownDis.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtBigDownDis.FontSize = MetroFramework.MetroTextBoxSize.Tall;
-            this.txtBigDownDis.Location = new System.Drawing.Point(138, 115);
-            this.txtBigDownDis.Margin = new System.Windows.Forms.Padding(1, 1, 1, 0);
-            this.txtBigDownDis.Name = "txtBigDownDis";
-            this.txtBigDownDis.Size = new System.Drawing.Size(135, 37);
-            this.txtBigDownDis.TabIndex = 13;
-            // 
-            // metroLabel14
-            // 
-            this.metroLabel14.AutoSize = true;
-            this.metroLabel14.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.metroLabel14.Location = new System.Drawing.Point(0, 115);
-            this.metroLabel14.Margin = new System.Windows.Forms.Padding(0, 1, 0, 0);
-            this.metroLabel14.Name = "metroLabel14";
-            this.metroLabel14.Size = new System.Drawing.Size(137, 37);
-            this.metroLabel14.TabIndex = 12;
-            this.metroLabel14.Text = "下降位移(mm)";
-            this.metroLabel14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // txtBIgBackInPressureLoss
-            // 
-            this.txtBIgBackInPressureLoss.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtBIgBackInPressureLoss.FontSize = MetroFramework.MetroTextBoxSize.Tall;
-            this.txtBIgBackInPressureLoss.Location = new System.Drawing.Point(412, 77);
-            this.txtBIgBackInPressureLoss.Margin = new System.Windows.Forms.Padding(1, 1, 1, 0);
-            this.txtBIgBackInPressureLoss.Name = "txtBIgBackInPressureLoss";
-            this.txtBIgBackInPressureLoss.Size = new System.Drawing.Size(135, 37);
-            this.txtBIgBackInPressureLoss.TabIndex = 11;
-            // 
-            // metroLabel15
-            // 
-            this.metroLabel15.AutoSize = true;
-            this.metroLabel15.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.metroLabel15.Location = new System.Drawing.Point(274, 77);
-            this.metroLabel15.Margin = new System.Windows.Forms.Padding(0, 1, 0, 0);
-            this.metroLabel15.Name = "metroLabel15";
-            this.metroLabel15.Size = new System.Drawing.Size(137, 37);
-            this.metroLabel15.TabIndex = 10;
-            this.metroLabel15.Text = "后倾进油口压力损失";
-            this.metroLabel15.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // txtBigUpPressureLoss
-            // 
-            this.txtBigUpPressureLoss.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtBigUpPressureLoss.FontSize = MetroFramework.MetroTextBoxSize.Tall;
-            this.txtBigUpPressureLoss.Location = new System.Drawing.Point(138, 77);
-            this.txtBigUpPressureLoss.Margin = new System.Windows.Forms.Padding(1, 1, 1, 0);
-            this.txtBigUpPressureLoss.Name = "txtBigUpPressureLoss";
-            this.txtBigUpPressureLoss.Size = new System.Drawing.Size(135, 37);
-            this.txtBigUpPressureLoss.TabIndex = 9;
-            // 
-            // metroLabel16
-            // 
-            this.metroLabel16.AutoSize = true;
-            this.metroLabel16.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.metroLabel16.Location = new System.Drawing.Point(0, 77);
-            this.metroLabel16.Margin = new System.Windows.Forms.Padding(0, 1, 0, 0);
-            this.metroLabel16.Name = "metroLabel16";
-            this.metroLabel16.Size = new System.Drawing.Size(137, 37);
-            this.metroLabel16.TabIndex = 8;
-            this.metroLabel16.Text = "上升压力损失";
-            this.metroLabel16.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // txtBigBackV
-            // 
-            this.txtBigBackV.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtBigBackV.FontSize = MetroFramework.MetroTextBoxSize.Tall;
-            this.txtBigBackV.Location = new System.Drawing.Point(412, 39);
-            this.txtBigBackV.Margin = new System.Windows.Forms.Padding(1, 1, 1, 0);
-            this.txtBigBackV.Name = "txtBigBackV";
-            this.txtBigBackV.Size = new System.Drawing.Size(135, 37);
-            this.txtBigBackV.TabIndex = 7;
-            // 
-            // metroLabel17
-            // 
-            this.metroLabel17.AutoSize = true;
-            this.metroLabel17.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.metroLabel17.Location = new System.Drawing.Point(274, 39);
-            this.metroLabel17.Margin = new System.Windows.Forms.Padding(0, 1, 0, 0);
-            this.metroLabel17.Name = "metroLabel17";
-            this.metroLabel17.Size = new System.Drawing.Size(137, 37);
-            this.metroLabel17.TabIndex = 6;
-            this.metroLabel17.Text = "后倾速度";
-            this.metroLabel17.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // txtBigUpV
-            // 
-            this.txtBigUpV.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtBigUpV.FontSize = MetroFramework.MetroTextBoxSize.Tall;
-            this.txtBigUpV.Location = new System.Drawing.Point(138, 39);
-            this.txtBigUpV.Margin = new System.Windows.Forms.Padding(1, 1, 1, 0);
-            this.txtBigUpV.Name = "txtBigUpV";
-            this.txtBigUpV.Size = new System.Drawing.Size(135, 37);
-            this.txtBigUpV.TabIndex = 5;
-            // 
-            // metroLabel18
-            // 
-            this.metroLabel18.AutoSize = true;
-            this.metroLabel18.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.metroLabel18.Location = new System.Drawing.Point(0, 39);
-            this.metroLabel18.Margin = new System.Windows.Forms.Padding(0, 1, 0, 0);
-            this.metroLabel18.Name = "metroLabel18";
-            this.metroLabel18.Size = new System.Drawing.Size(137, 37);
-            this.metroLabel18.TabIndex = 4;
-            this.metroLabel18.Text = "上升速度(m/s)";
-            this.metroLabel18.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // txtBigBackDis
-            // 
-            this.txtBigBackDis.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtBigBackDis.FontSize = MetroFramework.MetroTextBoxSize.Tall;
-            this.txtBigBackDis.Location = new System.Drawing.Point(412, 0);
-            this.txtBigBackDis.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
-            this.txtBigBackDis.Name = "txtBigBackDis";
-            this.txtBigBackDis.Size = new System.Drawing.Size(135, 38);
-            this.txtBigBackDis.TabIndex = 3;
-            // 
-            // metroLabel19
-            // 
-            this.metroLabel19.AutoSize = true;
-            this.metroLabel19.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.metroLabel19.Location = new System.Drawing.Point(274, 0);
-            this.metroLabel19.Margin = new System.Windows.Forms.Padding(0);
-            this.metroLabel19.Name = "metroLabel19";
-            this.metroLabel19.Size = new System.Drawing.Size(137, 38);
-            this.metroLabel19.TabIndex = 2;
-            this.metroLabel19.Text = "后倾位移";
-            this.metroLabel19.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // metroLabel20
-            // 
-            this.metroLabel20.AutoSize = true;
-            this.metroLabel20.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.metroLabel20.Location = new System.Drawing.Point(0, 0);
-            this.metroLabel20.Margin = new System.Windows.Forms.Padding(0);
-            this.metroLabel20.Name = "metroLabel20";
-            this.metroLabel20.Size = new System.Drawing.Size(137, 38);
-            this.metroLabel20.TabIndex = 0;
-            this.metroLabel20.Text = "上升位移(mm)";
-            this.metroLabel20.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // txtBigUpDis
-            // 
-            this.txtBigUpDis.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtBigUpDis.FontSize = MetroFramework.MetroTextBoxSize.Tall;
-            this.txtBigUpDis.Location = new System.Drawing.Point(138, 0);
-            this.txtBigUpDis.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
-            this.txtBigUpDis.Name = "txtBigUpDis";
-            this.txtBigUpDis.Size = new System.Drawing.Size(135, 38);
-            this.txtBigUpDis.TabIndex = 1;
+            // timer2
+            // 
+            this.timer2.Interval = 1000;
+            this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
+            // 
+            // btnRetest
+            // 
+            this.btnRetest.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnRetest.ForeColor = System.Drawing.Color.White;
+            this.btnRetest.Location = new System.Drawing.Point(780, 10);
+            this.btnRetest.Name = "btnRetest";
+            this.btnRetest.Size = new System.Drawing.Size(132, 57);
+            this.btnRetest.TabIndex = 10;
+            this.btnRetest.Text = "点亮";
+            this.btnRetest.UseVisualStyleBackColor = false;
+            this.btnRetest.Click += new System.EventHandler(this.btnRetest_Click);
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.SteelBlue;
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(947, 10);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(132, 57);
+            this.button1.TabIndex = 11;
+            this.button1.Text = "熄灭";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // ManualExperimentWin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1152, 922);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnRetest);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("宋体", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
@@ -1889,20 +1917,20 @@
             this.panel7.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picTest)).EndInit();
             this.panel6.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
-            this.panel5.ResumeLayout(false);
-            this.panel4.ResumeLayout(false);
             this.grpSteeveDis.ResumeLayout(false);
             this.panel11.ResumeLayout(false);
             this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel3.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel5.ResumeLayout(false);
+            this.groupBox1.ResumeLayout(false);
+            this.tableLayoutPanel2.ResumeLayout(false);
+            this.tableLayoutPanel2.PerformLayout();
+            this.panel4.ResumeLayout(false);
             this.grpSteeveForce.ResumeLayout(false);
             this.panel9.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
-            this.groupBox1.ResumeLayout(false);
-            this.tableLayoutPanel2.ResumeLayout(false);
-            this.tableLayoutPanel2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -2046,5 +2074,7 @@
         private MetroFramework.Controls.MetroLabel metroLabel19;
         private MetroFramework.Controls.MetroLabel metroLabel20;
         private MetroFramework.Controls.MetroTextBox txtBigUpDis;
+        private System.Windows.Forms.Button btnRetest;
+        private System.Windows.Forms.Button button1;
     }
 }

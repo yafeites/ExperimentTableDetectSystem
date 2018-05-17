@@ -125,6 +125,7 @@ namespace ExperimentTableDetectSystem.Windows.setParameterWin
                 SetConfigValue();
                 configManager.StoreConfigToDb();
                 //WriteToPlc();
+                writetest();
                 MessageBox.Show("参数发送给plc成功.");
             }catch(Exception ex)
             {
@@ -324,6 +325,30 @@ namespace ExperimentTableDetectSystem.Windows.setParameterWin
         private void SetParameterWin_Load(object sender, EventArgs e)
         {
             peakhelper = PeakHelper.GetInstance();
+        }
+        public void writetest()
+        {
+            TPCANMsg canmsg183;
+
+            canmsg183 = new TPCANMsg();
+            canmsg183.ID = 0x183;
+            canmsg183.LEN = Convert.ToByte(8);
+            canmsg183.MSGTYPE = TPCANMessageType.PCAN_MESSAGE_STANDARD;
+            canmsg183.DATA = new byte[8];
+            int mainP;
+            int mediumtime;
+            int steerTime;
+            int.TryParse(txtMainP.Text.Trim(), out mainP);
+            int.TryParse(txtMediumPTime.Text.Trim(), out mediumtime);
+            int.TryParse(txtSteerTestTime.Text.Trim(), out steerTime);
+            for(int i = 0; i < 8; i++)
+            {
+                canmsg183.DATA[i] = 0;
+            }
+            canmsg183.DATA[0] = Convert.ToByte( mainP);
+            canmsg183.DATA[4] =Convert.ToByte( mediumtime);
+            canmsg183.DATA[6] = Convert.ToByte(steerTime);
+            TPCANStatus sts = peakhelper.write(canmsg183);
         }
     }
 }

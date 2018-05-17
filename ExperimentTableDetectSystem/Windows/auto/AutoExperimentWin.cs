@@ -46,7 +46,8 @@ namespace ExperimentTableDetectSystem.Windows
         }
         private void btnStartTest_Click(object sender, EventArgs e)
         {
-            select();
+            // select();
+            selecttest();
             this.Close();
             autoDataDisplayWin win = autoDataDisplayWin.getInstance();
             win.Show();
@@ -54,12 +55,22 @@ namespace ExperimentTableDetectSystem.Windows
 
         private void select()
         {
+            #region 0x181
+            TPCANMsg canmsg181 = new TPCANMsg();
+            canmsg181.ID = 0x186;
+            canmsg181.LEN = Convert.ToByte(8);
+            canmsg181.MSGTYPE = TPCANMessageType.PCAN_MESSAGE_STANDARD;
+            canmsg181.DATA = new byte[8];
+            #endregion
+
             #region canmsg 0x186
             TPCANMsg canmsg186 = new TPCANMsg();
             canmsg186.ID = 0x186;
             canmsg186.LEN = Convert.ToByte(8);
             canmsg186.MSGTYPE = TPCANMessageType.PCAN_MESSAGE_STANDARD;
             canmsg186.DATA = new byte[8];
+
+
             if (chkMediumPressureLoss.Checked == true)
             {
                 canmsg186.DATA[0] = 1;
@@ -133,6 +144,12 @@ namespace ExperimentTableDetectSystem.Windows
             if (chkLeakageHoldPresssure.Checked == true)
             {
                 canmsg187.DATA[2] = 1;
+                canmsg181.DATA[0] = 0;
+                canmsg181.DATA[1] = 1;
+                for(int i = 2; i < 8; i++)
+                {
+                    canmsg181.DATA[i] = 0;
+                }
             }
             else { canmsg187.DATA[2] = 0; }
             if (chkSmallSelfLock.Checked == true)
@@ -150,12 +167,33 @@ namespace ExperimentTableDetectSystem.Windows
 
             #endregion
 
-            TPCANStatus sts1=  peakHelper.write(canmsg186);
+            TPCANStatus sts1 =  peakHelper.write(canmsg186);
             TPCANStatus sts2= peakHelper.write(canmsg187);
+
+
+            peakHelper.write(canmsg181);
+
             if (sts1 == TPCANStatus.PCAN_ERROR_OK && sts2 == TPCANStatus.PCAN_ERROR_OK)
             {
                 MessageBox.Show("实验项目选择成功，即将开始自动实验");
             } 
+        }
+
+        public void selecttest()
+        {
+            TPCANMsg canmsg183 = new TPCANMsg();
+            canmsg183.ID = 0x186;
+            canmsg183.LEN = Convert.ToByte(8);
+            canmsg183.MSGTYPE = TPCANMessageType.PCAN_MESSAGE_STANDARD;
+            canmsg183.DATA = new byte[8];
+            for (int i = 0; i < 8; i++)
+            {
+                canmsg183.DATA[i] = 0;
+            }
+            canmsg183.DATA[2] = 1;
+            canmsg183.DATA[3] = 1;
+            canmsg183.DATA[5] = 1;
+            TPCANStatus sts = peakHelper.write(canmsg183);
         }
 
     }

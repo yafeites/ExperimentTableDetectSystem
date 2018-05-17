@@ -15,8 +15,8 @@ namespace ExperimentTableDetectSystem.service
         private TPCANHandle m_PcanHandle;
         private TPCANBaudrate m_Baudrate;
         byte[] AllData = new byte[32];
-
-
+        double[] testvalue;
+        double[] value;
         private delegate void ReadDelegateHandler();
         private AutoResetEvent m_ReceiveEvent;
         #endregion
@@ -107,14 +107,18 @@ namespace ExperimentTableDetectSystem.service
             // If a message is found, we look again trying to find more.
             // If the queue is empty or an error occurr, we get out from
             // the dowhile statement.
-            //		
+            //	
+            for(int i = 0; i < 51; i++) { v[i] = 0; }	
             do
             {
                 stsResult = PCANBasic.Read(m_PcanHandle, out CANMsg, out CANTimeStamp);
                 if (stsResult == TPCANStatus.PCAN_ERROR_OK)
                 {
-                   // v = MyProcessMessage(CANMsg);//处理数据
-                    v = ConvertToRealValue(CANMsg);
+
+                    // v = ConvertToRealValue(CANMsg);
+                   //v = testrealvalue(CANMsg);
+                   // v = MyProcessMessage(CANMsg);
+                    //v = readtest(CANMsg);
                 }
             }
             while (!Convert.ToBoolean(stsResult & TPCANStatus.PCAN_ERROR_QRCVEMPTY));
@@ -122,89 +126,81 @@ namespace ExperimentTableDetectSystem.service
             return v;
         }
 
-
-
-
-
-        /// <summary>
-        /// 收到消息后处理消息
-        /// </summary>
-        /// <param name="CANMsg"></param>
-        /// <param name="CANTimeStamp"></param>
       //  int[] a = new int[4] { 0, 0, 0, 0 };
-        /// <summary>
-        /// 处理帧信息，解释成自己的值
-        /// </summary>
-        /// <param name="CANMsg"></param>
-        /// <returns></returns>
-        //public double[] MyProcessMessage(TPCANMsg CANMsg)
-        //{
-        //    #region 抱罐车处理数据
-        //    double[] value = new double[11];
 
-        //    if (CANMsg.ID != 0x184 && CANMsg.ID != 0x284 && CANMsg.ID != 0x384 && CANMsg.ID != 0x484)
-        //    {
-        //        return null;
-        //    }
-        //    if (CANMsg.ID == 0x184)
-        //    {
-        //        a[0] = 1;
-        //        for (int i = 0; i < 8; i++)
-        //            AllData[i] = CANMsg.DATA[i];
-        //    }
-        //    else if (CANMsg.ID == 0x284)
-        //    {
-        //        a[1] = 1;
-        //        for (int i = 8; i < 16; i++)
-        //            AllData[i] = CANMsg.DATA[i % 8];
-        //    }
-        //    else if (CANMsg.ID == 0x384)
-        //    {
-        //        a[2] = 1;
-        //        for (int i = 16; i < 24; i++)
-        //            AllData[i] = CANMsg.DATA[i % 8];
-        //    }
-        //    else if (CANMsg.ID == 0x484)
-        //    {
-        //        a[3] = 1;
-        //        for (int i = 24; i < 32; i++)
-        //            AllData[i] = CANMsg.DATA[i % 8];
-        //    }
+      /// <summary>
+      /// 处理数据
+      /// </summary>
+      /// <param name="CANMsg"></param>
+      /// <returns></returns>
+        public double[] MyProcessMessage(TPCANMsg CANMsg)
+        {
+            value = new double[51];
+            if (CANMsg.ID != 0x184 && CANMsg.ID != 0x284 && CANMsg.ID != 0x384 && CANMsg.ID != 0x484)
+            {
+                return null;
+            }
+            if (CANMsg.ID == 0x184)
+            {
+              //  a[0] = 1;
+                for (int i = 0; i < 8; i++)
+                    AllData[i] = CANMsg.DATA[i];
+            }
+            else if (CANMsg.ID == 0x284)
+            {
+               // a[1] = 1;
+                for (int i = 8; i < 16; i++)
+                    AllData[i] = CANMsg.DATA[i % 8];
+            }
+            else if (CANMsg.ID == 0x384)
+            {
+               // a[2] = 1;
+                for (int i = 16; i < 24; i++)
+                    AllData[i] = CANMsg.DATA[i % 8];
+            }
+            else if (CANMsg.ID == 0x484)
+            {
+               // a[3] = 1;
+                for (int i = 24; i < 32; i++)
+                    AllData[i] = CANMsg.DATA[i % 8];
+            }
 
-        //    if ((a[0] == 1) && (a[1] == 1) && (a[2] == 1) && (a[3] == 1))
-        //    {
+            //if ((a[0] == 1) && (a[1] == 1) && (a[2] == 1) && (a[3] == 1))
+            {
 
-        //        //accuHighPre value 
-        //        value[0] = (Convert.ToInt32(AllData[8]) * 100 + Convert.ToInt32(AllData[9]));
-        //        //accuLowPre value
-        //        value[1] = Convert.ToInt32(AllData[10]);
-        //        //pmOutPre value
-        //        value[2] = (Convert.ToInt32(AllData[11]) * 100 + Convert.ToInt32(AllData[12]));
-        //        //pmInPre value
-        //        value[3] = Convert.ToInt32(AllData[13]);
-        //        //slipPumpPre value
-        //        value[4] = Convert.ToInt32(AllData[14]);
-        //        //carSpeed value
-        //        value[5] = AllData[15];
-        //        //engineSpeed value
-        //        value[6] = (Convert.ToInt32(AllData[16]) * 100 + Convert.ToInt32(AllData[17]));
-        //        //acceSign value
-        //        value[7] = (Convert.ToInt32(AllData[18]) * 100 + Convert.ToInt32(AllData[19])) / 10.0;
-        //        //brakeSign value
-        //        value[8] = (Convert.ToInt32(AllData[20]) * 100 + Convert.ToInt32(AllData[21])) / 10.0;
-        //        //moterDisplacement value
-        //        value[9] = Convert.ToInt32(AllData[30]);
-        //        //pumpDisplacement value
-        //        value[10] = Convert.ToInt32(AllData[31]);
+                //accuHighPre value 
+                value[0] = (Convert.ToInt32(AllData[8]) * 100 + Convert.ToInt32(AllData[9]));
+                //accuLowPre value
+                value[1] = Convert.ToInt32(AllData[10]);
+                //pmOutPre value
+                value[2] = (Convert.ToInt32(AllData[11]) * 100 + Convert.ToInt32(AllData[12]));
+                //pmInPre value
+                value[3] = Convert.ToInt32(AllData[13]);
+                //slipPumpPre value
+                value[4] = Convert.ToInt32(AllData[14]);
+                //carSpeed value
+                value[5] = AllData[15];
+                //engineSpeed value
+                value[6] = (Convert.ToInt32(AllData[16]) * 100 + Convert.ToInt32(AllData[17]));
+                //acceSign value
+                value[7] = (Convert.ToInt32(AllData[18]) * 100 + Convert.ToInt32(AllData[19])) / 10.0;
+                //brakeSign value
+                value[8] = (Convert.ToInt32(AllData[20]) * 100 + Convert.ToInt32(AllData[21])) / 10.0;
+                //moterDisplacement value
+                value[9] = Convert.ToInt32(AllData[30]);
+                //pumpDisplacement value
+                value[10] = Convert.ToInt32(AllData[31]);
 
-        //        //ReceivelistMsg.Add(value);
-        //        a[0] = a[1] = a[2] = a[3] = 0;
+            
+            }
+            return value;
 
-        //    }
-        //    return value;
-        //    #endregion
 
-        //}
+        }
+
+
+
+
 
         public double[] ConvertToRealValue(TPCANMsg CanMsg)
         {
@@ -212,6 +208,7 @@ namespace ExperimentTableDetectSystem.service
 
             byte[] AllDatas = new byte[96];
             int[] temp = new int[12] { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
+
             if (CanMsg.ID != 0x280 && CanMsg.ID != 0x281 && CanMsg.ID != 0x282 && CanMsg.ID != 0x283 && CanMsg.ID != 0x284 && CanMsg.ID != 0x285 && CanMsg.ID != 0x286 && CanMsg.ID != 0x287 && CanMsg.ID != 0x288 && CanMsg.ID != 0x289 && CanMsg.ID != 0x290 && CanMsg.ID != 0x291)//
             {
                 return null;
@@ -501,6 +498,39 @@ namespace ExperimentTableDetectSystem.service
 
         }
 
+        /// <summary>
+        /// 试验数据方法
+        /// </summary>
+        /// <param name="canmsg"></param>
+        /// <returns></returns>
+        public double[] testrealvalue(TPCANMsg canmsg)
+        {
+            testvalue = new double[51];
+            int[] temp = new int[2] { 0, 0 };
+
+            if (canmsg.ID != 0x283 && canmsg.ID != 0x284)
+            {
+                return null;
+            }
+            if (canmsg.ID == 0x283)
+            {
+                temp[0] = 1;
+                for (int i = 0; i < 8; i++)
+                {
+                   testvalue[i] =Convert.ToDouble( canmsg.DATA[i]);
+                }
+            }
+            if (canmsg.ID == 0x284)
+            {
+                temp[1] = 1;
+               testvalue[8] =Convert.ToDouble( canmsg.DATA[0]);
+                testvalue[9] =Convert.ToDouble( canmsg.DATA[1]);
+                testvalue[10] =Convert.ToDouble( canmsg.DATA[2]);
+            }
+            return value;
+        }
+
+
         public int f1(byte a)
         {
             return Convert.ToInt32(a);
@@ -596,6 +626,8 @@ namespace ExperimentTableDetectSystem.service
         {
             return PCANBasic.Write(m_PcanHandle, ref CANMsg);
         }
+
+      
 
     }
 }

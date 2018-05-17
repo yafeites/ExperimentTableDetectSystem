@@ -31,8 +31,8 @@ namespace ExperimentTableDetectSystem.Windows.ExperimentData
              id= txtId.Text;//编号
              n= lstN.SelectedIndex+1;//测试次数
              test = lstSelection.SelectedIndex+1;//试验项目
-                                                 //  textBox1.Text = n.ToString();
-                                                 // textBox2.Text = test.ToString();
+                                                   //textBox1.Text = n.ToString();
+                                                  //textBox2.Text = test.ToString();
          
           HistoryDataWin win = new HistoryDataWin();
            win.Show();

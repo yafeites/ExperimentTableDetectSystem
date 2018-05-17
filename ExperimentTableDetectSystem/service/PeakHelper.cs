@@ -1,13 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Windows.Forms;
 using System.Threading;
 
 namespace ExperimentTableDetectSystem.service
 {
-   public class PeakHelper
+    public class PeakHelper
     {
         #region 字段
         public volatile bool hasData;
@@ -22,6 +19,7 @@ namespace ExperimentTableDetectSystem.service
         {
             this.hasData = false;
             this.AllValue = new double[51];
+
             this.pcanhelper = pcan;
             try
             { pcan.initialize();
@@ -82,7 +80,8 @@ namespace ExperimentTableDetectSystem.service
         private void ReadAllReadableValues()
         {
             lock (obj)
-            { AllValue= pcanhelper.ReadMessages();
+            {
+                AllValue  = pcanhelper.ReadMessages();
                 hasData = true;
             }
         }

@@ -101,11 +101,11 @@ namespace ExperimentTableDetectSystem.Windows
             {
                 DataStoreManager.Initialize();
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message + "数据保存类初始化错误。");
             }
-          
+
 
         }
         /// <summary>

@@ -81,6 +81,8 @@ namespace ExperimentTableDetectSystem.Windows.auto
             this.lblValveId.Text ="阀编号"+ valveid;
             this.txtinfo.Text ="发往公司名"+ company;
             peakhelper.StartTimer(250);
+            DataStoreManager.productId = this.valveid;
+            DataStoreManager.n = ManualNumberInput.n;
             datastoremanager.startTimer2(500,1000);
 
          
@@ -95,7 +97,8 @@ namespace ExperimentTableDetectSystem.Windows.auto
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            refresh();
+            // refresh();
+            testRefresh();
         }
         private void refresh()
         {
@@ -105,8 +108,8 @@ namespace ExperimentTableDetectSystem.Windows.auto
                 nowdata[i] = peakhelper.AllValue[i];
             }
             if (nowdata[30] == 1)//中位压力损失
-            {   foreach(Control c in Controls)
-                    if(c is TextBox) { c.Text = ""; }
+            {   //foreach(Control c in Controls)
+                 //   if(c is TextBox) { c.Text = ""; }
                 txtmainPumpP1.Text = nowdata[4].ToString();
                 txtMainPumpP2.Text = nowdata[5].ToString();
                 txtpumpFlow1.Text = nowdata[0].ToString();
@@ -116,8 +119,8 @@ namespace ExperimentTableDetectSystem.Windows.auto
             }
             if (nowdata[31] == 1)//转向优先阀流量测试
             {
-                foreach (Control c in Controls)
-                    if (c is TextBox) { c.Text = ""; }
+              //  foreach (Control c in Controls)
+                  //  if (c is TextBox) { c.Text = ""; }
                 txtmainPumpP1.Text = nowdata[4].ToString();
                 txtMainPumpP2.Text = nowdata[5].ToString();
                 txtpumpFlow1.Text = nowdata[0].ToString();
@@ -134,7 +137,7 @@ namespace ExperimentTableDetectSystem.Windows.auto
             }
             if (nowdata[32] == 1)//小门架上升
             {
-                clearBox();
+              //  clearBox();
                 txtmainPumpP1.Text = nowdata[4].ToString();
                 txtpumpFlow1.Text = nowdata[0].ToString();
                 txtOilPressure.Text = nowdata[48].ToString();
@@ -149,7 +152,7 @@ namespace ExperimentTableDetectSystem.Windows.auto
             }
             if (nowdata[33] == 1)
             {
-                clearBox();
+               // clearBox();
                 txtmainPumpP1.Text = nowdata[4].ToString();
                 txtpumpFlow1.Text = nowdata[0].ToString();
                 txtOilPressure.Text = nowdata[48].ToString();
@@ -163,7 +166,7 @@ namespace ExperimentTableDetectSystem.Windows.auto
             }
             if (nowdata[34] == 1)//大门架上升
             {
-                clearBox();
+              //  clearBox();
                 txtmainPumpP1.Text = nowdata[4].ToString();
                 txtMainPumpP2.Text = nowdata[5].ToString();
                 txtpumpFlow1.Text = nowdata[0].ToString();
@@ -178,7 +181,7 @@ namespace ExperimentTableDetectSystem.Windows.auto
             }
             if (nowdata[35] == 1)
             {
-                clearBox();
+                //clearBox();
                 txtmainPumpP1.Text = nowdata[4].ToString();
                 txtMainPumpP2.Text = nowdata[5].ToString();
                 txtpumpFlow1.Text = nowdata[0].ToString();
@@ -196,7 +199,7 @@ namespace ExperimentTableDetectSystem.Windows.auto
             }
             if (nowdata[36] == 1||nowdata[41]==1)//小门架前倾
             {
-                clearBox();
+               // clearBox();
                 setValue(txtmainPumpP1, nowdata[4]);
                 setValue(txtpumpFlow1, nowdata[0]);
                 setValue(txtoilInPressure, nowdata[49]);
@@ -212,7 +215,7 @@ namespace ExperimentTableDetectSystem.Windows.auto
             }
             if (nowdata[37] == 1)
             {
-                clearBox();
+               // clearBox();
                 setValue(txtmainPumpP1, nowdata[4]);
                 setValue(txtpumpFlow1, nowdata[0]);
                 setValue(txtoilInPressure, nowdata[49]);
@@ -228,7 +231,7 @@ namespace ExperimentTableDetectSystem.Windows.auto
             }
             if (nowdata[38] == 1||nowdata[42]==1)
             {
-                clearBox();
+               // clearBox();
                 setValue(txtmainPumpP1, nowdata[4]);
                 setValue(txtpumpFlow1, nowdata[0]);
                 setValue(txtoilInPressure, nowdata[49]);
@@ -246,7 +249,7 @@ namespace ExperimentTableDetectSystem.Windows.auto
             }
             if (nowdata[39] == 1)
             {
-                clearBox();
+              //  clearBox();
                 setValue(txtmainPumpP1, nowdata[4]);
                 setValue(txtpumpFlow1, nowdata[0]);
                 setValue(txtoilInPressure, nowdata[49]);
@@ -263,6 +266,42 @@ namespace ExperimentTableDetectSystem.Windows.auto
 
             }
             
+
+        }
+
+        private void testRefresh()
+        {
+            double[] showdata = new double[11];
+            for (int i = 0; i < 11; i++)
+            {
+                showdata[i] = peakhelper.AllValue[i];
+            }
+            ///数据显示实现代码？？?
+            if (showdata[9] == 0)
+            {
+                txtmainPumpP1.Text = showdata[0].ToString();
+                txtMainPumpP2.Text = showdata[1].ToString();
+                txtpumpFlow1.Text = showdata[2].ToString();
+                txtPumpFlow2.Text = showdata[3].ToString();
+                txtSystemBackPressure.Text = showdata[4].ToString();
+                txtMediumPressureLoss.Text = showdata[5].ToString();
+            }
+            if (showdata[9] == 1)
+            {
+                txtTestCourse.Text = "转向压力测试";
+                txtmainPumpP1.Text = showdata[0].ToString();
+                txtMainPumpP2.Text = showdata[1].ToString();
+                txtpumpFlow1.Text = showdata[2].ToString();
+                txtPumpFlow2.Text = showdata[3].ToString();
+                txtsteeringFlow.Text = showdata[7].ToString();
+                txtSteerPressure.Text = showdata[6].ToString();
+            }
+            if (showdata[10] == 1)
+            {
+                this.Close();
+                TestFinishedWin win = new TestFinishedWin();
+                win.Show();
+            }
 
         }
 

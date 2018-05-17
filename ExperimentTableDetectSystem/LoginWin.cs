@@ -10,6 +10,9 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
+
+using BridgeDetectSystem;
+
 namespace ExperimentTableDetectSystem
 {
     public partial class LoginWin : MetroFramework.Forms.MetroForm
@@ -76,5 +79,13 @@ namespace ExperimentTableDetectSystem
         {
             this.Close();
         }
+
+        private void metroButton1_Click(object sender, EventArgs e)
+        {
+            TestForm x = new TestForm();
+            x.Show();
+        }
+
+      
     }
 }

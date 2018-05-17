@@ -104,8 +104,8 @@ namespace ExperimentTableDetectSystem.service
         /// <param name="n"></param>
         /// <param name="dgv"></param>
         public void Searchf3(string id, int n,DataGridView dgv)
-        {//内泄漏测试
-            string sql = string.Format("select productId as 编号,n as 次数,testName as 测试项目,p as 主泵压力,q as 主泵流量,Pi as 油缸压力,Pb as 系统背压,P-Pi as 压力损失,S as 油缸位移,v as 油缸速度,f as 推动滑阀力,t as 推动滑阀时间,time as 时间 from valvef3 where productId='{0}' and n={1}and testName='内泄漏试验'", id, n);
+        {//内泄漏测试???测试内容需确定，此处不够确定
+            string sql = string.Format("select productId as 编号,n as 次数,testName as 测试项目,ai1 as 主泵1压力,pump1flow as 主泵1流量,ai2 as 主泵2压力,pump2flow as 主泵2流量,ai3 as 转向压力,steerflow as 转向流量 from allData where productId='{0}' and n={1} and testName='内泄漏试验'", id, n);
             loadData(sql, dgv);
         }
 
