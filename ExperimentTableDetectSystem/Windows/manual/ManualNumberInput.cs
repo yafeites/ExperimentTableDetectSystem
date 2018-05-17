@@ -14,9 +14,9 @@ namespace ExperimentTableDetectSystem.Windows.manual
     public partial class ManualNumberInput : MetroFramework.Forms.MetroForm
     {
         private DBHelper dbhelper=DBHelper.GetInstance();
-      
+        PeakHelper peak;
        private int i=1;
-        public static int n = -1;
+        public static int n = 1;
         #region singleton
         private static ManualNumberInput instance;
        
@@ -51,7 +51,7 @@ namespace ExperimentTableDetectSystem.Windows.manual
         private ManualNumberInput()
         {
             InitializeComponent();
-
+            peak = PeakHelper.GetInstance();
         }
         /// <summary>
         /// 输入编号，发往厂家，插入到表tbProductId
@@ -60,47 +60,51 @@ namespace ExperimentTableDetectSystem.Windows.manual
         /// <param name="e"></param>
         private void btnConfirm_Click(object sender, EventArgs e)
         {
-          
-            this.valveid = txtValveId.Text;
-            id = this.valveid;
-            this.SendCompany = txtCompany.Text;
-            company = this.SendCompany;
-        
-
-            string sqlstr = "select * from tbProductId where Id="+"'"+txtValveId.Text+"'" ;
-
-            
-            if (!OperateDb.IsTableNull(sqlstr))//说明存在此id的记录，biao，须建立新名字。
-
+            if (txtCompany.Text == "" || txtValveId.Text == "")
             {
-                DataTable dt = OperateDb.readTableN(sqlstr);
-
-                int n = dt.Rows.Count;
-                MessageBox.Show("此编号已测"+n.ToString()+"次");
-                 i = int.Parse(dt.Rows[n-1][1].ToString());
-               i = i + 1;
-                 MessageBox.Show("这是第"+i.ToString()+"测试。");
-             
+                MessageBox.Show("请输入，不能为空");
             }
-            n = i;
-            //  datastoremanager.n = n;
-           // DataStoreManager.n = n;
-           // DataStoreManager.productId = id;
-            try
+            else
             {
-                RecreateRecordManager.AddNewId(id, i,company);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("加入阀编号表错误" + ex.Message);
-            }
-            
-           
+                this.valveid = txtValveId.Text;
+                id = this.valveid;
+                this.SendCompany = txtCompany.Text;
+                company = this.SendCompany;
 
-            this.Close();
 
-            ManualExperimentWin win = ManualExperimentWin.getInstance();
-            win.Show();
+                string sqlstr = "select * from tbProductId where Id=" + "'" + txtValveId.Text + "'";
+
+
+                if (!OperateDb.IsTableNull(sqlstr))//说明存在此id的记录，biao，须建立新名字。
+
+                {
+                    DataTable dt = OperateDb.readTableN(sqlstr);
+
+                    n = dt.Rows.Count;
+                    MessageBox.Show("此编号已测" + n.ToString() + "次");
+                    //   i = int.Parse(dt.Rows[n-1][1].ToString());
+                    n = n + 1;
+                    MessageBox.Show("这是第" + n.ToString() + "测试。");
+
+                }
+                //n = i;
+
+                try
+                {
+                    RecreateRecordManager.AddNewId(id, n, company);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("加入阀编号表错误" + ex.Message);
+                }
+
+
+
+                this.Close();
+
+                ManualExperimentWin win = ManualExperimentWin.getInstance();
+                win.Show();
+            }
         }
 
       

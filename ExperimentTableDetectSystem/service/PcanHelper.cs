@@ -71,7 +71,7 @@ namespace ExperimentTableDetectSystem.service
             {
                 ConfiguerTraceFile();
             }
-            else { MessageBox.Show("pcanhelper初始化失败"); }
+            else {throw  new Exception("pcanhelper初始化失败"); }
         }
 
         /// <summary>
@@ -103,11 +103,7 @@ namespace ExperimentTableDetectSystem.service
             TPCANMsg CANMsg;
             TPCANTimestamp CANTimeStamp;
             TPCANStatus stsResult;
-            // We read at least one time the queue looking for messages.
-            // If a message is found, we look again trying to find more.
-            // If the queue is empty or an error occurr, we get out from
-            // the dowhile statement.
-            //	
+          
             for(int i = 0; i < 51; i++) { v[i] = 0; }	
             do
             {
@@ -117,7 +113,7 @@ namespace ExperimentTableDetectSystem.service
 
                     // v = ConvertToRealValue(CANMsg);
                    //v = testrealvalue(CANMsg);
-                   // v = MyProcessMessage(CANMsg);
+                    v = MyProcessMessage(CANMsg);
                     //v = readtest(CANMsg);
                 }
             }
@@ -126,7 +122,7 @@ namespace ExperimentTableDetectSystem.service
             return v;
         }
 
-      //  int[] a = new int[4] { 0, 0, 0, 0 };
+    
 
       /// <summary>
       /// 处理数据
@@ -156,20 +152,21 @@ namespace ExperimentTableDetectSystem.service
             {
                // a[2] = 1;
                 for (int i = 16; i < 24; i++)
-                    AllData[i] = CANMsg.DATA[i % 8];
+                    AllData[i] =1;
             }
             else if (CANMsg.ID == 0x484)
             {
                // a[3] = 1;
                 for (int i = 24; i < 32; i++)
-                    AllData[i] = CANMsg.DATA[i % 8];
+                    AllData[i] = 1;
             }
 
             //if ((a[0] == 1) && (a[1] == 1) && (a[2] == 1) && (a[3] == 1))
             {
 
                 //accuHighPre value 
-                value[0] = (Convert.ToInt32(AllData[8]) * 100 + Convert.ToInt32(AllData[9]));
+                //    value[0] = (Convert.ToInt32(AllData[8]) * 100 + Convert.ToInt32(AllData[9]));
+                value[0] = 111;
                 //accuLowPre value
                 value[1] = Convert.ToInt32(AllData[10]);
                 //pmOutPre value

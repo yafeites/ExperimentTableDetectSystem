@@ -40,8 +40,7 @@ namespace ExperimentTableDetectSystem.service
                 catch (Exception ex)
                 {
                     readTimer.Change(Timeout.Infinite, Timeout.Infinite);
-                   hasData = false;
-                 
+                    hasData = false;
                     System.Windows.Forms.MessageBox.Show("PEAKHelper读数据出错");
                 }
             }, null, Timeout.Infinite, Timeout.Infinite);
@@ -85,12 +84,18 @@ namespace ExperimentTableDetectSystem.service
                 hasData = true;
             }
         }
-
+        /// <summary>
+        /// 开始读数
+        /// </summary>
+        /// <param name="period"></param>
         public void StartTimer(int period)
         {
             readTimer.Change(0, period);
         }
 
+        /// <summary>
+        /// 停止读数
+        /// </summary>
         public void StopTimer()
         {
             readTimer.Change(Timeout.Infinite, Timeout.Infinite);

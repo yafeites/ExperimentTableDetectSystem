@@ -81,7 +81,7 @@ namespace ExperimentTableDetectSystem
         /// </summary>
         private static void initialPeakHelper()
         {
-            // PeakHelper pcan = new PeakHelper();
+           
             PcanHelper pcan = new PcanHelper();
             try
             {

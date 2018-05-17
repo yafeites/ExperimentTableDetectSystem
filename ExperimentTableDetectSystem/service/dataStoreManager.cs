@@ -28,15 +28,15 @@ namespace ExperimentTableDetectSystem.service
             {
                 if (peakhelper.hasData)
                 {
-                  //  storeData1();
+                   storeData1();
                 }
             }, null, Timeout.Infinite, Timeout.Infinite);
 
             storeTimer2 = new System.Threading.Timer(_ =>
               {
-                  //if (peakhelper.hasData)
+                  if (peakhelper.hasData)
                   {
-                    //  storeData2();
+                      storeData2();
                   }
               }, null, Timeout.Infinite, Timeout.Infinite);
 
