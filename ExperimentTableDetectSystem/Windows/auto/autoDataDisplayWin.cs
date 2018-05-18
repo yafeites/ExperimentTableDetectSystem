@@ -29,6 +29,7 @@ namespace ExperimentTableDetectSystem.Windows.auto
         }
         #endregion
         #region Filed
+      //  PeakHelper peakhelper;
         private string valveid;
 
         public string Valveid
@@ -277,8 +278,9 @@ namespace ExperimentTableDetectSystem.Windows.auto
                 showdata[i] = peakhelper.AllValue[i];
             }
             ///数据显示实现代码？？?
-            if (showdata[9] == 0)
+            if (showdata[9] == 0)//正在做中位压力损失试验
             {
+                txtTestCourse.Text = "中位压力测试";
                 txtmainPumpP1.Text = showdata[0].ToString();
                 txtMainPumpP2.Text = showdata[1].ToString();
                 txtpumpFlow1.Text = showdata[2].ToString();
@@ -286,9 +288,12 @@ namespace ExperimentTableDetectSystem.Windows.auto
                 txtSystemBackPressure.Text = showdata[4].ToString();
                 txtMediumPressureLoss.Text = showdata[5].ToString();
             }
-            if (showdata[9] == 1)
+            if (showdata[9] == 1)//正在做转向压力测试
             {
-                txtTestCourse.Text = "转向压力测试";
+               
+                txtTestCourse.Text = "转向优先阀流量测试";
+                txtSystemBackPressure.Text ="";
+                txtMediumPressureLoss.Text ="";
                 txtmainPumpP1.Text = showdata[0].ToString();
                 txtMainPumpP2.Text = showdata[1].ToString();
                 txtpumpFlow1.Text = showdata[2].ToString();
@@ -334,5 +339,7 @@ namespace ExperimentTableDetectSystem.Windows.auto
                 peakhelper.StopTimer();
             }
         }
+
+      
     }
 }

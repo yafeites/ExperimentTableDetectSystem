@@ -168,8 +168,7 @@
             this.metroLabel60 = new MetroFramework.Controls.MetroLabel();
             this.txtmainPumpP1 = new MetroFramework.Controls.MetroTextBox();
             this.timer2 = new System.Windows.Forms.Timer(this.components);
-            this.btnRetest = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnStartDraw = new MetroFramework.Controls.MetroButton();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel7.SuspendLayout();
@@ -1867,37 +1866,22 @@
             this.timer2.Interval = 1000;
             this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
             // 
-            // btnRetest
+            // btnStartDraw
             // 
-            this.btnRetest.BackColor = System.Drawing.Color.SteelBlue;
-            this.btnRetest.ForeColor = System.Drawing.Color.White;
-            this.btnRetest.Location = new System.Drawing.Point(780, 10);
-            this.btnRetest.Name = "btnRetest";
-            this.btnRetest.Size = new System.Drawing.Size(132, 57);
-            this.btnRetest.TabIndex = 10;
-            this.btnRetest.Text = "点亮";
-            this.btnRetest.UseVisualStyleBackColor = false;
-            this.btnRetest.Click += new System.EventHandler(this.btnRetest_Click);
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.SteelBlue;
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(947, 10);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(132, 57);
-            this.button1.TabIndex = 11;
-            this.button1.Text = "熄灭";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnStartDraw.Location = new System.Drawing.Point(895, 22);
+            this.btnStartDraw.Margin = new System.Windows.Forms.Padding(4);
+            this.btnStartDraw.Name = "btnStartDraw";
+            this.btnStartDraw.Size = new System.Drawing.Size(153, 54);
+            this.btnStartDraw.TabIndex = 3;
+            this.btnStartDraw.Text = "开始绘制";
+            this.btnStartDraw.Click += new System.EventHandler(this.btnStartDraw_Click_1);
             // 
             // ManualExperimentWin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1152, 922);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.btnRetest);
+            this.Controls.Add(this.btnStartDraw);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("宋体", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
@@ -2074,7 +2058,6 @@
         private MetroFramework.Controls.MetroLabel metroLabel19;
         private MetroFramework.Controls.MetroLabel metroLabel20;
         private MetroFramework.Controls.MetroTextBox txtBigUpDis;
-        private System.Windows.Forms.Button btnRetest;
-        private System.Windows.Forms.Button button1;
+        private MetroFramework.Controls.MetroButton btnStartDraw;
     }
 }

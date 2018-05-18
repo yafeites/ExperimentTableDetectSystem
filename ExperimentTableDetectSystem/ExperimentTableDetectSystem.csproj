@@ -41,6 +41,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -108,6 +109,12 @@
     </Compile>
     <Compile Include="Windows\dataAnalysis\dataAnalysisWin.Designer.cs">
       <DependentUpon>dataAnalysisWin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\drawing\CurveDrawing.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\drawing\CurveDrawing.Designer.cs">
+      <DependentUpon>CurveDrawing.cs</DependentUpon>
     </Compile>
     <Compile Include="Windows\ExperimentData\DataSearchWin.cs">
       <SubType>Form</SubType>
@@ -192,6 +199,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Windows\dataAnalysis\dataAnalysisWin.resx">
       <DependentUpon>dataAnalysisWin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\drawing\CurveDrawing.resx">
+      <DependentUpon>CurveDrawing.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Windows\ExperimentData\DataSearchWin.resx">
       <DependentUpon>DataSearchWin.cs</DependentUpon>

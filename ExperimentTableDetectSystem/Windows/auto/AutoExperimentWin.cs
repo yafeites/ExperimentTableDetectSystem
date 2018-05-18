@@ -47,6 +47,7 @@ namespace ExperimentTableDetectSystem.Windows
         private void btnStartTest_Click(object sender, EventArgs e)
         {
             // select();
+
             selecttest();
             this.Close();
             autoDataDisplayWin win = autoDataDisplayWin.getInstance();
@@ -179,10 +180,13 @@ namespace ExperimentTableDetectSystem.Windows
             } 
         }
 
+        /// <summary>
+        /// 演示。项目选择
+        /// </summary>
         public void selecttest()
         {
             TPCANMsg canmsg183 = new TPCANMsg();
-            canmsg183.ID = 0x186;
+            canmsg183.ID = 0x183;
             canmsg183.LEN = Convert.ToByte(8);
             canmsg183.MSGTYPE = TPCANMessageType.PCAN_MESSAGE_STANDARD;
             canmsg183.DATA = new byte[8];
@@ -190,10 +194,24 @@ namespace ExperimentTableDetectSystem.Windows
             {
                 canmsg183.DATA[i] = 0;
             }
+            canmsg183.DATA[1] = 1;
             canmsg183.DATA[2] = 1;
             canmsg183.DATA[3] = 1;
             canmsg183.DATA[5] = 1;
             TPCANStatus sts = peakHelper.write(canmsg183);
+
+            TPCANMsg canmsg283;
+            canmsg283 = new TPCANMsg();
+            canmsg283.ID = 0x283;
+            canmsg283.LEN = Convert.ToByte(8);
+            canmsg283.MSGTYPE = TPCANMessageType.PCAN_MESSAGE_STANDARD;
+            canmsg283.DATA = new byte[8];
+            canmsg283.DATA[0] = 0;
+            for (int i = 1; i < 8; i++)
+            {
+                canmsg283.DATA[i] = 0;
+            }
+            peakHelper.write(canmsg283);
         }
 
     }

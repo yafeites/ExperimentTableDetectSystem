@@ -31,7 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginWin));
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.metroButton1 = new MetroFramework.Controls.MetroButton();
             this.btnCancel = new MetroFramework.Controls.MetroButton();
             this.btnConfirm = new MetroFramework.Controls.MetroButton();
             this.txtPassword = new MetroFramework.Controls.MetroTextBox();
@@ -40,7 +39,6 @@
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.metroButton2 = new MetroFramework.Controls.MetroButton();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -66,8 +64,6 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.Highlight;
-            this.panel1.Controls.Add(this.metroButton2);
-            this.panel1.Controls.Add(this.metroButton1);
             this.panel1.Controls.Add(this.btnCancel);
             this.panel1.Controls.Add(this.btnConfirm);
             this.panel1.Controls.Add(this.txtPassword);
@@ -79,17 +75,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1102, 347);
             this.panel1.TabIndex = 0;
-            // 
-            // metroButton1
-            // 
-            this.metroButton1.AutoSize = true;
-            this.metroButton1.Location = new System.Drawing.Point(558, 137);
-            this.metroButton1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.metroButton1.Name = "metroButton1";
-            this.metroButton1.Size = new System.Drawing.Size(84, 30);
-            this.metroButton1.TabIndex = 106;
-            this.metroButton1.Text = "登录";
-            this.metroButton1.Click += new System.EventHandler(this.metroButton1_Click);
             // 
             // btnCancel
             // 
@@ -183,17 +168,6 @@
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
             // 
-            // metroButton2
-            // 
-            this.metroButton2.AutoSize = true;
-            this.metroButton2.Location = new System.Drawing.Point(746, 108);
-            this.metroButton2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.metroButton2.Name = "metroButton2";
-            this.metroButton2.Size = new System.Drawing.Size(84, 30);
-            this.metroButton2.TabIndex = 107;
-            this.metroButton2.Text = "登录";
-//            this.metroButton2.Click += new System.EventHandler(this.metroButton2_Click);
-            // 
             // LoginWin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
@@ -232,8 +206,6 @@
         private MetroFramework.Controls.MetroLabel metroLabel2;
         private MetroFramework.Controls.MetroTextBox txtUserName;
         private MetroFramework.Controls.MetroLabel metroLabel1;
-        private MetroFramework.Controls.MetroButton metroButton1;
-        private MetroFramework.Controls.MetroButton metroButton2;
     }
 }
 

@@ -35,7 +35,7 @@ namespace ExperimentTableDetectSystem.Windows
         {
             ManualNumberInput win = ManualNumberInput.getInstance();
             win.Show();
-            btnManualExperiment.Enabled = false;
+           // btnManualExperiment.Enabled = false;
             btnAutoExperiment.Enabled = true;
         }
         /// <summary>
@@ -46,7 +46,7 @@ namespace ExperimentTableDetectSystem.Windows
         private void btnAutoExperiment_Click(object sender, EventArgs e)
         {
             btnManualExperiment.Enabled = true;
-            btnAutoExperiment.Enabled = false;
+          //  btnAutoExperiment.Enabled = false;
             AutoExperimentWin win = AutoExperimentWin.getInstance();
             win.Show();
         }

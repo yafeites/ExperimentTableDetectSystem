@@ -1,4 +1,5 @@
 ﻿using ExperimentTableDetectSystem.service;
+using ExperimentTableDetectSystem.Windows.drawing;
 using ExperimentTableDetectSystem.Windows.manual;
 using System;
 using System.Collections.Generic;
@@ -116,27 +117,28 @@ namespace ExperimentTableDetectSystem.Windows
                 showdata[i] = peakHelperer.AllValue[i];
             }
             ///数据显示实现代码？？?
-            txtmainPumpP1.Text = showdata[0].ToString();
-          
-            txtMainPumpP2.Text = showdata[1].ToString();
-            txtpumpFlow1.Text = showdata[2].ToString();
-            txtPumpFlow2.Text = showdata[3].ToString();
+            if (showdata[8] == 0)
+            {
+                txtmainPumpP1.Text = showdata[0].ToString();
+
+                txtMainPumpP2.Text = showdata[1].ToString();
+                txtpumpFlow1.Text = showdata[2].ToString();
+                txtPumpFlow2.Text = showdata[3].ToString();
+            }
 
             if (showdata[8] == 1)
             {
                 timer1.Enabled = false;
-                DialogResult dr= MessageBox.Show("主溢流阀调定试验已做完，请进行转向溢流阀调定测试","提示",MessageBoxButtons.OKCancel);
+                DialogResult dr = MessageBox.Show("主溢流阀调定试验已做完，请进行转向溢流阀调定测试", "提示", MessageBoxButtons.OKCancel);
                 if (dr == DialogResult.OK)
                 {
-                    // this.picTest.Image = Image.FromFile(@"../../picture\1.jpg");
-                    //  timer1.Enabled = false;
-                    // timer2.Enabled = true;
+
                     this.Close();
                 }
-                else { timer1.Enabled = true; }
-              
+             //   else { timer1.Enabled = true; }
+
             }
-            
+
 
 
 
@@ -250,6 +252,19 @@ namespace ExperimentTableDetectSystem.Windows
             msg.DATA[1] = 0;
             peakHelperer.write(msg);
             peakHelperer.write(CANMsg);
+        }
+
+        private void btnStartDraw_Click(object sender, EventArgs e)
+        {
+            CurveDrawing win = new CurveDrawing();
+            win.Show();
+        }
+
+        private void btnStartDraw_Click_1(object sender, EventArgs e)
+        {
+
+            CurveDrawing win = new CurveDrawing();
+            win.Show();
         }
     }
 }

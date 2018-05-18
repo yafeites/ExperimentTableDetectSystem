@@ -123,6 +123,8 @@ namespace ExperimentTableDetectSystem.service
             {
                 valuesNow[i] = peakhelper.AllValue[i];
             }
+            if (valuesNow[9] == 0) { Insert(valuesNow, "中位压力损失试验"); }
+            if (valuesNow[9] == 1) { Insert(valuesNow, "转向优先阀流量试验"); }
             if (valuesNow[30] == 1) { Insert(valuesNow,"中位压力损失试验"); }
             if (valuesNow[31] == 1) { Insert(valuesNow,"转向优先阀流量试验"); }
             if (valuesNow[32] == 1) { Insert(valuesNow,"小门架上升"); }
@@ -137,5 +139,7 @@ namespace ExperimentTableDetectSystem.service
             if (valuesNow[41] == 1) { Insert(valuesNow,"小门架前倾自锁"); }
             if (valuesNow[42] == 1) {Insert(valuesNow,"大门架前倾自锁"); }
         }
+
+
     }
 }

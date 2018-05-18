@@ -112,9 +112,9 @@ namespace ExperimentTableDetectSystem.service
                 {
 
                     // v = ConvertToRealValue(CANMsg);
-                   //v = testrealvalue(CANMsg);
-                    v = MyProcessMessage(CANMsg);
-                    //v = readtest(CANMsg);
+                  v = testrealvalue(CANMsg);
+                  //  v = MyProcessMessage(CANMsg);
+                    
                 }
             }
             while (!Convert.ToBoolean(stsResult & TPCANStatus.PCAN_ERROR_QRCVEMPTY));
@@ -165,10 +165,10 @@ namespace ExperimentTableDetectSystem.service
             {
 
                 //accuHighPre value 
-                //    value[0] = (Convert.ToInt32(AllData[8]) * 100 + Convert.ToInt32(AllData[9]));
-                value[0] = 111;
+                   value[0] = (Convert.ToInt32(AllData[0]) * 10 + Convert.ToInt32(AllData[1]));
+               // value[0] = 111;
                 //accuLowPre value
-                value[1] = Convert.ToInt32(AllData[10]);
+                value[1] = Convert.ToInt32(AllData[1]);
                 //pmOutPre value
                 value[2] = (Convert.ToInt32(AllData[11]) * 100 + Convert.ToInt32(AllData[12]));
                 //pmInPre value
@@ -503,28 +503,32 @@ namespace ExperimentTableDetectSystem.service
         public double[] testrealvalue(TPCANMsg canmsg)
         {
             testvalue = new double[51];
-            int[] temp = new int[2] { 0, 0 };
+         
 
-            if (canmsg.ID != 0x283 && canmsg.ID != 0x284)
+            if (canmsg.ID != 0x184 && canmsg.ID != 0x284 && canmsg.ID != 0x384 && canmsg.ID != 0x484)
             {
                 return null;
             }
-            if (canmsg.ID == 0x283)
+            if (canmsg.ID == 0x184)
             {
-                temp[0] = 1;
+
                 for (int i = 0; i < 8; i++)
                 {
-                   testvalue[i] =Convert.ToDouble( canmsg.DATA[i]);
+                    AllData[i] = canmsg.DATA[i];
                 }
             }
-            if (canmsg.ID == 0x284)
+            else if (canmsg.ID == 0x284)
             {
-                temp[1] = 1;
-               testvalue[8] =Convert.ToDouble( canmsg.DATA[0]);
-                testvalue[9] =Convert.ToDouble( canmsg.DATA[1]);
-                testvalue[10] =Convert.ToDouble( canmsg.DATA[2]);
+
+                AllData[8] = canmsg.DATA[0];
+                AllData[9] = canmsg.DATA[1];
+                AllData[10] = canmsg.DATA[2];
             }
-            return value;
+            for(int i = 0; i < 32; i++)
+            {
+                testvalue[i] = AllData[i];
+            }
+            return testvalue;
         }
 
 

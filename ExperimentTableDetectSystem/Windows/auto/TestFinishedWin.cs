@@ -1,4 +1,5 @@
-﻿using ExperimentTableDetectSystem.Windows.manual;
+﻿using ExperimentTableDetectSystem.service;
+using ExperimentTableDetectSystem.Windows.manual;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -12,9 +13,11 @@ namespace ExperimentTableDetectSystem.Windows.auto
 {
     public partial class TestFinishedWin : MetroFramework.Forms.MetroForm
     {
+        PeakHelper peakhelper;
         public TestFinishedWin()
         {
             InitializeComponent();
+            peakhelper = PeakHelper.GetInstance();
         }
         private string valveid;
 
@@ -26,6 +29,19 @@ namespace ExperimentTableDetectSystem.Windows.auto
 
         private void btnRetest_Click(object sender, EventArgs e)
         {
+            TPCANMsg canmsg283;
+
+            canmsg283 = new TPCANMsg();
+            canmsg283.ID = 0x283;
+            canmsg283.LEN = Convert.ToByte(8);
+            canmsg283.MSGTYPE = TPCANMessageType.PCAN_MESSAGE_STANDARD;
+            canmsg283.DATA = new byte[8];
+            canmsg283.DATA[0] = 1;
+            for (int i = 1; i < 8; i++)
+            {
+                canmsg283.DATA[i] = 1;
+            }
+            peakhelper.write(canmsg283);
             this.Close();
             ManualNumberInput win = ManualNumberInput.getInstance();
             win.Show();

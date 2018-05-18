@@ -28,9 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainWin));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.btnUserSet = new System.Windows.Forms.ToolStripMenuItem();
             this.btnSetParameter = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnexpPara = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnWarningPara = new System.Windows.Forms.ToolStripMenuItem();
             this.btnExperiment = new System.Windows.Forms.ToolStripMenuItem();
             this.btnManualExperiment = new System.Windows.Forms.ToolStripMenuItem();
             this.btnAutoExperiment = new System.Windows.Forms.ToolStripMenuItem();
@@ -39,9 +42,9 @@
             this.btnDataAnalysis = new System.Windows.Forms.ToolStripMenuItem();
             this.btnAnalysisResult = new System.Windows.Forms.ToolStripMenuItem();
             this.btnExit = new System.Windows.Forms.ToolStripMenuItem();
-            this.btnexpPara = new System.Windows.Forms.ToolStripMenuItem();
-            this.btnWarningPara = new System.Windows.Forms.ToolStripMenuItem();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -85,6 +88,24 @@
             this.btnSetParameter.Text = "参数设置";
             this.btnSetParameter.Click += new System.EventHandler(this.btnSetParameter_Click);
             // 
+            // btnexpPara
+            // 
+            this.btnexpPara.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnexpPara.ForeColor = System.Drawing.Color.White;
+            this.btnexpPara.Name = "btnexpPara";
+            this.btnexpPara.Size = new System.Drawing.Size(204, 26);
+            this.btnexpPara.Text = "实验参数设置";
+            this.btnexpPara.Click += new System.EventHandler(this.btnexpPara_Click);
+            // 
+            // btnWarningPara
+            // 
+            this.btnWarningPara.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnWarningPara.ForeColor = System.Drawing.Color.White;
+            this.btnWarningPara.Name = "btnWarningPara";
+            this.btnWarningPara.Size = new System.Drawing.Size(204, 26);
+            this.btnWarningPara.Text = "报警参数设置";
+            this.btnWarningPara.Click += new System.EventHandler(this.btnWarningPara_Click);
+            // 
             // btnExperiment
             // 
             this.btnExperiment.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -101,7 +122,7 @@
             this.btnManualExperiment.BackColor = System.Drawing.Color.SteelBlue;
             this.btnManualExperiment.ForeColor = System.Drawing.Color.White;
             this.btnManualExperiment.Name = "btnManualExperiment";
-            this.btnManualExperiment.Size = new System.Drawing.Size(181, 26);
+            this.btnManualExperiment.Size = new System.Drawing.Size(164, 26);
             this.btnManualExperiment.Text = "手动实验";
             this.btnManualExperiment.Click += new System.EventHandler(this.btnManualExperiment_Click);
             // 
@@ -110,7 +131,7 @@
             this.btnAutoExperiment.BackColor = System.Drawing.Color.SteelBlue;
             this.btnAutoExperiment.ForeColor = System.Drawing.Color.White;
             this.btnAutoExperiment.Name = "btnAutoExperiment";
-            this.btnAutoExperiment.Size = new System.Drawing.Size(181, 26);
+            this.btnAutoExperiment.Size = new System.Drawing.Size(164, 26);
             this.btnAutoExperiment.Text = "自动实验";
             this.btnAutoExperiment.Click += new System.EventHandler(this.btnAutoExperiment_Click);
             // 
@@ -129,7 +150,7 @@
             this.btnCurrentData.BackColor = System.Drawing.Color.SteelBlue;
             this.btnCurrentData.ForeColor = System.Drawing.Color.White;
             this.btnCurrentData.Name = "btnCurrentData";
-            this.btnCurrentData.Size = new System.Drawing.Size(181, 26);
+            this.btnCurrentData.Size = new System.Drawing.Size(164, 26);
             this.btnCurrentData.Text = "数据查询";
             this.btnCurrentData.Click += new System.EventHandler(this.btnCurrentData_Click);
             // 
@@ -158,29 +179,23 @@
             this.btnExit.Text = "退出";
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
-            // btnexpPara
+            // pictureBox1
             // 
-            this.btnexpPara.BackColor = System.Drawing.Color.SteelBlue;
-            this.btnexpPara.ForeColor = System.Drawing.Color.White;
-            this.btnexpPara.Name = "btnexpPara";
-            this.btnexpPara.Size = new System.Drawing.Size(204, 26);
-            this.btnexpPara.Text = "实验参数设置";
-            this.btnexpPara.Click += new System.EventHandler(this.btnexpPara_Click);
-            // 
-            // btnWarningPara
-            // 
-            this.btnWarningPara.BackColor = System.Drawing.Color.SteelBlue;
-            this.btnWarningPara.ForeColor = System.Drawing.Color.White;
-            this.btnWarningPara.Name = "btnWarningPara";
-            this.btnWarningPara.Size = new System.Drawing.Size(204, 26);
-            this.btnWarningPara.Text = "报警参数设置";
-            this.btnWarningPara.Click += new System.EventHandler(this.btnWarningPara_Click);
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(22, 120);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(1108, 778);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 3;
+            this.pictureBox1.TabStop = false;
             // 
             // MainWin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1152, 922);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.menuStrip1);
             this.Font = new System.Drawing.Font("宋体", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -196,6 +211,7 @@
             this.Load += new System.EventHandler(this.MainWin_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -215,5 +231,6 @@
         private System.Windows.Forms.ToolStripMenuItem btnAutoExperiment;
         private System.Windows.Forms.ToolStripMenuItem btnexpPara;
         private System.Windows.Forms.ToolStripMenuItem btnWarningPara;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
