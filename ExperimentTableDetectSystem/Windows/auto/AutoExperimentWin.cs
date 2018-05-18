@@ -200,18 +200,7 @@ namespace ExperimentTableDetectSystem.Windows
             canmsg183.DATA[5] = 1;
             TPCANStatus sts = peakHelper.write(canmsg183);
 
-            TPCANMsg canmsg283;
-            canmsg283 = new TPCANMsg();
-            canmsg283.ID = 0x283;
-            canmsg283.LEN = Convert.ToByte(8);
-            canmsg283.MSGTYPE = TPCANMessageType.PCAN_MESSAGE_STANDARD;
-            canmsg283.DATA = new byte[8];
-            canmsg283.DATA[0] = 0;
-            for (int i = 1; i < 8; i++)
-            {
-                canmsg283.DATA[i] = 0;
-            }
-            peakHelper.write(canmsg283);
+          
         }
 
     }

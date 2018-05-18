@@ -29,19 +29,23 @@ namespace ExperimentTableDetectSystem.Windows.auto
 
         private void btnRetest_Click(object sender, EventArgs e)
         {
-            TPCANMsg canmsg283;
+            TPCANMsg canmsg183;
 
-            canmsg283 = new TPCANMsg();
-            canmsg283.ID = 0x283;
-            canmsg283.LEN = Convert.ToByte(8);
-            canmsg283.MSGTYPE = TPCANMessageType.PCAN_MESSAGE_STANDARD;
-            canmsg283.DATA = new byte[8];
-            canmsg283.DATA[0] = 1;
-            for (int i = 1; i < 8; i++)
+            canmsg183 = new TPCANMsg();
+            canmsg183.ID = 0x183;
+            canmsg183.LEN = Convert.ToByte(8);
+            canmsg183.MSGTYPE = TPCANMessageType.PCAN_MESSAGE_STANDARD;
+            canmsg183.DATA = new byte[8];
+            for (int i = 0; i < 8; i++)
             {
-                canmsg283.DATA[i] = 1;
+                canmsg183.DATA[i] = 0;
             }
-            peakhelper.write(canmsg283);
+            canmsg183.DATA[0] = 50;
+            canmsg183.DATA[2] = 0;
+            canmsg183.DATA[3] = 0;
+            canmsg183.DATA[5] = 0;
+         TPCANStatus sts=   peakhelper.write(canmsg183);
+            if (sts ==TPCANStatus.PCAN_ERROR_OK) { MessageBox.Show("置0发送成功"); }
             this.Close();
             ManualNumberInput win = ManualNumberInput.getInstance();
             win.Show();

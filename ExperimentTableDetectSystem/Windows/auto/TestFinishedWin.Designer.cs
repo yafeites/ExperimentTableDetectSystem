@@ -75,7 +75,6 @@
             this.Resizable = false;
             this.Text = "测试完成";
             this.TextAlign = System.Windows.Forms.VisualStyles.HorizontalAlign.Center;
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.TestFinishedWin_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
