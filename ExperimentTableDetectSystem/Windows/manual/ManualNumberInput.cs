@@ -26,7 +26,6 @@ namespace ExperimentTableDetectSystem.Windows.manual
         {
             if (instance == null || instance.IsDisposed)
             {
-
                 instance = new ManualNumberInput();
             }
             return instance;
@@ -180,18 +179,39 @@ namespace ExperimentTableDetectSystem.Windows.manual
                 {
                     canmsg105.DATA[1] = 1;
                 }
-                if (cbbValveType.Text == "二联")
+                if (cbbValveType.Text == "普通_二联")
                 {
                     canmsg105.DATA[2] = 1;
-                }
-                if (cbbValveType.Text == "三联")
-                {
                     canmsg105.DATA[3] = 1;
                 }
-                if (cbbValveType.Text == "四联")
+                if (cbbValveType.Text == "普通_三联")
                 {
-                    canmsg105.DATA[4] = 1;
+                    canmsg105.DATA[2] = 1;
+                    canmsg105.DATA[3] = 2;
                 }
+                if (cbbValveType.Text == "普通_四联")
+                {
+                    canmsg105.DATA[2] = 1;
+                    canmsg105.DATA[3] = 3;
+
+                }
+                if (cbbValveType.Text == "CDB4_二联")
+                {
+                    canmsg105.DATA[2] = 2;
+                    canmsg105.DATA[3] = 1;
+                }
+                if (cbbValveType.Text == "CDB4_三联")
+                {
+                    canmsg105.DATA[2] = 2;
+                    canmsg105.DATA[3] = 2;
+                }
+                if (cbbValveType.Text == "CDB4_四联")
+                {
+                    canmsg105.DATA[2] = 2;
+                    canmsg105.DATA[3] = 3;
+                }
+
+
 
                 #endregion
                 TPCANStatus sts4 = peak.write(canmsg105);

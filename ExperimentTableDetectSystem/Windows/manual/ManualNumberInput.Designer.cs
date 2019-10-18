@@ -46,7 +46,7 @@
             this.metroLabel1.FontSize = MetroFramework.MetroLabelSize.Tall;
             this.metroLabel1.Location = new System.Drawing.Point(100, 121);
             this.metroLabel1.Name = "metroLabel1";
-            this.metroLabel1.Size = new System.Drawing.Size(183, 25);
+            this.metroLabel1.Size = new System.Drawing.Size(174, 25);
             this.metroLabel1.TabIndex = 0;
             this.metroLabel1.Text = "请输入多路阀编号：";
             // 
@@ -55,7 +55,7 @@
             this.txtValveId.Font = new System.Drawing.Font("宋体", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.txtValveId.Location = new System.Drawing.Point(358, 108);
             this.txtValveId.Name = "txtValveId";
-            this.txtValveId.Size = new System.Drawing.Size(422, 42);
+            this.txtValveId.Size = new System.Drawing.Size(422, 35);
             this.txtValveId.TabIndex = 1;
             // 
             // btnConfirm
@@ -76,7 +76,7 @@
             this.metroLabel2.FontSize = MetroFramework.MetroLabelSize.Tall;
             this.metroLabel2.Location = new System.Drawing.Point(111, 200);
             this.metroLabel2.Name = "metroLabel2";
-            this.metroLabel2.Size = new System.Drawing.Size(145, 25);
+            this.metroLabel2.Size = new System.Drawing.Size(138, 25);
             this.metroLabel2.TabIndex = 4;
             this.metroLabel2.Text = "发往厂家名称：";
             // 
@@ -89,7 +89,7 @@
             "小门架"});
             this.cbbMenjiaType.Location = new System.Drawing.Point(358, 263);
             this.cbbMenjiaType.Name = "cbbMenjiaType";
-            this.cbbMenjiaType.Size = new System.Drawing.Size(422, 38);
+            this.cbbMenjiaType.Size = new System.Drawing.Size(422, 32);
             this.cbbMenjiaType.TabIndex = 6;
             // 
             // cbbValveType
@@ -97,12 +97,15 @@
             this.cbbValveType.Font = new System.Drawing.Font("宋体", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.cbbValveType.FormattingEnabled = true;
             this.cbbValveType.Items.AddRange(new object[] {
-            "二联",
-            "三联",
-            "四联"});
+            "普通_二联",
+            "普通_三联",
+            "普通_四联",
+            "CDB4_二联",
+            "CDB4_三联",
+            "CDB4_四联"});
             this.cbbValveType.Location = new System.Drawing.Point(358, 343);
             this.cbbValveType.Name = "cbbValveType";
-            this.cbbValveType.Size = new System.Drawing.Size(422, 38);
+            this.cbbValveType.Size = new System.Drawing.Size(422, 32);
             this.cbbValveType.TabIndex = 7;
             // 
             // metroLabel3
@@ -111,7 +114,7 @@
             this.metroLabel3.FontSize = MetroFramework.MetroLabelSize.Tall;
             this.metroLabel3.Location = new System.Drawing.Point(129, 274);
             this.metroLabel3.Name = "metroLabel3";
-            this.metroLabel3.Size = new System.Drawing.Size(107, 25);
+            this.metroLabel3.Size = new System.Drawing.Size(102, 25);
             this.metroLabel3.TabIndex = 8;
             this.metroLabel3.Text = "门架类型：";
             // 
@@ -121,7 +124,7 @@
             this.metroLabel4.FontSize = MetroFramework.MetroLabelSize.Tall;
             this.metroLabel4.Location = new System.Drawing.Point(148, 353);
             this.metroLabel4.Name = "metroLabel4";
-            this.metroLabel4.Size = new System.Drawing.Size(88, 25);
+            this.metroLabel4.Size = new System.Drawing.Size(84, 25);
             this.metroLabel4.TabIndex = 9;
             this.metroLabel4.Text = "阀类型：";
             // 
@@ -1143,13 +1146,13 @@
             "淄博市张店博中供销公司"});
             this.cbbCompany.Location = new System.Drawing.Point(358, 189);
             this.cbbCompany.Name = "cbbCompany";
-            this.cbbCompany.Size = new System.Drawing.Size(422, 38);
+            this.cbbCompany.Size = new System.Drawing.Size(422, 32);
             this.cbbCompany.TabIndex = 11;
             this.cbbCompany.TextUpdate += new System.EventHandler(this.cbbCompany_TextUpdate);
             // 
             // ManualNumberInput
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BorderStyle = MetroFramework.Drawing.MetroBorderStyle.FixedSingle;
             this.ClientSize = new System.Drawing.Size(933, 621);
