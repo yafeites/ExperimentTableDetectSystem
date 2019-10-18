@@ -31,6 +31,18 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>false</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>display.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -38,6 +50,22 @@
     </Reference>
     <Reference Include="MetroFramework.Design">
       <HintPath>..\packages\MetroFramework.Design.1.2.0.3\lib\net40\MetroFramework.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI, Version=2.0.1.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\NPOI.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OOXML, Version=2.0.1.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\NPOI.OOXML.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OpenXml4Net, Version=2.0.1.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\NPOI.OpenXml4Net.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OpenXmlFormats, Version=2.0.1.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\NPOI.OpenXmlFormats.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -61,10 +89,13 @@
     <Compile Include="LoginWin.Designer.cs">
       <DependentUpon>LoginWin.cs</DependentUpon>
     </Compile>
+    <Compile Include="NPOI\NPOIHelper.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="service\ChartExcel.cs" />
     <Compile Include="service\ConfigManager.cs" />
     <Compile Include="service\DataStoreManager.cs" />
+    <Compile Include="service\ExportToExcel.cs" />
     <Compile Include="service\OperateDb.cs" />
     <Compile Include="service\PCANBasic.cs" />
     <Compile Include="service\PcanHelper.cs" />
@@ -72,13 +103,6 @@
     <Compile Include="service\RecreateRecordManager.cs" />
     <Compile Include="service\SearchHelper.cs" />
     <Compile Include="service\UserRightManager.cs" />
-    <Compile Include="service\WarningManager.cs" />
-    <Compile Include="testdemo\testManualWin.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="testdemo\testManualWin.Designer.cs">
-      <DependentUpon>testManualWin.cs</DependentUpon>
-    </Compile>
     <Compile Include="testWin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -104,17 +128,11 @@
     <Compile Include="Windows\auto\TestFinishedWin.Designer.cs">
       <DependentUpon>TestFinishedWin.cs</DependentUpon>
     </Compile>
-    <Compile Include="Windows\dataAnalysis\dataAnalysisWin.cs">
+    <Compile Include="Windows\ExperimentData\DataSearchByTimeWin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Windows\dataAnalysis\dataAnalysisWin.Designer.cs">
-      <DependentUpon>dataAnalysisWin.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Windows\drawing\CurveDrawing.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Windows\drawing\CurveDrawing.Designer.cs">
-      <DependentUpon>CurveDrawing.cs</DependentUpon>
+    <Compile Include="Windows\ExperimentData\DataSearchByTimeWin.Designer.cs">
+      <DependentUpon>DataSearchByTimeWin.cs</DependentUpon>
     </Compile>
     <Compile Include="Windows\ExperimentData\DataSearchWin.cs">
       <SubType>Form</SubType>
@@ -127,6 +145,18 @@
     </Compile>
     <Compile Include="Windows\ExperimentData\HistoryDataWin.Designer.cs">
       <DependentUpon>HistoryDataWin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\ExperimentData\HistoryDataWin2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\ExperimentData\HistoryDataWin2.Designer.cs">
+      <DependentUpon>HistoryDataWin2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\ExperimentData\ValveListWin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\ExperimentData\ValveListWin.Designer.cs">
+      <DependentUpon>ValveListWin.cs</DependentUpon>
     </Compile>
     <Compile Include="Windows\MainWin.cs">
       <SubType>Form</SubType>
@@ -146,11 +176,29 @@
     <Compile Include="Windows\manual\ManualNumberInput.Designer.cs">
       <DependentUpon>ManualNumberInput.cs</DependentUpon>
     </Compile>
+    <Compile Include="Windows\manual\ManualSelectWin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\manual\ManualSelectWin.Designer.cs">
+      <DependentUpon>ManualSelectWin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\manual\RetestConfirmWin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\manual\RetestConfirmWin.Designer.cs">
+      <DependentUpon>RetestConfirmWin.cs</DependentUpon>
+    </Compile>
     <Compile Include="Windows\setParameterWin\SetParameterWin.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Windows\setParameterWin\SetParameterWin.Designer.cs">
       <DependentUpon>SetParameterWin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\SinglePoint\SinglePointDebuggingWin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\SinglePoint\SinglePointDebuggingWin.Designer.cs">
+      <DependentUpon>SinglePointDebuggingWin.cs</DependentUpon>
     </Compile>
     <Compile Include="Windows\TestForm.cs">
       <SubType>Form</SubType>
@@ -182,9 +230,6 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="testdemo\testManualWin.resx">
-      <DependentUpon>testManualWin.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="testWin.resx">
       <DependentUpon>testWin.cs</DependentUpon>
     </EmbeddedResource>
@@ -197,17 +242,20 @@
     <EmbeddedResource Include="Windows\auto\TestFinishedWin.resx">
       <DependentUpon>TestFinishedWin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Windows\dataAnalysis\dataAnalysisWin.resx">
-      <DependentUpon>dataAnalysisWin.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Windows\drawing\CurveDrawing.resx">
-      <DependentUpon>CurveDrawing.cs</DependentUpon>
+    <EmbeddedResource Include="Windows\ExperimentData\DataSearchByTimeWin.resx">
+      <DependentUpon>DataSearchByTimeWin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Windows\ExperimentData\DataSearchWin.resx">
       <DependentUpon>DataSearchWin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Windows\ExperimentData\HistoryDataWin.resx">
       <DependentUpon>HistoryDataWin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\ExperimentData\HistoryDataWin2.resx">
+      <DependentUpon>HistoryDataWin2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\ExperimentData\ValveListWin.resx">
+      <DependentUpon>ValveListWin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Windows\MainWin.resx">
       <DependentUpon>MainWin.cs</DependentUpon>
@@ -218,8 +266,17 @@
     <EmbeddedResource Include="Windows\manual\ManualNumberInput.resx">
       <DependentUpon>ManualNumberInput.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Windows\manual\ManualSelectWin.resx">
+      <DependentUpon>ManualSelectWin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\manual\RetestConfirmWin.resx">
+      <DependentUpon>RetestConfirmWin.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Windows\setParameterWin\SetParameterWin.resx">
       <DependentUpon>SetParameterWin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\SinglePoint\SinglePointDebuggingWin.resx">
+      <DependentUpon>SinglePointDebuggingWin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Windows\TestForm.resx">
       <DependentUpon>TestForm.cs</DependentUpon>
@@ -231,6 +288,9 @@
       <DependentUpon>UserRightWin.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="app.config" />
+    <None Include="Properties\app.manifest">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -242,8 +302,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="image\" />
-    <Folder Include="picture\" />
+    <Content Include="display.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

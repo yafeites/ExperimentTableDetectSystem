@@ -14,9 +14,9 @@ namespace ExperimentTableDetectSystem.service
         #region 字段
         private TPCANHandle m_PcanHandle;
         private TPCANBaudrate m_Baudrate;
-        byte[] AllData = new byte[32];
-        double[] testvalue;
-        double[] value;
+        byte[] AllDatas = new byte[112];
+        //byte[] AllData = new byte[32];
+        double[] realValue;
         private delegate void ReadDelegateHandler();
         private AutoResetEvent m_ReceiveEvent;
         #endregion
@@ -71,7 +71,7 @@ namespace ExperimentTableDetectSystem.service
             {
                 ConfiguerTraceFile();
             }
-            else {throw  new Exception("pcanhelper初始化失败"); }
+            else { throw new Exception("pcanhelper初始化失败"); }
         }
 
         /// <summary>
@@ -99,22 +99,22 @@ namespace ExperimentTableDetectSystem.service
         /// </summary>
         public double[] ReadMessages()
         {
-            double[] v = new double[51];//对外的实际值
+            double[] v = new double[76];//对外的实际值
             TPCANMsg CANMsg;
             TPCANTimestamp CANTimeStamp;
             TPCANStatus stsResult;
-          
-            for(int i = 0; i < 51; i++) { v[i] = 0; }	
+
+            for (int i = 0; i < 76; i++) { v[i] = 0; }
             do
             {
                 stsResult = PCANBasic.Read(m_PcanHandle, out CANMsg, out CANTimeStamp);
                 if (stsResult == TPCANStatus.PCAN_ERROR_OK)
                 {
 
-                    // v = ConvertToRealValue(CANMsg);
-                  v = testrealvalue(CANMsg);
-                  //  v = MyProcessMessage(CANMsg);
-                    
+                    v = ConvertToRealValue(CANMsg);
+                    //   v = testrealvalue(CANMsg);
+                    // v = MyProcessMessage(CANMsg);
+
                 }
             }
             while (!Convert.ToBoolean(stsResult & TPCANStatus.PCAN_ERROR_QRCVEMPTY));
@@ -122,413 +122,401 @@ namespace ExperimentTableDetectSystem.service
             return v;
         }
 
-    
-
-      /// <summary>
-      /// 处理数据
-      /// </summary>
-      /// <param name="CANMsg"></param>
-      /// <returns></returns>
-        public double[] MyProcessMessage(TPCANMsg CANMsg)
-        {
-            value = new double[51];
-            if (CANMsg.ID != 0x184 && CANMsg.ID != 0x284 && CANMsg.ID != 0x384 && CANMsg.ID != 0x484)
-            {
-                return null;
-            }
-            if (CANMsg.ID == 0x184)
-            {
-              //  a[0] = 1;
-                for (int i = 0; i < 8; i++)
-                    AllData[i] = CANMsg.DATA[i];
-            }
-            else if (CANMsg.ID == 0x284)
-            {
-               // a[1] = 1;
-                for (int i = 8; i < 16; i++)
-                    AllData[i] = CANMsg.DATA[i % 8];
-            }
-            else if (CANMsg.ID == 0x384)
-            {
-               // a[2] = 1;
-                for (int i = 16; i < 24; i++)
-                    AllData[i] =1;
-            }
-            else if (CANMsg.ID == 0x484)
-            {
-               // a[3] = 1;
-                for (int i = 24; i < 32; i++)
-                    AllData[i] = 1;
-            }
-
-            //if ((a[0] == 1) && (a[1] == 1) && (a[2] == 1) && (a[3] == 1))
-            {
-
-                //accuHighPre value 
-                   value[0] = (Convert.ToInt32(AllData[0]) * 10 + Convert.ToInt32(AllData[1]));
-               // value[0] = 111;
-                //accuLowPre value
-                value[1] = Convert.ToInt32(AllData[1]);
-                //pmOutPre value
-                value[2] = (Convert.ToInt32(AllData[11]) * 100 + Convert.ToInt32(AllData[12]));
-                //pmInPre value
-                value[3] = Convert.ToInt32(AllData[13]);
-                //slipPumpPre value
-                value[4] = Convert.ToInt32(AllData[14]);
-                //carSpeed value
-                value[5] = AllData[15];
-                //engineSpeed value
-                value[6] = (Convert.ToInt32(AllData[16]) * 100 + Convert.ToInt32(AllData[17]));
-                //acceSign value
-                value[7] = (Convert.ToInt32(AllData[18]) * 100 + Convert.ToInt32(AllData[19])) / 10.0;
-                //brakeSign value
-                value[8] = (Convert.ToInt32(AllData[20]) * 100 + Convert.ToInt32(AllData[21])) / 10.0;
-                //moterDisplacement value
-                value[9] = Convert.ToInt32(AllData[30]);
-                //pumpDisplacement value
-                value[10] = Convert.ToInt32(AllData[31]);
-
-            
-            }
-            return value;
-
-
-        }
-
-
-
 
 
         public double[] ConvertToRealValue(TPCANMsg CanMsg)
         {
-            double[] realValue = new double[51];
+            realValue = new double[76];
 
-            byte[] AllDatas = new byte[96];
-            int[] temp = new int[12] { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
 
-            if (CanMsg.ID != 0x280 && CanMsg.ID != 0x281 && CanMsg.ID != 0x282 && CanMsg.ID != 0x283 && CanMsg.ID != 0x284 && CanMsg.ID != 0x285 && CanMsg.ID != 0x286 && CanMsg.ID != 0x287 && CanMsg.ID != 0x288 && CanMsg.ID != 0x289 && CanMsg.ID != 0x290 && CanMsg.ID != 0x291)//
+           // int[] temp = new int[12] { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
+
+            //  if (CanMsg.ID != 0x280 && CanMsg.ID != 0x281 && CanMsg.ID != 0x282 && CanMsg.ID != 0x283 && CanMsg.ID != 0x284 && CanMsg.ID != 0x285 && CanMsg.ID != 0x286 && CanMsg.ID != 0x287 && CanMsg.ID != 0x288 && CanMsg.ID != 0x289 && CanMsg.ID != 0x290 && CanMsg.ID != 0x291)//
+            //   {
+            // return null;
+            //   }
+            //把289的第一帧数据换成222的第二帧
+           // if (CanMsg.ID == 0x222)
+            //{
+           //     AllDatas[72] = CanMsg.DATA[1];
+           // }
+
+             if (CanMsg.ID == 0x301)
             {
-                return null;
-            }
-            if (CanMsg.ID == 0x280)
-            {
-                temp[0] = 1;
+                //temp[0] = 1;
                 for (int i = 0; i < 8; i++)
                 {
                     AllDatas[i] = CanMsg.DATA[i];
                 }
             }
-            else if (CanMsg.ID == 0x281)
+            else if (CanMsg.ID == 0x302)
             {
-                temp[1] = 1;
+               // temp[1] = 1;
                 for (int i = 8; i < 16; i++)
                 {
                     AllDatas[i] = CanMsg.DATA[i % 8];
 
                 }
             }
-            else if (CanMsg.ID == 0x282)
+            else if (CanMsg.ID == 0x303)
             {
-                temp[2] = 1;
+                //temp[2] = 1;
                 for (int i = 16; i < 24; i++)
                 {
                     AllDatas[i] = CanMsg.DATA[i % 8];
                 }
             }
-            else if (CanMsg.ID == 0x283)
+            else if (CanMsg.ID == 0x304)
             {
-                temp[3] = 1;
+              //  temp[3] = 1;
                 for (int i = 24; i < 32; i++)
                 {
                     AllDatas[i] = CanMsg.DATA[i % 8];
                 }
             }
-            else if (CanMsg.ID == 0x284)
+            else if (CanMsg.ID == 0x305)
             {
-                temp[4] = 1;
+               // temp[4] = 1;
                 for (int i = 32; i < 40; i++)
                 {
                     AllDatas[i] = CanMsg.DATA[i % 8];
                 }
             }
-            else if (CanMsg.ID == 0x285)
+            else if (CanMsg.ID == 0x306)
             {
-                temp[5] = 1;
+                //temp[5] = 1;
                 for (int i = 40; i < 48; i++)
                 {
                     AllDatas[i] = CanMsg.DATA[i % 8];
                 }
             }
-            else if (CanMsg.ID == 0x286)
+            else if (CanMsg.ID == 0x307)
             {
-                temp[6] = 1;
+               // temp[6] = 1;
                 for (int i = 48; i < 56; i++)
                 {
                     AllDatas[i] = CanMsg.DATA[i % 8];
                 }
             }
-            else if (CanMsg.ID == 0x287)
+            else if (CanMsg.ID == 0x308)
             {
-                temp[7] = 1;
+               // temp[7] = 1;
                 for (int i = 56; i < 64; i++)
                 {
                     AllDatas[i] = CanMsg.DATA[i % 8];
                 }
             }
-            else if (CanMsg.ID == 0x288)
+            else if (CanMsg.ID == 0x310)
             {
-                temp[8] = 1;
+               // temp[8] = 1;
                 for (int i = 64; i < 72; i++)
                 {
                     AllDatas[i] = CanMsg.DATA[i % 8];
                 }
             }
-            else if (CanMsg.ID == 0x289)
+            else if (CanMsg.ID == 0x401)
             {
-                temp[9] = 1;
+               // temp[9] = 1;
                 for (int i = 72; i < 80; i++)
                 {
                     AllDatas[i] = CanMsg.DATA[i % 8];
                 }
             }
-            else if (CanMsg.ID == 0x290)
+            else if (CanMsg.ID == 0x402)
             {
-                temp[10] = 1;
+                //temp[10] = 1;
                 for (int i = 80; i < 88; i++)
                 {
                     AllDatas[i] = CanMsg.DATA[i % 8];
                 }
             }
-            else if (CanMsg.ID == 0x291)
+            else if (CanMsg.ID == 0x403)
             {
-                temp[11] = 1;
+                //temp[11] = 1;
                 for (int i = 88; i < 96; i++)
                 {
                     AllDatas[i] = CanMsg.DATA[i % 8];
                 }
             }
-            if (temp[0] == 1 && temp[1] == 1 && temp[2] == 1 && temp[3] == 1 & temp[4] == 1 & temp[5] == 1 && temp[6] == 1 && temp[7] == 1 && temp[8] == 1 && temp[9] == 1 & temp[10] == 1 & temp[11] == 1)
+            else if (CanMsg.ID == 0x309)
             {
-                #region 将数值解析存到数组里
-                //1 主泵1流量
-                //2 主泵2流量
-                //3 转向流量
-                //4 泄露流量
-                //5 主泵1压力
-                //6 主泵2压力
-                //7 转向压力
-                //8 中位压力损失
-                //9 小门架上升位移
-                //10 小门架上升压力损失
-                int pump1Flow = Convert.ToInt32(AllDatas[0]);
-                int pump2Flow = Convert.ToInt32(AllDatas[1]);
-                int steerFlow = Convert.ToInt32(AllDatas[2]);
-                int leakageFlow = Convert.ToInt32(AllDatas[3]);
-                int mainPump1Pressure = Convert.ToInt32(AllDatas[16]) * 100 + Convert.ToInt32(AllDatas[17]);
-                int mainPump2Pressure = Convert.ToInt32(AllDatas[18]) * 100 + Convert.ToInt32(AllDatas[19]);
-                int steerPressure = Convert.ToInt32(AllDatas[20]) * 100 + Convert.ToInt32(AllDatas[21]);
-                int mediumPressureLoss = Convert.ToInt32(AllDatas[22]);
-
-                int smallUpDis = Convert.ToInt32(AllDatas[23]) * 100 + Convert.ToInt32(AllDatas[24]);
-                int smallUpPressureLoss = Convert.ToInt32(AllDatas[26]);
-
-                //11 小门架下降位移
-                //12 小门架下降压力损失
-                //13 大门架上升位移
-                //14 大门架上升压力损失
-                //15 大门架下降位移
-                //16 大门架下降压力损失
-                //17 小门架前倾位移
-                //18 小门架前倾进油口压力损失
-                //19 小门架前倾出油口压力损失
-                //20 小门架后倾位移
-
-                int smallDownDis = f2(AllData[27], AllDatas[28]);
-                int smallDownPressureLoss = f1(AllDatas[30]);
-
-                int bigUpDis = f2(AllDatas[31], AllDatas[32]);
-                int bigUpPressureLoss = f1(AllDatas[34]);
-                int bigDownDis = f2(AllDatas[35], AllDatas[36]);
-                int bigDownPressureLoss = f1(AllDatas[38]);
-
-                int smallForwardDis = f2(AllDatas[39], AllDatas[40]);
-                int smallForwardInLoss = f1(AllDatas[42]);
-                int smallForwardOutLoss = f1(AllDatas[43]);
-                int smallBackDis = f2(AllDatas[44], AllDatas[45]);
-
-                //21 小门架后倾进油口压力损失
-                //22 小门架后倾出油口压力损失
-                //23 大门架前倾位移
-                //24 大门架前倾进油口压力损失
-                //25 大门架前倾出油口压力损失
-                //26 大门架后倾位移
-                //27 大门架后倾进油口压力损失
-                //28 大门架后倾出油口压力损失
-                //29 手动1实验结束标志
-                //30 手动2实验结束标志
-                 
-                int smallBackInLoss = f1(AllDatas[47]);
-                int smallBackOutLoss = f1(AllDatas[48]);
-
-                int bigForwardDis = f2(AllDatas[49], AllDatas[50]);
-                int bigForwardInLoss = f1(AllDatas[52]);
-                int bigForwardOutLoss = f1(AllDatas[53]);
-                int bigBackDis = f2(AllDatas[54], AllDatas[55]);
-                int bigBackInLoss = f1(AllDatas[57]);
-                int bigBackOutLoss = f1(AllDatas[58]);
-
-                int shoudong1 = f1(AllDatas[60]);
-                int shoudong2 = f1(AllDatas[61]);
-
-                //31 中位压力损失测试结束
-                //32 转向优先阀流量测试结束
-                //33 小门架上升实验结束
-                //34 小门架下降实验结束
-                //35 大门架上升实验结束
-                //36 大门架下降
-                //37 小门架前倾
-                //38 小门架后倾
-                //39 大门架前倾
-                //40 大门架后倾
-                int endFlag3= f1(AllDatas[62]);
-                int endFlag4 = f1(AllDatas[63]);
-                int endFlag5 = f1(AllDatas[64]);
-                int endFlag6 = f1(AllDatas[65]);
-                int endFlag7 = f1(AllDatas[66]);
-                int endFlag8 = f1(AllDatas[67]);
-                int endFlag9 = f1(AllDatas[68]);
-                int endFlag10 = f1(AllDatas[69]);
-                int endFlag11 = f1(AllDatas[70]);
-                int endFlag12 = f1(AllDatas[71]);
-
-                //41 内泄漏测试结束标志
-                //42 小门架前倾自锁实验结束
-                //43 大门架前倾自锁实验结束
-                //44 推动滑阀力1
-                //45 推动滑阀力2
-                //46 推动滑阀力3
-                //47 推动滑阀力4
-                //48 系统背压
-                //49 油缸压力
-                //50 油缸进油口压力
-                //51 油缸回油压力
-                int endFlag13leakageTest= f1(AllDatas[72]);
-                int endFlag14 = f1(AllDatas[73]);
-                int endFlag15 = f1(AllDatas[74]);
-
-                int force1 = f1(AllDatas[76]);
-                int force2 = f1(AllDatas[77]);
-                int force3 = f1(AllDatas[78]);
-                int force4 = f1(AllDatas[79]);
-                int systemBeiPressure = f1(AllDatas[80]);
-                int oilPressure = f2(AllDatas[81], AllDatas[82]);
-                int oilInPressure = f2(AllDatas[83], AllDatas[84]);
-
-                int oilOutPressure = f2(AllDatas[85], AllDatas[86]);
-
-
-
-                realValue[0] = pump1Flow;
-                realValue[1] = pump2Flow;
-                realValue[2] = steerFlow;
-                realValue[3] = leakageFlow;
-                realValue[4] = mainPump1Pressure;
-                realValue[5] = mainPump2Pressure;
-                realValue[6] = steerPressure;
-                realValue[7] = mediumPressureLoss;
-                realValue[8] = smallUpDis;
-                realValue[9] = smallUpPressureLoss;
-
-                realValue[10] = smallDownDis;
-                realValue[11] = smallDownPressureLoss;
-                realValue[12] = bigUpDis;
-                realValue[13] = bigUpPressureLoss;
-                realValue[14] = bigDownDis;
-                realValue[15] = bigDownPressureLoss;
-                realValue[16] = smallForwardDis;
-                realValue[17] = smallForwardInLoss;
-                realValue[18] = smallForwardOutLoss;
-                realValue[19] = smallBackDis;
-
-                realValue[20] = smallBackInLoss;
-                realValue[21] = smallBackOutLoss;
-                realValue[22] = bigForwardDis;
-                realValue[23] = bigForwardInLoss;
-                realValue[24] = bigForwardOutLoss;
-                realValue[25] = bigBackDis;
-                realValue[26] = bigBackInLoss;
-                realValue[27] = bigBackOutLoss;
-                realValue[28] = shoudong1;
-                realValue[29] = shoudong2;
-
-                realValue[30] = endFlag3;
-                realValue[31] = endFlag4;
-                realValue[32] = endFlag5;
-                realValue[33] = endFlag6;
-                realValue[34] = endFlag7;
-                realValue[35] = endFlag8;
-                realValue[36] = endFlag9;
-                realValue[37] = endFlag10;
-                realValue[38] = endFlag11;
-                realValue[39] = endFlag12;
-
-                realValue[40] = endFlag13leakageTest;
-                realValue[41] = endFlag14;
-                realValue[42] = endFlag15;
-
-                realValue[43] = force1;
-                realValue[44] = force2;
-                realValue[45] = force3;
-                realValue[46] = force4;
-
-                realValue[47] = systemBeiPressure;
-                realValue[48] = oilPressure;
-                realValue[49] = oilInPressure;
-                realValue[50] = oilOutPressure;
-                #endregion
-                for (int i = 0; i < 12; i++)
+                // temp[7] = 1;
+                for (int i = 96; i < 104; i++)
                 {
-                    temp[i] = 0;
+                    AllDatas[i] = CanMsg.DATA[i % 8];
                 }
             }
+            else if (CanMsg.ID == 0x313)
+            {
+                // temp[7] = 1;
+                for (int i = 104; i < 112; i++)
+                {
+                    AllDatas[i] = CanMsg.DATA[i % 8];
+                }
+            }
+
+
+            //    if (temp[0] == 1 && temp[1] == 1 && temp[2] == 1 && temp[3] == 1 & temp[4] == 1 & temp[5] == 1 && temp[6] == 1 && temp[7] == 1 && temp[8] == 1 && temp[9] == 1 & temp[10] == 1 & temp[11] == 1)
+            // {
+            #region 将数值解析存到数组里
+            //0 中位压力损失测试结束
+            //1 门架上升结束
+            //2 门架后倾结束
+            //3 门架前倾结束
+            //4 门架前倾动作检测结束
+            //5 门架前倾自锁结束
+            //6 泄露保压升降结束
+            //7 内泄露A口结束
+            //8 内泄露B口结束
+            //9 门架下降结束
+            int endFlag3 = f1(AllDatas[0]);
+            int endFlag4 = f1(AllDatas[1]);
+            int endFlag13leakageTest = f1(AllDatas[2]);
+            int endFlag5 = f1(AllDatas[3]);
+            int endFlag6 = f1(AllDatas[4]);
+            int endFlag7 = f1(AllDatas[5]);
+            int endFlag8 = f1(AllDatas[6]);
+            int endFlag9 = f1(AllDatas[7]);
+            int endFlag10 = f1(AllDatas[8]);
+            int endFlag11 = f1(AllDatas[9]);
+
+            //10 主泵1压力
+            //11 主泵2压力
+            //12 转向压力
+            //13 推动滑阀力进口力
+            //14 推动滑阀力出口力
+            int mainPump1Pressure = Convert.ToInt32(AllDatas[16]) * 100 + Convert.ToInt32(AllDatas[17]);
+            int mainPump2Pressure = Convert.ToInt32(AllDatas[18])* 100 + Convert.ToInt32(AllDatas[19]);
+            int steerPressure = Convert.ToInt32(AllDatas[20]) * 100 + Convert.ToInt32(AllDatas[21]);
+            int forceIn = Convert.ToInt32(AllDatas[22]) * 100 + Convert.ToInt32(AllDatas[23]);
+            int forceOut = Convert.ToInt32(AllDatas[24]) * 100 + Convert.ToInt32(AllDatas[25]);
+
+            //15 系统背压
+            //16 油缸压力
+            //17 油缸进口压力
+            //18 油缸回油压力
+            //19 中位压力损失
+            //20 门架升降位移
+            //21 门架倾斜位移
+            //22 门架上升压力损失
+            int systemBeiPressure = f1(AllDatas[26]);
+            int oilPressure = f2(AllDatas[27], AllDatas[28]);
+            int oilInPressure = f2(AllDatas[29], AllDatas[30]);
+            int oilOutPressure = f2(AllDatas[31], AllDatas[32]);
+            int mediumPressureLoss = f2(AllDatas[33], AllDatas[44]);
+            int VerticalDis = f2(AllDatas[34], AllDatas[35]);
+            int LeanDis = f2(AllDatas[36], AllDatas[37]);
+            int UpPressureLoss = Convert.ToInt32(AllDatas[38]);
+
+            //23 门架下降压力损失
+            //24 门架前倾（自锁）进口压力损失
+            //25 门架前倾（自锁）出口压力损失
+            //26 门架后倾进口压力损失
+            //27 门架后倾出口压力损失
+            int DownPressureLoss = f1(AllDatas[39]);
+            int ForwardInLoss = f1(AllDatas[40]);
+            int ForwardOutLoss = f1(AllDatas[41]);
+            int BackInLoss = f1(AllDatas[42]);
+            int BackOutLoss = f1(AllDatas[43]);
+
+
+            //28 推动滑阀1复位，5.28改为过载阀A1口实验状态
+            //29 推动滑阀2复位，5.28改为过载阀A2口实验状态
+            //30 推动滑阀3复位，5.28改为过载阀B1口实验状态
+            //31 推动滑阀4复位，5.28改为过载阀B2口实验状态
+            //32 滤油器1报警
+            //33 滤油器2报警
+            //34 滤油器3报警
+            //35 先导压力
+            //36 主泵1流量
+            int slideValve1Reset = f1(AllDatas[58]);
+            int slideValve2Reset = f1(AllDatas[59]);
+            int slideValve3Reset = f1(AllDatas[60]);
+            int slideValve4Reset = f1(AllDatas[61]);
+            int oilFilter1Alarm = f1(AllDatas[64]);
+            int oilFilter2Alarm = f1(AllDatas[65]);
+            int oilFilter3Alarm = f1(AllDatas[66]);
+            int pilotPressre = f3(AllDatas[67], AllDatas[68]);
+            int pump1Flow = f3(AllDatas[72], AllDatas[73]);
+
+            //37 主泵2流量
+            //38 转向流量
+            //39 泄漏流量
+            //40 备用压力传感器1压力
+            //41 备用压力传感器2压力(3.12日由于口子不够暂改为新增回油流量)
+            //42 备用压力传感器3压力
+            //43 备用压力传感器4压力
+            //44 油箱温度
+            //45 泵1出口温度
+            //46 泵2出口温度
+            int pump2Flow = f3(AllDatas[74], AllDatas[75]);
+            int steerFlow = Convert.ToInt32(AllDatas[76])*100;
+            int leakageFlow = f3(AllDatas[77], AllDatas[94]);
+            int standbyPressure1 = f3(AllDatas[78], AllDatas[79]);
+            int backflow = f3(AllDatas[80], AllDatas[81]);
+            int standbyPressure3 = f3(AllDatas[82], AllDatas[83]);
+            int standbyPressure4 = f3(AllDatas[84], AllDatas[85]);
+            int tankTemp = f1(AllDatas[87]);
+            int pump1OutTemp = f1(AllDatas[88]);
+            int pump2OutTemp = f1(AllDatas[89]);
+
+            //47 备用位移传感器1位移
+            //48 备用位移传感器2位移
+            //49 Q1-1的状态 //6.13改为备用1口中位泄漏试验状态
+            //50 Q1-2的状态               2
+            //51 Q2-1的状态               3
+            //52 Q2-2的状态               4
+            //53 主泵1压力超限信号
+            //54 主泵2压力超限信号
+            //55 内泄露流量超限信号
+            //56 转向溢流阀实验状态
+            //57 主溢流阀实验状态
+            //58 换向泄露压力达到
+            //59  下降动作检测后泄压状态
+            //60 上升回程位移
+            //61 前倾回程位移
+            //62 后倾回程位移
+            //63 过载阀A1口调定实验状态
+            //64 过载阀B1口调定实验状态
+
+            //65 换向泄露前倾口测试
+            //66 换向泄露后倾口测试
+            //67 换向泄露备用1口测试
+            //68 换向泄露备用2口测试
+            //69 换向泄露备用3口测试
+            //70 换向泄露备用4口测试
+
+
+            int standbyDis1 = f3(AllDatas[90], AllDatas[91]);
+            int standbyDis2 = f3(AllDatas[92], AllDatas[93]);
+            int q11State = f1(AllDatas[96]);
+            int q12State = f1(AllDatas[97]);
+            int q21State = f1(AllDatas[98]);
+            int q22State = f1(AllDatas[99]);
+            int pump1TooHigh = f1(AllDatas[100]);
+            int pump2TooHigh = f1(AllDatas[101]);
+            int overFlow = f1(AllDatas[86]);
+            int steerLeakage = f1(AllDatas[48]);
+            int mainLeakage = f1(AllDatas[49]);
+            int changeLeakage = f1(AllDatas[50]);
+            int end = AllDatas[12];
+            int testUpDis = AllDatas[45];
+            int testForwardDis = AllDatas[46];
+            int testBackDis = AllDatas[47];
+            int overflowA1Test = AllDatas[52];
+            int overflowB1Test = AllDatas[53];
+
+            int changeA = AllDatas[104];
+            int changeB = AllDatas[105];
+            int spare1 = AllDatas[106];
+            int spare2 = AllDatas[107];
+            int spare3 = AllDatas[108];
+            int spare4 = AllDatas[109];
+
+            //71 过载阀A2口调定实验状态
+            //72 过载阀B2口调定实验状态
+            //73 换向泄露上升口测试
+            //74 转向阀启闭特性实验状态
+            //75 主阀启闭特性实验状态
+
+            int overflowA2Test = AllDatas[54];
+            int overflowB2Test = AllDatas[55];
+            int changeUp = f1(AllDatas[51]);
+            int steerQb = AllDatas[13];
+            int mainQb = AllDatas[14];
+
+            realValue[0] = endFlag3;
+            realValue[1] = endFlag4;
+            realValue[2] = endFlag13leakageTest;
+            realValue[3] = endFlag5;
+            realValue[4] = endFlag6;
+            realValue[5] = endFlag7;
+            realValue[6] = endFlag8;
+            realValue[7] = endFlag9;
+            realValue[8] = endFlag10;
+            realValue[9] = endFlag11;
+
+            realValue[10] = mainPump1Pressure;
+            realValue[11] = mainPump2Pressure;
+            realValue[12] = steerPressure;
+            realValue[13] = forceIn;
+            realValue[14] = forceOut;
+            realValue[15] = systemBeiPressure;
+            realValue[16] = oilPressure;
+            realValue[17] = oilInPressure;
+            realValue[18] = oilOutPressure;
+            realValue[19] = mediumPressureLoss;
+
+            realValue[20] = VerticalDis;
+            realValue[21] = LeanDis;
+            realValue[22] = UpPressureLoss;
+            realValue[23] = DownPressureLoss; 
+            realValue[24] = ForwardInLoss;
+            realValue[25] = ForwardOutLoss;
+            realValue[26] = BackInLoss;
+            realValue[27] = BackOutLoss;
+            realValue[28] = slideValve1Reset;
+            realValue[29] = slideValve2Reset;
+
+            realValue[30] = slideValve3Reset;
+            realValue[31] = slideValve4Reset;
+            realValue[32] = oilFilter1Alarm;
+            realValue[33] = oilFilter2Alarm;
+            realValue[34] = oilFilter3Alarm;
+            realValue[35] = pilotPressre;
+            realValue[36] = pump1Flow;
+            realValue[37] = pump2Flow;
+            realValue[38] = steerFlow;
+            realValue[39] = leakageFlow;
+
+            realValue[40] = standbyPressure1;
+            realValue[41] = backflow;
+            realValue[42] = standbyPressure3;
+            realValue[43] = standbyPressure4;
+            realValue[44] = tankTemp;
+            realValue[45] = pump1OutTemp;
+            realValue[46] = pump2OutTemp;
+            realValue[47] = standbyDis1;
+            realValue[48] = standbyDis2;
+            realValue[49] = q11State;
+
+            realValue[50] = q12State;
+            realValue[51] = q21State;
+            realValue[52] = q22State;
+            realValue[53] = pump1TooHigh;
+            realValue[54] = pump2TooHigh;
+            realValue[55] = overFlow;
+            realValue[56] = steerLeakage;
+            realValue[57] = mainLeakage;
+            realValue[58] = changeLeakage;
+            realValue[59] = end;
+            realValue[60] = testUpDis;
+            realValue[61] = testForwardDis;
+            realValue[62] = testBackDis;
+            realValue[63] = overflowA1Test;
+            realValue[64] = overflowB1Test;
+            realValue[65] = changeA;
+            realValue[66] = changeB;
+            realValue[67] = spare1;
+            realValue[68] = spare2;
+            realValue[69] = spare3;
+            realValue[70] = spare4;
+
+            realValue[71] = overflowA2Test;
+            realValue[72] = overflowB2Test;
+            realValue[73] = changeUp;
+            realValue[74] = steerQb;
+            realValue[75] = mainQb;
+
+
+            #endregion
+            //   for (int i = 0; i < 12; i++)
+            //  {
+            //     temp[i] = 0;
+            //  }
+            // }
             return realValue;
 
-        }
-
-        /// <summary>
-        /// 试验数据方法
-        /// </summary>
-        /// <param name="canmsg"></param>
-        /// <returns></returns>
-        public double[] testrealvalue(TPCANMsg canmsg)
-        {
-            testvalue = new double[51];
-         
-
-            if (canmsg.ID != 0x184 && canmsg.ID != 0x284 && canmsg.ID != 0x384 && canmsg.ID != 0x484)
-            {
-                return null;
-            }
-            if (canmsg.ID == 0x184)
-            {
-
-                for (int i = 0; i < 8; i++)
-                {
-                    AllData[i] = canmsg.DATA[i];
-                }
-            }
-            else if (canmsg.ID == 0x284)
-            {
-
-                AllData[8] = canmsg.DATA[0];
-                AllData[9] = canmsg.DATA[1];
-                AllData[10] = canmsg.DATA[2];
-            }
-            for(int i = 0; i < 32; i++)
-            {
-                testvalue[i] = AllData[i];
-            }
-            return testvalue;
         }
 
 
@@ -536,7 +524,11 @@ namespace ExperimentTableDetectSystem.service
         {
             return Convert.ToInt32(a);
         }
-        public int f2(byte a,byte b)
+        public int f2(byte a, byte b)
+        {
+            return Convert.ToInt32(a) * 100 + Convert.ToInt32(b);
+        }
+        public int f3(byte a,byte b)
         {
             return Convert.ToInt32(a) * 100 + Convert.ToInt32(b);
         }
@@ -628,7 +620,7 @@ namespace ExperimentTableDetectSystem.service
             return PCANBasic.Write(m_PcanHandle, ref CANMsg);
         }
 
-      
+
 
     }
 }

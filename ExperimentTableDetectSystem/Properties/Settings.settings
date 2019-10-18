@@ -3,7 +3,7 @@
   <Profiles />
   <Settings>
     <Setting Name="DataBaseConnection" Type="System.String" Scope="User">
-      <Value Profile="(Default)">server=localhost\SQLEXPRESS;database=ExperimentTable;Integrated Security=True;</Value>
+      <Value Profile="(Default)">server=localhost\YAFEITES;database=BridgeDetect;Integrated Security=True;</Value>
     </Setting>
   </Settings>
 </SettingsFile>

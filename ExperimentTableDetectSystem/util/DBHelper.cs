@@ -54,20 +54,28 @@ namespace ExperimentTableDetectSystem.util
             using (conn = new SqlConnection(connString))
             {
                 conn.Open();
-                using (SqlTransaction transaction = conn.BeginTransaction())
+                try
                 {
-                    string cmdText = sql;
-                    comm = new SqlCommand(cmdText, conn);
-                    comm.Transaction = transaction;
-                    if (parameters != null)
+                    using (SqlTransaction transaction = conn.BeginTransaction())
                     {
-                        comm.Parameters.AddRange(parameters);
+                        string cmdText = sql;
+                        comm = new SqlCommand(cmdText, conn);
+                        comm.Transaction = transaction;
+                        if (parameters != null)
+                        {
+                            comm.Parameters.AddRange(parameters);
 
+                        }
+                        affectedRows = comm.ExecuteNonQuery();
+                        transaction.Commit();
+                        transaction.Dispose();
                     }
-                    affectedRows = comm.ExecuteNonQuery();
-                    transaction.Commit();
-                    transaction.Dispose();
                 }
+                catch
+                {
+
+                }
+
 
             }
             return affectedRows;

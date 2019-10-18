@@ -77,30 +77,43 @@ namespace ExperimentTableDetectSystem.service
         /// </summary>
         public enum ConfigKeys
         {//
-            Atime,
-            Btime,
+           // Atime,
+          //  Btime,
 
             MaxTemp,
            MinTemp,
 
             BigBackS,
             BigForwardS,
-            BigSelfLockS,
+            //BigSelfLockS,
             BigUpS,
             BigDownS,
 
-            LeakageLiftTime,
+           // LeakageLiftTime,
             MainP,
             MediumPTime,
 
             SmallBackS,
             SmallDownS,
             SmallForwardS,
-            SmallSelfLockS,
+           // SmallSelfLockS,
             SmallUpS,
 
             SteeringValveP,
-            SteerPreesureTestTime,
+           // SteerPreesureTestTime,
+
+            Pump1Pressure,
+            Pump2Pressure,
+            LeakageFlow,
+
+            P1Speed,
+            P2Speed,
+            HotMoterSpeed,
+            LeadPumpSpeed,
+            //BackMoterSpeed,
+
+            ChangeLeakageP,
+            OverloadP,
 
         }
         /// <summary>
@@ -141,23 +154,36 @@ namespace ExperimentTableDetectSystem.service
                 {ConfigKeys.MainP,new ConfigItem("主溢流阀调定压力",0,1000,50) },
                 {ConfigKeys.SteeringValveP,new ConfigItem("转向溢流阀调定压力",0,10000,50) },
 
-                {ConfigKeys.Atime,new ConfigItem("泄露倾斜阀A口保压时间",0,10000,60) },
-                {ConfigKeys.Btime,new ConfigItem("泄露倾斜阀B口保压时间",0,10000,60) },
-                {ConfigKeys.LeakageLiftTime,new ConfigItem("泄露升降阀口保压时间",0,10000,60) },
+               // {ConfigKeys.Atime,new ConfigItem("泄露倾斜阀A口保压时间",0,10000,60) },
+               // {ConfigKeys.Btime,new ConfigItem("泄露倾斜阀B口保压时间",0,10000,60) },
+                //{ConfigKeys.LeakageLiftTime,new ConfigItem("泄露升降阀口保压时间",0,10000,60) },
                   {ConfigKeys.MediumPTime,new ConfigItem("中位压力损失测试时间",0,10000,60) },
-                   {ConfigKeys.SteerPreesureTestTime,new ConfigItem("转向压力损失测试时间",0,10000,60) },
+                 //  {ConfigKeys.SteerPreesureTestTime,new ConfigItem("转向压力损失测试时间",0,10000,60) },
 
                 {ConfigKeys.SmallBackS,new ConfigItem("小门架油缸后倾停止位移",0,10000,60) },
                 {ConfigKeys.SmallDownS,new ConfigItem("小门架油缸下降停止位移",0,10000,60) },
                 {ConfigKeys.SmallForwardS,new ConfigItem("小门架油缸前倾停止位移",0,10000,60) },
-                {ConfigKeys.SmallSelfLockS,new ConfigItem("小门架油缸自锁位移",0,10000,60) },
+               // {ConfigKeys.SmallSelfLockS,new ConfigItem("小门架油缸自锁位移",0,10000,60) },
                 {ConfigKeys.SmallUpS,new ConfigItem("小门架油缸上升停止位移",0,10000,60) },
 
                 {ConfigKeys.BigBackS,new ConfigItem("大门架油缸后倾停止位移",0,10000,30) },
                 {ConfigKeys.BigDownS,new ConfigItem("大门架油缸下降停止位移",0,10000,60) },
                 {ConfigKeys.BigForwardS,new ConfigItem("大门架油缸前倾停止位移",0,10000,60) },
-                {ConfigKeys.BigSelfLockS,new ConfigItem("大门架油缸自锁位移",0,10000,60) },
+               // {ConfigKeys.BigSelfLockS,new ConfigItem("大门架油缸自锁位移",0,10000,60) },
                 {ConfigKeys.BigUpS,new ConfigItem("大门架油缸上升停止位移",0,10000,60) },
+
+                {ConfigKeys.Pump1Pressure,new ConfigItem("主泵1压力上限",0,10000,1000) },
+                {ConfigKeys.Pump2Pressure,new ConfigItem("主泵2压力上限",0,10000,1000) },
+                {ConfigKeys.LeakageFlow,new ConfigItem("内泄露流量上限",0,10000,1000) },
+
+                {ConfigKeys.P1Speed,new ConfigItem("泵1转速",0,10000,1500) },
+                {ConfigKeys.P2Speed,new ConfigItem("泵2转速",0,10000,1500) },
+                {ConfigKeys.HotMoterSpeed,new ConfigItem("热电机转速",0,10000,1500) },
+                {ConfigKeys.LeadPumpSpeed,new ConfigItem("先导泵转速",0,10000,1500) },
+                //{ConfigKeys.BackMoterSpeed,new ConfigItem("回油电机转速",0,10000,1500) },
+
+                {ConfigKeys.ChangeLeakageP,new ConfigItem("换向泄露测试调定压力",0,10000,50) },
+                {ConfigKeys.OverloadP,new ConfigItem("过载阀测试调定压力",0,10000,50) },
 
 
             };

@@ -46,162 +46,102 @@ namespace ExperimentTableDetectSystem.Windows
         }
         private void btnStartTest_Click(object sender, EventArgs e)
         {
-            // select();
+            select();
 
-            selecttest();
-            this.Close();
-            autoDataDisplayWin win = autoDataDisplayWin.getInstance();
-            win.Show();
         }
 
         private void select()
         {
-            #region 0x181
-            TPCANMsg canmsg181 = new TPCANMsg();
-            canmsg181.ID = 0x186;
-            canmsg181.LEN = Convert.ToByte(8);
-            canmsg181.MSGTYPE = TPCANMessageType.PCAN_MESSAGE_STANDARD;
-            canmsg181.DATA = new byte[8];
+
+            #region 0x108
+            TPCANMsg canmsg108 = new TPCANMsg();
+            canmsg108.ID = 0x108;
+            canmsg108.LEN = Convert.ToByte(8);
+            canmsg108.MSGTYPE = TPCANMessageType.PCAN_MESSAGE_STANDARD;
+            canmsg108.DATA = new byte[8];
+            canmsg108.DATA[2] = 1; //自动实验开始
             #endregion
 
-            #region canmsg 0x186
-            TPCANMsg canmsg186 = new TPCANMsg();
-            canmsg186.ID = 0x186;
-            canmsg186.LEN = Convert.ToByte(8);
-            canmsg186.MSGTYPE = TPCANMessageType.PCAN_MESSAGE_STANDARD;
-            canmsg186.DATA = new byte[8];
 
-
+            #region 0x101
+            TPCANMsg canmsg101 = new TPCANMsg();
+            canmsg101.ID = 0x101;
+            canmsg101.LEN = Convert.ToByte(8);
+            canmsg101.MSGTYPE = TPCANMessageType.PCAN_MESSAGE_STANDARD;
+            canmsg101.DATA = new byte[8];
             if (chkMediumPressureLoss.Checked == true)
             {
-                canmsg186.DATA[0] = 1;
+                canmsg101.DATA[0] = 1;
             }
-            else { canmsg186.DATA[0] = 0; }
+            else { canmsg101.DATA[0] = 0; }
 
-            if (chkSteerValveQ.Checked == true)
+            if (chkMenjiaUp.Checked == true)
             {
-                canmsg186.DATA[1] = 1;
+                canmsg101.DATA[1] = 1;
             }
-            else { canmsg186.DATA[1] = 0; }
-
-            if (chkSmallMenjiaUp.Checked == true)
+            else { canmsg101.DATA[1] = 0; }
+            if (chkMenjiaBack.Checked == true)
             {
-                canmsg186.DATA[2] = 1;
+ 
+                 canmsg101.DATA[2] = 1;
             }
-           else { canmsg186.DATA[2] = 0; }
-
-            if (chkSmallMenjiaDown.Checked == true)
+            else { canmsg101.DATA[2] = 0; }
+            if (chkMenjiaForward.Checked == true)
             {
-                canmsg186.DATA[3] = 1;
+                canmsg101.DATA[3] = 1;
+            }
+            else { canmsg101.DATA[3] = 0; }
+
+            if (chkMenjiaForwardTest.Checked == true)
+            {
+                canmsg101.DATA[4] = 1;
             }
             else
             {
-                canmsg186.DATA[3] = 0;
+                canmsg101.DATA[4] = 0;
             }
-            if (chkBigMenjiaUp.Checked == true)
+            if (chkSelfLock.Checked == true)
             {
-                canmsg186.DATA[4] = 1;
+                canmsg101.DATA[5] = 1;
             }
-            else { canmsg186.DATA[4] = 0; }
-            if (chkBigMenjiaDown.Checked == true)
-            {
-                canmsg186.DATA[5] = 1;
-            }
-            else
-            {
-                canmsg186.DATA[5] = 0;
-            }
-            if (chkSmallMenjiaForward.Checked == true)
-            {
-                canmsg186.DATA[6] = 1;
-            }
-            else
-            {
-                canmsg186.DATA[6] = 0;
-            }
-            if (chkSmallMenjiaBack.Checked == true)
-            {
-                canmsg186.DATA[7] = 1;
-            }
-            else
-            {
-                canmsg186.DATA[7] = 0;
-            }
-            #endregion
-
-
-            #region 0x187
-            TPCANMsg canmsg187 = new TPCANMsg();
-            canmsg187.ID = 0x187;
-            canmsg187.LEN = Convert.ToByte(8);
-            canmsg187.MSGTYPE = TPCANMessageType.PCAN_MESSAGE_STANDARD;
-            canmsg187.DATA = new byte[8];
-          
-           
-            if (chkBigMenjiaForward.Checked == true) { canmsg187.DATA[0] = 1; }
-            else { canmsg187.DATA[0] = 0; }
-            if (chkBigMenjiaBack.Checked == true) { canmsg187.DATA[1] = 1; }
-            else { canmsg187.DATA[1] = 0; }
+            else { canmsg101.DATA[5] = 0; }
             if (chkLeakageHoldPresssure.Checked == true)
             {
-                canmsg187.DATA[2] = 1;
-                canmsg181.DATA[0] = 0;
-                canmsg181.DATA[1] = 1;
-                for(int i = 2; i < 8; i++)
-                {
-                    canmsg181.DATA[i] = 0;
-                }
+                canmsg101.DATA[6] = 1;
             }
-            else { canmsg187.DATA[2] = 0; }
-            if (chkSmallSelfLock.Checked == true)
+            else { canmsg101.DATA[6] = 0; }
+            if (chkMenjiaDown.Checked == true)
             {
-                canmsg187.DATA[3] = 1;
+                canmsg101.DATA[7] = 1;
             }
-            else { canmsg187.DATA[3] = 0; }
-
-            if (chkBigSelfLock.Checked == true)
-            { canmsg187.DATA[4] = 1; }
-            else { canmsg187.DATA[4] = 0; }
-            canmsg187.DATA[5] = 1;//自动测试开始
-            canmsg187.DATA[6] = 0;
-            canmsg187.DATA[7] = 0;
+            else { canmsg101.DATA[7] = 0; }
 
             #endregion
 
-            TPCANStatus sts1 =  peakHelper.write(canmsg186);
-            TPCANStatus sts2= peakHelper.write(canmsg187);
 
+            TPCANStatus sts4 = peakHelper.write(canmsg101);
+            TPCANStatus sts3 = peakHelper.write(canmsg108);
 
-            peakHelper.write(canmsg181);
-
-            if (sts1 == TPCANStatus.PCAN_ERROR_OK && sts2 == TPCANStatus.PCAN_ERROR_OK)
+            if (sts3 == TPCANStatus.PCAN_ERROR_OK && sts4 == TPCANStatus.PCAN_ERROR_OK)
             {
-                MessageBox.Show("实验项目选择成功，即将开始自动实验");
+
+                this.Close();
+                autoDataDisplayWin win = autoDataDisplayWin.getInstance();
+                win.Show();
+                //MessageBox.Show("实验项目选择成功，即将开始自动实验");
             } 
         }
 
-        /// <summary>
-        /// 演示。项目选择
-        /// </summary>
-        public void selecttest()
+        private void chkMenjia_CheckedChanged(object sender, EventArgs e)
         {
-            TPCANMsg canmsg183 = new TPCANMsg();
-            canmsg183.ID = 0x183;
-            canmsg183.LEN = Convert.ToByte(8);
-            canmsg183.MSGTYPE = TPCANMessageType.PCAN_MESSAGE_STANDARD;
-            canmsg183.DATA = new byte[8];
-            for (int i = 0; i < 8; i++)
+            if (chkMenjia.Checked == false)
             {
-                canmsg183.DATA[i] = 0;
+                chkMenjiaBack.Checked = chkMenjiaDown.Checked = chkMenjiaForward.Checked = chkMenjiaForwardTest.Checked = chkMenjiaUp.Checked = chkSelfLock.Checked = false;
             }
-            canmsg183.DATA[1] = 1;
-            canmsg183.DATA[2] = 1;
-            canmsg183.DATA[3] = 1;
-            canmsg183.DATA[5] = 1;
-            TPCANStatus sts = peakHelper.write(canmsg183);
-
-          
+            if (chkMenjia.Checked == true)
+            {
+                chkMenjiaBack.Checked = chkMenjiaDown.Checked = chkMenjiaForward.Checked = chkMenjiaForwardTest.Checked = chkMenjiaUp.Checked = chkSelfLock.Checked = true;
+            }
         }
-
     }
 }

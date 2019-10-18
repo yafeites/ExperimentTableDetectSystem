@@ -8,10 +8,11 @@ using System.Windows.Forms;
 
 namespace ExperimentTableDetectSystem.service
 {
-   public  class SearchHelper
+    public class SearchHelper
 
     {
         DBHelper dbhelper;
+       
         #region 单例
         private static volatile SearchHelper instance;
         private SearchHelper()
@@ -34,13 +35,13 @@ namespace ExperimentTableDetectSystem.service
             return instance;
         }
         #endregion
-        public void loadData(string sql,DataGridView dgv)
+        public void loadData(string sql, DataGridView dgv)
         {
             dbhelper = DBHelper.GetInstance();
             DataTable dt = dbhelper.ExecuteSqlDataAdapter(sql, null, 0);
             adjustDgv(dt, dgv);
         }
-        public void adjustDgv(DataTable dt,DataGridView dataGridView1)
+        public void adjustDgv(DataTable dt, DataGridView dataGridView1)
         {
             dataGridView1.DataSource = dt;
             dataGridView1.RowsDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
@@ -55,11 +56,11 @@ namespace ExperimentTableDetectSystem.service
         /// <param name="id"></param>
         /// <param name="n"></param>
         /// <param name="dgv"></param>
-        public void SearchM1(string id, int n, DataGridView dgv)
+        public  void SearchM1(string id, int n,  DataGridView dgv)
         {
-            string sql = string.Format("select productId as 编号,n as 次数,testName as 测试项目,ai1 as 主泵1压力,pump1flow as 主泵1流量,ai2 as 主泵2压力,pump2flow as 主泵2流量 from allData where productId='{0}' and n={1} and testName='主溢流阀调定试验'", id, n);
+            string sql = string.Format("select productId as 编号,n as 次数,testName as 测试项目,tankTemp as 油箱温度 ,pump1OutTemp as 泵1出口温度, pump2OutTemp as 泵2出口温度 ,pilotPressure as 先导压力 ,mainPumpP1 as 主泵1压力,pump1flow as 主泵1流量,mainPumpP2 as 主泵2压力,pump2flow as 主泵2流量,currentTime as 当前时间 from allData where productId='{0}' and n={1} and testName='主溢流阀调定试验'", id, n);
             loadData(sql, dgv);
-
+           // return sql;
         }
         /// <summary>
         /// 转向溢流阀调定试验
@@ -67,12 +68,138 @@ namespace ExperimentTableDetectSystem.service
         /// <param name="id"></param>
         /// <param name="n"></param>
         /// <param name="dgv"></param>
-        public void SearchM2(string id, int n, DataGridView dgv)
+        public void SearchM2(string id, int n,  DataGridView dgv)
         {
-            string sql = string.Format("  select productId as 编号,n as 次数,ai1 as 主泵1压力,testName as 测试项目,pump1flow as 主泵1流量,ai2 as 主泵2压力,pump2flow as 主泵2流量,ai3 as 转向压力 from allData where productId='{0}' and n={1} and testName='转向溢流阀调定试验'", id, n);
+            string sql = string.Format("  select productId as 编号,n as 次数,mainPumpP1 as 主泵1压力,testName as 测试项目,tankTemp as 油箱温度 ,pump1OutTemp as 泵1出口温度, pump2OutTemp as 泵2出口温度 ,pilotPressure as 先导压力 ,pump1flow as 主泵1流量,mainPumpP2 as 主泵2压力,pump2flow as 主泵2流量,steerPressure as 转向压力,currentTime as 当前时间 from allData where productId='{0}' and n={1}and testName='转向溢流阀调定试验'", id, n);
             loadData(sql, dgv);
         }
+        /// <summary>
+        /// 过载阀A1口阀调定试验
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="n"></param>
+        /// <param name="dgv"></param>
+        public void SearchOverloadA(string id, int n, DataGridView dgv)
+        {
+            string sql = string.Format("select productId as 编号,n as 次数,testName as 测试项目,tankTemp as 油箱温度 ,pump1OutTemp as 泵1出口温度, pump2OutTemp as 泵2出口温度 ,pilotPressure as 先导压力 ,mainPumpP1 as 主泵1压力,pump1flow as 主泵1流量,mainPumpP2 as 主泵2压力,pump2flow as 主泵2流量,currentTime as 当前时间 from allData where productId='{0}' and n={1} and testName='过载阀A1口调定试验'", id, n);
+            loadData(sql, dgv);
+            // return sql;
+        }
+        /// <summary>
+        /// 过载阀B1口阀调定试验
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="n"></param>
+        /// <param name="dgv"></param>
+        public void SearchOverloadB(string id, int n, DataGridView dgv)
+        {
+            string sql = string.Format("select productId as 编号,n as 次数,testName as 测试项目,tankTemp as 油箱温度 ,pump1OutTemp as 泵1出口温度, pump2OutTemp as 泵2出口温度 ,pilotPressure as 先导压力 ,mainPumpP1 as 主泵1压力,pump1flow as 主泵1流量,mainPumpP2 as 主泵2压力,pump2flow as 主泵2流量,currentTime as 当前时间 from allData where productId='{0}' and n={1} and testName='过载阀B1口调定试验'", id, n);
+            loadData(sql, dgv);
+            // return sql;
+        }
 
+        /// <summary>
+        /// 过载阀A2口阀调定试验
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="n"></param>
+        /// <param name="dgv"></param>
+        public void SearchOverloadA2(string id, int n, DataGridView dgv)
+        {
+            string sql = string.Format("select productId as 编号,n as 次数,testName as 测试项目,tankTemp as 油箱温度 ,pump1OutTemp as 泵1出口温度, pump2OutTemp as 泵2出口温度 ,pilotPressure as 先导压力 ,mainPumpP1 as 主泵1压力,pump1flow as 主泵1流量,mainPumpP2 as 主泵2压力,pump2flow as 主泵2流量,currentTime as 当前时间 from allData where productId='{0}' and n={1} and testName='过载阀A2口调定试验'", id, n);
+            loadData(sql, dgv);
+            // return sql;
+        }
+        /// <summary>
+        /// 过载阀B2口阀调定试验
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="n"></param>
+        /// <param name="dgv"></param>
+        public void SearchOverloadB2(string id, int n, DataGridView dgv)
+        {
+            string sql = string.Format("select productId as 编号,n as 次数,testName as 测试项目,tankTemp as 油箱温度 ,pump1OutTemp as 泵1出口温度, pump2OutTemp as 泵2出口温度 ,pilotPressure as 先导压力 ,mainPumpP1 as 主泵1压力,pump1flow as 主泵1流量,mainPumpP2 as 主泵2压力,pump2flow as 主泵2流量,currentTime as 当前时间 from allData where productId='{0}' and n={1} and testName='过载阀B2口调定试验'", id, n);
+            loadData(sql, dgv);
+            // return sql;
+        }
+
+        /// <summary>
+        /// 换向泄漏上升口试验
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="n"></param>
+        /// <param name="dgv"></param>
+        public void SearchM3(string id, int n,  DataGridView dgv)
+        {
+            string sql = string.Format("  select productId as 编号,n as 次数,mainPumpP1 as 主泵1压力,testName as 测试项目,tankTemp as 油箱温度 ,pump1OutTemp as 泵1出口温度, pump2OutTemp as 泵2出口温度 ,pilotPressure as 先导压力 ,pump1flow as 主泵1流量,mainPumpP2 as 主泵2压力,pump2flow as 主泵2流量,leakageflow as 泄漏流量 ,currentTime as 当前时间 from allData where productId='{0}' and n={1}and testName='换向泄漏上升口试验'", id, n);
+            loadData(sql, dgv);
+        }
+        /// <summary>
+        /// 换向泄漏前倾口试验
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="n"></param>
+        /// <param name="dgv"></param>
+        public void SearchM3A(string id, int n, DataGridView dgv)
+        {
+            string sql = string.Format("  select productId as 编号,n as 次数,mainPumpP1 as 主泵1压力,testName as 测试项目,tankTemp as 油箱温度 ,pump1OutTemp as 泵1出口温度, pump2OutTemp as 泵2出口温度 ,pilotPressure as 先导压力 ,pump1flow as 主泵1流量,mainPumpP2 as 主泵2压力,pump2flow as 主泵2流量,leakageflow as 泄漏流量 ,currentTime as 当前时间 from allData where productId='{0}' and n={1}and testName='换向泄漏前倾口试验'", id, n);
+            loadData(sql, dgv);
+        }
+        /// <summary>
+        /// 换向泄漏后倾口试验
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="n"></param>
+        /// <param name="dgv"></param>
+        public void SearchM3B(string id, int n, DataGridView dgv)
+        {
+            string sql = string.Format("  select productId as 编号,n as 次数,mainPumpP1 as 主泵1压力,testName as 测试项目,tankTemp as 油箱温度 ,pump1OutTemp as 泵1出口温度, pump2OutTemp as 泵2出口温度 ,pilotPressure as 先导压力 ,pump1flow as 主泵1流量,mainPumpP2 as 主泵2压力,pump2flow as 主泵2流量,leakageflow as 泄漏流量 ,currentTime as 当前时间 from allData where productId='{0}' and n={1}and testName='换向泄漏后倾口试验'", id, n);
+            loadData(sql, dgv);
+        }
+        /// <summary>
+        /// 换向泄漏备用1口试验
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="n"></param>
+        /// <param name="dgv"></param>
+        public void SearchM31(string id, int n, DataGridView dgv)
+        {
+            string sql = string.Format("  select productId as 编号,n as 次数,mainPumpP1 as 主泵1压力,testName as 测试项目,tankTemp as 油箱温度 ,pump1OutTemp as 泵1出口温度, pump2OutTemp as 泵2出口温度 ,pilotPressure as 先导压力 ,pump1flow as 主泵1流量,mainPumpP2 as 主泵2压力,pump2flow as 主泵2流量,leakageflow as 泄漏流量 ,currentTime as 当前时间 from allData where productId='{0}' and n={1}and testName='换向泄漏备用1口试验'", id, n);
+            loadData(sql, dgv);
+        }
+        /// <summary>
+        /// 换向泄漏备用2口试验
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="n"></param>
+        /// <param name="dgv"></param>
+        public void SearchM32(string id, int n, DataGridView dgv)
+        {
+            string sql = string.Format("  select productId as 编号,n as 次数,mainPumpP1 as 主泵1压力,testName as 测试项目,tankTemp as 油箱温度 ,pump1OutTemp as 泵1出口温度, pump2OutTemp as 泵2出口温度 ,pilotPressure as 先导压力 ,pump1flow as 主泵1流量,mainPumpP2 as 主泵2压力,pump2flow as 主泵2流量,leakageflow as 泄漏流量 ,currentTime as 当前时间 from allData where productId='{0}' and n={1}and testName='换向泄漏备用2口试验'", id, n);
+            loadData(sql, dgv);
+        }
+        /// <summary>
+        /// 换向泄漏备用3口试验
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="n"></param>
+        /// <param name="dgv"></param>
+        public void SearchM33(string id, int n, DataGridView dgv)
+        {
+            string sql = string.Format("  select productId as 编号,n as 次数,mainPumpP1 as 主泵1压力,testName as 测试项目,tankTemp as 油箱温度 ,pump1OutTemp as 泵1出口温度, pump2OutTemp as 泵2出口温度 ,pilotPressure as 先导压力 ,pump1flow as 主泵1流量,mainPumpP2 as 主泵2压力,pump2flow as 主泵2流量,leakageflow as 泄漏流量 ,currentTime as 当前时间 from allData where productId='{0}' and n={1}and testName='换向泄漏备用3口试验'", id, n);
+            loadData(sql, dgv);
+        }
+        /// <summary>
+        /// 换向泄漏备用4口试验
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="n"></param>
+        /// <param name="dgv"></param>
+        public void SearchM34(string id, int n, DataGridView dgv)
+        {
+            string sql = string.Format("  select productId as 编号,n as 次数,mainPumpP1 as 主泵1压力,testName as 测试项目,tankTemp as 油箱温度 ,pump1OutTemp as 泵1出口温度, pump2OutTemp as 泵2出口温度 ,pilotPressure as 先导压力 ,pump1flow as 主泵1流量,mainPumpP2 as 主泵2压力,pump2flow as 主泵2流量,leakageflow as 泄漏流量 ,currentTime as 当前时间 from allData where productId='{0}' and n={1}and testName='换向泄漏备用4口试验'", id, n);
+            loadData(sql, dgv);
+        }
 
         /// <summary>
         /// 中位压力损失
@@ -80,149 +207,168 @@ namespace ExperimentTableDetectSystem.service
         /// <param name="id"></param>
         /// <param name="n"></param>
         /// <param name="dgv"></param>
-        public void Searchf1(string id,int n,DataGridView dgv)
+        public void Searchf1(string id, int n,  DataGridView dgv)
         {
-            string sql = string.Format("select productId as 编号,n as 次数,testName as 测试项目,ai1 as 主泵1压力,pump1flow as 主泵1流量,ai2 as 主泵2压力,pump2flow as 主泵2流量,systembackPressure as 系统背压,ai4 as 中位压力损失 from allData where productId='{0}' and n={1} and testName='中位压力损失试验'", id, n);
-            loadData(sql, dgv);
-        }
-        /// <summary>
-        /// 转向优先阀流量测试
-        /// </summary>
-        /// <param name="id"></param>
-        /// <param name="n"></param>
-        /// <param name="dgv"></param>
-        public void  Searchf2(string id ,int n,DataGridView dgv)
-        {
-            string sql = string.Format("select productId as 编号,n as 次数,testName as 测试项目,ai1 as 主泵1压力,pump1flow as 主泵1流量,ai2 as 主泵2压力,pump2flow as 主泵2流量,ai3 as 转向压力,steerflow as 转向流量 from allData where productId='{0}' and n={1} and testName='转向优先阀流量试验'", id, n);
-            loadData(sql, dgv);
-        }
-
-        /// <summary>
-        /// 内泄漏测试？？？？？？？？？
-        /// </summary>
-        /// <param name="id"></param>
-        /// <param name="n"></param>
-        /// <param name="dgv"></param>
-        public void Searchf3(string id, int n,DataGridView dgv)
-        {//内泄漏测试???测试内容需确定，此处不够确定
-            string sql = string.Format("select productId as 编号,n as 次数,testName as 测试项目,ai1 as 主泵1压力,pump1flow as 主泵1流量,ai2 as 主泵2压力,pump2flow as 主泵2流量,ai3 as 转向压力,steerflow as 转向流量 from allData where productId='{0}' and n={1} and testName='内泄漏试验'", id, n);
+            string sql = string.Format("select productId as 编号,n as 次数,testName as 测试项目,tankTemp as 油箱温度 ,pump1OutTemp as 泵1出口温度, pump2OutTemp as 泵2出口温度 ,pilotPressure as 先导压力 ,mainPumpP1 as 主泵1压力,pump1flow as 主泵1流量,mainPumpP2 as 主泵2压力,pump2flow as 主泵2流量,systembackPressure as 系统背压,mediumPressureLoss as 中位压力损失,currentTime as 当前时间 from allData where productId='{0}' and n={1} and testName='中位压力损失试验'", id, n);
             loadData(sql, dgv);
         }
 
 
         /// <summary>
-        /// 小门架上升
+        /// 泄漏保压升降测试
         /// </summary>
         /// <param name="id"></param>
         /// <param name="n"></param>
         /// <param name="dgv"></param>
-       public void Searchf4(string id,int n,DataGridView dgv)
-        {//小上升
-            string sql = string.Format(" select productId as 编号,n as 次数,testName as 测试项目,ai1 as 主泵1压力,pump1flow as 主泵1流量,cylinderPressure as 油缸压力,ai7 as 压力损失,ai5 as 油缸位移, ai6 as 油缸速度,pushvalvef1  as 推动滑阀力,pushvalveTime1 as 推动滑阀时间,ai3 as 转向压力,steerflow as 转向流量 from allData where productId='{0}' and n={1} and testName='小门架上升'", id, n);
+        public void Searchf3(string id, int n, DataGridView dgv)
+        {
+            string sql = string.Format("select productId as 编号,n as 次数,testName as 测试项目,tankTemp as 油箱温度 ,pump1OutTemp as 泵1出口温度, pump2OutTemp as 泵2出口温度 ,pilotPressure as 供油压力 ,cylinderPressure as 升降阀压力,leakageflow as 泄漏流量,currentTime as 当前时间 from allData where productId='{0}' and n={1} and testName='泄漏保压升降测试'", id, n);
             loadData(sql, dgv);
         }
         /// <summary>
-        /// 小门架下降
+        /// 倾斜阀A口内泄漏测试
         /// </summary>
         /// <param name="id"></param>
         /// <param name="n"></param>
         /// <param name="dgv"></param>
-        public void Searchf5(string id,int n,DataGridView dgv)
+        public void Searchf3A(string id, int n, DataGridView dgv)
         {
-            string sql = string.Format("select productId as 编号,n as 次数,testName as 测试项目,ai1 as 主泵1压力,pump1flow as 主泵1流量,cylinderPressure as 油缸压力,systembackpressure as 系统背压, ai10 as 压力损失,ai8 as 油缸位移, ai9 as 油缸速度,pushvalvef1  as 推动滑阀力,pushvalveTime2 as 推动滑阀时间,ai3 as 转向压力,steerflow as 转向流量 from allData  where productId='{0}' and n={1} and testName='小门架下降'", id, n);
-            loadData(sql, dgv);
-        }
-         /// <summary>
-/// 大门架上升
-/// </summary>
-/// <param name="id"></param>
-/// <param name="n"></param>
-/// <param name="dgv"></param>
-        public void Searchf6(string id,int n,DataGridView dgv)
-        {
-            string sql = string.Format("  select productId as 编号,n as 次数,testName as 测试项目,ai1 as 主泵1压力,pump1flow as 主泵1流量,ai2 as 主泵2压力,pump2flow as 主泵2流量,cylinderPressure as 油缸压力,ai13 as 压力损失,ai11 as 油缸位移, ai12 as 油缸速度,pushvalvef2  as 推动滑阀力,pushvalveTime3 as 推动滑阀时间,ai3 as 转向压力,steerflow as 转向流量 from allData where productId='{0}' and n={1} and testName='大门架上升'", id, n);
+            string sql = string.Format("select productId as 编号,n as 次数,testName as 测试项目,tankTemp as 油箱温度 ,pump1OutTemp as 泵1出口温度, pump2OutTemp as 泵2出口温度 ,pilotPressure as 供油压力 ,cylinderInPressure as 倾斜阀A口压力,leakageflow as 泄漏流量,currentTime as 当前时间 from allData where productId='{0}' and n={1} and testName='倾斜阀A口内泄漏测试'", id, n);
             loadData(sql, dgv);
         }
         /// <summary>
-        /// 大门架下降
+        /// 倾斜阀B口内泄漏测试
         /// </summary>
         /// <param name="id"></param>
         /// <param name="n"></param>
         /// <param name="dgv"></param>
-        public void Searchf7(string id,int n,DataGridView dgv)
+        public void Searchf3B(string id, int n, DataGridView dgv)
+        {
+            string sql = string.Format("select productId as 编号,n as 次数,testName as 测试项目,tankTemp as 油箱温度 ,pump1OutTemp as 泵1出口温度, pump2OutTemp as 泵2出口温度 ,pilotPressure as 供油压力 ,cylinderOutPressure as 倾斜阀B口压力,leakageflow as 泄漏流量,currentTime as 当前时间 from allData where productId='{0}' and n={1} and testName='倾斜阀B口内泄漏测试'", id, n);
+            loadData(sql, dgv);
+        }
+        /// <summary>
+        /// 备用1口内泄漏测试
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="n"></param>
+        /// <param name="dgv"></param>
+        public void Searchfb1(string id, int n, DataGridView dgv)
+        {
+            string sql = string.Format("select productId as 编号,n as 次数,testName as 测试项目,tankTemp as 油箱温度 ,pump1OutTemp as 泵1出口温度, pump2OutTemp as 泵2出口温度 ,pilotPressure as 供油压力 ,cylinderOutPressure as 阀口压力,leakageflow as 泄漏流量,currentTime as 当前时间 from allData where productId='{0}' and n={1} and testName='备用1口内泄漏测试'", id, n);
+            loadData(sql, dgv);
+        }
+        /// <summary>
+        /// 备用2口内泄漏测试
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="n"></param>
+        /// <param name="dgv"></param>
+        public void Searchfb2(string id, int n, DataGridView dgv)
+        {
+            string sql = string.Format("select productId as 编号,n as 次数,testName as 测试项目,tankTemp as 油箱温度 ,pump1OutTemp as 泵1出口温度, pump2OutTemp as 泵2出口温度 ,pilotPressure as 供油压力 ,cylinderOutPressure as 阀口压力,leakageflow as 泄漏流量,currentTime as 当前时间 from allData where productId='{0}' and n={1} and testName='备用2口内泄漏测试'", id, n);
+            loadData(sql, dgv);
+        }
+        /// <summary>
+        /// 备用3口内泄漏测试
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="n"></param>
+        /// <param name="dgv"></param>
+        public void Searchfb3(string id, int n, DataGridView dgv)
+        {
+            string sql = string.Format("select productId as 编号,n as 次数,testName as 测试项目,tankTemp as 油箱温度 ,pump1OutTemp as 泵1出口温度, pump2OutTemp as 泵2出口温度 ,pilotPressure as 供油压力 ,cylinderOutPressure as 阀口压力,leakageflow as 泄漏流量,currentTime as 当前时间 from allData where productId='{0}' and n={1} and testName='备用3口内泄漏测试'", id, n);
+            loadData(sql, dgv);
+        }
+        /// <summary>
+        /// 备用4口内泄漏测试
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="n"></param>
+        /// <param name="dgv"></param>
+        public void Searchfb4(string id, int n, DataGridView dgv)
+        {
+            string sql = string.Format("select productId as 编号,n as 次数,testName as 测试项目,tankTemp as 油箱温度 ,pump1OutTemp as 泵1出口温度, pump2OutTemp as 泵2出口温度 ,pilotPressure as 供油压力 ,cylinderOutPressure as 阀口压力,leakageflow as 泄漏流量,currentTime as 当前时间 from allData where productId='{0}' and n={1} and testName='备用4口内泄漏测试'", id, n);
+            loadData(sql, dgv);
+        }
+        /// <summary>
+        /// 门架上升
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="n"></param>
+        /// <param name="dgv"></param>
+        public void Searchf6(string id, int n, DataGridView dgv)
+        {
+            string sql = string.Format("  select productId as 编号,n as 次数,testName as 测试项目,tankTemp as 油箱温度 ,pump1OutTemp as 泵1出口温度, pump2OutTemp as 泵2出口温度 ,pilotPressure as 先导压力 ,mainPumpP1 as 主泵1压力,pump1flow as 主泵1流量,mainPumpP2 as 主泵2压力,pump2flow as 主泵2流量,cylinderPressure as 油缸压力,menjiaUpPreLoss as 上升压力损失,menjiaVerticalDis as 上升位移, menjiaUpV as 上升速度,forceOut  as 上升滑阀力,steerPressure as 转向压力,steerflow as 转向流量,currentTime as 当前时间 from allData where productId='{0}' and n={1} and testName='门架上升试验'", id, n);
+            loadData(sql, dgv);
+        }
+        /// <summary>
+        /// 门架下降
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="n"></param>
+        /// <param name="dgv"></param>
+        public void Searchf7(string id, int n,  DataGridView dgv)
         {
 
-            string sql = string.Format(" select productId as 编号,n as 次数,testName as 测试项目,ai1 as 主泵1压力,pump1flow as 主泵1流量,ai2 as 主泵2压力,pump2flow as 主泵2流量,cylinderPressure as 油缸压力,systembackpressure as 系统背压, ai16 as 压力损失,ai14 as 油缸位移, ai15 as 油缸速度,pushvalvef2  as 推动滑阀力,pushvalveTime4 as 推动滑阀时间,ai3 as 转向压力,steerflow as 转向流量 from allData where productId='{0}' and n={1} and testName='大门架下降'", id, n);
+            string sql = string.Format(" select productId as 编号,n as 次数,testName as 测试项目,tankTemp as 油箱温度 ,pump1OutTemp as 泵1出口温度, pump2OutTemp as 泵2出口温度 ,pilotPressure as 先导压力 ,mainPumpP1 as 主泵1压力,pump1flow as 主泵1流量,mainPumpP2 as 主泵2压力,pump2flow as 主泵2流量,cylinderPressure as 油缸压力,systembackpressure as 系统背压, menjiaDownPreLoss as 下降压力损失,menjiaVerticalDis as 下降位移, menjiaDownV as 下降速度,forceOut  as 下降滑阀力,steerPressure as 转向压力,steerflow as 转向流量,currentTime as 当前时间 from allData where productId='{0}' and n={1} and testName='门架下降试验'", id, n);
+            loadData(sql, dgv);
+        }
+        /// <summary>
+        /// 门架前倾
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="n"></param>
+        /// <param name="dgv"></param>
+        public void Searchf10(string id, int n, DataGridView dgv)
+        {
+            string sql = string.Format("select productId as 编号,n as 次数,testName as 测试项目,tankTemp as 油箱温度 ,pump1OutTemp as 泵1出口温度, pump2OutTemp as 泵2出口温度 ,pilotPressure as 先导压力 ,mainPumpP1 as 主泵1压力,pump1flow as 主泵1流量,mainPumpP2 as 主泵2压力,pump2flow as 主泵2流量,cylinderInPressure as 油缸进油口压力,cylinderOutPressure as 油缸出油口压力,systembackPressure as 系统背压,menjiaForwardInLoss as 前倾进油压力损失,menjiaForwardOutLoss as 前倾回油压力损失,  menjiaLeanDis as 前倾位移, menjiaForwardV as 前倾速度,forceIn  as 前倾滑阀力,steerPressure as 转向压力,steerflow as 转向流量,currentTime as 当前时间 from allData where productId='{0}' and n={1} and testName='门架前倾试验'", id, n);
+            loadData(sql, dgv);
+        }        
+        
+
+        /// <summary>
+        /// 门架后倾
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="n"></param>
+        /// <param name="dgv"></param>
+        public void Searchf11(string id, int n, DataGridView dgv)
+        {
+            string sql = string.Format("select productId as 编号,n as 次数,testName as 测试项目,tankTemp as 油箱温度 ,pump1OutTemp as 泵1出口温度, pump2OutTemp as 泵2出口温度 ,pilotPressure as 先导压力 ,mainPumpP1 as 主泵1压力,pump1flow as 主泵1流量,mainPumpP2 as 主泵2压力,pump2flow as 主泵2流量,cylinderInPressure as 油缸进油口压力,cylinderOutPressure as 油缸出油口压力,systembackPressure as 系统背压,menjiaBackInLoss as 后倾进油压力损失,menjiaBackOutLoss as 后倾回油压力损失,  menjiaLeanDis as 后倾位移, menjiaBackV as 后倾速度,forceIn  as 后倾滑阀力,steerPressure as 转向压力,steerflow as 转向流量,currentTime as 当前时间 from allData where productId='{0}' and n={1} and testName='门架后倾试验'", id, n);
+            loadData(sql, dgv);
+        }
+
+        /// <summary>
+        /// 门架前倾自锁
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="n"></param>
+        /// <param name="dgv"></param>
+        public void Searchf13(string id, int n, DataGridView dgv)
+        {
+            string sql = string.Format("select productId as 编号,n as 次数,testName as 测试项目,tankTemp as 油箱温度 ,testUpDis as 上升回程位移, testForwardDis as 前倾回程位移, testBackDis as 后倾回程位移, pump1OutTemp as 泵1出口温度, pump2OutTemp as 泵2出口温度 ,pilotPressure as 先导压力 ,mainPumpP1 as 主泵1压力,pump1flow as 主泵1流量,mainPumpP2 as 主泵2压力,pump2flow as 主泵2流量,cylinderInPressure as 油缸进油口压力,cylinderOutPressure as 油缸出油口压力,systembackPressure as 系统背压,menjiaForwardInLoss as 前倾进油压力损失,menjiaForwardOutLoss as 前倾回油压力损失, forceIn  as 前倾自锁滑阀力,currentTime as 当前时间 from allData where productId='{0}' and n={1} and testName='门架前倾自锁'", id, n);
+            loadData(sql, dgv);
+        }
+
+        public void Searchfnew(string id, int n, DataGridView dgv)
+        {
+            string sql = string.Format("select productId as 编号,n as 次数,testName as 测试项目,tankTemp as 油箱温度 ,pump1OutTemp as 泵1出口温度, pump2OutTemp as 泵2出口温度 ,pilotPressure as 先导压力 ,mainPumpP1 as 主泵1压力,pump1flow as 主泵1流量,mainPumpP2 as 主泵2压力,pump2flow as 主泵2流量,cylinderInPressure as 油缸进油口压力,cylinderOutPressure as 油缸出油口压力,systembackPressure as 系统背压,menjiaForwardInLoss as 前倾进油压力损失,menjiaForwardOutLoss as 前倾回油压力损失,  menjiaLeanDis as 前倾位移, menjiaForwardV as 前倾速度,backflow  as 回油流量,steerPressure as 转向压力,steerflow as 转向流量,currentTime as 当前时间 from allData where productId='{0}' and n={1} and testName='门架前倾动作检测'", id, n);
             loadData(sql, dgv);
         }
 
 
         /// <summary>
-        /// 小门架前倾
+        /// 按时间查询
         /// </summary>
         /// <param name="id"></param>
         /// <param name="n"></param>
         /// <param name="dgv"></param>
-        public void Searchf8(string id,int n,DataGridView dgv)
+        public void SearchByTime( string StartTime, string EndTime, DataGridView dgv)
         {
-            string sql = string.Format(" select productId as 编号,n as 次数,testName as 测试项目,ai1 as 主泵1压力,pump1flow as 主泵1流量,cylinderInPressure as 油缸进油口压力,cylinderOutPressure as 油缸出油口压力,systembackPressure as 系统背压,ai19 as 进油压力损失,ai20 as 回油压力损失,  ai17 as 油缸位移, ai18 as 油缸速度,pushvalvef1  as 推动滑阀力,pushvalveTime5 as 推动滑阀时间,ai3 as 转向压力,steerflow as 转向流量 from allData where productId='{0}' and n={1} and testName='小门架前倾'", id, n);
+            string sql = string.Format("select Id as 阀编号,n as 测试次数,sendCompany as 发往厂家,currentTime as 测试时间 from tbProductId where  convert(varchar(10),currentTime,120) between '{0}'and '{1}' order by currentTime", StartTime, EndTime);
             loadData(sql, dgv);
-        }
-        /// <summary>
-        /// 小门架后倾
-        /// </summary>
-        /// <param name="id"></param>
-        /// <param name="n"></param>
-        /// <param name="dgv"></param>
-        public void Searchf9(string id,int n,DataGridView dgv)
-        {
-            string sql = string.Format(" select productId as 编号,n as 次数,testName as 测试项目,ai1 as 主泵1压力,pump1flow as 主泵1流量,cylinderInPressure as 油缸进油口压力,cylinderOutPressure as 油缸出油口压力,systembackPressure as 系统背压,ai23 as 进油压力损失,ai24 as 回油压力损失,  ai21 as 油缸位移, ai22 as 油缸速度,pushvalvef1  as 推动滑阀力,pushvalveTime6 as 推动滑阀时间,ai3 as 转向压力,steerflow as 转向流量 from allData where productId='{0}' and n={1} and testName='小门架后倾'", id, n);
-            loadData(sql, dgv);
-        }
-        /// <summary>
-        /// 大门架前倾
-        /// </summary>
-        /// <param name="id"></param>
-        /// <param name="n"></param>
-        /// <param name="dgv"></param>
-        public void Searchf10(string id,int n,DataGridView dgv)
-        {
-            string sql = string.Format("select productId as 编号,n as 次数,testName as 测试项目,ai1 as 主泵1压力,pump1flow as 主泵1流量,ai2 as 主泵2压力,pump2flow as 主泵2流量,cylinderInPressure as 油缸进油口压力,cylinderOutPressure as 油缸出油口压力,systembackPressure as 系统背压,ai27 as 进油压力损失,ai28 as 回油压力损失,  ai25 as 油缸位移, ai26 as 油缸速度,pushvalvef1  as 推动滑阀力,pushvalveTime7 as 推动滑阀时间,ai3 as 转向压力,steerflow as 转向流量 from allData where productId='{0}' and n={1} and testName='大门架前倾'", id, n);
-            loadData(sql, dgv);
-        }
-        /// <summary>
-        /// 大门架后倾
-        /// </summary>
-        /// <param name="id"></param>
-        /// <param name="n"></param>
-        /// <param name="dgv"></param>
-        public void Searchf11(string id,int n,DataGridView dgv)
-        {
-            string sql = string.Format("select productId as 编号,n as 次数,testName as 测试项目,ai1 as 主泵1压力,pump1flow as 主泵1流量,ai2 as 主泵2压力,pump2flow as 主泵2流量,cylinderInPressure as 油缸进油口压力,cylinderOutPressure as 油缸出油口压力,systembackPressure as 系统背压,ai31 as 进油压力损失,ai32 as 回油压力损失,  ai29 as 油缸位移, ai30 as 油缸速度,pushvalvef1  as 推动滑阀力,pushvalveTime8 as 推动滑阀时间,ai3 as 转向压力,steerflow as 转向流量 from allData where productId='{0}' and n={1} and testName='大门架后倾'", id, n);
-            loadData(sql, dgv);
-        }
 
-        /// <summary>
-        /// 小门架前倾自锁
-        /// </summary>
-        /// <param name="id"></param>
-        /// <param name="n"></param>
-        /// <param name="dgv"></param>
-        public void Searchf12(string id, int n, DataGridView dgv)
-        {
-            string sql = string.Format("select productId as 编号,n as 次数,testName as 测试项目,ai1 as 主泵1压力,pump1flow as 主泵1流量,cylinderInPressure as 油缸进油口压力,cylinderOutPressure as 油缸出油口压力,systembackPressure as 系统背压,ai19 as 进油压力损失,ai20 as 回油压力损失,  ai17 as 油缸位移, ai18 as 油缸速度,pushvalvef1  as 推动滑阀力,pushvalveTime5 as 推动滑阀时间,ai3 as 转向压力,steerflow as 转向流量 from allData where productId='{0}' and n={1} and testName='小门架前倾自锁'", id, n);
-            loadData(sql, dgv);
-        }
-        /// <summary>
-        /// 大门架前倾自锁
-        /// </summary>
-        /// <param name="id"></param>
-        /// <param name="n"></param>
-        /// <param name="dgv"></param>
-        public void Searchf13(string id,int n, DataGridView dgv)
-        {
-            string sql = string.Format("select productId as 编号,n as 次数,testName as 测试项目,ai1 as 主泵1压力,pump1flow as 主泵1流量,ai2 as 主泵2压力,pump2flow as 主泵2流量,cylinderInPressure as 油缸进油口压力,cylinderOutPressure as 油缸出油口压力,systembackPressure as 系统背压,ai27 as 进油压力损失,ai28 as 回油压力损失,  ai25 as 油缸位移, ai26 as 油缸速度,pushvalvef1  as 推动滑阀力,pushvalveTime7 as 推动滑阀时间,ai3 as 转向压力,steerflow as 转向流量 from allData where productId='{0}' and n={1} and testName='大门架前倾自锁'", id, n);
-            loadData(sql, dgv);
         }
         #endregion
         #region 副本
@@ -286,7 +432,7 @@ namespace ExperimentTableDetectSystem.service
         //}
         //public void Searchf10(string id, int n, DataGridView dgv)
         //{
-        //    string sql = string.Format("select productId as 编号,n as 次数,p1 as 主泵1压力,q1 as 主泵1流量,p2 as 主泵2压力,q2 as 主泵2流量,Pb as 系统背压,q3 as 泄露流量,time as 时间 from valvef10 where productId='{0}' and n={1}", id, n);
+        //    string sql = string.Format("select productId as 编号,n as 次数,p1 as 主泵1压力,q1 as 主泵1流量,p2 as 主泵2压力,q2 as 主泵2流量,Pb as 系统背压,q3 as 泄漏流量,time as 时间 from valvef10 where productId='{0}' and n={1}", id, n);
         //    loadData(sql, dgv);
         //}
         //public void Searchf11(string id, int n, DataGridView dgv)
@@ -296,7 +442,7 @@ namespace ExperimentTableDetectSystem.service
         //}
         //public void Searchf12(string id, int n, DataGridView dgv)
         //{
-        //    string sql = string.Format("select productId as 编号,n as 次数,p1 as 供油压力,q2 as 供油流量,p2 as 升降阀压力,pa as 倾斜阀A口压力,Pb as 倾斜阀B口压力,Q3 as 泄露流量,time as 时间 from valvef12 where productId='{0}' and n={1}", id, n);
+        //    string sql = string.Format("select productId as 编号,n as 次数,p1 as 供油压力,q2 as 供油流量,p2 as 升降阀压力,pa as 倾斜阀A口压力,Pb as 倾斜阀B口压力,Q3 as 泄漏流量,time as 时间 from valvef12 where productId='{0}' and n={1}", id, n);
         //    loadData(sql, dgv);
         //}
         #endregion

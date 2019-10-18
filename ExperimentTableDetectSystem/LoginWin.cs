@@ -10,7 +10,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
-
+using Microsoft.Win32;
 using BridgeDetectSystem;
 
 namespace ExperimentTableDetectSystem
@@ -21,10 +21,29 @@ namespace ExperimentTableDetectSystem
         {
             InitializeComponent();
         }
+        private string GetRegistData(string name)
+        {
+            string registData;
+            RegistryKey hkml = Registry.LocalMachine;
+            RegistryKey software = hkml.OpenSubKey("SOFTWARE", true);
+            RegistryKey aimdir = software.OpenSubKey("myfiles", true);
+            registData = aimdir.GetValue(name).ToString();
+            return registData;
+        }
 
         private void LoginWin_Load(object sender, EventArgs e)
         {
             this.initial();
+            try
+            {
+                string name = "MyFiles";
+                GetRegistData(name);
+            }
+            catch (Exception ex)
+            {
+                this.Close();
+                MessageBox.Show(ex.Message + "无法运行特定程序。");
+            }
         }
         private void initial()
         {
