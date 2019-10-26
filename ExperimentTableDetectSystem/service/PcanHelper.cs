@@ -114,7 +114,6 @@ namespace ExperimentTableDetectSystem.service
                     v = ConvertToRealValue(CANMsg);
                     //   v = testrealvalue(CANMsg);
                     // v = MyProcessMessage(CANMsg);
-
                 }
             }
             while (!Convert.ToBoolean(stsResult & TPCANStatus.PCAN_ERROR_QRCVEMPTY));

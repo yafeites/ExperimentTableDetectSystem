@@ -109,12 +109,12 @@
             this.txtSmallUpDis = new MetroFramework.Controls.MetroTextBox();
             this.txtSmallUpV = new MetroFramework.Controls.MetroTextBox();
             this.txtSmallUpPreLoss = new MetroFramework.Controls.MetroTextBox();
+            this.unloading_valve2 = new System.Windows.Forms.Button();
+            this.unloading_valve3 = new System.Windows.Forms.Button();
+            this.unloading_valve1 = new System.Windows.Forms.Button();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.timer12 = new System.Windows.Forms.Timer(this.components);
-            this.unloading_valve1 = new System.Windows.Forms.Button();
-            this.unloading_valve2 = new System.Windows.Forms.Button();
-            this.unloading_valve3 = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart2)).BeginInit();
             this.grpSteeveForce.SuspendLayout();
@@ -293,7 +293,7 @@
             this.metroLabel18.Name = "metroLabel18";
             this.metroLabel18.Size = new System.Drawing.Size(147, 31);
             this.metroLabel18.TabIndex = 48;
-            this.metroLabel18.Text = "泵2出口温度";
+            this.metroLabel18.Text = "泵2出口温度（℃）";
             this.metroLabel18.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // metroLabel17
@@ -305,7 +305,7 @@
             this.metroLabel17.Name = "metroLabel17";
             this.metroLabel17.Size = new System.Drawing.Size(147, 31);
             this.metroLabel17.TabIndex = 47;
-            this.metroLabel17.Text = "泵1出口温度";
+            this.metroLabel17.Text = "泵1出口温度（℃）";
             this.metroLabel17.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // metroLabel16
@@ -317,7 +317,7 @@
             this.metroLabel16.Name = "metroLabel16";
             this.metroLabel16.Size = new System.Drawing.Size(147, 31);
             this.metroLabel16.TabIndex = 46;
-            this.metroLabel16.Text = "油箱温度";
+            this.metroLabel16.Text = "油箱温度（℃）";
             this.metroLabel16.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // metroLabel15
@@ -329,7 +329,7 @@
             this.metroLabel15.Name = "metroLabel15";
             this.metroLabel15.Size = new System.Drawing.Size(147, 31);
             this.metroLabel15.TabIndex = 45;
-            this.metroLabel15.Text = "先导压力";
+            this.metroLabel15.Text = "先导压力（bar）";
             this.metroLabel15.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // metroLabel47
@@ -341,7 +341,7 @@
             this.metroLabel47.Name = "metroLabel47";
             this.metroLabel47.Size = new System.Drawing.Size(147, 31);
             this.metroLabel47.TabIndex = 44;
-            this.metroLabel47.Text = "油缸出口压力";
+            this.metroLabel47.Text = "油缸出口压力（bar）";
             this.metroLabel47.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // metroLabel45
@@ -353,7 +353,7 @@
             this.metroLabel45.Name = "metroLabel45";
             this.metroLabel45.Size = new System.Drawing.Size(147, 31);
             this.metroLabel45.TabIndex = 43;
-            this.metroLabel45.Text = "油缸进口压力";
+            this.metroLabel45.Text = "油缸进口压力（bar）";
             this.metroLabel45.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // metroLabel44
@@ -365,7 +365,7 @@
             this.metroLabel44.Name = "metroLabel44";
             this.metroLabel44.Size = new System.Drawing.Size(147, 31);
             this.metroLabel44.TabIndex = 42;
-            this.metroLabel44.Text = "中位压力损失";
+            this.metroLabel44.Text = "中位压力损失（bar）";
             this.metroLabel44.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // metroLabel43
@@ -377,7 +377,7 @@
             this.metroLabel43.Name = "metroLabel43";
             this.metroLabel43.Size = new System.Drawing.Size(147, 31);
             this.metroLabel43.TabIndex = 41;
-            this.metroLabel43.Text = "系统背压";
+            this.metroLabel43.Text = "系统背压（bar）";
             this.metroLabel43.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // metroLabel42
@@ -389,7 +389,7 @@
             this.metroLabel42.Name = "metroLabel42";
             this.metroLabel42.Size = new System.Drawing.Size(147, 31);
             this.metroLabel42.TabIndex = 40;
-            this.metroLabel42.Text = "油缸压力";
+            this.metroLabel42.Text = "油缸压力（bar）";
             this.metroLabel42.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // txtOilPressure
@@ -412,7 +412,7 @@
             this.metroLabel41.Name = "metroLabel41";
             this.metroLabel41.Size = new System.Drawing.Size(147, 31);
             this.metroLabel41.TabIndex = 30;
-            this.metroLabel41.Text = "转向压力";
+            this.metroLabel41.Text = "转向压力（bar）";
             this.metroLabel41.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // txtSystemBackPressure
@@ -457,7 +457,7 @@
             this.metroLabel50.Name = "metroLabel50";
             this.metroLabel50.Size = new System.Drawing.Size(147, 31);
             this.metroLabel50.TabIndex = 20;
-            this.metroLabel50.Text = "泄漏流量";
+            this.metroLabel50.Text = "泄漏流量（ml/min)";
             this.metroLabel50.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // txtoilOutPressure
@@ -480,7 +480,7 @@
             this.metroLabel52.Name = "metroLabel52";
             this.metroLabel52.Size = new System.Drawing.Size(147, 31);
             this.metroLabel52.TabIndex = 16;
-            this.metroLabel52.Text = "转向流量";
+            this.metroLabel52.Text = "转向流量（ml/min)";
             this.metroLabel52.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // metroLabel54
@@ -492,7 +492,7 @@
             this.metroLabel54.Name = "metroLabel54";
             this.metroLabel54.Size = new System.Drawing.Size(147, 31);
             this.metroLabel54.TabIndex = 12;
-            this.metroLabel54.Text = "主泵2流量";
+            this.metroLabel54.Text = "主泵2流量（l/min)";
             this.metroLabel54.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // txtoilInPressure
@@ -515,7 +515,7 @@
             this.metroLabel56.Name = "metroLabel56";
             this.metroLabel56.Size = new System.Drawing.Size(147, 31);
             this.metroLabel56.TabIndex = 8;
-            this.metroLabel56.Text = "主泵1流量";
+            this.metroLabel56.Text = "主泵1流量（l/min)";
             this.metroLabel56.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // metroLabel57
@@ -541,7 +541,7 @@
             this.metroLabel58.Name = "metroLabel58";
             this.metroLabel58.Size = new System.Drawing.Size(147, 31);
             this.metroLabel58.TabIndex = 4;
-            this.metroLabel58.Text = "主泵2压力";
+            this.metroLabel58.Text = "主泵2压力（bar）";
             this.metroLabel58.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblValveId
@@ -577,7 +577,7 @@
             this.metroLabel60.Name = "metroLabel60";
             this.metroLabel60.Size = new System.Drawing.Size(147, 32);
             this.metroLabel60.TabIndex = 0;
-            this.metroLabel60.Text = "主泵1压力";
+            this.metroLabel60.Text = "主泵1压力（bar）";
             this.metroLabel60.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // txtinfo
@@ -1088,6 +1088,37 @@
             this.txtSmallUpPreLoss.Size = new System.Drawing.Size(145, 27);
             this.txtSmallUpPreLoss.TabIndex = 45;
             // 
+            // unloading_valve2
+            // 
+            this.unloading_valve2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.unloading_valve2.Location = new System.Drawing.Point(150, 227);
+            this.unloading_valve2.Name = "unloading_valve2";
+            this.unloading_valve2.Size = new System.Drawing.Size(141, 25);
+            this.unloading_valve2.TabIndex = 58;
+            this.unloading_valve2.Text = "泄压阀2";
+            this.unloading_valve2.UseVisualStyleBackColor = true;
+            // 
+            // unloading_valve3
+            // 
+            this.unloading_valve3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.unloading_valve3.Location = new System.Drawing.Point(297, 227);
+            this.unloading_valve3.Name = "unloading_valve3";
+            this.unloading_valve3.Size = new System.Drawing.Size(141, 25);
+            this.unloading_valve3.TabIndex = 59;
+            this.unloading_valve3.Text = "泄压阀3";
+            this.unloading_valve3.UseVisualStyleBackColor = true;
+            // 
+            // unloading_valve1
+            // 
+            this.unloading_valve1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.unloading_valve1.Location = new System.Drawing.Point(3, 227);
+            this.unloading_valve1.Name = "unloading_valve1";
+            this.unloading_valve1.Size = new System.Drawing.Size(141, 25);
+            this.unloading_valve1.TabIndex = 57;
+            this.unloading_valve1.Text = "泄压阀1";
+            this.unloading_valve1.UseVisualStyleBackColor = true;
+            this.unloading_valve1.Click += new System.EventHandler(this.button2_Click);
+            // 
             // tableLayoutPanel5
             // 
             this.tableLayoutPanel5.ColumnCount = 1;
@@ -1122,37 +1153,6 @@
             // 
             this.timer12.Enabled = true;
             this.timer12.Tick += new System.EventHandler(this.timer12_Tick);
-            // 
-            // unloading_valve1
-            // 
-            this.unloading_valve1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.unloading_valve1.Location = new System.Drawing.Point(3, 227);
-            this.unloading_valve1.Name = "unloading_valve1";
-            this.unloading_valve1.Size = new System.Drawing.Size(141, 25);
-            this.unloading_valve1.TabIndex = 57;
-            this.unloading_valve1.Text = "泄压阀1";
-            this.unloading_valve1.UseVisualStyleBackColor = true;
-            this.unloading_valve1.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // unloading_valve2
-            // 
-            this.unloading_valve2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.unloading_valve2.Location = new System.Drawing.Point(150, 227);
-            this.unloading_valve2.Name = "unloading_valve2";
-            this.unloading_valve2.Size = new System.Drawing.Size(141, 25);
-            this.unloading_valve2.TabIndex = 58;
-            this.unloading_valve2.Text = "泄压阀2";
-            this.unloading_valve2.UseVisualStyleBackColor = true;
-            // 
-            // unloading_valve3
-            // 
-            this.unloading_valve3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.unloading_valve3.Location = new System.Drawing.Point(297, 227);
-            this.unloading_valve3.Name = "unloading_valve3";
-            this.unloading_valve3.Size = new System.Drawing.Size(141, 25);
-            this.unloading_valve3.TabIndex = 59;
-            this.unloading_valve3.Text = "泄压阀3";
-            this.unloading_valve3.UseVisualStyleBackColor = true;
             // 
             // autoDataDisplayWin
             // 

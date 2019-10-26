@@ -147,6 +147,7 @@ namespace ExperimentTableDetectSystem.Windows.SinglePoint
             }
             txttankTemp.Text = singledata[44].ToString();
             txtpump1OutTemp.Text = singledata[45].ToString();
+            txt_backfow.Text = singledata[41].ToString();
             txtpump2OutTemp.Text = singledata[46].ToString();
 
             txtmainPumpP1.Text = singledata[10].ToString();
@@ -192,6 +193,36 @@ namespace ExperimentTableDetectSystem.Windows.SinglePoint
                 MessageBox.Show("退出单点模式失败" + ex.Message);
             }
             this.Close();
+        }
+
+        private void metroLabel60_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void metroLabel41_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void metroLabel44_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void metroLabel17_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void metroLabel_backflow_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtpump1OutTemp_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -35,7 +35,6 @@ namespace ExperimentTableDetectSystem.service
                 try
                 {
                     ReadAllReadableValues();
-
                 }
                 catch (Exception ex)
                 {
