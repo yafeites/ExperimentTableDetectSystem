@@ -173,7 +173,7 @@ namespace ExperimentTableDetectSystem.Windows.auto
             addDataRunner.IsBackground = true;
             addDataRunner.Start();
         }
-        
+        private static object syncRoot = new Object();
         Series f1;
         Series f2;
         Series f3;
@@ -1249,6 +1249,94 @@ namespace ExperimentTableDetectSystem.Windows.auto
         private void button2_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void unloading_valve_1_Click(object sender, EventArgs e)
+        {
+            Thread t = new Thread(new ParameterizedThreadStart(send));
+            t.Start(1);
+        }
+
+        private void unloading_valve_2_Click(object sender, EventArgs e)
+        {
+            Thread t = new Thread(new ParameterizedThreadStart(send));
+            t.Start(2);
+        }
+
+        private void unloading_valve_3_Click(object sender, EventArgs e)
+        {
+            Thread t = new Thread(new ParameterizedThreadStart(send));
+            t.Start(3);
+        }
+        private void send(Object cnt)
+        {
+
+            int i = (int)cnt;
+            TPCANMsg canmsg108 = new TPCANMsg();
+            canmsg108.ID = 0x108;
+            canmsg108.LEN = Convert.ToByte(8);
+            canmsg108.MSGTYPE = TPCANMessageType.PCAN_MESSAGE_STANDARD;
+            canmsg108.DATA = new byte[8];
+            int res = 0;
+            List<int> list = new List<int>();
+            list.Add(1);
+            list.Add(2);
+            list.Add(3);
+            lock (syncRoot)
+            {
+                foreach (var n in list)
+                {
+                    String name = "unloading_valve_" + n;
+                    Control[] arr = this.Controls.Find(name, true);
+                    if (n != i)
+                    {
+                        if (arr[0].Text.Contains("关闭"))
+                        {
+                            int num = (int)Math.Pow(2, n - 1);
+                            res = res | num;
+                        }
+
+                    }
+                    else
+                    {
+                        if (arr[0].Text.Contains("打开"))
+                        {
+                            int num = (int)Math.Pow(2, n - 1);
+                            res = res | num;
+                        }
+                    }
+                }
+                canmsg108.DATA[0] = (byte)res;
+                TPCANStatus sts = peakhelper.write(canmsg108);
+                if (sts != TPCANStatus.PCAN_ERROR_OK)
+                {
+                    MessageBox.Show("发送错误");
+                }
+                else
+                {
+                    Control c = this.Controls.Find("unloading_valve_" + i, true)[0];
+                    if (c.Text.Contains("关闭"))
+                    {
+                        this.Text = "卸荷阀" + i + "_打开";
+                        c.Invoke(new EventHandler(delegate
+
+                        {
+
+                            this.Text = "卸荷阀" + i + "_打开";
+
+                        }));
+                    }
+                    else
+                    {
+                        this.Text = "卸荷阀" + i + "_关闭";
+                        c.Invoke(new EventHandler(delegate
+
+                        {
+                            this.Text = "卸荷阀" + i + "_关闭";
+                        }));
+                    }
+                }
+            }
         }
     }
 }
