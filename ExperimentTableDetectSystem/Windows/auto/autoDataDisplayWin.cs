@@ -77,7 +77,6 @@ namespace ExperimentTableDetectSystem.Windows.auto
                 valveid = value;
             }
         }
-
         public int currentCount1 = 0;
         public int currentCount2 = 0;
 
