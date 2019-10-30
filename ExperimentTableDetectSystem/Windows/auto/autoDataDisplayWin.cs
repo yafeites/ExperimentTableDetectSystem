@@ -485,7 +485,7 @@ namespace ExperimentTableDetectSystem.Windows.auto
             {
                     
                 txtTestCourse.Text = "倾斜阀A口内泄漏测试";
-      
+     
             }
             else if (nowdata[8] == 1)//内泄漏测试
             {
@@ -494,23 +494,43 @@ namespace ExperimentTableDetectSystem.Windows.auto
             }
             else if (nowdata[49] == 1)//内泄漏测试
             {
-                pilotPressre = nowdata[40];
-                txtTestCourse.Text = "B3口内泄漏测试";
+                lock (datastoremanager)
+                {
+                    realPilotPressure = pilotPressre;
+                    pilotPressre = nowdata[40];
+                    txtTestCourse.Text = "B3口内泄漏测试";
+                }
+                
             }
             else if (nowdata[50] == 1)//内泄漏测试
             {
-                pilotPressre = nowdata[40];
-                txtTestCourse.Text = "A3口内泄漏测试";
+                lock (datastoremanager)
+                {
+                    realPilotPressure = pilotPressre;
+                    pilotPressre = nowdata[40];
+                    txtTestCourse.Text = "A3口内泄漏测试";
+                }
+                
             }
             else if (nowdata[51] == 1)//内泄漏测试
             {
-                pilotPressre = nowdata[40];
-                txtTestCourse.Text = "B4口内泄漏测试";
+                lock (datastoremanager)
+                {
+                    realPilotPressure = pilotPressre;
+                    pilotPressre = nowdata[40];
+                    txtTestCourse.Text = "B4口内泄漏测试";
+                }
+                
             }
             else if (nowdata[52] == 1)//内泄漏测试
             {
-                pilotPressre = nowdata[40];
-                txtTestCourse.Text = "A4口内泄漏测试";
+                lock (datastoremanager)
+                {
+                    realPilotPressure = pilotPressre;
+                    pilotPressre = nowdata[40];
+                    txtTestCourse.Text = "A4口内泄漏测试";
+                }
+               
             }
             else if (nowdata[6] == 1)//内泄漏测试
             {
@@ -1254,30 +1274,35 @@ namespace ExperimentTableDetectSystem.Windows.auto
         private void unloading_valve_1_Click(object sender, EventArgs e)
         {
             Thread t = new Thread(new ParameterizedThreadStart(send));
-            t.Start(1);
+            t.Start("A1");
         }
 
         private void unloading_valve_2_Click(object sender, EventArgs e)
         {
             Thread t = new Thread(new ParameterizedThreadStart(send));
-            t.Start(2);
+            t.Start("B1");
         }
 
         private void unloading_valve_3_Click(object sender, EventArgs e)
         {
             Thread t = new Thread(new ParameterizedThreadStart(send));
-            t.Start(3);
+            t.Start("A2");
         }
-        private void send(Object cnt)
+        private void send(Object str)
         {
-
-            int i = (int)cnt;
+            Dictionary<string, int> dic = new Dictionary<string, int>();
+            dic.Add("A1",1 );
+            dic.Add("B1",2 );
+            dic.Add("A2",3 );
+            int i = dic[(string)str];
             TPCANMsg canmsg108 = new TPCANMsg();
             canmsg108.ID = 0x108;
             canmsg108.LEN = Convert.ToByte(8);
             canmsg108.MSGTYPE = TPCANMessageType.PCAN_MESSAGE_STANDARD;
             canmsg108.DATA = new byte[8];
             int res = 0;
+           
+           
             List<int> list = new List<int>();
             list.Add(1);
             list.Add(2);
@@ -1295,7 +1320,6 @@ namespace ExperimentTableDetectSystem.Windows.auto
                             int num = (int)Math.Pow(2, n - 1);
                             res = res | num;
                         }
-
                     }
                     else
                     {
@@ -1307,6 +1331,7 @@ namespace ExperimentTableDetectSystem.Windows.auto
                     }
                 }
                 canmsg108.DATA[0] = (byte)res;
+                canmsg108.DATA[2] = 1;
                 TPCANStatus sts = peakhelper.write(canmsg108);
                 if (sts != TPCANStatus.PCAN_ERROR_OK)
                 {
@@ -1315,24 +1340,24 @@ namespace ExperimentTableDetectSystem.Windows.auto
                 else
                 {
                     Control c = this.Controls.Find("unloading_valve_" + i, true)[0];
+                   // MessageBox.Show(c.Text);
                     if (c.Text.Contains("关闭"))
                     {
-                        this.Text = "卸荷阀" + i + "_打开";
+                       //c.Text = "卸荷阀" + i + "_打开";
                         c.Invoke(new EventHandler(delegate
-
                         {
 
-                            this.Text = "卸荷阀" + i + "_打开";
+                            c.Text =  "打开"+ "卸荷阀" + str ;
 
                         }));
                     }
                     else
                     {
-                        this.Text = "卸荷阀" + i + "_关闭";
+                        //c.Text = "卸荷阀" + i + "_关闭";
                         c.Invoke(new EventHandler(delegate
 
                         {
-                            this.Text = "卸荷阀" + i + "_关闭";
+                            c.Text = "关闭" + "卸荷阀" + str;
                         }));
                     }
                 }

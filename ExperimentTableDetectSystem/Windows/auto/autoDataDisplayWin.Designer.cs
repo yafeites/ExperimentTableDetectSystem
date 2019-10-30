@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea5 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend5 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea6 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend6 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.chart2 = new System.Windows.Forms.DataVisualization.Charting.Chart();
@@ -78,6 +78,9 @@
             this.txtsteeringFlow = new MetroFramework.Controls.MetroTextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
+            this.unloading_valve_1 = new System.Windows.Forms.Button();
+            this.unloading_valve_2 = new System.Windows.Forms.Button();
+            this.unloading_valve_3 = new System.Windows.Forms.Button();
             this.txtMenjiaType = new MetroFramework.Controls.MetroTextBox();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel59 = new MetroFramework.Controls.MetroLabel();
@@ -112,9 +115,6 @@
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.timer12 = new System.Windows.Forms.Timer(this.components);
-            this.unloading_valve_3 = new System.Windows.Forms.Button();
-            this.unloading_valve_2 = new System.Windows.Forms.Button();
-            this.unloading_valve_1 = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart2)).BeginInit();
             this.grpSteeveForce.SuspendLayout();
@@ -150,17 +150,17 @@
             // 
             // chart2
             // 
-            chartArea5.Name = "ChartArea1";
-            this.chart2.ChartAreas.Add(chartArea5);
+            chartArea1.Name = "ChartArea1";
+            this.chart2.ChartAreas.Add(chartArea1);
             this.chart2.Dock = System.Windows.Forms.DockStyle.Fill;
-            legend5.Name = "Legend1";
-            this.chart2.Legends.Add(legend5);
+            legend1.Name = "Legend1";
+            this.chart2.Legends.Add(legend1);
             this.chart2.Location = new System.Drawing.Point(603, 316);
             this.chart2.Name = "chart2";
-            series5.ChartArea = "ChartArea1";
-            series5.Legend = "Legend1";
-            series5.Name = "Series1";
-            this.chart2.Series.Add(series5);
+            series1.ChartArea = "ChartArea1";
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            this.chart2.Series.Add(series1);
             this.chart2.Size = new System.Drawing.Size(485, 274);
             this.chart2.TabIndex = 9;
             this.chart2.Text = "chart2";
@@ -731,6 +731,39 @@
             this.tableLayoutPanel4.TabIndex = 2;
             this.tableLayoutPanel4.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel4_Paint);
             // 
+            // unloading_valve_1
+            // 
+            this.unloading_valve_1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.unloading_valve_1.Location = new System.Drawing.Point(3, 227);
+            this.unloading_valve_1.Name = "unloading_valve_1";
+            this.unloading_valve_1.Size = new System.Drawing.Size(141, 25);
+            this.unloading_valve_1.TabIndex = 62;
+            this.unloading_valve_1.Text = "打开卸荷阀A1";
+            this.unloading_valve_1.UseVisualStyleBackColor = true;
+            this.unloading_valve_1.Click += new System.EventHandler(this.unloading_valve_1_Click);
+            // 
+            // unloading_valve_2
+            // 
+            this.unloading_valve_2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.unloading_valve_2.Location = new System.Drawing.Point(150, 227);
+            this.unloading_valve_2.Name = "unloading_valve_2";
+            this.unloading_valve_2.Size = new System.Drawing.Size(141, 25);
+            this.unloading_valve_2.TabIndex = 61;
+            this.unloading_valve_2.Text = "打开卸荷阀B1";
+            this.unloading_valve_2.UseVisualStyleBackColor = true;
+            this.unloading_valve_2.Click += new System.EventHandler(this.unloading_valve_2_Click);
+            // 
+            // unloading_valve_3
+            // 
+            this.unloading_valve_3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.unloading_valve_3.Location = new System.Drawing.Point(297, 227);
+            this.unloading_valve_3.Name = "unloading_valve_3";
+            this.unloading_valve_3.Size = new System.Drawing.Size(141, 25);
+            this.unloading_valve_3.TabIndex = 60;
+            this.unloading_valve_3.Text = "打开卸荷阀A2";
+            this.unloading_valve_3.UseVisualStyleBackColor = true;
+            this.unloading_valve_3.Click += new System.EventHandler(this.unloading_valve_3_Click);
+            // 
             // txtMenjiaType
             // 
             this.txtMenjiaType.CustomForeColor = true;
@@ -1103,17 +1136,17 @@
             // 
             // chart1
             // 
-            chartArea6.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea6);
+            chartArea2.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea2);
             this.chart1.Dock = System.Windows.Forms.DockStyle.Fill;
-            legend6.Name = "Legend1";
-            this.chart1.Legends.Add(legend6);
+            legend2.Name = "Legend1";
+            this.chart1.Legends.Add(legend2);
             this.chart1.Location = new System.Drawing.Point(3, 3);
             this.chart1.Name = "chart1";
-            series6.ChartArea = "ChartArea1";
-            series6.Legend = "Legend1";
-            series6.Name = "Series1";
-            this.chart1.Series.Add(series6);
+            series2.ChartArea = "ChartArea1";
+            series2.Legend = "Legend1";
+            series2.Name = "Series1";
+            this.chart1.Series.Add(series2);
             this.chart1.Size = new System.Drawing.Size(479, 301);
             this.chart1.TabIndex = 0;
             this.chart1.Text = "chart1";
@@ -1122,39 +1155,6 @@
             // 
             this.timer12.Enabled = true;
             this.timer12.Tick += new System.EventHandler(this.timer12_Tick);
-            // 
-            // unloading_valve_3
-            // 
-            this.unloading_valve_3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.unloading_valve_3.Location = new System.Drawing.Point(297, 227);
-            this.unloading_valve_3.Name = "unloading_valve_3";
-            this.unloading_valve_3.Size = new System.Drawing.Size(141, 25);
-            this.unloading_valve_3.TabIndex = 60;
-            this.unloading_valve_3.Text = "卸荷阀3_打开";
-            this.unloading_valve_3.UseVisualStyleBackColor = true;
-            this.unloading_valve_3.Click += new System.EventHandler(this.unloading_valve_3_Click);
-            // 
-            // unloading_valve_2
-            // 
-            this.unloading_valve_2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.unloading_valve_2.Location = new System.Drawing.Point(150, 227);
-            this.unloading_valve_2.Name = "unloading_valve_2";
-            this.unloading_valve_2.Size = new System.Drawing.Size(141, 25);
-            this.unloading_valve_2.TabIndex = 61;
-            this.unloading_valve_2.Text = "卸荷阀2_打开";
-            this.unloading_valve_2.UseVisualStyleBackColor = true;
-            this.unloading_valve_2.Click += new System.EventHandler(this.unloading_valve_2_Click);
-            // 
-            // unloading_valve_1
-            // 
-            this.unloading_valve_1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.unloading_valve_1.Location = new System.Drawing.Point(3, 227);
-            this.unloading_valve_1.Name = "unloading_valve_1";
-            this.unloading_valve_1.Size = new System.Drawing.Size(141, 25);
-            this.unloading_valve_1.TabIndex = 62;
-            this.unloading_valve_1.Text = "卸荷阀1_打开";
-            this.unloading_valve_1.UseVisualStyleBackColor = true;
-            this.unloading_valve_1.Click += new System.EventHandler(this.unloading_valve_1_Click);
             // 
             // autoDataDisplayWin
             // 
