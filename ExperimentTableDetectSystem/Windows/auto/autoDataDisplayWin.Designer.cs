@@ -749,7 +749,7 @@
             this.unloading_valve_2.Name = "unloading_valve_2";
             this.unloading_valve_2.Size = new System.Drawing.Size(141, 25);
             this.unloading_valve_2.TabIndex = 61;
-            this.unloading_valve_2.Text = "打开卸荷阀B1";
+            this.unloading_valve_2.Text = "打开卸荷阀B2";
             this.unloading_valve_2.UseVisualStyleBackColor = true;
             this.unloading_valve_2.Click += new System.EventHandler(this.unloading_valve_2_Click);
             // 

@@ -1270,7 +1270,7 @@ namespace ExperimentTableDetectSystem.Windows.auto
         private void unloading_valve_2_Click(object sender, EventArgs e)
         {
             Thread t = new Thread(new ParameterizedThreadStart(send));
-            t.Start("B1");
+            t.Start("B2");
         }
 
         private void unloading_valve_3_Click(object sender, EventArgs e)
@@ -1282,7 +1282,7 @@ namespace ExperimentTableDetectSystem.Windows.auto
         {
             Dictionary<string, int> dic = new Dictionary<string, int>();
             dic.Add("A1",1 );
-            dic.Add("B1",2 );
+            dic.Add("B2",2 );
             dic.Add("A2",3 );
             int i = dic[(string)str];
             TPCANMsg canmsg108 = new TPCANMsg();
