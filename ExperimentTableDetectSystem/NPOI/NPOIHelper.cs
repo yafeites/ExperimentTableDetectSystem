@@ -347,7 +347,7 @@ namespace ExperimentTableDetectSystem.NPOI
             string p10 = reader21["p1"].ToString();
 
             //备用1内泄漏
-            string sqlb1a = string.Format("select isnull((MAX(pilotPressure)-3),0) as p1 from allData where pilotPressure<(select MAX(pilotPressure) from allData where testName='备用1口内泄漏测试' and productId='{0}' and n={1}) and where testName='备用1口内泄漏测试' and productId='{0}' and n={1} ", ManualNumberInput.id, n);
+            string sqlb1a = string.Format("select isnull((MAX(pilotPressure)-3),0) as p1 from allData where pilotPressure< (select MAX(pilotPressure) from allData where testName='备用1口内泄漏测试' and productId='{0}' and n={1}) and testName='备用1口内泄漏测试' and productId='{0}' and n={1} ", ManualNumberInput.id, n);
             SqlDataReader readerb1a = dbHelper.ExecuteReader(sqlb1a);
             readerb1a.Read();
             string sqlb1b = string.Format("select isnull(round(60/AVG(leakageflow),2),0) as lf from (select top 5 leakageflow  from allData where testName='备用1口内泄漏测试' and productId='{0}' and n={1} and leakageflow!=600 order by currentTime desc) as temp", ManualNumberInput.id, n);

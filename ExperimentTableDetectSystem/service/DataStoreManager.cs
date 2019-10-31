@@ -92,10 +92,9 @@ namespace ExperimentTableDetectSystem.service
         public void Insert(double[] value, string testName)
         {
             string sql;
-            lock (this)
-            {
-                sql = string.Format("insert into allData values('{0}',{1},'{2}','{3}','{4}',{5},{6},{7},{8},{9},{10},{11},{12},{13},{14},{15},{16},{17},{18},{19},{20},{21},{22},{23},{24},{25},{26},{27},{28},{29},{30},{31},{32},{33},{34},{35},{36},{37},'{38}',{39})", productId, n, menjiaType, valveType, testName, value[36], value[37], value[38], value[39], value[10], value[11], value[12], value[19], value[20], autoDataDisplayWin.SmallUpV, value[22], autoDataDisplayWin.SmallDownV, value[23], value[21], autoDataDisplayWin.SmallForwardV, value[24], value[25], autoDataDisplayWin.SmallBackV, value[26], value[27], value[13], value[14], value[15], value[16], value[17], value[18], autoDataDisplayWin.realPilotPressure, value[44], value[45], value[46], value[60], value[61], value[62], DateTime.Now, value[41]);
-            }
+          
+            sql = string.Format("insert into allData values('{0}',{1},'{2}','{3}','{4}',{5},{6},{7},{8},{9},{10},{11},{12},{13},{14},{15},{16},{17},{18},{19},{20},{21},{22},{23},{24},{25},{26},{27},{28},{29},{30},{31},{32},{33},{34},{35},{36},{37},'{38}',{39})", productId, n, menjiaType, valveType, testName, value[36], value[37], value[38], value[39], value[10], value[11], value[12], value[19], value[20], autoDataDisplayWin.SmallUpV, value[22], autoDataDisplayWin.SmallDownV, value[23], value[21], autoDataDisplayWin.SmallForwardV, value[24], value[25], autoDataDisplayWin.SmallBackV, value[26], value[27], value[13], value[14], value[15], value[16], value[17], value[18], autoDataDisplayWin.realPilotPressure, value[44], value[45], value[46], value[60], value[61], value[62], DateTime.Now, value[41]);
+            
             
             dbhelper.ExecuteNonQuery(sql);
         }

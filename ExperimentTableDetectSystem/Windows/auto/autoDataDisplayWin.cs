@@ -79,7 +79,6 @@ namespace ExperimentTableDetectSystem.Windows.auto
         }
         public int currentCount1 = 0;
         public int currentCount2 = 0;
-
         public int currentCount5 = 0;
         public int currentCount6 = 0;
         public int currentCount7 = 0;
@@ -493,42 +492,34 @@ namespace ExperimentTableDetectSystem.Windows.auto
             }
             else if (nowdata[49] == 1)//内泄漏测试
             {
-                lock (datastoremanager)
-                {
-                    realPilotPressure = pilotPressre;
-                    pilotPressre = nowdata[40];
-                    txtTestCourse.Text = "B3口内泄漏测试";
-                }
-                
+                realPilotPressure = nowdata[40];
+                pilotPressre = nowdata[40];                           
+                txtTestCourse.Text = "B3口内泄漏测试";           
             }
             else if (nowdata[50] == 1)//内泄漏测试
             {
-                lock (datastoremanager)
-                {
-                    realPilotPressure = pilotPressre;
+                
+                 
                     pilotPressre = nowdata[40];
                     txtTestCourse.Text = "A3口内泄漏测试";
-                }
+                
                 
             }
             else if (nowdata[51] == 1)//内泄漏测试
             {
-                lock (datastoremanager)
-                {
-                    realPilotPressure = pilotPressre;
+               
+                   
                     pilotPressre = nowdata[40];
                     txtTestCourse.Text = "B4口内泄漏测试";
-                }
+                
                 
             }
             else if (nowdata[52] == 1)//内泄漏测试
             {
-                lock (datastoremanager)
-                {
-                    realPilotPressure = pilotPressre;
+                  
                     pilotPressre = nowdata[40];
                     txtTestCourse.Text = "A4口内泄漏测试";
-                }
+                
                
             }
             else if (nowdata[6] == 1)//内泄漏测试
